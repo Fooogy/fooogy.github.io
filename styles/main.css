@@ -760,7 +760,11 @@ a {
 }
 
       .sidebar .top-container .site-nav {
-        color: #212529;
+        color: #495057;
+      }
+    
+      body {
+        background: #adb5bd;
       }
     
       if (params.customCss) {
