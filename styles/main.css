@@ -764,7 +764,7 @@ a {
       }
     
       body {
-        background: #adb5bd;
+        background: #212529;
       }
     
       if (params.customCss) {
