@@ -1,102 +1,362 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" >
 
+<head>
+  <meta charset="UTF-8" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<meta name="keywords" content="Gridea静态个人博客">
+<meta name="description" content="Curiosity &amp; Creativity">
+<meta name="theme-color" content="#000">
 <title>隔岸观·第八章 | A Dream of Fooogy</title>
+<link rel="shortcut icon" href="/favicon.ico?v=1593433910418">
+<link rel="stylesheet" href="/media/css/muse.css">
+<link rel="stylesheet" href="/media/fonts/font-awesome.css">
+<link
+  href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Rosario:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext"
+  rel="stylesheet" type="text/css">
 
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link href="/media/hljs/styles/androidstudio.css"
+  rel="stylesheet">
 
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://fooogy.github.io//favicon.ico?v=1593433443690">
-<link rel="stylesheet" href="https://fooogy.github.io//styles/main.css">
+<link rel="stylesheet" href="/styles/main.css">
+
+<script src="/media/hljs/highlight.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.0/velocity.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.0/velocity.ui.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css"
+  integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"
+  integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"
+  integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
+  onload="renderMathInElement(document.body);"></script>
 
 
 
-<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 
 
+  <meta name="description" content="隔岸观·第八章" />
+  <meta name="keywords" content="" />
+</head>
 
-    <meta name="description" content="疼疼疼……Make轻点轻点……疼！
-打你又打不过，叫你跑你还不跑，张禹你吃错药啊？
-输人不输阵嘛。
-当时我和Make在慈云山踢球踢输了，对方太粗野，我和他气得揪着他们领子就要打一架……但我和Make下手狠跑的也快，来劝架的阿禹反而被落在最后..." />
-    <meta name="keywords" content="" />
-  </head>
-  <body>
-    <div id="app" class="main">
-
-      <div class="sidebar" :class="{ 'full-height': menuVisible }">
-  <div class="top-container" data-aos="fade-right">
-    <div class="top-header-container">
-      <a class="site-title-container" href="https://fooogy.github.io/">
-        <img src="https://fooogy.github.io//images/avatar.png?v=1593433443690" class="site-logo">
-        <h1 class="site-title">A Dream of Fooogy</h1>
-      </a>
-      <div class="menu-btn" @click="menuVisible = !menuVisible">
-        <div class="line"></div>
+<body>
+  <div class="head-top-line"></div>
+  <div class="header-box">
+    
+<div class="muse">
+  <header class="header bg-color ">
+    <div class="blog-header box-shadow-wrapper  " id="header">
+      <div class="nav-toggle" id="nav_toggle">
+        <div class="toggle-box">
+          <div class="line line-top"></div>
+          <div class="line line-center"></div>
+          <div class="line line-bottom"></div>
+        </div>
       </div>
+      <div class="site-meta">       
+        <div class="site-title">
+          
+            <a href="/" class="brand">
+              <span>A Dream of Fooogy</span>
+            </a>  
+          
+        </div>
+        
+          <p class="subtitle">Freedom</p>
+        
+      </div>
+      <nav class="site-nav" id="site_nav">
+        <ul id="nav_ul">
+          
+            
+            
+              
+            
+            <li class="nav-item ">
+              
+              
+                <a href="/" target="_self">
+                  <i class="fa fa-home"></i> 首页
+                </a>
+              
+            </li>
+          
+            
+            
+              
+            
+            <li class="nav-item ">
+              
+              
+                <a href="/archives/" target="_self">
+                  <i class="fa fa-archive"></i> 归档
+                </a>
+              
+            </li>
+          
+            
+            
+              
+            
+            <li class="nav-item ">
+              
+              
+                <a href="/tags/" target="_self">
+                  <i class="fa fa-tags"></i> 标签
+                </a>
+              
+            </li>
+          
+            
+            
+              
+            
+            <li class="nav-item ">
+              
+              
+                <a href="/post/about/" target="_self">
+                  <i class="fa fa-user"></i> 关于
+                </a>
+              
+            </li>
+          
+          
+            
+              <li class="nav-item ">
+                <a href="/friends/" target="_self">
+                  
+                    <i class="fa fa-address-book"></i> 友情链接
+                  
+                </a>
+              </li>
+            
+          
+          
+            <li id="fa_search" class="nav-item">
+              <a href="javascript:void(0);">
+                <i class="fa fa-search"></i> <span class="language" data-lan="search">搜索</span>
+              </a>
+            </li>
+          
+        </ul>
+      </nav>
     </div>
-    <div>
-      
-        
-          <a href="/" class="site-nav">
-            首页
-          </a>
-        
-      
-        
-          <a href="/archives" class="site-nav">
-            归档
-          </a>
-        
-      
-        
-          <a href="/tags" class="site-nav">
-            标签
-          </a>
-        
-      
-        
-          <a href="/post/about" class="site-nav">
-            关于
-          </a>
-        
-      
-    </div>
-  </div>
-  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
-    <div class="social-container">
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    </div>
-    <div class="site-description">
-      Curiosity & Creativity
-    </div>
-    <div class="site-footer">
-      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://fooogy.github.io//atom.xml" target="_blank">RSS</a>
-    </div>
-  </div>
+  </header>
 </div>
 
+<script type="text/javascript"> 
+ 
+  let showNav = true;
 
-      <div class="main-container">
-        <div class="content-container" data-aos="fade-up">
-          <div class="post-detail">
-            <h2 class="post-title">隔岸观·第八章</h2>
-            <div class="post-date">2020-06-09</div>
+  let navToggle = document.querySelector('#nav_toggle'),
+  siteNav = document.querySelector('#site_nav');
+  
+  function navClick() {
+    let sideBar = document.querySelector('.sidebar');
+    let navUl = document.querySelector('#nav_ul');
+    navToggle.classList.toggle('nav-toggle-active');
+    siteNav.classList.toggle('nav-menu-active');
+    if (siteNav.classList.contains('nav-menu-active')) {
+      siteNav.style = "height: " + (navUl.children.length * 42) +"px !important";
+    } else {
+      siteNav.style = "";
+    }
+  }
+
+  navToggle.addEventListener('click',navClick);  
+</script>
+  </div>
+  <div class="main-continer">
+    
+    <div
+      class="section-layout muse bg-color">
+      <div class="section-layout-wrapper">
+        
+
+<div class="sidebar">
+  
+    <div class="sidebar-box box-shadow-wrapper  right-motion" id="sidebar">
+      
+        <div class="post-list-sidebar">
+          <div class="sidebar-title">
+            <span id="tocSideBar" class="sidebar-title-item sidebar-title-active language" data-lan="index">文章目录</span>
+            <span id="metaSideBar" class="sidebar-title-item language" data-lan="preview">站点概览</span>
+          </div>
+        </div>
+      
+      <div class="sidebar-body muse" id="sidebar_body">
+        
+          
             
-            <div class="post-content" v-pre>
+<div class="sidebar-wrapper box-shadow-wrapper ">
+  <div class="sidebar-item">
+    <img class="site-author-image right-motion" src="/images/avatar.png"/>
+    <p class="site-author-name">Fooogy仔</p>
+    
+    <div class="site-description right-motion">
+      
+      
+      
+        <p>不疯魔不成活</p>
+      
+      
+    </div>
+    
+  </div>
+  <div class="sidebar-item side-item-stat right-motion">
+    <div class="sidebar-item-box">
+      <a href="/archives/">
+        
+        <span class="site-item-stat-count">20</span>
+        <span class="site-item-stat-name language" data-lan="article">文章</span>
+      </a>
+    </div>
+    <div class="sidebar-item-box">
+      <a href="">
+        <span class="site-item-stat-count">0</span>
+        <span class="site-item-stat-name language" data-lan="category">分类</span>
+      </a>
+    </div>
+    <div class="sidebar-item-box">
+      <a href="/tags/">
+        <span class="site-item-stat-count">0</span>
+        <span class="site-item-stat-name language" data-lan="tag">标签</span>
+      </a>
+    </div>
+  </div>
+  
+  
+
+
+  <div class="sidebar-item">
+    
+  </div>
+
+</div>
+          
+        
+      </div>
+    </div>
+  
+</div>
+<script>
+  const SIDEBAR_TITLE_ACTIVE = 'sidebar-title-active';
+  const SIDEBAR_BODY_ACTIVE = 'sidebar-body-active';
+  const SLIDE_UP_IN = 'slide-up-in';
+
+  let sidebar = document.querySelector('#sidebar'),
+  tocSideBar = document.querySelector('#tocSideBar'),
+  metaSideBar = document.querySelector('#metaSideBar'),
+  postToc = document.querySelector('#post_toc'),
+  postSiteMeta = document.querySelector('#post_side_meta'),
+  sidebarTitle = document.querySelector('.sidebar-title'),
+  sidebarBody = document.querySelector('#sidebar_body');
+
+  tocSideBar && tocSideBar.addEventListener('click', (e) => {
+    toggleSidebar(e);
+  });
+
+  metaSideBar && metaSideBar.addEventListener('click', (e) => {
+    toggleSidebar(e);
+  });
+
+  function toggleSidebar(e) {
+    let currentTitle = document.querySelector("."+SIDEBAR_TITLE_ACTIVE);
+    if (currentTitle == e.srcElement) {
+      return ;
+    }
+    let current, showElement, hideElement;
+    if (e.srcElement == metaSideBar) {
+      showElement = postSiteMeta;
+      hideElement = postToc;
+    } else if (e.srcElement == tocSideBar){
+      showElement = postToc;
+      hideElement = postSiteMeta;
+    }
+    currentTitle.classList.remove(SIDEBAR_TITLE_ACTIVE);
+    e.srcElement.classList.add(SIDEBAR_TITLE_ACTIVE);
+
+    window.Velocity(hideElement, 'stop');
+    window.Velocity(hideElement, 'transition.slideUpOut', {
+      display: 'none',
+      duration: 200,
+      complete: function () {
+        window.Velocity(showElement, 'transition.slideDownIn', {
+          duration: 200
+        });
+      }
+    })
+    hideElement.classList.remove(SIDEBAR_BODY_ACTIVE);
+    showElement.classList.add(SIDEBAR_BODY_ACTIVE);
+  }
+
+  postToc && postToc.addEventListener('transitionend', function() {
+    this.classList.remove(SLIDE_UP_IN);
+  });
+
+  if (sidebarBody) {
+    if (sidebarBody.classList.contains('pisces') || sidebarBody.classList.contains('gemini')) {
+      let hasFix = false;
+      let scrollEl = document.querySelector('.main-continer');
+      let limitTop = document.querySelector('#nav_ul').children.length * 42 + 162;
+      window.addEventListener('scroll', function(e) {
+        if (document.scrollingElement.scrollTop >= limitTop) {
+          if (!hasFix) {
+            sidebar.classList.add('sidebar-fixed');
+            hasFix = true;
+          }
+        } else {
+          if (hasFix) {
+            sidebar.classList.remove('sidebar-fixed');
+            hasFix = false;
+          }
+        }
+      });
+    }
+  }
+  
+</script>
+        <div class="section-box box-shadow-wrapper">
+          <div class="section bg-color post post-page">
+            <header class="post-header">
+  <h1 class="post-title">
+    <a class="post-title-link" href="https://fooogy.github.io/post/ge-an-guan-di-ba-zhang/">
+      隔岸观·第八章
+    </a>
+  </h1>
+  <div class="post-meta">
+    
+    <span class="meta-item pc-show">
+      <i class="fa fa-calendar-o"></i>
+      <span class="language" data-lan="publish">发布于</span>
+      <span>2020-06-09</span>
+      <span class="post-meta-divider pc-show">|</span>
+    </span>
+    
+    <span class="meta-item">
+      <i class="fa fa-clock-o"></i>
+      <span>13<span class="language" data-lan="minute">分钟</span></span>
+    </span>
+    <span class="meta-item">
+      <span class="post-meta-divider">|</span>
+      <i class="fa fa-file-word-o"></i>
+      <span>3649<span class="pc-show language" data-lan="words">字数</span></span>
+    </span>
+    
+    
+    
+    <span id="/post/ge-an-guan-di-ba-zhang/" data-flag-title="隔岸观·第八章" class="meta-item pc-show leancloud_visitors">
+      <span class="post-meta-divider">|</span>
+      <i class="fa fa-eye"></i>
+      <span><span class="language" data-lan="view">浏览量</span>：<span class="leancloud-visitors-count"></span></span>
+    </span>
+    
+  </div>
+</header>
+            <div class="post-body next-md-body" id="post_body">
               <p>疼疼疼……Make轻点轻点……疼！</p>
 <p>打你又打不过，叫你跑你还不跑，张禹你吃错药啊？</p>
 <p>输人不输阵嘛。</p>
@@ -176,47 +436,2250 @@
             </div>
             
             
-              <div class="next-post">
-                <div class="next">下一篇</div>
-                <a href="https://fooogy.github.io/post/ge-an-guan-di-qi-zhang/">
-                  <h3 class="post-title">
-                    隔岸观·第七章
-                  </h3>
-                </a>
-              </div>
+              <div class="post-footer">
+  <ul class="post-copyright">
+    <li class="post-copyright-author">
+      <strong class="language" data-lan="author">本文作者：</strong>
+      Fooogy仔
+    </li>
+    <li class="post-copyright-link">
+      <strong class="language" data-lan="link">本文链接：</strong>
+      <a href="https://fooogy.github.io/post/ge-an-guan-di-ba-zhang/" title="隔岸观·第八章">https://fooogy.github.io/post/ge-an-guan-di-ba-zhang/</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong class="language" data-lan="copyright">版权声明： </strong>
+      本博客所有文章除特别声明外，均采用<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i> BY-NC-SA</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+  <div class="tags">
+    
+  </div>
+  <div class="nav">
+    <div class="nav-prev">
+      
+        <i class="fa fa-chevron-left"></i>
+        <a class="nav-pc-next" title="隔岸观·第九章" href="https://fooogy.github.io/post/ge-an-guan-di-jiu-zhang/">隔岸观·第九章</a class="nav-pc-next">
+        <a class="nav-mobile-prev" title="隔岸观·第九章" href="https://fooogy.github.io/post/ge-an-guan-di-jiu-zhang/">上一篇</a>
+      
+    </div>
+    <div class="nav-next">
+      
+        <a class="nav-pc-next" title="隔岸观·第七章" href="https://fooogy.github.io/post/ge-an-guan-di-qi-zhang/">隔岸观·第七章</a>
+        <a class="nav-mobile-next" title="隔岸观·第七章" href="https://fooogy.github.io/post/ge-an-guan-di-qi-zhang/">下一篇</a>
+        <i class="fa fa-chevron-right"></i>
+      
+    </div>
+  </div>
+</div>
             
+            
+  <script src="https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js"></script>
+<div id="vcomments" style="padding: 10px 0px 0px 0px"></div>
 
-            
+<style>
+  .v .veditor {
+    min-height: 10rem;
+    background-image: url('');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+    background-color: rgba(255, 255, 255, 0);
+    resize: none;
+  }
+
+  .v .vwrap {
+    border: 1px solid #000 !important;
+  }
+
+  .v .vbtn {
+    padding: .4rem 1.2rem !important;
+    border-color: #fff !important;
+    background-color: #49b1f5 !important;
+    color: #fff !important;
+    font-size: .7rem !important;
+  }
+
+  .v .vcards .vcard .vh .vmeta .vat {
+    padding: 0 .8rem !important;
+    border: 1px solid #00c4b6 !important;
+    border-radius: 5px !important;
+    color: #00c4b6 !important;
+  }
+</style>
+<script>
+  new Valine({
+    el: '#vcomments',
+    appId: '',
+    appKey: '',
+    avatar: '',
+    placeholder: '',
+    pageSize: '',
+    lang: 'zh-cn',
+    enableQQ: true,
+    visitor: 'true' === 'true',
+    highlight: 'true' === 'true',
+    avatarForce: 'true' === 'true',
+  });
+</script>
 
           </div>
-
         </div>
       </div>
     </div>
+    <div class="footer-box">
+  <footer class="footer">
+    <div class="copyright">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | © 2019-2020 Theme By <a
+        href="https://github.com/hsxyhao/gridea-theme-next" target="_blank">HsxyHao</a>
+    </div>
+    <div class="poweredby">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+    </div>
+  </footer>
+  
+  
+  <div class="drawer-box left" id="drawer_box">
+    <span class="muse-line muse-line-first"></span>
+    <span class="muse-line muse-line-middle"></span>
+    <span class="muse-line muse-line-last"></span>
+  </div>
+  
+  <div class="muse back-to-top" id="back_to_top">
+    <i class="fa fa-arrow-up"></i>
+    
+  </div>
+  
+  
+  
+  
 
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-<script type="application/javascript">
+  
+</div>
+<script>
 
-AOS.init();
+  let sideBarOpen = 'sidebar-open';
+  let body = document.body;
+  let back2Top = document.querySelector('#back_to_top'),
+    back2TopText = document.querySelector('#back_to_top_text'),
+    drawerBox = document.querySelector('#drawer_box'),
+    rightSideBar = document.querySelector('.sidebar'),
+    viewport = document.querySelector('body');
 
-var app = new Vue({
-  el: '#app',
-  data: {
-    menuVisible: false,
-  },
-})
+  function scrollAnimation(currentY, targetY) {
 
+    let needScrollTop = targetY - currentY
+    let _currentY = currentY
+    setTimeout(() => {
+      const dist = Math.ceil(needScrollTop / 10)
+      _currentY += dist
+      window.scrollTo(_currentY, currentY)
+      if (needScrollTop > 10 || needScrollTop < -10) {
+        scrollAnimation(_currentY, targetY)
+      } else {
+        window.scrollTo(_currentY, targetY)
+      }
+    }, 1)
+  }
+
+  back2Top.addEventListener("click", function (e) {
+    scrollAnimation(document.scrollingElement.scrollTop, 0);
+    e.stopPropagation();
+    return false;
+  });
+
+  window.addEventListener('scroll', function (e) {
+    let percent = document.scrollingElement.scrollTop / (document.scrollingElement.scrollHeight - document.scrollingElement.clientHeight) * 100;
+    if (percent > 1 && !back2Top.classList.contains('back-top-active')) {
+      back2Top.classList.add('back-top-active');
+    }
+    if (percent == 0) {
+      back2Top.classList.remove('back-top-active');
+    }
+    if (back2TopText) {
+      back2TopText.textContent = Math.floor(percent);
+    }
+  });
+
+
+  let hasCacu = false;
+  window.onresize = function () {
+    calcuHeight();
+  }
+
+  function calcuHeight() {
+    // 动态调整站点概览高度
+    if (!hasCacu && back2Top.classList.contains('pisces') || back2Top.classList.contains('gemini')) {
+      let sideBar = document.querySelector('.sidebar');
+      let navUl = document.querySelector('#site_nav');
+      sideBar.style = 'margin-top:' + (navUl.offsetHeight + navUl.offsetTop + 15) + 'px;';
+      hasCacu = true;
+    }
+  }
+  calcuHeight();
+
+  let open = false, MOTION_TIME = 300, RIGHT_MOVE_DIS = '320px';
+
+  if (drawerBox) {
+    let rightMotions = document.querySelectorAll('.right-motion');
+    let right = drawerBox.classList.contains('right');
+
+    let transitionDir = right ? "transition.slideRightIn" : "transition.slideLeftIn";
+
+    let openProp, closeProp;
+    if (right) {
+      openProp = {
+        paddingRight: RIGHT_MOVE_DIS
+      };
+      closeProp = {
+        paddingRight: '0px'
+      };
+    } else {
+      openProp = {
+        paddingLeft: RIGHT_MOVE_DIS
+      };
+      closeProp = {
+        paddingLeft: '0px'
+      };
+    }
+
+    drawerBox.onclick = function () {
+      open = !open;
+      window.Velocity(rightSideBar, 'stop');
+      window.Velocity(viewport, 'stop');
+      window.Velocity(rightMotions, 'stop');
+      if (open) {
+        window.Velocity(rightSideBar, {
+          width: RIGHT_MOVE_DIS
+        }, {
+          duration: MOTION_TIME,
+          begin: function () {
+            window.Velocity(rightMotions, transitionDir, {});
+          }
+        })
+        window.Velocity(viewport, openProp, {
+          duration: MOTION_TIME
+        });
+      } else {
+        window.Velocity(rightSideBar, {
+          width: '0px'
+        }, {
+          duration: MOTION_TIME,
+          begin: function () {
+            window.Velocity(rightMotions, {
+              opacity: 0
+            });
+          }
+        })
+        window.Velocity(viewport, closeProp, {
+          duration: MOTION_TIME
+        });
+      }
+      for (let i = 0; i < drawerBox.children.length; i++) {
+        drawerBox.children[i].classList.toggle('muse-line');
+      }
+      drawerBox.classList.toggle(sideBarOpen);
+    }
+  }
+
+  // 链接跳转
+  let newWindow = 'false'
+  if (newWindow === 'true') {
+    let links = document.querySelectorAll('.post-body a')
+    links.forEach(item => {
+      if (!item.classList.contains('btn')) {
+        item.setAttribute("target", "_blank");
+      }
+    })
+  }
+
+  let faSearch = document.querySelector('#fa_search');
+  faSearch.addEventListener('click', function () {
+    document.querySelector('#search_mask').style = ''
+  })
+
+  // 代码高亮
+  hljs.initHighlightingOnLoad();
+  
+  // 离开当前页title变化
+  var leaveTitle = '';
+  if (leaveTitle) {
+    document.addEventListener('visibilitychange', function () {
+      if (document.visibilityState == 'hidden') {
+        normal_title = document.title;
+        document.title = leaveTitle;
+      } else {
+        document.title = normal_title;
+      }
+    });
+  }
+
+</script>
+    <div class="light-box" id="light_box"></div>
+<script>
+  let imgs = document.querySelectorAll('.post-body img');
+  let lightBox = document.querySelector('#light_box');
+  lightBox.addEventListener('mousedown', (e) => {
+    e.preventDefault()
+  })
+  lightBox.addEventListener('mousewheel', (e) => {
+    e.preventDefault()
+  })
+  let width = window.innerWidth * 0.8;
+  lightBox.onclick = () => {
+    let img = lightBox.querySelector('img');
+    lightBox.style = '';
+    img && img.remove();
+  }
+  imgs.forEach(item => {
+    item.onclick = function (e) {
+      let lightImg = document.createElement('img');
+      lightImg.src = this.src;
+      lightBox.style = `height: 100%; opacity: 1; background-color: rgba(0, 0, 0, 0.5);cursor: zoom-out;`;
+      lightImg.style = `width: ${width}px; border: 1px solid #fff; border-radius: 2px;`;
+      lightImg.onclick = function () {
+        lightBox.style = '';
+        this.remove();
+      }
+      lightBox.append(lightImg);
+    }
+  })
+</script>
+    <div class="reward-mask" style="display: none;">
+  <div class="reward-relative">
+    <span class="close" aria-hidden="true">x</span>
+    <div class="reward-body">
+      <h2>感谢您的支持，我会继续努力的!</h2>
+      <div class="reward-img-box">
+        <div style="position: relative; width: 140px; height: 140px;">
+          
+          
+          
+        </div>
+      </div>
+      <p class="reward-word">扫码打赏，你说多少就多少</p>
+      <p class="reward-tip">打开微信扫一扫，即可进行扫码打赏哦</p>
+    </div>
+    <div class="bottom">
+      
+      
+    </div>
+  </div>
+</div>
+<style>
+  .reward-mask {
+    position: fixed;
+    z-index: 99999;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #00000054;
+  }
+
+  .reward-relative {
+    position: relative;
+    width: 480px;
+    text-align: center;
+    margin: 0 auto;
+    border-radius: 5px;
+    background-color: #fff;
+    top: 50%;
+    margin-top: -205px;
+  }
+
+  .reward-relative .close {
+    position: absolute;
+    right: 10px;
+    font-weight: normal;
+    font-size: 16px;
+    color: #929292;
+  }
+
+  .reward-body {
+    padding: 40px 20px 20px;
+  }
+
+  .bottom {
+    display: flex;
+  }
+
+  .reward-btn {
+    text-align: center;
+  }
+
+  .reward-btn-text {
+    display: inline-block;
+    cursor: pointer;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    border-radius: 50%;
+    background-color: #ff9734;
+    color: #FFF;
+    margin-top: 20px;
+  }
+
+  .pay-text {
+    margin-top: 10px;
+    padding: 10px;
+    flex: 1;
+    transition: all .2s linear;
+  }
+
+  .pay-text:hover {
+    background-color: #a5a5a536;
+  }
+
+  .reward-body h2 {
+    padding-top: 10px;
+    text-align: center;
+    color: #a3a3a3;
+    font-size: 16px;
+    font-weight: normal;
+    margin: 0 0 20px;
+  }
+
+  .reward-body h2:after,
+  .reward-body h2:before {
+    font-family: Arial, Helvetica, sans-serif;
+    background: 0 0;
+    width: 0;
+    height: 0;
+    font-style: normal;
+    color: #eee;
+    font-size: 80px;
+    position: absolute;
+    top: 20px;
+  }
+
+  .reward-body h2:before {
+    content: '\201c';
+    left: 50px;
+  }
+
+  .reward-body h2:after {
+    content: '\201d';
+    right: 80px;
+  }
+
+  .reward-img-box {
+    display: inline-block;
+    padding: 10px;
+    border: 6px solid #ea5f00;
+    margin: 0 auto;
+    border-radius: 3px;
+    position: relative;
+  }
+
+  .reward-img {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+  }
+
+  @media (max-width: 767px) {
+    .reward-relative {
+      height: 100%;
+      top: 0px;
+      margin-top: 0;
+      width: auto;
+    }
+
+    .reward-relative .bottom {
+      flex-direction: column;
+    }
+
+    .reward-relative .pay-text {
+      width: 80%;
+      margin: 5px auto;
+      border: 1px solid silver;
+      padding: 6px;
+      border-radius: 4px;
+    }
+
+    .reward-body h2:after {
+      right: 40px;
+    }
+
+    .reward-body h2:after,
+    .reward-body h2:before {
+      font-size: 60px;
+    }
+
+    .reward-body h2:before {
+      left: 20px;
+    }
+  }
+</style>
+<script>
+  !function () {
+    var mask = document.querySelector('.reward-mask');
+    let close = document.querySelector('.reward-relative .close');
+    let rewardBtn = document.querySelector('.reward-btn');
+
+    let zfb = document.querySelector('#zfb'),
+      wx = document.querySelector('#wx'),
+      zfbBtn = document.querySelector('#zfbBtn'),
+      wxBtn = document.querySelector('#wxBtn');
+
+    if (zfbBtn && wxBtn) {
+      zfbBtn.addEventListener('click', () => {
+        window.Velocity(zfb, 'transition.slideLeftIn', {
+          duration: 400
+        });
+        window.Velocity(wx, 'transition.slideRightOut', {
+          display: 'none',
+          duration: 400
+        });
+      });
+
+      wxBtn.addEventListener('click', () => {
+        window.Velocity(wx, 'transition.slideRightIn', {
+          duration: 400
+        });
+        window.Velocity(zfb, 'transition.slideLeftOut', {
+          display: 'none',
+          duration: 400
+        });
+      });
+    }
+
+    rewardBtn.addEventListener('click', (e) => {
+      window.Velocity(mask, 'transition.slideDownIn', {
+        duration: 400
+      })
+    });
+
+    close.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.Velocity(mask, 'transition.slideUpOut', {
+        duration: 400
+      })
+    })
+  }()
+</script>
+
+  </div>
+</body>
+
+  <div class="search-mask" id="search_mask" style="display: none;">
+  <div class="search-box">
+    <div class="search-title">
+      <i class="fa fa-search"></i>
+      <div class="input-box">
+        <input id="search" type="text" class="language" data-lan="search" placeholder="搜索">
+      </div>
+      <i id="close" class="fa fa-times-circle"></i>
+    </div>
+    <div class="stat-box">
+      <span id="stat_count">0</span><span class="language" data-lan="stat">条相关条目，使用了</span><span id="stat_times">0</span><span class="language" data-lan="stat-time">毫秒</span>
+      <hr>
+    </div>
+    <div class="result" id="result">
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://fooogy.github.io/post/ge-an-guan-di-shi-jiu-zhang/"" data-c="
+          &lt;p&gt;两年前，也就是1997年的3月12号，距离香港回归还剩三个月零十八天。&lt;br&gt;
+在95公寓三楼，张禹从床上翻身坐起，又赤脚下地，推开窗子，走到阳台处偷偷点燃了一支烟。洪先生也醒来，低头抚摸着床单上的水渍，又抬起头盯着张禹的背影，突然问：“你以前在香港哪个大学念书？”&lt;br&gt;
+“洪先生突然问这个……”张禹回头一笑，“要查我？”&lt;br&gt;
+洪先生抓起一件浴袍披上，坐起身倚着，解释说：“随便问问而已。还想回学校继续念书吗？想的话，知会Mon一声就好。你原本是学什么的？医学？法律？……”&lt;br&gt;
+张禹没有回答，过了很久，直到指尖的烟都烧完了，他才反问洪先生一句，“我看起来像是这么会念书的人吗？”&lt;br&gt;
+洪先生笑了，眼睛眯成两道缝，感慨地说：“确实不像。但医生和律师，是我最信任的两种人。”&lt;br&gt;
+“……你很信任我？”张禹被自己的话吓得心惊了又惊，烟头落在地上，先磕了一下地板，最后弹出去落在了一楼的草坪中。他追问道“为什么？”&lt;br&gt;
+“因为你和我不一样，你重情义。黑道上的人可能缺钱，缺女人，但其实最缺的，还是情义。”&lt;br&gt;
+“我和你有情义吗？洪先生？”张禹突然笑得很大声。&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;洪先生理所当然地点点头，“连我父母这样的夫妻都有情义在，我们怎么会没有？”&lt;br&gt;
+张禹一撇嘴，“可你父母是什么样的夫妻，我怎么会知道？”&lt;br&gt;
+“我父母……呵，不提他们也罢。其实我昨天在车里看到你父亲了，但因为你们长得实在太不像，我就没想到这一层关系。你父亲看起来很正派，今年多大年纪？做什么工作的？”&lt;br&gt;
+张禹靠在栏杆上，笑得花枝乱颤，断断续续地问道“洪先生你是警察吗？盘问得太仔细了吧。我爸爸他只是个老古惑仔，香港“和义胜”听说过吗？他差一点就做了话事人。”&lt;br&gt;
+“你这样讲，我更想和张老先生坐下来好好谈谈了。”&lt;br&gt;
+张禹又转过身，抬头望着月亮，淡淡一笑，宛如十年：“你不会想见他的，他这个人不爱钱也不贪名，就是以背叛人为乐。所以这一生无父无母无妻无子，就是老天爷给他的报应。”&lt;/p&gt;
+&lt;p&gt;夜风从阳台吹送到了床铺上来，还带着一点烟灰的暧昧味道。洪京墨搂紧浴袍，紧接着走下床，上前拥抱着张禹：“这几年，港英政府一面提升福利，一面缩减税收，财政赤字越来越大，许多有钱人都拼命想着外逃。大概也就只有你，会想回去。”&lt;br&gt;
+“穷人在哪里都是一样的。”张禹依然没有回头，只笑着问：“我听说大陆在刑法里新定了一个罪名，叫洗钱罪。像不像是为你量身定制的一副金镣铐啊？我的洪先生。”&lt;br&gt;
+洪先生也笑，“只有Money Laundering一副镣铐吗？法典里的每一条罪名，不都是给我量身定制的吗？行贿、贩毒、走私武器、故意杀人……”&lt;br&gt;
+张禹摇头叹道，“虽然说杀人偿命是天理，但你谋害的人命明明有那么多，量刑上，你却只有一条命能来偿，太不公平了。”&lt;br&gt;
+张禹总是能有这样的本事，把讽刺的话说成恭维一样，又或许这是洪先生的本事。于是洪先生听完，心满意足地回道：“是啊。我甚至还能堂堂正正地走在阳光下，和你父亲一起共进午餐，这世道还真是欺人太甚。”&lt;br&gt;
+张禹又点燃了一支烟，吞吐着烟雾，嘴唇粘着烟卷，微张，开口道：“我老爸要是知道我和你是这种关系，一定会开枪毙了我。”&lt;br&gt;
+天边快要亮了，洪先生亲吻着对方的后脑，假意安慰道：“那还是让他一枪毙了我吧。我可不想再添个罪名，叫‘离间父子罪’。”&lt;br&gt;
+砰——&lt;/p&gt;
+&lt;p&gt;“洪先生你怎么了？”&lt;br&gt;
+凯迪拉克停在香槟大道95号门前，洪京墨在低头开锁时突然一阵头晕目眩，心口剧痛。他下意识地扶住墙，中森施予也追上前几步，因双手捧着青花瓷礼盒，空不出手去扶，只站在原地又问了一遍：&lt;br&gt;
+“是什么地方不舒服？”&lt;br&gt;
+“无事。以前受过枪伤，留下一点心慌的毛病。”&lt;br&gt;
+“仇家寻仇？”中森施予一边问一边走上了台阶。&lt;br&gt;
+“不完全是。”洪京墨捂住胸口，缓慢推开门，望着漆黑一片深不见底的公寓，先摁亮了走廊灯，才解释道：“他应该算是我的债主吧。”&lt;/p&gt;
+&lt;h1 id=&#34;&#34;&gt;&lt;/h1&gt;
+&lt;p&gt;鸿蒙工作室由复式三层别墅95公寓改建而来，一层办公室、二层会议室、三层有客房和简单的浴室。《雨霖瀮》剧本大纲便是洪京墨和Mon在这里完成的，既有追思之意，亦有反思。虽然伯乐推算出洪京墨一生和“雨”犯禁，他却仍然坚信着遇“水”则发，所以并不打算听取温辞的建议，轻易地更改电影名字为《十里鋃鐺》。毕竟法律这副镣铐，向来是锁不住他。&lt;br&gt;
+进门后，中森施予特意绕过满地的照片与演员简历，贴着窗边走，直到将修伟夫妻二人所赠的青花瓷瓶，安稳地放在办公桌后的书架上。中森施予抚摸着青花瓷瓶，釉面上波光粼粼，像刚下过雨的湖面，只是在水面以下，有几成是合法投资，又有几成是非法所得，谁又说的清楚呢？像是拍卖行上的一锤定音，有人因他倾家荡产，有人因他钵满盆盈。在亚洲金融危机后，一位同样来自东南亚国家的证券主任就曾说过，“我国大约有2000亿的资金存入新加坡银行，但国内生产总值也才3500亿美元。”中森施予一回身，又看见墙上悬挂的一幅油画，突兀地摆放在最显眼的位置，生怕别人注意不到似的，疑惑念出上面的中文：“瞒昧天地，逆转乾坤？”&lt;br&gt;
+“你看不懂吗？”&lt;br&gt;
+见中森施予摇了摇头，洪京墨一边脱去外套搭在椅子上，一边回答他说：“画是伯也斯画的。小孩子把戏，不必理会。本来‘也’和‘斯’在中文当中，就都是无意义的字眼。”&lt;br&gt;
+中森施予走进，又探着身子凑近去看，认真地分析道：“他画的……是老式风车。这人无论是靠山还是靠水，都有山穷水尽的时候。但要是借到一股好风的话，就是取之不尽用之不竭。伯公子大概是在劝洪先生，做正确的选择。”&lt;br&gt;
+“我……”洪京墨刚想开口说些什么，就听见办公桌上的传真机发出呼叫声，是温辞重新修改过的剧本大纲。中森施予摁下“开始接受”键。&lt;/p&gt;
+&lt;p&gt;剧本一张张地发送过来了，中森施予拿起第一张低头认真看着，忽而问：&lt;br&gt;
+“洪先生和张禹什么关系？”&lt;br&gt;
+“我和张禹……”洪京墨双眼微眯着，说道“是久旱的枯莲败藕，逢一场甘霖，以润焦涸。”&lt;br&gt;
+中森施予笑，指着剧本说：“原来《雨霖瀮》要拍的是一场云雨情。那张禹的结局是什么？”&lt;br&gt;
+“雨过云破，红日初升，他融进了海水里。海水又蒸腾成雾霭，现在大概是飘回香港去了。”&lt;br&gt;
+“我有点不明白。这部电影拍出来，到底是要给他看，还是要给香港看？”&lt;br&gt;
+“施予，如果你也想要报复一个人，你就会发现，对于那个人，哪怕是剥皮实草，挫骨扬灰都难消心头恨。”&lt;br&gt;
+“那要……”&lt;br&gt;
+“让他化成东风，化成磷火，化成黄粱一梦，最后沦为虚无。中森施予……”洪京墨无缘无故地唤了他一声，但又不像是真的在唤眼前这个人，更像是在吟诗，道：“两年前在医院，几乎所有医生都想要放弃了，但是我没同意。但如此不遗余力地抢救你，不是对你有所图，只是第一次见，就很中意你的名字。在残体字中，一个‘尸’字，一个‘禹’字，合成一起就是终成眷‘属’。你像一句谶语，不幸言中了我和他的一生。”&lt;br&gt;
+“没想到‘终成眷属’居然能有这样一层深意，我的中文真的有待提高……”中森施予笑了笑，摇摇头“但我更没想到，洪先生是想要借我的尸，还他的魂。草木枯荣有序，顺时而发。还从没听说过，谁能真正地从黄泉路走回阳间道。哪怕是我这个堪称为‘医疗奇迹’的中森施予，也不能算是真正活过来了，不是吗？”&lt;br&gt;
+洪京墨此时已经听不见中森施予在讲什么话了，满心盘算着自己和他的关系，到底有没有不积小流也成江海的可能性。盘算间，人已经走了过去，手掌更是不由自主地攀附上了中森施予的头发。两指夹着一缕，虽然有些唐突，但看中森施予仍然是若无其事地，好像还在读剧本。手指就更自在地往下游去，探入对方潮湿松软的后颈。江河湖轰然间汇聚成海，这是禅机将到。&lt;/p&gt;
+&lt;p&gt;“中森施予，天生我材必有用，千金散尽还复来。大难不死的人要惜命，更要惜福。”洪京墨说话间，另一只手又拉过中森施予，真正将人拽到眼前来。&lt;br&gt;
+天生我材……中森施予下意识地看向自己的左手，恍惚一笑。说这个笑是哀莫大于心死，又名不副实，哀与心死他是都没有的。有的只是一个人，赤手握着一块烧得通红的炭火，只身蹒跚在冰天雪地里。炭和雪，像是天地偏要勉强把红事白事一起办下来，既悲既喜的样子。&lt;/p&gt;
+&lt;h1 id=&#34;-2&#34;&gt;&lt;/h1&gt;
+&lt;p&gt;“Papa，你坦白讲，我们家是要破产了吗？”&lt;br&gt;
+“咒我破产对你有什么好处吗？”&lt;br&gt;
+“如果不是要破产了，你为什么要把我给卖了？”&lt;br&gt;
+“这不是买卖，是置换。名利场的规矩，你懂什么？”&lt;br&gt;
+山海酒店的顶层总统套房里，伯也斯把腿架在茶几上，杂志顺势掉到了地上，“名利场？这是角斗场吧！周刊上怎么写的，我亲自给你读一遍。”伯也斯弓着身子把杂志捡起来，清了清嗓，高声朗读道：“原本预计下个月初开拍的电影《雨霖瀮》，其男主选角已钦定为新加坡小生修伟。但在该片邀请到知名推理作家温辞加入编剧工作后，监制方表示，根据编剧温辞的建议，影片将大胆采用全新人阵容，不排除和新加坡电视台合作，以‘寻找张禹’的选秀比赛形式，推出新人男主角的可能……”伯也斯手指大力敲着杂志，挤眉弄眼地强调道：“Papa,你这就是苦恨念念压金线，为他人作嫁——衣——裳！”&lt;br&gt;
+伯乐掏出一支笔，在杂志上画出几个圈，解释说：“如果你站得再高一点，你就能看出洪京墨是在用平民主义做障眼法。游戏的题眼从来不在这部电影的男主角选角上，而在新加坡、泰国、还有中国三地的人脉上。他在泰国固然有钱，但都是死钱。必须走一条曲线，经新加坡折回来。”&lt;br&gt;
+伯乐又在修伟的名字上打了一个叉，“这也是他电影必须要用修伟的原因，找一个能打开中国内地市场的借口。保证投入的死钱，在从投资变成盈利这期间内，损耗不超过20％。但他同时又不足够信任修伟，一心只想培养出自己的嫡系演员。印尼猛犸听说过吗？他是电影的投资人之一，正在把一笔又一笔的资金，源源不断地注入鸿蒙兄弟的账户里。我们能做的，就是在这期间尽量帮忙。一旦洪京墨把这笔钱盘活了，我们江南一带待开发的别墅区就能跟着活。”&lt;br&gt;
+伯也斯无奈地摇头，“Papa，我看这洪京墨和猛犸，自己的算盘打得叮当响，你就别自作多情了。”&lt;br&gt;
+“未必，猛犸对洪京墨来说，只是可用，并非不可或缺。我们能做的事情还有很多。”&lt;br&gt;
+“那就你玩你的，我玩我的，我们井水不犯河水……”伯也斯最后，也只是把自己重新陷进沙发里，有气无力地抱怨道：“Papa，幸亏你只有我一个儿子，没有女儿。不然她一定被你送出去和亲。”&lt;br&gt;
+“不对……”&lt;br&gt;
+“我又哪句话说的不对？”伯也斯惊得坐起来。&lt;br&gt;
+伯乐将杂志一页页翻过，直至露出了杂志封面来，念道：“新世界周刊……为何能拿到《雨霖瀮》的独家消息？莫非是温辞在针对……西子印象？”&lt;br&gt;
+“西子印象不是唱片公司吗？”伯也斯问道。&lt;br&gt;
+伯乐恍然大悟，将杂志重新放回到伯也斯的腿上，朝这个乳臭未干的小子意味深长地一笑：“Femme Fatale. （法语：红颜祸水）”&lt;/p&gt;
+&lt;p&gt;人是最慈悲也最残忍的动物，弱肉强食本是天性使然，但却只有人类这种肉食者，会在进食之前先戴好一面叫做“伪善”的面具。英国人会把羊肉称呼为“mutton”，仿佛自己没有杀死一只羊；日本人会把鹿肉称呼为“红叶”，仿佛自己没有杀死一只鹿。&lt;br&gt;
+而洪京墨，是将这种伪善做成行为艺术的集大成者。以至于他翻云覆雨地毁灭了什么后，又总能置身事外，发出“早知如此何必当初”的怜惜之情。&lt;br&gt;
+但今日的黄历或许是写着“诸事不宜”，起初是Mon特助大煞风景地，给洪先生的手机打来了一个电话。而后，无人接听，便又拨通了一楼办公室的号码。洪先生先是不悦，但心中又紧接着生出一股不良预感。他意识到，如果无要紧事，Mon绝不会在这么晚的时间，如此失礼地给他连续打两通电话。想到此处，Mon的第三通电话也打了进来。接通后，Mon慌张的声音从电话里猛然跳出来：&lt;br&gt;
+“洪先生！猛犸一下飞机就被官秋山带走了！我本想通知俞溪桥立即带律师过去，但他电话根本打不通。现在正在开车去他家的路上，我们和猛犸的资金往来毕竟都没落实到账面上，如果猛犸捞不出来……”&lt;br&gt;
+洪京墨匆忙披上一件衣服，回复道：“不要慌。律师要找，和修伟的合同也要尽快签下。玩得起，就要赌得起。另外，联系一位医生来95公寓这边。”&lt;br&gt;
+“洪先生你心脏不舒服吗？”&lt;br&gt;
+洪京墨看了躺在浴室地上的中森施予一眼，那人双手捂着下腹，两腿微微抽搐，衣衫上的莲花被自己揪得皱成一团，像条浴巾被扔在地上，只得淡然地回了一句：“不是我。”&lt;br&gt;
+剧痛中，瘫倒在地的中森施予双耳轰鸣，已经根本意识不到是洪京墨在说话了。眼镜跌落，碎在了瓷砖上，眼前只剩模糊的血红一片。浴缸还在放着热水，于是在浴室里氤氲的祥和之气里，他兀然看见自己手腕上的刀疤化成一条炭黑色的蜈蚣，掌纹化成了细足，正被洪京墨抓住七寸。他心里只是可惜，好端端的蜈蚣，即便是被沸水烫、文火烤，居然也只得佐餐、下酒，亦是不能再作药用了。&lt;/p&gt;
+">隔岸观·第十九章</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://fooogy.github.io/post/ge-an-guan-di-shi-ba-zhang/"" data-c="
+          &lt;h1 id=&#34;&#34;&gt;&lt;/h1&gt;
+&lt;p&gt;“都说文人好鄙薄商人，然文人又往往以金玉、珠玑、锦绣誉诗文。可见“财色”二字，无人看得破，文人亦是不能免俗。《金瓶梅》书中所言，堆金积玉，是棺材内带不去的瓦砾尘沙；锦衣绣袄，是骷髅上裹不了的败絮。不说远的，只说近在眼前的这一家山海酒店。两年前，还是一群广东人建的私人俱乐部，创建人姓鹿，叫鹿天鸣。所有入股的股东也都姓鹿。”&lt;br&gt;
+“那酒店之后又为何易主？”&lt;br&gt;
+“这一家俱乐部穷奢极欲，连建筑材料都采用的是澳洲进口砂岩，却从不对外营业，只招待朋友。洪先生有一年的生日宴，便是鹿家人在这里给他操办，一连七天，灯火通明彻夜不歇。可就在两年前，鹿天鸣因为吸毒过量，横死街头。只道是：一朝鹿死黄金尽，亲者如同陌路人。其余的鹿家人纷纷抵押股权，最后把这俱乐部低价卖给了洪先生，这才有了现在的山海酒店。这酒店坐西南朝东北，共建18层，每层18个房间，正对围棋棋盘的324格局，以调天地东南西北之调和。但是工程竣工那日，泰国进入雨期，雨沥沥潇潇半个月，正式营业后也寥寥无几。某天，洪先生孤身一人登高望山海，满目悲古昔。所以这顶层的旋转餐厅，才会命名为：望雨楼。”&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;“您的剧本虽然一字未动，但这怪力乱神的故事却听了很多。”&lt;br&gt;
+温辞装作没听出言外之意的样子，幽默地替自己解围：“大概是背井离乡，水土不服导致的。更何况世上根本没有不拖稿的作家，只有不敢误工的代笔。这一行水很深，中森先生又是电影圈的外行人，怎么可能明白呢？”&lt;br&gt;
+被称呼为圈外人士的中森先生笑了，摘下眼镜揉眉，问“是不是您在年轻时，也曾给什么推理作家代笔过？现在飞上枝头，做凤凰了，就变本加厉地使唤别人？”&lt;br&gt;
+温辞自嘲地摇了摇头，“我做不了凤凰。伯乐父子才是凤凰相对盘金缕，春风得意如登天。”&lt;br&gt;
+中森恍然大悟状，轻叹道：“所以文人看着对富贵恨之入骨，却好像更恨自己无用，没能糟一场大富大贵的荼毒。”&lt;br&gt;
+温辞含蓄的笑了，恰似一席山珍海味的残羹，同时具备着“贵”与“馊”两种风味，食之无味弃之可惜，这便是温辞。&lt;br&gt;
+“其实您说话很有意思，但可惜的是，我应该是从小书读得太少。您说的话，十句里有八句都听不太懂。”&lt;br&gt;
+“中森先生不必妄自菲薄。秀色乱侵书帙晚，中森先生就是秀色，而我只是一帙书。虽然我们都是给人观看的，但当有中森先生这样好相貌的人摆在眼前，谁还记得四书五经？恐怕就连自己究竟姓甚名谁，也通通抛之脑后了。”&lt;br&gt;
+中森先生居然有些禁不住温辞的恭维，没有再搭话，只是面向窗外长舒一口气，待到再回过头来时，仍是一副好餐的秀色。酒店经理遥遥看着两人，心想，只一盏茶的功夫，来中森先生座位上搭讪的人就已有四五个，行走江湖，好卖相还真是硬通货。&lt;br&gt;
+于是经理人出于关怀，先给温辞送去了一杯清酒润喉，又用日语询问中森先生，是否需要重新安排一个清净的地方，更显酒店的善解人意。然而不等中森先生回复，温辞却像是听懂了似的，悻悻回到自己的座位上，埋头于稿纸中，继续奋笔疾书。&lt;br&gt;
+许是笑累了，中森先生没有再笑，默默戴好眼镜后，单单说了一句谢谢，用的是中文。&lt;/p&gt;
+&lt;h1 id=&#34;-2&#34;&gt;&lt;/h1&gt;
+&lt;p&gt;此时，一台凯迪拉克停在四海酒店的正门前。服务人员立刻上前拉开车门，洪京墨从中走出，面有风尘色，很是疲惫的样子，疾步走进酒店中。随后又走下来一人，双手捧着一个精美的木盒，缓步跟上洪先生。再之后，司机迅速将凯迪拉克开往停车区泊车，然而不到两分钟，又匆匆开来一辆白色轿车，走出来三个人。&lt;br&gt;
+其实也不算是走，只是左右两个拖着中间的一个在走。两个人皆是西装革履，却不像赴宴，脸色凝重，脚步仓促，更像是奔赴一场葬礼。&lt;br&gt;
+走进电梯里，中间的人抬起头，露出一张衰败的脸，这是官秋山当初卧底时认的老大——鬣狗。他绝望地看着电梯一层层向上缓慢攀爬，登顶时，便是他的大难要临头了。&lt;br&gt;
+鬣狗双脚几乎都没有着地，一路擦着地毯的金羊毛被拖入了房间。最后两个人把手一松，闷地一声，鬣狗像件破衣服似的被摔在地毯上。粗糙的手指糟蹋着地毯上的羊毛，很软，他知道自己的骨头应该比这更软。&lt;br&gt;
+洪京墨看都没看鬣狗一眼，坐在椅子上，专心致志地用一柄小钥匙在开木盒的锁。安静的房间里，几乎只剩下金属零件钻洞摩擦的声音。鬣狗艰难地抬头，看见洪京墨正襟坐在红木椅上，背后是一扇黄纱屏风，绣着山水画，题着古体诗。鬣狗刚想开口说话，就听啪地一声，是木盒的锁开了。&lt;br&gt;
+“官秋山当年带着张禹父亲上船回香港后，便失踪了。你知道他去哪儿了吗？”&lt;br&gt;
+“我……不知。”&lt;br&gt;
+洪先生拨开盒中防震的丝绒，从木盒里取出一件青花瓷瓶。却不像是捧着一件死物，更像温香软玉在怀，捧着一个活人在手心上，他缓缓开口：“你该知道。”&lt;br&gt;
+鬣狗磕头谢罪道：“洪先生，我错了，是我蠢，可是我真不知道他是警察。”&lt;br&gt;
+洪京墨说：“我一直以为是因为鹿天鸣勾结警察出卖兄弟，才导致我和猛犸交易失败，伤亡惨重。却没想到香港警察步步为营，下暗棋都下到我身边来了。官秋山来路不明，我却委以重任。鬣狗，你蠢没有错，你只是错在不该拖累我。”&lt;br&gt;
+鬣狗四肢早已经被废，此时只能像一条蛆虫一般向洪京墨脚底蠕动，一边蠕动一边说：“洪先生我知道我错了，您就是要我断手断脚，我也心甘情愿。我只求您能给我一条活路……”&lt;br&gt;
+“你不配跟我要活路！”洪京墨手中的青花瓷瓶突然重重咂向鬣狗的头颅，碎在了手中。&lt;br&gt;
+鬣狗哀嚎着瘫软下去，上半身抽搐着，面额被砸得深深凹进去一块，双眼、双耳都在流血，不胜凄惨。可屋中的所有人都是一副司空见惯的镇静，目不斜视地站立在原地，仿佛什么都没看见。&lt;br&gt;
+洪京墨握着瓷片狠狠插进鬣狗的后背，怒斥道：“张禹沾染毒品，是官秋山送他去的医院！张禹父亲回香港，更是官秋山亲自送上的船！你现在居然敢告诉我，你不知道？”&lt;br&gt;
+“或许是真的不知情呢？”&lt;br&gt;
+洪京墨眼色一凛，扭头看向身后屏风，问道：“什么人？”&lt;br&gt;
+众人闻声，纷纷掀开西服拔出枪，并用枪口死死对准那扇屏风。洪京墨走近几步，缓慢拉开屏风，只见中森先生正坐在隔间中。双眼被镜片反射出的墨绿色的光掩住，神色不明，不知到底听懂了多少。&lt;/p&gt;
+&lt;h1 id=&#34;-3&#34;&gt;&lt;/h1&gt;
+&lt;p&gt;洪先生微微一抬手，示意身后的人放下枪，后命令道：“不到万不得已，不得诉诸暴力。江湖中人，以和为贵。”&lt;br&gt;
+中森施予心里笑道：以和为贵吗？&lt;br&gt;
+洪京墨头也不回地下命令道：“这是中森施予，钢琴家，不是什么危险人物。你们先出去。”&lt;br&gt;
+乌合之众逐一退出了房间，中森施予整个人仍然是波澜不惊地坐在隔间的红木椅上，饮茶。原本有那一层屏风在，洪京墨等人只是影影绰绰，皮影戏一样地在眼前，虚晃而过。可这一块遮羞布被拿开，皮影戏就成了刺青，正在皮肉上幽幽地往外渗血。&lt;br&gt;
+“谁安排你来的？”&lt;br&gt;
+中森施予抿了一口茶，又想了半晌，好不容易才想起那人的名字，回答道：“Mon。还有和我的经纪人，俞溪桥。”&lt;br&gt;
+“听到了多少？”&lt;br&gt;
+“全部。”&lt;br&gt;
+“桌上放着电话，要报警？”&lt;br&gt;
+“报警有用吗？”&lt;br&gt;
+“你可以试试看。其实我一直都想知道，警察一旦进了这个门，楼下到底有多少人愿意替我去坐牢。”&lt;br&gt;
+中森施予一口茶水又吐回了杯中，抖了抖衣襟溅上的茶水，笑道：“洪先生是个奇人啊，清政府倒了，英国人也走了，居然还是能在泰国这一隅之地，关起门来威风凛凛地做皇帝。好像无论你犯了什么罪，都有别人替你受罚。怕是到入殓的那一天，坟墓里埋的也是别人的尸身吧。”&lt;br&gt;
+洪京墨望向中森施予，下半身穿黑裤黑鞋，上半身着一件亚麻布的白色衬衫，胸口绣着一团殷红的莲花状线条，正有出淤泥而不染的深意。眼神再顺着胸口往上看去，那可真是一副精雕细刻，刀削斧凿出来的好皮囊。他不免想起年幼时在电台里听到过的聊斋故事。说有一狞鬼，铺人皮于榻上，画为女相。王生贪慕美色，遂成苟且。只不过那时候孩子心性，还不太懂所谓知好色则慕少艾。&lt;br&gt;
+“你认识我？”&lt;br&gt;
+“怎么可能？”中森施予放下茶杯，站起身来，左手拿着手机，右手朝洪京墨伸出，一笑，“初次见面，我是西子印象的中森施予。”&lt;br&gt;
+但这其实是洪京墨与中森施予所见的第二面。上一次见，是在两年前。中森施予在病床上躺着，全靠心脏起搏器吊着最后一口气，以至于错过了金松柏电影节的颁奖典礼。但毕竟是金松柏电影节的红毯，哪怕只是上去走一走，对很多人来说也足够光宗耀祖。于是后有一记者在报道中写：著名音乐人中森施予为情所困，金松柏电影节颁奖典礼当天，于家中泳池边割腕自杀，在送往医院的路上不治身亡。&lt;br&gt;
+报道中，甚至乎还有几张血肉模糊的照片做旁证，但报道那篇新闻稿的记者，连同刊登它《新世界周刊》，很快就因“诽谤”而被西子印象唱片公司起诉。官司在年初终于尘埃落定，《新世界周刊》败诉，被判赔偿西子印象唱片公司1万美金。但中森施予为情自杀一事是真是假，他人又到底是生是死，法官判决书里没说。&lt;br&gt;
+洪京墨心里一阵阴森森，这个活生生的中森施予看过去，美则美矣，却是似人似鬼的妖异之美。心中只剩莫名地惶惶不安，退后两步，退到有壁灯照亮的地方，那里比较像是人间。&lt;br&gt;
+中森施予的手落下，又重新插回裤子口袋中。脸上看不出任何过头的情绪，惊惧、尴尬，喜怒哀乐等通通都没有了形状，仍然是一套春风和煦的做派，像是假面具戴的时间太久，已经死死长在了脸上，彻底成为了他五官中的一部分。&lt;br&gt;
+洪京墨在桌上摆了四个玻璃杯子，举着一瓶洋酒依次斟满，说：“‘鸿蒙集团’清理门户，本不该当着外客的面，但是底下人做事不清不楚，冒失地把你也请进了房间。招待不周，自罚三杯。”&lt;br&gt;
+中森施予背着手走近，俯下身闭眼嗅了嗅，又抬眼笑问：“看来是情报有误，我听说洪先生很少饮酒。”&lt;br&gt;
+洪京墨自顾自地将前三杯酒水尽数饮尽，又夺过中森施予的手机，浸没在第四杯酒水中，最后伸手邀中森施予入座。&lt;br&gt;
+中森施予没入座，只盯着杯中的手机，隔着一层玻璃，不知道是谁窥视着谁，笑着解释道：“这手机是我跟经纪人借来用的，冤有头债有主，洪先生可千万要记得赔他一个啊。”&lt;br&gt;
+洪京墨将木盒里另一件元青花取出摆在桌上，说：“其实像你这样有名望有长相的人，不应该过得这么差的。”&lt;br&gt;
+中森施予没有回话，仍是双手插袋地在房间内四处闲逛，脚尖偶然踢上地上的青花碎瓷，蹲下身抚摸着鬣狗的脖颈，却已经摸不到任何脉搏，到底是像野狗一样地死去了。于是站起身问道：“瓶子谁送的？”&lt;br&gt;
+洪先生看着形单影只的元青花，也不由黯然，伤感道：“一个过时的男演员，修伟。他未婚妻做拍卖行生意，在政界商界人脉广博，今日又以夫妻名义送来这么一对瓷瓶，不知用意如何。原本属意修伟出演男二号的事，反倒难以继续推行，生怕拂了他妻家的面子。”&lt;br&gt;
+“男一号定下来了吗？”&lt;br&gt;
+“伯乐家的小公子伯也斯，年纪和‘张禹’相仿，如果最后能定他，那么以后在国土部门的审批手续，应当会简化许多。”&lt;br&gt;
+中森施予抬头一笑，“看来他们和我一样，都非常在意这部电影。但我又和他们两个不一样，在洪先生的事业方面，好像只有我帮不上什么忙。”&lt;br&gt;
+洪京墨反问，“那我能不能帮到你什么？”&lt;/p&gt;
+&lt;h1 id=&#34;-4&#34;&gt;&lt;/h1&gt;
+&lt;p&gt;“刚听楼下一位老先生说，洪先生修建‘望雨楼’以求天地东南西北之调和。而我与人博弈不为求胜，也是为求和。今天来，不是要来和任何人争夺地盘的，只是走投无路，急需复出。只要洪先生能给我一个活路走，我愿意把未来五年经纪约都签给鸿蒙，违约金多高，由洪先生定夺。”&lt;br&gt;
+洪京墨摇头，笑了，“你两年前就已经获得了金松柏的提名，只是因为身体原因未能出席，才与奖项失之交臂。但鸿蒙只是一家新公司，庙宇太小，怎么供奉得下‘中森施予’这尊万人景仰的大佛。”&lt;br&gt;
+“我曾万人景仰吗……”中森施予仰头念着念着,突然嗤笑出声，“洪先生，两年前你救我一命，我欠你一个人情。《雨霖瀮》如果有用得上我的地方，你尽管开口，反正我也拒绝不了。”&lt;br&gt;
+洪京墨叹了一口气，像是惋惜，像是同情，又问：“两年前，何必自杀呢？”&lt;br&gt;
+中森施予回过身，脸上的面具像是撕开了一道口子，兀地颓下去，皮笑肉不笑地反问洪京墨：“两年前，何必救我呢？醒来后，等着我的是一场接一场的手术，和一张又一张的巨额医药费账单。在我昏迷期间，又碰上了金融风暴。房子和车子经纪公司供不起，都抵押给银行。再不出来做事，几年以后真是连买棺材的钱都没有了。”&lt;br&gt;
+洪京墨抚着额头，几乎是有点忿恨地安慰他道：“我只剩下半条命，都苦苦撑到今时今日。你那么年轻，漂亮，才华洋溢，又是年少成名，一举一动都会引起社会公众的议论和模仿，根本就不能有任何轻生的念头。两年前，我甚至都不敢问医生一句，中森施予还活着吗？我不是不想给你这个机会，我是怕电影还没杀青，你便精神上又不堪重负，死在我的片场。”&lt;br&gt;
+中森施予走近几步，天真无邪地摊手一笑，“我这两年，几乎每做完一场大手术，就会约见一次精神科医生。医生诊断书，经纪公司应该都发到Mon特助的邮箱里了。只要耶稣不急着要见我，我就一定不会急着去见他。”&lt;br&gt;
+洪京墨手指一下下叩着桌面，像是终于做了决定，命令道：“我今天喝了酒，于情于理，你都该送我一程。在路上，我们可以谈谈电影合作的事。今晚谈的顺利的话，明天就能来香槟大道95号签约，你的经纪人俞溪桥是学法律出身，带着他一起，陪你看看合同。不过五年时间太短，我希望延长到八年。”&lt;br&gt;
+中森施予耸肩，无奈地表示，“抱歉，我只能签五年。”&lt;br&gt;
+“为什么？”&lt;br&gt;
+中森施予莞尔一笑：“医生说我最多还能再活五年。”&lt;br&gt;
+洪京墨却是望向角落，目光扫过鬣狗的尸身，和散落一地的青花瓷片，最后重新落到中森施予的脸上，像是默然度过了一场轮回，冷言冷语道：“对于商人来说，万事万物都有商量的余地，包括生死。”&lt;/p&gt;
+&lt;p&gt;山海酒店正门外，中森施予坐入凯迪拉克的驾驶座位上。又朝车后座的人抖了一抖手，提前推卸责任道：“割腕自杀过，车技不好的话，请您多多担待。”&lt;br&gt;
+望雨楼上，本在俯瞰街景的温辞也终于收回自己目光，转身在草稿纸上工整书写道：“人有淫心，是生亵境；人有亵心，是生怖境。菩萨点化愚蒙，空即是色，色即是空……”&lt;br&gt;
+故事虽是这么讲的，温辞心里却另有一番天地，想着怒汉神探若是还在人世，一定会指着剧本嘲笑自己说：错了，全都错了。温辞本就善忘，是个不中看也不中用的破旧书袋，而那人却是过目不忘，若是上天再多给他延命几年，这世道的光景怕是能大不一样。想到此处，钢笔尖就这么突然地在稿纸上顿住了，蓝黑色的莲花蓦然在纸上生开。而温辞心中关于电影剧本的种种修修补补，也在这一瞬蓦然修成了正果。&lt;/p&gt;
+">隔岸观·第十八章</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://fooogy.github.io/post/ge-an-guan-di-shi-qi-zhang/"" data-c="
+          &lt;h1 id=&#34;&#34;&gt;&lt;/h1&gt;
+&lt;p&gt;“你是？”&lt;br&gt;
+“就一开公司的，做电影策划。”&lt;br&gt;
+“电影？你是制片厂的？”&lt;br&gt;
+“够不上够不上，我们公司就一个出纳，一个会计。算上我拢共才仨人儿。”&lt;br&gt;
+“那你是……”&lt;br&gt;
+“导演。”&lt;br&gt;
+“你先留个电话吧。”&lt;br&gt;
+“欸欸欸！我这电话上次就留给您助理了，在家等了小半个月，一直没敢换。后来一打听才知道您为了创作‘犯罪三部曲’去北京了，根本就不在新加坡。我一琢磨也是这个理儿，温老的出版生意越做越大，人肯定越来越忙，这时间可金贵，哪儿像我这么闲。但也没敢回北京，怕跟您又走岔道儿。”&lt;br&gt;
+“我现在还有个会要开，你看……”&lt;br&gt;
+“欸欸欸！您忙您的，以后要是有用得上我的地方，您招呼我一声就是。我姓翁，就是嗡嗡马蜂那个翁，特别好记。”&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;温老与翁导两人一里一外，文学和艺术清清白白地在两岸站着，中间隔着楚河汉界。老北京话里讲，谁都不愿做第一个趟浑水的人。电梯门“啪”地一声适时合上，像是合掌夹死了一只马蜂，喧闹嘈杂的世界骤然清净。&lt;br&gt;
+温老慢慢收敛起笑容，面无表情地喃喃道：穢れ（日语：脏）。&lt;br&gt;
+他是温辞，一位业余的推理小说家。人如其名，通三教之书，晓九流之典。因曾在新加坡的大学里执教两年，所以人们称其为“温老师”。而后随着年纪渐长，许多人便省去了“师”字，只称呼他为“温老”。但有一个人例外，明明没上过一堂他的课，却仍是恭恭敬敬喊他为老师。&lt;br&gt;
+电梯门开，抬头迎见一张脸，深目峨眉，状如愁胡，正是昔年红极一时的英俊小生修伟，“现在的北京可正刮风呢，老师这次外出采风，不仅很会挑地方，更会挑时候啊。”&lt;br&gt;
+两个人并肩朝办公室里走着，温辞说，“是啊。对于一个南方人来说，北京确实是太冷了。但我就是中意这个地方，我和你就是在那儿认识的。那时候我才出版第一本小说，而你，还是个一集电视剧只拿800块的穷小子。那一年……”&lt;br&gt;
+推开门，修伟轻车熟路地坐在沙发中间位置，将手中的文件夹放在桌上，笑道，“1990年，我在戏剧学院附近的酒吧驻唱，唱的沧海一声笑。然后就见老师您拎着酒瓶大步走过来，红着一张脸，我还以为是来闹场的。结果您把酒瓶往我怀里一塞，说我的粤语发音不标准，居然又教我唱了一遍。”&lt;br&gt;
+以示纪念，温辞特意开了一瓶90年的红酒，一边给修伟递酒杯一边摆手笑：“所以说，酒壮怂人胆，我那天要是少喝几杯，可就没有后面那么多的故事了。”&lt;br&gt;
+两人碰杯，相视一笑，而后温辞突然问道，“婚期定了？”&lt;br&gt;
+“还没有，想等等老师的意见。”&lt;br&gt;
+温辞慈爱一笑，“婚姻大事，我可不敢给意见。你看看我，这把年纪不还是孤家寡人一个。就连我那些朋友，也没见过谁跟谁，是真能白头偕老的。但我还是盼着你能有个好归宿，不然等将来到了我这个岁数，难免会后悔，后悔年轻时没有好好体会男欢女爱的滋味。”&lt;br&gt;
+“老师做什么都是为我好，我明白。”&lt;br&gt;
+温辞将空杯放在桌上，顺势坐下，手掌拍着修伟的膝盖低声说，“伟，我之前建议你秘密结婚，主要是考虑到你的演员身份。我不想你在婚礼上，还要忙于应付各路媒体。但我最近也在反思，如果真拒绝了所有的媒体，未免太不近人情。于是想起我有个老同学，在香港做电影杂志的，你的婚礼报道权，不如给他一个独家。只是不知道，你信不信得过我看人的眼光。”&lt;br&gt;
+修伟一怔，转眼又是一笑“老师目光如炬，能从几千个人里挑中我做男主角。我能有什么信不过的。但我今天不是为了婚事来的，而是为了给老师看一个剧本。对方远道而来，诚意十足，我正发愁，不知该怎么拒绝。”&lt;br&gt;
+修伟点了点桌上的文件，温辞顺着他的手势往下瞥，问：“电视台在这个时候找你拍剧？”&lt;br&gt;
+“不是电视剧剧本，是电影剧本，《雨霖瀮》。”&lt;/p&gt;
+&lt;h1 id=&#34;-2&#34;&gt;&lt;/h1&gt;
+&lt;p&gt;圈中无人莫演戏。人脉，就是演员的血脉。无边苦海，贵人便是上面的一叶扁舟，和舟畔的东风。谁早一日借上东风的力，谁就早一日脱苦海，登极乐。佛经所云：种善因，结善果，讲的便是这个道理。&lt;br&gt;
+此时的伯乐父子二人，也终于在第二天的午时，于万佛之国——泰国落地。伯公子脚步虚浮，神情恍惚，好像仍停留在上一个时区中，见到当头的烈阳，还以为是月亮。在路上忍着困意，勉强将自己收拾出一副人样后，终于在一俱乐部，见到了鼎鼎大名的洪先生。&lt;br&gt;
+洪京墨左手撑着拐杖，伸出右手，笑问，“这就是伯小公子，伯也斯吧。我们以前见过的，在我生日宴上，还记得我吗？”&lt;br&gt;
+伯也斯原本一只眼半睁着，一只眼全闭着。现在却都努力撑开两道缝，摇摇晃晃地双手回握洪京墨的手，“记得记得，洪先生在95公寓住得还舒服吗。”&lt;br&gt;
+“其实我一直拿他来招待朋友，不过我的朋友们……现在已经被Mon改建成工作室了。”&lt;br&gt;
+“改得好。我以前就一直想不明白，为什么别墅会设计成个中世纪城堡，墙壁厚、采光差，这种监狱一样的户型，是个正常人都住不下去的。但我更想不明白的是，我Pa Pa居然还送给您做生日贺礼，我太替他羞愧了。”&lt;br&gt;
+伯乐叹了一口气，将伯也斯带回了座位。洪京墨坐在父子俩的对面，眼中含笑。&lt;br&gt;
+“对了洪先生，我记得我小时候见你，你就拄着拐杖，现在还是这样。都这么多年了，腿还没好吗？”&lt;br&gt;
+“我是因为心脏病走不动路，腿没有问题。”&lt;br&gt;
+“啊……那你心脏病都这么严重了，还要拍电影啊？还是警匪片，心脏受得了吗？”&lt;br&gt;
+“每星期定时去医院复诊，三五年内……不会出什么大事。”&lt;br&gt;
+“但还是要多注意身体，现在特别多黑心医院出来的庸医，谋财害命，没半点医德。”&lt;br&gt;
+“我都是去自己旗下的公益医院医治。医生们大概……算不上是庸医吧。”&lt;br&gt;
+“哇，公益医院，洪先生不愧是有名的慈善家，您这样的好人一定长命百岁。我Papa其实也应该捐一些不义之财出来，不仅能回馈社会，还能给子孙后代积阴德，你说对不对？”&lt;br&gt;
+伯乐又叹了一口气，洪京墨捂着胸口笑了几声，望了一眼伯也斯，洪先生从不饮酒，也少饮茶。此时以白水代酒，举杯跟伯乐说道：&lt;br&gt;
+“人不可貌相啊。”&lt;br&gt;
+伯乐道，“在国外的时间一长，说话是会这样词不达意，颠三倒四。用广东话来讲，他就是个外黄里白的‘半唐番’，洪先生千万别见怪。”&lt;br&gt;
+伯也斯不以为然。毕竟，和他那些狂嫖滥赌吸大麻的好友们比起来，他是何等的洁身自爱。又问道，“新电影名字听说是《雨霖瀮》，剧本、选角……方方面面，还顺利？”&lt;br&gt;
+洪京墨把玩着酒杯，一笑，“不太顺利。金融危机后，各行各业的朋友都很艰难。我在电影制片这一行，又确实没有经验。侥幸做成了，那是我的造化。但要是不成，我也不愿拖累旁人。”&lt;br&gt;
+伯乐也笑，意味深长地拍着洪京墨的手臂说，“洪先生背后有高人指点，无论是什么危机，最后总能全身而退。电影5％的低税率，真是救市的一招险棋。洪先生破局的勇气，值得后人反思啊。不像我了，是个失败典型。有好几处待开发的别墅区还搁置着，天一黑，荒凉得像公墓。”&lt;br&gt;
+“那就不建别墅，改做旅游，政府支持。”&lt;br&gt;
+“哪个政府？”&lt;br&gt;
+“那看伯大师需要哪个政府。”&lt;br&gt;
+伯乐杯里的酒和笑声同时洒了出来，自嘲地摇头叹息，“伯大师，太久没人这么称呼我了。”&lt;br&gt;
+洪京墨问，“我当年在泰国事事不顺，幸好有你提点我，说我在世上还有亲人，在西北方向。您现在再看看我的面相，《雨霖瀮》的运势还好吗？”&lt;br&gt;
+伯乐的手指在空中画了一个圈，煞有介事地说道，“洪先生啊，一个人的风水都在脸上。你面堂晦暗，这是有余孽未消。人中深凹，这是命中犯水之兆。雨霖瀮这个名字意境虽然好，财势全无。电影要是想成，必须考虑换个名字了。”&lt;br&gt;
+“是。我一直看好大陆市场，所以找了很多门路，问合作的事。但剧本交上去，没等到任何回音，就像被判了无期徒刑。还是托朋友去北京请教高人，才求来了一句修改意见：内容消沉。”&lt;br&gt;
+洪京墨先是一叹，又苦笑，“他们眼里，这只是一部电影。但对于我来说，这是我逃都逃不出去的人生。”&lt;br&gt;
+伯乐递给伯也斯一个眼神，伯也斯心领神会，立刻将桌下一副精心装裱的油画抬上桌子。&lt;br&gt;
+洪京墨做出赞叹不已的样子，“伯公子画的这是……雏菊？”&lt;br&gt;
+伯也斯脸一皱，“洪先生，我画的可不是野花野草，而是风车。更准确地说，这是一个人的时运。‘瞒昧天地，逆转乾坤’，我把天与地可都画进去了，这份心意送给别人，别人也从来不懂。送你正合适。”&lt;br&gt;
+洪京墨淡然一笑，道了一声谢。&lt;/p&gt;
+&lt;h1 id=&#34;-3&#34;&gt;&lt;/h1&gt;
+&lt;p&gt;温辞随意地将内容消沉的剧本撇到一旁，开口说“我在杂志上看到过洪京墨筹备电影的事，但我万万没想到他会找到你。毕竟圈子里，谁不知道你婚后将要隐退的事。”&lt;br&gt;
+“所以他的特助Mon还特意告诉我，电影的预算不多，会尽量压缩拍摄周期，不会影响我完婚。”&lt;br&gt;
+温辞点烟，眉头一皱，“呵——预算不多，他是在压价吧？”&lt;br&gt;
+修伟笑，“我一开始也这么想。但Mon跟我说，洪京墨原本也是出身名门，一夜间家破人亡身败名裂。在泰国发家前，又饱受世人冷眼，最懂人间疾苦。现在年纪也不小了，只想落叶归根。这部电影要是能消除香港人对他的偏见，让他付出多大代价他都愿意。人活着，就得相互成全。”&lt;br&gt;
+“相互成全……他说话倒是中听。我只怕他，是图你做一回活佛，割肉饲鹰，喂活了他，亡了自己。修伟，你看过《英雄本色》没有？男主角有一句话是这么说的。我等了三年，就是要等一个机会。我不见的东西，我一定自己拿回来。洪京墨现在要拍电影，是向这世道，讨债来了。”&lt;br&gt;
+“所以，我现在就该去知会Mon，推了这个本子。”&lt;br&gt;
+“是要推，但不是要你推这部电影”温辞把烟灰掸了掸，吞云吐雾间，缓慢解释道，“能不能选另一个角色出演，以你这样正大仙容的长相，如果演的是这个一步一步走向深渊的反派，对观众来说，其实更有看头。”&lt;br&gt;
+修伟脸色沉下：“老师，我现在是不比当年了，但从没给谁做过陪衬。”&lt;br&gt;
+温辞却是满面的正气凛然，“人世的富贵荣华，都应当去人世的险处去找。难道这种道理还要我来教你吗？”&lt;br&gt;
+“可是，Mon称剧本是给我量身打造……”&lt;br&gt;
+“修伟！现在已经不是你挑剧本的那个年代了，而是剧本挑你。更何况，电影不是电视剧，观众要先花钱买票才能看戏……”&lt;br&gt;
+“老师，我在你心里，就这样不值钱？”&lt;br&gt;
+“这不是价值问题，是认知问题。”&lt;br&gt;
+“认知问题……对方这样高的投资，却给我这样低的片酬，居然是我有问题？”&lt;br&gt;
+“伟，这部电影的剧本会大改，听我的话，演另一个角色，更有张力。”&lt;br&gt;
+“老师，没有任何一个人走进电影院，是为了看一个配角。”&lt;br&gt;
+“但很多人走出电影院时，主角可能只剩下一个面目模糊的影子。”&lt;br&gt;
+修伟苦笑，反问：“老师居然害怕我毁掉这部电影？”&lt;br&gt;
+温辞对此不置可否，也反问：“你不也害怕我会毁掉你吗？”&lt;br&gt;
+最终，师徒两人不欢而散。溶溶月色之夜，温辞端起酒杯，缓缓走向办公室的落地窗前，见自己影子印在城市的天台上，不免心生几分琼楼玉宇，高处不胜寒的寂寞来。‘砰’地一下，酒杯碰着玻璃，凶猛地差点将杯子撞碎，自言自语道：&lt;br&gt;
+“东海的石头就算有仙人点化，也改不了他粗蠢的本质。人啊，到头来，还是得自个儿成全自个儿。”&lt;/p&gt;
+&lt;h1 id=&#34;-4&#34;&gt;&lt;/h1&gt;
+&lt;p&gt;温辞虽居住在新加坡，却生于香港，长于台湾，但无论是粤语还是台语，他都不太灵光。这皆因他所念的台北学校，从幼儿园到高中一应俱全，但只有高官子女才能就读，连开家长会都是按照党政职务高低来排座次。从小生活在一个完全成熟但也完全封闭的教育系统中。还是后来上了香港中文大学读文学，才知道读书这件事，原来并不需要朝中有人，有钱也可。看上去很美的文学，也因为自由，美得更加春风得意，野火燎原。&lt;br&gt;
+但他当年最要好的把兄弟，却连这点钱财都没有，于是去赌场赌钱赚取学费。因为总是赢，被多家赌场老板记恨，经常遭到报复。最严重的一次是因为在赌桌上出老千，被关进了监狱。但因为在狱中表现良好，只关了一个月就获释出狱，一头扎进了黑帮。别人都以为他是走投无路，温辞却看得分明，这位好兄弟是在帮警察做线人，香港也才有了怒汉神探这一吊诡的传说。&lt;br&gt;
+无关名利，只是天生反骨。通过愚弄他人，给一潭死水的香港增添刺激罢了。等到好兄弟混到已有一方势力时，温辞才大学毕业，但因读的是文学，不容于上流社会，又被家人安排去新加坡留学，这一次终于遂了父母的意，读的是商科。后又结婚、生子、分居、离婚……好像除了生死，无一不能被父母安排。浑浑噩噩间，已到了1976年，好兄弟突然从黑帮全身而退，而后不知去向。等再见面时，已是人父。酒过三巡，忽问他给孩子取什么名字才好。&lt;br&gt;
+温辞笑叹：香港怒汉神探的后代，自当走一条光辉灿烂的人间正道。正如《涉江》中言：汤禹久远兮，愿志之有像。这孩子的名字，不如就叫张禹吧。&lt;br&gt;
+其实那诗歌并非是这样写的，只不过那晚喝的酒太猛太烈，温辞记错了也念错了。后来不止一次地在信件中自嘲，姓名是要跟着人走一生的。以后怕是一看到这个孩子，就会想起自己这满腹不成章法的经纶。&lt;br&gt;
+可一封又一封的信寄出后，通通有去无回。温辞又回香港多番打听，才得知他的好兄弟死在了香港的一家茶餐厅里。餐厅突发火灾，他没能逃出去。他的死，对香港这个城市没什么影响，只是报纸上再也不见怒汉神探四个字。而温辞早期创作的推理小说男主角，身上总是模模糊糊地飘着一层雾，任谁也看不透。便都是这位好兄弟不散的阴魂在作祟。&lt;br&gt;
+办公室桌上的电话响起，温辞回身接听，是Mon。&lt;br&gt;
+“真是名师出高徒。修伟刚刚居然主动联系我，说他可以降低片酬，甚至想要投资这部电影。但有一个条件，他必须出演男主角。”&lt;br&gt;
+温辞坦然道，“其实修伟的外形，并不适合出现在任何一部警匪片中。”&lt;br&gt;
+“但以温老和他的关系，为他真正打造出一个‘量身定制’来，也不是难题。最重要的是，修伟这样正派的面相，如果能够出演‘洪先生’，北京那方面更有利于电影过审。”&lt;br&gt;
+温辞笑了，问洪先生和伯乐谈的怎么样。&lt;br&gt;
+Mon叹了一口气，抱怨道“那个神棍说，剧本想要过审，先得换个名字。《雨霖瀮》这种文艺片名，伤春悲秋，无病呻吟，哎……万事开头难啊……想要借神棍的神力就更是难上加难。”&lt;br&gt;
+温辞对伯乐那一套风水五行说始终嗤之以鼻，但仍安慰道，“吉凶祸福自有天命，Mon特助何必说这么丧气的话。”&lt;br&gt;
+“伯乐的话，洪先生必然会信的。只是我，想不出破解的门道。”&lt;br&gt;
+“既然伯乐说洪先生犯‘雨’的忌讳，那我们改个名字也不难。”&lt;br&gt;
+“温老觉得哪些字合适？”&lt;br&gt;
+“听洪先生说祖上是扬州人，我想起一阕词来，春风十里扬州路。”&lt;br&gt;
+“温老想用‘十里春风’？”&lt;br&gt;
+温辞笑了，道：“十年前的话，倒是真有可能这么取名。但老来终于了然，一味的春风得意其实没什么意思。我青年时曾去扬州采风，有一处景致特别，我就细心记了下，叫‘十里琅珰’。我想雨霖铃这一词牌，毕竟是是唐明皇闻雨淋銮铃时所创，如果想要保留追思之意不改，我们可用‘十里鋃鐺’。从‘王’到‘金’，既尊且贵，亦官亦商，甚是妥当。”&lt;br&gt;
+“谢温老赐名，我这就通知洪先生去。剧本能得到温老的支持，我相信雨……不，现在要叫《十里鋃鐺》了。我相信《十里鋃鐺》的票房一定会成功。只可惜洪先生身体不便，不然一定亲自登门拜访。”&lt;br&gt;
+“是我该去泰国走一趟才对。”&lt;br&gt;
+两人有说有笑，简直像爱侣相互慰安，又将电话会议延长了半个小时才依依不舍地挂断。随后，温辞便起身寻找去泰国出差应带的见面礼。&lt;br&gt;
+他的见面礼是一副价值18万的油画，在那油画的落款处，铮铮写着“也斯”两字。原是温辞在法国一个人画展上拍得，以捧故友之子的场。但在听闻伯乐任性地影响了一部电影的走向后，这幅画的处置，他也另起了新打算。于是从胸口抽出钢笔，在画上题诗道：“枯桥枯桥尔生稊，我独七十而孤栖。弹弦写恨意不尽，瞑目归黄泥。”但写到最后一笔，太过用力，笔尖一折，蓝黑墨水山涧般流淌下来，生生毁了整幅画的布局。不待墨迹干透，温辞便又从酒柜中取出一瓶洋酒，不喝，全浇在画上头，最后掏出打火机点燃。&lt;br&gt;
+火焰婀娜多姿地攀上来，深蓝色的画布蒙上了一层炭黑色，平庸的画作居然生出些涅槃的好看来。&lt;br&gt;
+洪京墨眠花宿柳，朝欢暮乐，人世间的堂皇和炎凉几乎都让他享尽，却偏偏没有养出淡泊的心性。锱铢必较，睚眦必报。但黄雀在后，既然他能利用修伟所剩无几的名气，去给伯也斯做嫁衣，他就也能利用洪氏灭门惨案的东风，来造自己新书上市的势。想必像洪京墨这样视金钱如人命，视人命如草芥的人物，做什么事都能称心如意。只是可惜他那位英年而逝的好兄弟，九泉之下，或许是永不能瞑目了。&lt;/p&gt;
+">隔岸观·第十七章</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://fooogy.github.io/post/ge-an-guan-di-shi-liu-zhang/"" data-c="
+          &lt;h1 id=&#34;&#34;&gt;&lt;/h1&gt;
+&lt;p&gt;正午12点，法国里昂，国际刑警组织总部（ICPO）。&lt;br&gt;
+官秋山正对办公室里堆积成山的待发通报文件，进行最后的检查。姓名、性别、指纹、出身日期、失踪日期……逐一核实无误后，郑重其事地把其中一份黄色通报放在最上面。黄色通报，即是失踪人口通报。早一日发出，当事人或许就多一分生还的希望。&lt;br&gt;
+这个世界每年至少有几百万未成年人失踪，约几十万成年人死于自杀，不是为情，就是为钱。&lt;br&gt;
+死亡到底算不算是解脱，没有任何人能替死者开口。但上穷碧落下黄泉，两处茫茫皆不见总归是个噩兆。一张死亡证明对于活人来说，远胜过音信全无。无缘无故予人希望，是这社会最残暴而不自知的酷刑。&lt;br&gt;
+但张禹还活在人世。两个人当初说的那一句英雄不死，即便只是戏言，官秋山也只能深信不疑。毕竟不这样顽固地相信着张禹的生命力，那他心底顽固的愧疚感，便能在顷刻间灰飞烟灭他的精神。&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;“Macbeth，这份黄色通报插队的事，你能替我保密吗？”&lt;br&gt;
+“当然。”一位同样名字为麦克，但却是金发碧眼的美国男人，放下官秋山几分钟前贿赂给他的咖啡后，双手紧捂双眼，像是在和自己家中的华裔妻子调笑一样，用怪腔怪调的中文回答着，“我什么都没看见。”&lt;br&gt;
+“多谢。”&lt;br&gt;
+“应该道谢的人是我。这半个月的翻译工作又多又急，每天睡不到五个小时就又要上班。幸好怒汉神探跟我妻子推荐了你，让你从泰国来支援，一个泰文比英文更好的男人。深入金三角做过卧底的警察，是真的比那些坐在办公室法国佬有语言优势！秋，你要不要改签成明天的航班，我们下班后去喝几杯啤酒？Trinch!（德语：喝！）”&lt;br&gt;
+“还是等毒枭猛犸真正入狱那天，再一起庆功吧。另外……”官秋山抬手松开前襟墨色领带，长舒一口气，感慨道“多谢你送我的这条领带。来法国之前，一直没人告诉我上班必须要系领带。”&lt;br&gt;
+“穿西装但不打领带，就像喝Millionaire却不加茴香酒，太失礼了。ICPO的规矩虽然多，但你如果再多工作半个月，一定也能很快适应法国，就像你当年适应泰国。最后成为你精神上的第二故乡……”&lt;br&gt;
+“如果泰国是第二故乡，那法国应该算第三故乡才对。”&lt;br&gt;
+官秋山客套一笑，拆卸下领带归还给Macbeth，大步流星地朝门外走去，嘴里念着旁人根本不可能听懂的广东童谣：“点兵指兵，点着谁人做大兵。点贼指贼，点着谁人做大贼。”&lt;/p&gt;
+&lt;p&gt;官秋山心里想，大概从童年时代起，那些和张禹，和Make一起唱着玩的童谣，就算是他最初的精神教条。但官秋山的阿妈有另一套教条，他阿妈不像张禹母亲那样开明，极不满意警察这个职业。更何况卧底警察，货真价实的古惑仔还不如，和摆摊子卖鱼蛋比起来甚至算不上是一种职业。口里振振有词，心头念念不忘，不外乎那几句老话：你要向上流动啊，你要出人头地啊，你要走出屋邨，做坦坦荡荡的人上人啊。尽管她从生到死，始终没离开过屋邨。那样的廉租房又小又挤，简直像鸟笼，却也养活了成千上万的像他父母这样的人，也不知都是怎样苟且下来的。&lt;br&gt;
+这时，一架客机从城市的上空掠过，官秋山闻声，抬头深深望了一眼。1999年，Make殉职两周年，张禹失踪两周年，至于官秋山，没能读大学拿学位，没能进外企做高管，也没能走出屋邨做人上人，甚至都没能坦坦荡荡。&lt;br&gt;
+这复印般过活来的二十五年人生，他身无长物，一事无成。&lt;/p&gt;
+&lt;p&gt;“The swindler disguised himself as a bitch ! I hate being the Bitchy !”&lt;br&gt;
+未等官秋山在路口站稳，他就听到一阵咒骂声。那人的嗓音不知道是在烟酒里熏陶了多少年，宛如破铜敲着烂铁。话里面又是骗子又是婊子，像是金钱纠纷，又更像是感情纠纷。但同样没等他听清这咒骂的具体内容，一辆急速行驶的黑色保时捷就从他眼前飞过，只在瞳孔前留下一道模糊的墨痕。&lt;br&gt;
+在保时捷里坐着的有一老一少两个人，年轻的太过年轻，十七八岁样子，染了一头正时兴的颜色；年老的太过年老，金丝边眼镜顶上，已是满头梨花白发。虽是父子，更似爷孙。&lt;br&gt;
+“Sorry……PAPA，我只是……太讨厌这个叫张禹的男主角！这种程度的舍己为人不是善良，而是一种精神病……拍这种电影有什么意义，演员在机器前面神经病一样又哭又笑，观众坐在位子上又惊又叫，还不都是作假。”&lt;br&gt;
+“你是学艺术的人，电影不也是一门艺术吗？”&lt;br&gt;
+年轻人惊叫道：“PAPA！油画一副可以拍出几十万甚至几千万的天价，电影票才多少钱一张！不要侮辱我们好吗？”&lt;br&gt;
+老爷子冷眼一瞥，“侮辱你们？你知不知道你开画廊用了多少钱？你又知不知道洪京墨攒局拍电影要用多少钱！你的画，是因为有人买才勉强值个价！没人买它就是一屋子废纸！一个电影项目，从筹备那一天起就已经值好几千万！只增不减！闲话少说，我已经给你替学校请好了假，坐下午的飞机，去泰国和他见一面。不许空着手去，要带见面礼！洪京墨最喜欢收藏古董画。更不许当着他面酗烟酗酒！落地后第一时间把头发染回去，再剪短……”&lt;br&gt;
+年轻人又惊叫，本就不算好听的嗓音变得更加难听：“PAPA！为什么不是他来法国见我？”&lt;/p&gt;
+&lt;p&gt;“他身体不便，出不了远门。”&lt;br&gt;
+年轻人终于妥协了，歪着头流里流气地说，“OK,OK. 如果我命中注定要演一个骗子，那么今晚饭局就是我第一场重头戏，我应该说什么？做什么？”&lt;br&gt;
+老爷子凝神静气，闭目养神间，却似乎是已看到了这出大戏的bad ending，突然没好语气地回答说，“除了爱什么都能做，除了戏什么都要说。近而示之远，远而示之近，忽远忽近，若即若离，功利心别太重。洪京墨这人城府深，话不投机时你就往美术方面带一带，事不成，能结交一份好人缘，总归也是有利无害。”&lt;br&gt;
+年轻人喉咙里的破铜烂铁，最后只能有气无力地嗡嗡作响：&lt;br&gt;
+“Yes , papa.”&lt;/p&gt;
+&lt;p&gt;不同于法国里昂的晴空烈日，远在泰国曼谷的洪先生正站在窗子前赏夜景。95公寓堂皇依旧，富丽依旧，只是了无生气宛如皇陵。Mon特助已经在地板上铺了一层又一层的男演员照片，宛如他妻子平日里梳洗施粉一般细致。但他同时也体会到，在这个买卖美色的电影行当里，皮相和皮相之间总会分出三六九等，是人除了出身以外的第二次洗牌。黑社会教条如果是一将功成万骨枯，那么演艺圈的规矩便是三千弱水一瓢饮。大银幕再大，也只放得下一张人脸，随后艳惊四座，满堂喝彩。万千宠爱于一身的脚底下，踩着的是无颜色的六宫粉黛。&lt;br&gt;
+Mon特助一直半跪在地板上画圈画叉，画圈是他觉得资质尚可的，画叉的是较为一般的。最后手里的笔扔在地上，直了直腰，问，“洪先生会打牌吗？有的高官太太打牌是不用看牌的，几百张牌胡乱摸着。要不您也随便摸一张，谁运气好就定谁？”&lt;br&gt;
+洪先生摇头，“我的男主角是个一直走霉运的人，情路坎坷，学业也坎坷，最后甚至还客死异乡。我怎么能找运气太好的人来演他。”&lt;br&gt;
+Mon特助又弓着身子一张张翻阅着，尽管他已经看花了眼，早分不清照片里哪里是鼻子，哪里是眼睛，“依我看，真正运气差的是不但穷困潦倒，而且面目丑陋的那些人。这里面一个个都长成这副祸国殃民样，算什么霉运……洪先生你看这一个，18岁，父亲早亡，母亲改嫁，没有任何生活来源，但勤工俭学，白天在餐厅洗盘子，晚上在社区大学读表演课程，去年考入美国第一表演学府，悲惨和奇迹都落在他一人身上了，而且眉宇间居然还和张禹有几分相似。”&lt;br&gt;
+洪京墨终于回过头，接过Mon递来的照片，问道：“美国第一表演学府……如果我没记错，一年的学费大概有十几万。他一天要洗多少盘子才能赚出来？”&lt;br&gt;
+“那就是有贵人相助吧，毕竟世界上像洪先生一样的大善人还是很多的。去餐厅不为食饭，只为阿弥陀佛，普度众生。”Mon特助与洪京墨对视一眼，随后又都笑出了声。洪京墨手一松，照片薄如蝉翼，轻飘飘地又落回到地面上，被Mon一脚踩了过去。&lt;/p&gt;
+&lt;p&gt;“说到食饭，明天给您约了一场饭局。洪先生还记不记得伯乐？”&lt;br&gt;
+“不提饭局还好，你一提，真是半点食欲也没有了。最近见的人太多太杂，吃饭已经成了一种负担。但如果是跟伯乐父子……”洪先生盯着满地的照片，低沉说道，“东南亚华人里，谁敢怠慢了他这尊大佛。”洪京墨又抬起拐杖指了指墙壁，继续说“这95公寓就是他送给我的，我见过他一面，说过几句话，确实是个活神仙一样的人。”&lt;br&gt;
+Mon又累又倦，直接坐在了演员们的照片上，追问“听说他儿子才十几岁，老来得子，确实很神。我要是有个这么有钱，又这么老，好像随时都能一命呜呼的老爸，该多好。可惜我老爸虽然死的早，但是除了几对染色体，是一分钱也没留给我。”&lt;br&gt;
+洪京墨又一摇头，叹息道：“他的神，远远不在他的身家这等俗事上。等明天见了他，你就懂了。”&lt;br&gt;
+Mon特助双手撑地，慵懒地左顾右盼着：“那伯公子的照片，您要不要先看看。虽然长得一副要被关监狱的少年犯模样，但那张脸在纨绔子弟中，也算是出色了。”&lt;br&gt;
+见洪先生面色一沉，Mon顿觉失言，身体连忙坐正跪着解释道：“对不起，洪先生。我……我最近为了电影融资的事日夜奔走，白天黑夜都分不清楚，才会胡言乱语。”&lt;br&gt;
+洪京墨居高临下地看着Mon，质问道：“神志不清的话，就应该放你回家好好休息，是吗？”&lt;br&gt;
+“洪先生对不起。”Mon冷汗津津，只能将身子放得更低，抬都不敢抬头看一眼洪京墨的脸。&lt;br&gt;
+洪京墨来回踱步，眉头一皱一舒，似是反思后顿悟出了什么，淡淡一笑：“最近交给你的事情确实太多了。累的话就把电影项目先放下，出国度假歇上三天。新加坡怎么样？去过吗？替我去一趟吧。”&lt;br&gt;
+“是，洪先生。”&lt;br&gt;
+“你回来时，我还想见一个新加坡演员——修伟。”&lt;br&gt;
+“是……”&lt;br&gt;
+“虽然小道消息说修伟为了筹备婚礼，未来半年都不会接戏，但我不信人间自有真情在，我只相信有钱能使鬼推磨……”洪先生蹲下身子，捡起一张照片，饶有兴趣地问道：“Mon，这个被你形容为……长得和张禹有几分相似的男孩子，私下到底给了你多少钱。”&lt;br&gt;
+“他的经纪人只承诺说，事成之后必有重谢。”&lt;br&gt;
+“重谢有多重啊……”洪先生轻笑，用照片重重地扇过Mon的脸，Mon却仍是一动不动地跪在原地，像是死尸一样敛声屏气，恭敬地回复说：“洪先生，我以前在伦敦上学时交过一个女朋友，是新加坡当地的名门望族。我想她……她或许认识修伟刚订婚的未婚妻。有这一层关系在，应该是……不难办的。只是……只是我们给这样一线演员的片酬预算……”&lt;br&gt;
+“Mon，我这两年只不过做了点传媒方面的正经营生，你还真不拿我当黑社会了。做人不能忘本啊。”&lt;/p&gt;
+&lt;p&gt;洪先生先是拍了拍Mon的肩膀，再拉着Mon一起站起身，最后伸出手指点了点Mon的额头：“明早就出发，今晚无论是哪家经纪公司塞名片给你，你都不要接，必须回家好好休息。”&lt;br&gt;
+“是。”Mon点头。&lt;br&gt;
+“其实我从前看过不少修伟的电影，演技在同辈里也算是出色了。你见到他以后，务必告知他，这剧本是给他量身打造的。是从此结婚隐退，还是最后再搏一把，聪明人都应该懂怎么选。Mon，你也是聪明人，你现在还能站在这里挨骂，是因为我看重你。甚至可以说一句，我只看重你。我在泰国这么多年蝇营狗苟，但都是徒劳无功，只有你堪为我一生的知己。我还记得第一次见你时，是在伦敦，你在一家中餐馆打工。明明都是华人，却故意克扣顾客给你的小费，而不克扣别人的。你还记得我那时跟你说了什么吗？”&lt;br&gt;
+Mon眼眶一热，回答“记得。洪先生当时说自己大学刚毕业时，工资甚至只有几十块，从小一直喜欢听音乐，想要去音像店买一盒磁带，磁带却要十几块，根本买不起。”&lt;br&gt;
+洪京墨语重心长地沉吟道，“从那一天起，我就明白众生平等四个字，是出家人最大的诳语。你看看地上这些照片，看看他们的眼睛。就算不翻过来看照片背后的信息，我也能看透这些年轻人。富家子弟的从容，和破落门户的困窘，是比黑和白还要分明的两道颜色。”&lt;br&gt;
+Mon漠然道，“我一直都明白，阶级壁垒，只凭一副血肉之躯，是越不过去的。”&lt;br&gt;
+“越不过去，就只能兵行险招，试着看能不能打破。”洪先生自嘲一笑，“这么说可能有点可笑，我当时就站在音像店门外，想，如果我有朝一日，成为这家音响店老板，岂不是就能每天都听到古典乐？我现在甚至觉得，兜兜转转大半生，黄赌毒无一不沾，好像就是一直在为这个小小的愿望铺路。”&lt;br&gt;
+“洪先生，您相信我，修伟这一纸合同我签定了。无论他是婚是丧，就算是剃度出家了，我都能把他完完整整带到泰国来。”&lt;br&gt;
+“我不相信你，还能相信谁？”话说的十分真诚，但说这话时，洪先生却没有看着Mon，而是拄着拐杖颤巍巍俯下身，捡起了Mon刚随手乱丢的那根笔，拉过Mon的右手，在他掌心写道：&lt;/p&gt;
+&lt;p&gt;#Harmony Brothers.&lt;/p&gt;
+&lt;p&gt;洪京墨的声音从头顶又有传下来，犹如醍醐灌顶，“Mon，第一次见你时，我还开玩笑问，Mon难道是Money的意思吗？我不懂算命看相，但我知道你是命里注定有一场大富大贵的人。我已经不年轻了，但你还年轻。我们要一起。我从不是那个背负弑父杀母罪名外逃的少年犯，你也不再是流浪异乡的打工仔。我们要一起成就伟大的事业，不单单犯罪事业，而是要让整个东南亚，甚至是让整个世界都知道我们两个人。知道除了Warner Brothers 华纳兄弟以外，还有一个叫Harmony Brothers 的鸿蒙兄弟。我，和你，会在二十世纪末，一手打造出最伟大的电影帝国！”&lt;br&gt;
+Mon凝视着自己的手掌，就像孙悟空凝视着五指山，前途凶险未卜，但未尝不可放手一搏。鸿蒙初辟原无姓，王侯将相宁有种乎？无论是中国香港还是泰国曼谷，无论是少年犯还是富家子，从古至今的戏台上尸山血海，遍地哀鸿。唱戏的人已换了三四波，唯一万古不易历久弥新的还是这个笔画简单的字——&lt;/p&gt;
+&lt;p&gt;争啊。&lt;/p&gt;
+">隔岸观·第十六章</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://fooogy.github.io/post/ge-an-guan-di-shi-wu-zhang/"" data-c="
+          &lt;h1 id=&#34;&#34;&gt;&lt;/h1&gt;
+&lt;p&gt;张禹将官秋山的枪远远抛进江水里，扑通一声，洪京墨的心却跟着一起沉到底，问。&lt;br&gt;
+“如果枪里有子弹，你会开枪吗？”“会。”&lt;br&gt;
+张禹无意在生命的尽头，继续拼力扮演着一个蹩脚的骗子。他此时筋疲力竭，眼前只剩下血红一片。刚才在混乱中吞下去的药物，在此刻也悄悄起了作用，张禹肩膀一软，靠在了洪先生的肩膀上。洪先生感觉肩膀微热，不知道是张禹流的冷汗还是眼泪。&lt;br&gt;
+“张禹，你就不能……再骗我最后一回吗？”洪京墨心脏隐隐作痛，看来这一回是真的旧疾发作了。&lt;br&gt;
+插进去的再抽出来，不等于没发生过。鹿天鸣当初在床上说的话，还真是发人深省。洪京墨，这个时候，你应该是真真切切，终于有那么一点喜欢我了。可惜我死到临头，你却仍然不知道我张禹是谁。&lt;br&gt;
+“可能是药效还没过吧，我没有力气去思考怎么骗人了。”&lt;br&gt;
+“水至清则无鱼的道理你懂吗？这个世界越是黑白分明的人，越是无路可走的。”&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;张禹用手指抚摸着他耳鬓的白发，凑近洪先生的耳朵，轻声说：&lt;br&gt;
+“洪先生，我们两个的缘分，真的是比一张报纸还要薄。你知不知一张报纸有多薄？我爸说，是0.7mm。他在的时候，每天都会给我妈买报纸，有一天他不在，我便替他去买了，结果我妈气得把我好一顿打……你永远不会明白，我今天晚上有多开心，哪怕我马上就要死了，我也开心。因为我救下来的人，是一位丈夫，他会回到香港去。只要他活着，他就能一生一世陪在他妻子身边……你已经杀了他的孩子，你不能再杀他的丈夫了。我今天做了一件，我9岁时几乎连想都不敢想的事……我觉得我太了不起。”&lt;br&gt;
+“你救了你父亲，真的非常……非常了不起。”&lt;br&gt;
+张禹的头靠了过来，他从未有过如此沉重的愧疚，“我对不起我爸……洪京墨，你不明白，你真的不明白…”&lt;br&gt;
+“张禹。”洪先生打断了张禹的话，进一步拥紧了对方孱弱的身躯，仿佛这样做能止疼一样，“除我以外，你没有对不起任何一个人。”&lt;br&gt;
+枪林弹雨、生离死别，一个东南亚黑帮教父，一个和警察血脉相连的学生，真是有够风情万种的罗曼蒂克，虽然心中无限旖旎的怅惘，但Mon特助最后仍然是大煞风景地走过来，恭恭敬敬地递给洪先生一把枪。&lt;br&gt;
+洪京墨的手从张禹赤裸的大腿，向上覆上了他干瘦的脊背。心中又想起那句话，存在比毁灭更重要。这是多么高尚的投降理由，张禹你却偏要对此不屑一顾。洪京墨经年的伤疤凸出来，白衫下的脊椎也一节一节凸出，一行行伤疤像候鸟飞掠张禹每一寸肌肤，手指像帆船一样在上面短暂停靠，最后洪先生挪动麻痹的右半身，颤巍巍抬起手接过枪，抵住张禹的胸膛，声音带着少许哽咽：&lt;br&gt;
+“这一回，我是真的不能再放过你。”&lt;br&gt;
+我已尽力将棋已经走到这一步，就算仍是一败涂地，我也心甘情愿以命相抵。张禹默默擦掉垂在眼角的酸涩感，好像最后再用力喘出几口气来，自己就真的能不害怕。随后，枪声像暴雨前的闪电，在码头上空劈开来。&lt;/p&gt;
+&lt;h1 id=&#34;-2&#34;&gt;&lt;/h1&gt;
+&lt;p&gt;厉sir听得心上一震，眼角一滴泪凭空渗出，拽着官秋山的肩膀试探地问：“张禹是不是因为救我……牺牲了？”&lt;br&gt;
+“不会。这一枪是特意开给给你听的。”官秋山佯装镇定，坐在甲板上用力吸着烟，又说了一遍，“洪先生杀人，不会只开一枪。”&lt;br&gt;
+可厉sir不知道官秋山说的这句话，到底是在安慰他，还是在安慰自己。&lt;br&gt;
+“阿秋，替洪京墨翻案的怒汉神探就是我的师父，他的确是姓张。但我知道他这一生，除了破案什么都不在乎的。他的退休仪式上甚至一个亲人朋友都没来，如果他是张禹的父亲，我怎么可能不知道呢……”&lt;br&gt;
+官秋山摇了摇头，“阿禹的父亲当然不是警察，如果他父亲是……张禹可能就不会走这条路了。”&lt;br&gt;
+“那他是因为什么，走了当警察这条路？”&lt;br&gt;
+“因为一个人。”&lt;br&gt;
+“Make督察吗？还是……因为你？”&lt;br&gt;
+官秋山看着码头上渺茫的灯火，依稀看到了张禹的眼睛。9岁的张禹坐在屋邨天台上，双手双脚都伸出栏杆晃荡着，栏杆旁边是湿淋淋的床单，还有女人和小孩的衣服。张禹力气一直不够，家里洗完衣服总是拧不干，晾在屋子里像是在下雨，惹得邻居总是抱怨不停。&lt;br&gt;
+一个孤儿，一个寡母，这一生无论怎么过，都是折磨的。&lt;br&gt;
+还是晾在天台这里比较好，就是风大了点，要一直看着，不然会被风吃掉。张禹闭上眼睛，凉风吹过他的脚趾头、头发丝舒舒服服，这一坐就是许久。然而就在他靠着栏杆，快要睡着的时候，背后突然有人叫了他一声“阿禹！我找了阿秋来帮你！”&lt;br&gt;
+白床单被风吹得翻起来，像是天上翻涌的云海。隔着细细长长一条晾衣绳，张禹在云海里回过头，看见了Make搂着一个脸上像是擦了煤灰似的小少年，正在向自己招手。&lt;br&gt;
+“阿秋，谢谢了。”&lt;br&gt;
+当时，没有人看得懂张禹这双似笑非笑的眼睛里有什么。而今年，现在已经23岁的官秋山，这个做了毒品调查科三年的卧底，比起查案更懂得怎么销赃的官秋山，又一次地认真看了过去。吐出来的烟雾留在手指上，像只飞蛾，掸一掸，便扑火而亡。&lt;/p&gt;
+&lt;p&gt;官秋山想，张禹眼睛里装着的，就像是这片浸在夜色里的辽阔海域。&lt;br&gt;
+无喜无悲，太阳终将照常升起。&lt;/p&gt;
+&lt;h1 id=&#34;-3&#34;&gt;&lt;/h1&gt;
+&lt;p&gt;1985年，2月27日，香港平静无风。&lt;/p&gt;
+&lt;p&gt;“他们都说你是高材生，你应该认得很多字对不对？”&lt;br&gt;
+住在屋邨十八层顶楼的高材生不姓高，姓棠，棠高财，非汉唐陵阙的唐。因他号称自己是屋邨里，学历最高的住户。偶时远远看着，五官仍是英俊得出色，但他的年纪其实已经不小了，只是他的生活却好像一张油画，被画家默默封存在少年时代里，永远靠着最高分的虚荣心过活，所以别人才半讽半刺地叫他一声高材生。三十九岁的高材生重新戴上眼镜，看见九岁的张禹坐在楼梯台阶上，脸上红红一片，好像是被人打过巴掌。眼睛也通红，确实是哭过。手上攥着一张报纸，像盖着张被子，几乎藏住了整个人。高材生望了一眼，报纸上醒目的加粗黑字是今日的头条新闻“香港怒汉神探与洪氏家族灭门惨案真相！追踪调查十二载，终靠DNA技术替杀人魔翻案！”&lt;br&gt;
+“我妈妈今天看到报纸上的新闻，就哭了。我想知道为什么……可是Make他说他也不知道……”&lt;br&gt;
+高材生搔了搔肚皮，拿过报纸问，“小孩，你爸爸就是这位怒汉神探吗？对洪氏灭门惨案念念不忘十二年的重案组神探，也姓张……”&lt;br&gt;
+“高材生，我爸爸要是警察的话，我妈妈怎么会哭呢？”&lt;br&gt;
+对，这个住在十七楼，张姓小孩的父亲死了。在这楼里，是众所周知的事情。高材生将张神探的探案实录阅读过半后，心里讶异，这DNA技术确实像占卜问灵一样神气，明明已经是十二年前的事了，仍是活灵活现，放映电影似的把案件的每一个细枝末节，都重演一遍。但通读一遍后，仍然是不由自主对香港这些嗜血的媒体嗤之以鼻，那洪先生与洪太太之间哪里算得上是艺术家殉情，艺术何其无辜，稚子何其无辜。他们是纠缠一生一世还嫌不够，死后也阴魂不散，不让你好过。&lt;/p&gt;
+&lt;p&gt;不过这洪京墨幸亏是逃了，留在香港迟早一死。不是被香港混乱的律法处死，就是被人们的唾沫星子淹死。人言可畏，所有人都更愿意相信之前那个，洪京墨丧尽天良弑父杀母故事。那个故事更像国外的电影，破绽百出但精彩纷呈。谁不是暗自厌恶父母的强势，但又不敢明言。谁不是只敢憎恨生的小孩不够懂事，这欺软怕硬的世道上，小孩最软弱便是最可欺，孩子如果反叛父母，便是大逆不道，整个社会都会帮你管教他。那哪吒削骨还父，割肉还母，都用莲藕重新做了肉身，但灵魂不灭，又还是要认祖归宗。&lt;br&gt;
+为人父母者，也曾为人子女。但这一句生是我的人，死是我的鬼的道理，流传了祖祖辈辈生生世世，俨然成了经典。洪京墨弑父杀母的动机不重要，他是否真的这般大逆不道也不重要。&lt;br&gt;
+重要的是，他是明知不可为而为之的香港精神，是看客们压抑近百年的不忠不孝不仁不义的忤逆心。&lt;/p&gt;
+&lt;p&gt;“高材生，这报纸上每一个字我都听清楚了，真的没有我爸爸。”&lt;br&gt;
+小小的张禹没有念过很多书，却将报道里的每一个字都牢记在心。高材生放下报纸，也一起放下这个血腥的故事，叹了一口气说，&lt;br&gt;
+“小孩，不是每一个人的死，都值得用油墨印刷出来的，那太不环保。你看这一行小字……此餐饮店因多次违规改建，火灾发生后楼梯坍塌，造成近百人受伤，和数十人死亡……你老爸，就死在这一行里。”&lt;br&gt;
+顺着高材生的指尖，他的眼镜迫切地跟着在报纸上划来划去。张禹那个时候还年轻，他不明白，为什么有的人死了父亲，十二年之后仍是连篇累牍地追踪报道。而有的人也死了父亲，却只挤在简短的几行字里，和数十人一起，像是火化后混乱地塞进骨灰盒里，生前窘迫，死后更是逼仄。&lt;br&gt;
+张禹固执地问，“我今天要是忘记给我妈妈取报纸，他是不是就不会死？”&lt;br&gt;
+姜还是老的辣，和张禹亡父几乎同龄的高材生，语重心长地说，“有时候死，才是更好的活。梵高的父亲也死了，但他依然画出了最伟大的作品。小孩，你记住今天的伤痛，长大以后或许也能凭着伤痛，成为一个坚强的、勇敢的、了不起的人。”&lt;br&gt;
+可活在伤痛里的人，是不知伤痛为何物的，张禹又问，“可死的人到底算是去哪了？”&lt;br&gt;
+死了，就是没有了。高材生看着报纸上的照片，那个女人美得那么生动，那任何诗人和画家都不能够形容出来的美。她却不是电影明星，只是洪太太，一个因为婚戒、婚纱、婚姻，今生今世只被唤作洪太太的女人，张禹的父亲是在昨天没有了的，这个女人却是早就已经没有了，高材生嘶哑着嗓子道“应该算是出国了吧，荷兰、英国伦敦、巴黎、奥维……天南海北无处不去，但都是有去无回。”&lt;br&gt;
+“原来我老爸偷偷跑去了这么多地方玩。”&lt;br&gt;
+张禹将报纸接过来，认真折叠好，妥当放在怀中。抬起头又是一张灿烂的笑脸，“真替他开心。”&lt;/p&gt;
+&lt;p&gt;然后，一大一小的两个人都笑了，屋邨十八层是十八层地狱在人间的倒影，快活的神气像是岩浆，蒸干眼泪、汗液，从身下脚下的台阶飞溅开，从十八楼下坠、再下坠，直到淹没最低一层为止。&lt;br&gt;
+这亦是明知不可笑，而一笑了之的——香港精神。&lt;/p&gt;
+">隔岸观·第十五章</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://fooogy.github.io/post/ge-an-guan-di-shi-si-zhang/"" data-c="
+          &lt;h1 id=&#34;&#34;&gt;&lt;/h1&gt;
+&lt;p&gt;仔细感受着枪的重量，张禹心里无望地想着，为何你杀别人是如此轻而易举，而我想要杀你却难于登天。这世道还真是欺人太甚，尤其是欺我。张禹不仅潸然泪下，问：&lt;br&gt;
+“洪先生，你父亲为什么最后能开枪呢？”他怎么就舍得让你一个人留在这世上？&lt;br&gt;
+如果这句话，问的是当初那个把自己关在书房里的15岁少年，洪京墨一定会说，其实香港警察不算冤枉我，的确是我逼迫他们致死。然而二十三年过去了，在唱片机腐朽失真的乐声里，他回过头看到那个15岁幽灵一样的孩子，也不再视死亡为恭维。那是一场遗弃，而他历经千千万万回。&lt;br&gt;
+洪先生眼中升起悲凉之雾，笼罩在整片海面上，最后回答他说：&lt;br&gt;
+“他们自然是因为……恨我。”&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;h1 id=&#34;-2&#34;&gt;&lt;/h1&gt;
+&lt;p&gt;1973年12月31日，香港阴天小雨。&lt;br&gt;
+随着石油与天然气价格的上涨，香港加强了与东南亚各区域的贸易往来。银行服务业、房地产、娱乐业随之兴起，成为权贵们的避风港和交易所。然而洪先生对于这个深水港口城市，却没有半分多余的感情，无论是视她为母亲，还是妻子，只是不自觉地毛骨悚然。&lt;br&gt;
+“她从楼上摔下来是意外，你不要怕……等我办完事情，我就带你一起回英国……”洪先生颤抖着吸着烟，手上的指甲缝里还残留一丝血污，是他抱起那女人时蹭上的血，在烟上留下了半枚血印。&lt;br&gt;
+洪京墨看着窗外淅淅沥沥的雨，声音微不可闻，“让我毁了你在香港的这个家后，再毁了你在伦敦的家？”&lt;br&gt;
+“她和你母亲不同，她会善待你……”&lt;br&gt;
+洪京墨和那个女人如出一辙地发出一声冷笑，听得洪先生心惊胆战，“三年两年，或许她还勉强可以……那五年呢？八年呢？你们什么事情都没做错，为什么要抚养一个还没长大，就已经像个老人的孩子。你还不懂吗？她为什么要当着你的面从楼上跳下去，就是为了继续折磨你，让你一生一世都背负着‘杀妻’的嫌疑。你越不想和她纠缠，她便越要阴魂不散，这个世界不会再有第二个这么爱你的女人了。”&lt;br&gt;
+洪京墨心里快活地想着，原来我从出生起，就注定是一场报复了。仿佛这辈子突然有了继续玩下去的意义。&lt;br&gt;
+“对，我知道她爱我。所以我才宁愿找一个没有那么爱我的女人，共度余生。我只是个出身贫寒的普通人，我用功念书、工作、用寻常人十倍苦心才能过上同等的生活，我这辈子唯一的错，就是在画展上多看了你母亲一眼。然后就再也不能从她身上移开了……”&lt;br&gt;
+洪京墨想，这世上大概唯有衰老和变心这两件事，不可逆。只可惜这两件事，他都没办法好好体会。他毕竟是他父母亲生的血脉，一般是遗传自母亲的疯魔，一半是遗传自父亲的凉薄。这一生无论怎么过，都是折磨。&lt;br&gt;
+男人打出了一个电话，谁也不知道那是将来能作为呈堂证供的一个东西。&lt;br&gt;
+“威廉，我的老朋友，我们接下来的对话，你能录下来吗？毕竟，每个人都有找律师留下临终遗言的时候，我也不会例外。我回香港了……不，我还没来得及和她离婚，所以之前委托你办理的，关于我净身出户的事情，不作数了。因为我妻子她在家中……坠楼身亡了……但她毕竟是洪京墨的亲生母亲，她怎么能舍得……我现在心里很乱。”&lt;br&gt;
+“我现已经在开车去警局的路上了，是，我当然是他的父亲。我应该带他回英国，但像他这样的孩子明明就应该关进监狱里，今生今世都不要放他出来……不，我甚至当年就不应该让他生出来。”&lt;br&gt;
+“我与我的妻子，都是那么健康、善良。我们怎么能生出这种——心脏生生缺了一块的怪物出来。或许……洪京墨并不是我的亲生骨肉，他是我妻子与别人苟合而生。但我太爱她了，我不愿去追究她。我这一生最大的错处，不是不再爱她，而是曾经太爱她。”&lt;br&gt;
+“威廉，你应该不知道在中国，有句话叫‘养不教，父之过’。我对洪京墨的德行失望至极，也对我们夫妻二人教育不当，所造成的恶劣影响深感悲伤。所以我决定将我们夫妻名下所有财产，全部捐赠给香港教育事业。愿香港今后所有为人父母者，能以我为例，或以我为戒……”&lt;br&gt;
+砰——&lt;br&gt;
+那个男人当时，一定是突然忘记了自己在伦敦的妻儿，不然他不会放任自己崩溃到如此地步。美国产的手提电话陡然落地摔裂，男人朝自己的太阳穴上开了一枪。而后手松开方向盘，顺其自然地让车直行开着，直到撞上了警局外的电线杆。面对妻子这一场处心积虑的嫁祸，他终于用尽了自己最后一丝力气。他想要把自己对那个女人由爱生的恨，对这梦魇般人生的恨，包括对自己无能的那一份恨，在最后一刻完完整整地留给洪京墨。&lt;br&gt;
+天长地久有时尽，此恨绵绵无绝期，这便是他作为父亲，唯一想要教会洪京墨的事情。&lt;br&gt;
+可洪京墨只是冷眼看着男人几乎打碎了自己整个后脑，闻着车内弥漫开来的血腥味，用手帕捂住口鼻。先是张了张唇漠然地一笑，而后嗤笑出了声，然后是真像个怪物，只会狰狞诡谲地笑着，笑到五脏六腑都开始阵痛，开始咳血，却还是好久都停不下来。&lt;br&gt;
+这么一个无情懦弱，让自己母亲爱了一生也恨了一生的男人，居然因为害怕面对天亮以后千夫所指的局面，选择开枪自杀了。而这个人，居然就是自己的父亲。&lt;br&gt;
+后来的后来，被锁在车里的洪京墨被一个警察救了出来。那是一个很好心的警察，见洪京墨一身的显贵模样，只勒索了几百块便答应帮他敲碎车窗。&lt;br&gt;
+需要帮忙吗？小孩。&lt;br&gt;
+洪京墨从碎玻璃中爬出来后，却没有这几百块能够贿赂他。他嫌那警察吵闹，便拿碎玻璃割开了那个警察的咽喉。他在那警察身边坐了很久，直到那警察身体变僵，鲜血变黑，他都忘记了离开。其实心里还有点惊奇，杀一个人原来是这么容易的。&lt;br&gt;
+后来的他因为袭警、涉嫌杀害亲生父母、非法使用枪支等多项罪名被起诉，理所当然地进了监狱。他坦然地录了口供，如实说出了洪家一夕之间，家破人亡的惨案经过。但夜已深，问话的警察听到睡着，口水染污了本子上的一行字。&lt;br&gt;
+“洪京墨，15岁，杀人……”&lt;br&gt;
+顷刻之间，因弑父杀母被法律剥夺继承权的洪京墨，就这么坦荡荡从上流跌进了下流。再之后，洪京墨在监狱里认识了鹿天鸣。鹿天鸣听说了洪京墨的事迹后，坦荡赠与了洪京墨好几百块。那是他第一次运毒后的报酬，是他偷偷塞进肛门里带进监狱来的。&lt;br&gt;
+鹿天鸣问他，既然你连自己父母都能杀，你出去之后，能杀掉我父母吗？&lt;br&gt;
+于是洪京墨拿着不干不净的钱，与鹿天鸣完成了不明不白的交易。&lt;br&gt;
+两个孩子光明正大出狱后，却都没有蒙受大赦的死囚犯般的心境。见到父母来接自己鹿天鸣却心生悔意，要和洪京墨取消这个雇凶杀人的约定。&lt;br&gt;
+洪京墨笑着回答说，做生意赔钱不要紧，信誉不能丢。但我记下来了，毕竟你本来也没说，到底要在什么时候杀。便上了船。&lt;br&gt;
+第二年，鹿天鸣父母因贩毒被关进了监狱，所以和远房亲戚偷渡到泰国去。洪京墨按照惯例，给了鹿天鸣一笔数目不小的钱财，让他去重新打通关系。而鹿天鸣却揉着一头乱发说，香港成立了廉政公署，很多事情都不好办了。还带来一个好消息，说洪京墨父母的遗产被好几派人瓜分后，又被廉政公署追回其中一部分。遵循他父母的医院筹建洪氏基金，说是要复兴香港教育，不再生养出洪京墨这样的坏孩子。&lt;br&gt;
+几年过去，鹿天鸣又来了泰国。说洪京墨作为未成年犯罪的经典案例，被写在了学警心理修习手册里。在警务处，洪京墨15岁弑父杀母，还杀了一个无辜的警察的案子，便就这样从师父传给徒弟，从老人传给新人，口口相传，历久弥新。&lt;br&gt;
+洪京墨听了，却只是几声冷笑，从未辩解过只言片语。&lt;br&gt;
+多年以后，洪京墨31岁了，成了东南亚最具威望的洪先生。他乐善好施，说过最多的一句话就是“需要帮忙吗？”随后，无论你的需求是移植心脏、还是灭人满门，都能称心如意。洪先生解决了千万犯罪者们的生计和痛苦。后来年岁徒增，鹿天鸣与洪先生便渐行渐远，以至于那一桩冤案被人重新翻出来的事情，从没有人告知洪先生。&lt;br&gt;
+直到最近一次，鹿天鸣突然浑身是伤地出现在泰国，说想要联系上猛犸，把泰国的毒品做到香港那边来。洪先生想了想，若是自己让香港的青少年用洪氏基金的钱来吸毒，助人为乐至此，也是善举。&lt;br&gt;
+可惜和猛犸交易的当天，混进了香港警察。&lt;br&gt;
+一个叫Make的督察。&lt;br&gt;
+此人对毒贩有着近乎变态的痴恋，洪先生想了想，一个警察追求正义到这步田地，大概也是种贪得无厌。一将功成万骨枯，洪先生一直以为自己就是那个“将”，因他而死的那些警察便是‘万骨’。但事实并非如此。功成的一将是命运，警察、毒贩、妓女、赌徒，酒囊饭袋与正人君子，俱是万骨枯的众生。&lt;br&gt;
+鬣狗的马仔中，一个叫阿秋地出声说道：“洪先生，既然这个人是警察！要不我们留他一命，或许还能套出什么话来？”&lt;br&gt;
+可惜对于香港，对于警察，对于人，洪先生是早已毫无兴趣。只在枪林弹雨里哀叹道，“今日我留他一命，将来谁留我呢？”&lt;br&gt;
+被揪着头发抬起头的Make督察，深深看了一眼卧底官秋山，在官秋山朝自己一步步逼近后，低声同他讲了一句：&lt;br&gt;
+还记得我说过的话吗？&lt;br&gt;
+不要吸毒、不要嫖妓、不要杀人、不要……当时做卧底训练时Make说了千万条禁例，但官秋山此刻精神紧绷着整个人都快要裂掉，是一句都想不起来。&lt;br&gt;
+阿秋，不要死。&lt;br&gt;
+从俱乐部离开后，洪先生见鹿天鸣又有临阵脱逃之意，心中不悦，命司机提速。然后与前面的车体猛然相撞，鹿天鸣被撞出去十几米远后，陷入晕厥，终是不能再逃了。洪先生回过头，看见了一个因车门变形，而被死死困在车里的年轻人。&lt;br&gt;
+从新鲜到腐坏，从七十年代流浪到九十年代，他终于看到了那个叫阿禹的孩子。冥冥之中，所有的久别重逢都巧合的像是一场阴谋。&lt;br&gt;
+洪先生淡然一笑：需要帮忙吗？小孩。&lt;/p&gt;
+">隔岸观·第十四章</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://fooogy.github.io/post/ge-an-guan-di-shi-san-zhang/"" data-c="
+          &lt;h1 id=&#34;&#34;&gt;&lt;/h1&gt;
+&lt;p&gt;活人不能被死物奴役，药品、酒精、道德、法律、血缘关系，对人而言都是死物。然而哪怕是脱俗如洪先生，也不得不把各种药物视为一生一世的爱人，和它生死与共，不离不弃。这是洪先生和这个世界，最接近爱情的时候。可惜他今天，又要为张禹，破例一回。&lt;br&gt;
+张禹看见洪京墨从怀中掏出钢制酒壶来时，还以为是洪京墨心灰意冷，也开始尝试酗酒。然而当酒壶里的液体灌进自己的喉咙里时，他才意识到那里面装着的，原来不是任何一种烈酒，而是微微发苦的药水。洪京墨一只手圈住张禹的腰，让他和自己紧紧贴在一起，没有一点空隙。另一只手则用力掰开张禹的牙齿，用手指按压住他的舌头，好让药水在喉咙里一路飞流而下，直击灵魂深处。&lt;br&gt;
+“美国警察审讯时常用的药水，香港还没听说过这种东西，对吧？”&lt;br&gt;
+张禹顺着玻璃不自觉地下滑，再抬起头时整张脸都湿漉漉的，沐浴过的样子“你怎么能……”&lt;br&gt;
+“我只是觉得，这个药或许能让我们，重新认识一下彼此。我是洪京墨，你是谁？”&lt;br&gt;
+“张禹。”他听见自己的声音，像山谷里的回声一样，越飘越远。手拽着窗帘想要站起来，抓住自己的声音，却扑了个空，原来他离家出走的是灵魂。&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;“你为什么跟着鹿天鸣一起来泰国？”洪先生手指捏红了张禹的脸。&lt;br&gt;
+“我放暑假……过来玩。”张禹双眼失神，呆呆地看着波涛汹涌的天花板，吊灯也幻化成海上的灯塔，暗自发着光，数都数不清。&lt;br&gt;
+“玩的开心吗？”洪先生掀开了张禹的白T，却发现张禹居然哭出了声，眼泪大颗大颗落在衣襟上，润湿成一朵又一朵的雪绒花。&lt;br&gt;
+“不开心，所有人都死了。”&lt;br&gt;
+“你一开始明明可以回香港去的，你为什么不回去？”洪京墨将头抵在张禹的额头上，其实他自己都想不清楚，现在到底是想听到一个什么内容的回答。但无论是残酷的，还是鲜血淋漓的，只要是真实的就好。洪京墨在这一刻，对张禹已经别无所求。&lt;br&gt;
+“我在找一个人。”泪眼朦胧间，张禹也知道自己好像说出了不该说的话，但他的灵魂已经脱离身体太远太久，他对即将要发生的所有一切，都无能为力。&lt;br&gt;
+“最后找到了吗？”&lt;br&gt;
+张禹被硬生生翻了个面，无意将窗帘也整个扯落，一抬眼，他又看见了楼下的官秋山，身影模糊的像是一段回忆，轻声笑了“找到了。他还活着……我很高兴……”&lt;br&gt;
+窗帘现在成了赤裸裸的两个人最后一块遮羞布，但这回赤诚相见的是他们的灵魂。洪先生重新抱紧张禹的身体，像每一个做爱之前占有欲都空前膨胀的男人那样，俗滥地一问：“鹿天鸣是你的初恋吗？”&lt;br&gt;
+“当然不是！”张禹怏怏不乐地否认道，“我第一次拍拖，是和一个好单纯的女孩。手都没牵过可是我好爱她，分手之后还去求复合……”张禹有些苦闷，凭空回想起来那时候还真是丢人。&lt;br&gt;
+可洪京墨此时居然因为张禹的情路坎坷，而喜形于色。他承认这太不道德，但张禹这个人确实有些悲惨的幽默在。洪京墨一根根亲吻着对方细长的手指，漫不经心地随口一问：&lt;br&gt;
+“看来鹿天鸣只是你第一次和男人做，甚至可能是……第一次做？”&lt;br&gt;
+“不，不是第一次。”灵魂彻底灰飞烟灭的张禹，最终这样说道。&lt;/p&gt;
+&lt;p&gt;只剩下一件白色上衣的张禹挂在玻璃窗上，官秋山抬头凝视着，在玻璃反射的强光下，那几乎就仅仅只是件白衣服，没有人在那里。官秋山记得自己第一次见张禹，就是在晾满衣服和床单的屋邨天台上。肥皂水味道如梦似幻，干净得像是一场梦。&lt;br&gt;
+“喂！洗过的衣服要用力拧干净，才晾得快。”&lt;br&gt;
+“你相信我，我真的已经尽力了。”&lt;br&gt;
+张禹那时候9岁，官秋山一直很意外，怎么会有人才9岁，说的每一句话就已经像是一声叹息，宛如活过二十年以上的老人。官秋山不知道自己也很快长成了一个二十多岁的老人，不，是一个二十多岁的老古惑仔。&lt;br&gt;
+泰国扫毒行动前天，香港下了一场大暴雨，连Make都说，这活见鬼的天气真不像是个好兆头，便挂了电话。张禹出门时，还被阿妈叮嘱不要太晚回家。鞋子踩着马路上的水洼，越走脚步越重，走到官秋山的出租屋时，整个人像是从水里刚捞出来的活鱼。&lt;br&gt;
+官秋山看着张禹狼狈的模样，阴郁的心情也消退大半，开玩笑说道“游泳来的？”&lt;br&gt;
+“对啊，水很深，差点淹死我。阿嚏！”&lt;br&gt;
+放下啤酒和烧鸡后，一块毛巾适时地甩了过来。张禹用脸接住后，认真地擦着头发，还有溅落在小腿的泥水，然后他听见阿秋拉开一罐啤酒说：&lt;br&gt;
+“阿禹，你说我怎么突然就这么老了……但你好像一直没长大。”&lt;br&gt;
+“喂喂喂！你别以为我听不出你在说我矮！”&lt;br&gt;
+啤酒罐落地，官秋山猛地抬起头，定定看着张禹，拉着他的手问道：“阿禹我认真的，我现在就想知道你长大后会是什么模样。你会做一个什么样的警察，你会在什么年纪结婚，你会和谁结婚，你会生几个孩子，你也会被Make骂着去卖命吗？你会每天清明节都记得扫墓吗？你会像祭奠你爸一样，年年月月记得我吗……”&lt;br&gt;
+无人理会的毛巾掉在地上，张禹看着越来越激动的官秋山，心里想，如果自己再早出生几年就好了。&lt;br&gt;
+“官秋山，我已经长大了。”&lt;/p&gt;
+&lt;p&gt;那天晚上的张禹今天回忆起来，已是面目模糊了。但官秋山没有特意去回忆，天真莽撞的张禹本就是一直长在他眼前，长在他脑子里的人。天色已晚，洪先生却仍然没有从95公寓里出来，官秋山只能和所有人一起站在楼下等待，和很多人一起，却仍感觉自己形单影只。所以他一直抬头望着楼上的窗子，一如他在每一个不眠之夜望着的高天孤月。&lt;br&gt;
+一只虚白的手怏怏伸出来，洪京墨抓住它用力摁在玻璃上，胡乱留下的指印都来自于这只被废掉的左手。轮番打磨着每一寸指节，然后卷起手掌勾住。当他全神贯注涌进去时，手指会把窗帘揪成一团，当他退出来，一根根绷紧的手指才会重新松开，只剩下窗帘皱皱巴巴的花团锦簇盛开着，像一张古城的地图，任由洪京墨南征北讨，占为己有。&lt;br&gt;
+洪京墨目光灼灼，盯着自己的作品看来看去，却没有任何春风得意在脸上停留，凄然一笑。用窗帘将整个人卷起来，打横抱着进了浴室。窗帘长长拖在地上，跟着两个人左拐右拐，幽幽散发着风情。可洪先生抱着张禹时，却全然不像是抱着一个和自己有肌肤之亲的男人。&lt;br&gt;
+人和窗帘一起抛进浴缸里，张禹探出来头，虚脱地眨了眨眼。温水浇在身上，他的灵魂也终于回来了一半，于是他问，“这药太绝了，我该不会连小时候尿床的事都说了吧。”&lt;br&gt;
+洪先生笑得五官都移了位置，掐着对方的脸说道：“你还说自己苦恋我多年。”&lt;br&gt;
+张禹配合地作出大惊失色的脸，忙伸出左手捂住洪京墨的嘴，“喂！不可以把我的秘密说出来！”&lt;br&gt;
+“我从来都是最不受威胁的人。”洪京墨偏头忘乎所以地吻着张禹手上的伤疤，又顺着手臂一路向下，那件白T沾了水贴在他胸膛前，还有着斑斑驳驳的污渍，不知道是谁留下来的，光打下来有些湿润的性感。突然间，就算他看不清张禹的真面目他也不在意，这段感情如云如雾，反而极美。而张禹也顺势将他搂在身前，唇齿相依时，洪京墨甚至重新把手伸进了张禹的白T里，想要替他脱下来好好清洗。然后，下腹忽然被硬物狠狠一顶，洪京墨低头去看，笑意全无。张禹右手正拿枪指着自己。&lt;br&gt;
+云雾散开，张禹天真得让人生厌的脸，又清晰可见。&lt;br&gt;
+“我的洪先生，这才叫威胁。”&lt;/p&gt;
+&lt;h1 id=&#34;-2&#34;&gt;&lt;/h1&gt;
+&lt;p&gt;凯迪拉克的轮胎碾过路面，洪先生只觉得自己的脸面，也被张禹随意丢在地上，再碾平。三十八年以来，这是洪先生第一次明白生死由命的道理。在人生的中段认识了张禹，不是给他的恩赏，而是他的报应。&lt;br&gt;
+空气暖湿，卷着树叶的风吹过去，他从后视镜里能看到官秋山等人开车默默跟着，车里还坐着张禹的父亲。而自己则小心翼翼握着方向盘，在张禹的胁迫下朝码头开过去，身上只狼狈地披着一件浴袍，这还是张禹当时好心给自己搭上的。不然洪先生可能要成为东南亚各国，第一个被情人逼着赤裸裸出门的黑帮教父。倒也算名垂青史。&lt;br&gt;
+然而每当洪先生心不在焉时，张禹的枪口就会猛然磕在他太阳穴位置上，作为命若悬丝的提示。洪京墨心底的怒火慢慢烧上来，整个胸膛都红灿灿的，肋骨位置似乎更疼了，洪京墨忽然松开一只手，压在心脏上。&lt;br&gt;
+“你怎么了？”张禹仍然维持着双手举枪的动作，只是偏过头看了一眼，洪京墨面色惨白，好像不太对劲。&lt;br&gt;
+洪京墨没有说话，捂着心脏弓下去了，上半身趴在方向盘上，一抖一抖的地说：药。&lt;br&gt;
+张禹左手从枪上移下，伸出手拨开洪京墨额前的乱发，看见了对方痛极难耐的面容，心中也有些不忍，问“车上有吗？我给你拿……”&lt;br&gt;
+张禹徒劳地翻找着药瓶，可他既不可能分出目光去看，也不可能放下枪去找，只能眼睁睁看着洪京墨在眼前呻吟着。方向盘失去了他的控制后车撞上了护栏，张禹几乎能感觉到背后的灼热感。&lt;br&gt;
+“洪京墨！刹车！”&lt;br&gt;
+洪京墨对此充耳不闻，一只手猛打方向盘调整好方向后，又慌乱地踩下油门，把车子的速度又提起来。索性张禹终于找到了一瓶药，放在嘴边咬开瓶盖后就要给洪京墨嘴里倒下去。然而洪京墨刚一张开嘴，车子又是猛烈颠簸，药片撒了他一胸膛不说，药瓶甚至也飞到了车后座去。洪京墨自暴自弃地两只手都松开了方向盘，张禹左手试图抓起药片却根本握不住，心下一横，整个人趴了上去，用舌头卷起散落的药片喂到了洪京墨嘴里。&lt;br&gt;
+在凯迪拉克即将要撞上码头仓库的墙壁之前，洪京墨终于回过神来踩住急刹车。两个人的身体同时一晃一震，也不知道是谁磕破了舌头，两个人嘴唇上都粘上了血丝。分开时，张禹看见洪京墨的眼里一片清明，好像什么情绪都没有。&lt;br&gt;
+洪京墨摸着张禹的头发，脸上一半像是哭，一半像是在笑：“生死关头，倒是吻得很用功。”&lt;br&gt;
+张禹喘匀了胸里这口气后，释然一笑“你骗我啊。”&lt;br&gt;
+“只能你骗我，我不能骗你吗？”&lt;br&gt;
+“可以，那我们又扯平了。”&lt;br&gt;
+“可惜我是真的没想到，原来我哪怕是要死在你眼前，你都不能放下枪。”&lt;br&gt;
+“洪先生说笑了，您和我爸一起千年万年地活下去。”枪口像一个冰凉的吻，碰在额头上。在昏暗的车厢里，张禹在自己的腿上坐了起来，洪先生看见的仍然是他一贯若无其事的微笑，微笑里藏匿万千沟壑和阴影，“现在立刻让官秋山带着我爸上船，不然洪先生的头马上就开花了。”&lt;br&gt;
+洪先生望着他许久，叹息似的发出声音：“官秋山，送张老先生上船。”&lt;br&gt;
+余光瞥见官秋山搀扶着厉sir上船后，张禹终于松下了一口气。洪先生也感觉得到，身前的张禹几乎是在刹那间就化成了一滩水，随后船慢慢启动，离岸飘远，两个人仍在车里僵持着，一呼一吸相互交融着体温，深深看着对方眼底自己的倒影。&lt;br&gt;
+张禹没有放下枪，尽管他心里明白这枪只不过是虚张声势的摆设，然后惨淡一笑，“谢谢了，洪先生。”&lt;br&gt;
+“还是要……杀我吗？”洪先生没有意识到自己的疑问句，其实带着微茫的希望。&lt;br&gt;
+哪怕夜深，哪怕他的视力不够出色，厉sir仍然是固执地眺望着码头上的那辆车，官秋山心中闪过一丝不忍和愧疚，掰过他的肩膀说道“厉sir，你不要看了！阿禹杀不了他的。”&lt;br&gt;
+“为什么？”&lt;br&gt;
+“因为……”官秋山的声音沉下去，无影无踪浸没在江水里，“我的那把枪在Make死后，再也没装过子弹。”&lt;/p&gt;
+">隔岸观·第十三章</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://fooogy.github.io/post/ge-an-guan-di-shi-er-zhang/"" data-c="
+          &lt;h1 id=&#34;&#34;&gt;&lt;/h1&gt;
+&lt;p&gt;张禹遇见洪先生那一年，已经20岁。比起14岁的罗密欧，他的确是太老了一些。&lt;br&gt;
+英国国王爱德华八世还没来得及加冕，便宣布退位，随后同辛普森夫人结婚。那一年他42岁，成为温莎公爵。&lt;br&gt;
+洪先生遇见张禹那一年，才38岁。他却比爱美人不爱江山的温莎公爵更年轻。所以直到很多年的岁月都度过去，洪先生对张禹仍没有生不逢时之感。&lt;br&gt;
+1997年3月12日，距离香港回归还剩三个月零十八天。在谈判桌上，英方代表对中方的提议心不在焉。&lt;br&gt;
+而在泰国的一家中餐馆里，洪先生与厉sir也将进行一场谈判，商议张禹的去留。&lt;br&gt;
+没有唇枪舌剑，没有握手言欢，洪先生坐下来之后，甚至只说了几个字，张老先生，你好。&lt;br&gt;
+厉sir便从怀里掏出了枪，洪先生甚至没来得及看清楚那人手里拿的是枪，他只看到那个苍老的男人朝自己抬起了手，自己的胸口便痛得整个裂开。他还以为是心脏病发作。&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;厉sir被洪先生的保镖像条狗似的押在地上时，张禹恍然发觉自己一生，好像又一次地要失去父亲。而后听见官秋山跟自己说，快走！然而枪声响起后，无一人幸免。张禹没能顺利逃脱，看着厉sir满脸鲜血的模样，又问，他，为什么？&lt;br&gt;
+官秋山告诉他，洪京墨为给新市长移植心脏，前阵子杀害了一个待产的孕妇，那是厉sir的女儿。&lt;br&gt;
+原来洪先生的名字就是洪京墨。那个每一个香港小孩都听说过的豪门孽子——洪京墨。张禹终于回过神来，他这一生数学不好、历史地理也不好，好像凡是关于这个世界的，万事万物他都学不好。&lt;br&gt;
+他只听得懂，忠孝仁义礼智信廉。 但他其实只是一直以为自己听懂了。&lt;br&gt;
+世间唯一忠贞不屈之物，是人深藏于心的憎恨，它延绵不绝，万古长青。&lt;br&gt;
+可惜子弹没有能彻底打穿防弹衣，洪先生只是断了两根肋骨，胸口像破风箱似的呼啦地响。本来采光就不够好的95公寓从温柔乡变成了集中营，张禹在里面被关了一个星期的紧闭，从金丝雀变成了阶下囚。所有人都知道他命不久矣，但在洪先生正式出院前，谁又都不愿背负着谋他性命的罪名。唯有官秋山日日奔波在医院与公寓这两点一线，送来食物和水，还有消息。说厉sir还活着，洪先生的人只是打断了他一条腿。只要两个人能捱到支援来，就都能平平安安。&lt;br&gt;
+然而张禹最终还是没有等到支援的人过来，他只等到了洪先生。&lt;br&gt;
+那颗子弹虽然没有直接拿走他的性命，但也足矣让他后半生永远为此心有余悸。张禹抬起头，这个男人身量瘦削，坐在木椅上无声无息，像是圆寂的僧。头上又白了好多，本就不算年轻的人看着更是老气横秋。两颊深深凹陷，面色铁青，嘴唇蠕动着，问：&lt;br&gt;
+“为什么？”&lt;br&gt;
+张禹当然清楚厉sir这么做的原因是什么，但他说不出口。这甚至与所有人的警察身份是否暴露都没有关系，他说不出口厉sir是以一位父亲的身份向他开枪的，而非是一个警察。&lt;br&gt;
+张禹靠在落地窗前，日光将他的影子映在地板上，被死死踩在洪先生的脚下。&lt;/p&gt;
+&lt;h1 id=&#34;-2&#34;&gt;&lt;/h1&gt;
+&lt;p&gt;“他开枪的原因，其实根本不重要。”&lt;br&gt;
+“不重要吗？我只是因为喜欢你，你的父亲就要置我于死地。如果有一天爱上你，是不是要将我碎尸万段？”&lt;br&gt;
+“洪京墨，你怎么会喜欢人呢？你连亲生父母都能杀……”&lt;br&gt;
+“你为什么……”&lt;br&gt;
+我为什么会这么说呢？张禹捂住了眼睛，好让眼泪不要掉得太快，他即将编织出一个欺天罔地的谎言，只为替厉sir争取一线生机，“你本名叫洪京墨，7岁时被诊断出先天性心脏病，随后你的父母分居。15岁那一年，在与母亲争执时将她从顶楼推下，你母亲不幸去世。你父亲作为目击者报了警，在送你去警局的路上，被你用一把枪打爆了头。但你也被你父亲困在了车里，一个警察助你脱困后，你又用碎玻璃割开了这个警察的喉咙。后来在监狱里通过贿赂……”&lt;br&gt;
+洪先生的拐杖一下下敲着地板上的黑影，像是敲在张禹的良心上，“这都是鹿天鸣告诉你的？”&lt;br&gt;
+“可我还知道一些鹿天鸣不知道的事情，洪先生要听吗？”&lt;br&gt;
+洪先生将深入骨髓的杀意，隐没在笑意里，“但说无妨。”&lt;br&gt;
+张禹偏过头，透过窗子望了一眼站在楼下的官秋山，他正靠在一棵树上，在枝繁叶茂的阴影底下，拿脚用力踩灭了烟头。他仿佛也闻到了他身上的烟草味道，如果官秋山现在听得见他的声音就好了，就能冲过来扼住他的喉咙，阻止他继续铤而走险。&lt;br&gt;
+张禹一笑，正色道，“我老爸要杀你，不过是因为他——是个警察。”&lt;br&gt;
+洪先生目光往上移，从地上的影子转到张禹波澜不惊的脸，公寓陷入一片死寂。&lt;br&gt;
+“我刚才给你的理由还不够好吗？你父亲如果是警察，那你还活得成吗？”&lt;br&gt;
+张禹没有理会洪京墨，自言自语地说着：“1985年2月27日，一直有‘怒汉神探’之称的重案组张督察宣布告破一桩陈年旧案——洪氏家族灭门惨案。这也是香港警方首次用DNA技术……”&lt;br&gt;
+“张禹！”洪先生丢开拐杖快步走来，一把将张禹的喉咙扼住，好让他再也发不出任何声音来。头磕在玻璃上发出沉闷的声响，张禹脸色渐红，因为缺氧而眼神失焦，只能望向洪京墨，可他映在眼眶里却模糊一片，不成人形。&lt;br&gt;
+“重案组张督察……表示，坠楼案发生的地点……在洪太太卧室的阳台上……以洪京墨15岁时的身高和力量，都不足以推一个成年女性翻下楼……”&lt;br&gt;
+“你觉得我会信吗？”&lt;br&gt;
+“在枪击案发生的地点里……是洪先生正在驾驶的汽车内……洪先生在给律师打电话途中突然中枪也并非是洪京墨所为……”&lt;br&gt;
+这时，洪京墨突然松开手朝他吻了过去，张禹奋力躲避着想要说完，洪京墨却尽情投入在这个吻里，一个字都不想听。张禹扯着洪先生的衣襟声嘶力竭地强调着：&lt;br&gt;
+“洪京墨！你今天要是杀了他……全香港就真的再也没有人能记得，你15岁时的冤案。”&lt;br&gt;
+“我不在乎。”&lt;br&gt;
+“可是我在乎……”亦真亦假间，像蝴蝶煽动着翅膀，一颗眼泪恰到好处地掉了下来。人到底要付出多沉重的代价，才能打碎一场只有苦痛的困局，即兴演出一个目眩神迷的爱情故事来。你已经在泰国待了二十三年，对这个地方没有什么感情，但就是这么些年都舍不得离开。张禹握紧拳头，红着眼睛想起了洪先生说的这句话，那些不知道是对多少情人反复练习过的话。张禹要将他们一字一句都充分回收利用起来。他甚至感觉，自己一生经历的所有大难不死，都是为了最终，坦然地死在洪京墨手中这个结局。&lt;br&gt;
+“现在想起来，原来是我冥冥之中在等你。”&lt;/p&gt;
+&lt;h1 id=&#34;-3&#34;&gt;&lt;/h1&gt;
+&lt;p&gt;洪京墨用那双深邃的眼看着张禹，那双眼睛里，已经很久都没有过相信，“证据呢？警察说话，是要讲证据的对吧？”&lt;br&gt;
+张禹回忆起95公寓里，鹿天鸣旧时的衣物甚至还被保留着。那洪先生应该是个传统念旧的人，“鹿天鸣当时偷了我所有的东西来投靠你，我的护照身份证，我想你应该是看过了，但钱包呢？你应该看看的，钱包里装着的，不一定只有钱……”&lt;br&gt;
+洪先生盯着张禹看了很久，最终还是命人去找鹿天鸣当初留下来的物品。官秋山带着一个纸箱子走上楼时，洪先生甚至怀疑那就是潘多拉魔盒，只要自己一打开，就会陷入万劫不复的境地。洪先生将钱夹里的港币、泰铢纷纷取出，最后在钱包的内层，抽出一张折叠着的陈年报纸。报纸在钱夹里藏了太多年，折痕上的文字已经被摩擦得太过模糊。洪先生缓慢地将泛黄的报纸展开，媒体当年醒目的标题依旧清晰可见：香港怒汉神探与洪氏家族灭门惨案真相！追踪调查十二载，终靠DNA技术替杀人魔翻案！&lt;br&gt;
+“洪京墨，这张报纸不可能是我伪造的。上面每一条消息……都是1985年2月27日真实发生着的。你不信的话，可以去查。”&lt;br&gt;
+“说我弑父杀母的是香港警察，多年之后让我沉冤得雪的，居然也是香港警察。你们香港人……还真有趣”洪先生冷笑一声，拿着报纸摔在张禹的脸上，然后又重新掐住对方的脖颈，质问道：“他们是怎么死的，归根结底都是我的家事，跟你们父子俩到底有什么关系！连我父亲都质疑我的身份，你们何苦兴师动众地替我做DNA认祖归宗！”&lt;br&gt;
+“洪京墨，我说这些话给你听，不是在威胁，而是恳求。你父亲当年就这么不管不顾地死了，把所有的惩戒都留给你，这是什么样的人生，我大概也是感同身受。所以父债子偿，他欠你的命，现在开始算在我头上，你也朝我胸口开一枪。想一想，他的后半生一定过得比死还惨，我妈会每天追着问，死的为什么不是你。真是想想都好玩啊……”&lt;br&gt;
+阿妈，原来这个世界从来不是非黑即白的，有的人身处黑暗，却贪恋晴天烈日，那我现在呢？也深陷在黑暗之中吗？何时才能弃暗投明，又或者，像雪花落在冻僵的泥潭里，它改变不了泥潭的颜色，只能等春暖花开，永远融在一起。在生死关头想起‘永远’这种话，还真是一种荡气回肠的浪漫啊。可惜是诅咒出来的浪漫。张禹眨了眨眼睛，黑色的瞳孔里亮着闪光。&lt;br&gt;
+张禹的眉目似乎也像地上的报纸一样褪色、枯萎，于是洪先生的脸上，也出现了一点能够被称呼为‘神色’的东西，他问：“你可能会死，值得吗？”&lt;br&gt;
+“当然不值得了。我可才20，如果不出意外我还能活80年……但我总觉得我命不该绝，洪先生你说呢。”&lt;br&gt;
+张禹就是这样，总能把各取所需的交易做成一场游戏，明明早就已经一无所有，却总是能熬出一个平局。引诱着人跟他继续玩，直到能分出胜负为止。洪京墨转身望了一眼官秋山，“把枪留下。然后，离开。”&lt;br&gt;
+张禹也向官秋山投过去一个眼神，那眼睛里的底色是一片沉静，让他突然想起了同样枉死在枪下的Make。官秋山紧张得每一寸关节都僵直发硬，缓慢地从腰后抽出一支枪，放在了地上。&lt;br&gt;
+一张嘴却欲言又止，心里面挥之不去的一句话是：不要死。&lt;/p&gt;
+">隔岸观·第十二章</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://fooogy.github.io/post/ge-an-guan-di-shi-yi-zhang/"" data-c="
+          &lt;blockquote&gt;
+&lt;p&gt;民间看戏，樊梨花杀父弑父……还有哪吒，哪吒是个小小孩童，翻江倒海闯了大祸。&lt;br&gt;
+他父亲怕他连累，挟生身之恩要责罚他。哪吒一怒，刳肉还母，剔骨还父。&lt;br&gt;
+后来是观世音用荷叶与藕做成他的肢体。&lt;br&gt;
+爱玲便亦是这样的莲花身。　&lt;br&gt;
+　　　　　　　　　　　　　　　　　　　　　　　　　　——胡兰成．今生今世&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;昏暗的车内有人微弱的呼吸着，玻璃雾了又散，散了又凝。张禹被洪先生压在车窗上，看着泰国的日光降落在寺庙的塔尖，闪闪发光，像是神迹。但那座金黄色的塔，又刺破了太阳，像是他以前看见自己阿妈在碗边，磕破了一个能够孕育出生命的胚胎。天边血红一片，慢慢朝自己流淌着，灼伤了一小片落叶，然后就焚毁了整片山林，山羊躺在光秃秃的草原里哀嚎着。张禹腿上寒飕飕地一颤，但又动不了，他想从黑暗里游出去，但又被黑暗从喉咙里灌进去，进进出出，一次次被它彻底掏空，又填满。&lt;br&gt;
+“好看吗？”&lt;br&gt;
+张禹的手紧紧贴在太阳上，隔着一层玻璃。手指卷曲，是欲扑火而不能的白蛾。每当他抽出去，像是从身上撕下了陈年的死皮。可是再插进来，就像是在被焚烧殆尽的荒野里，半根野草向下顽强不屈地扎根，他突然忘记了自己原本在看什么。&lt;br&gt;
+隔着玻璃，隔着风萧萧兮的寒水，他看见了洪先生淹没在其中，一张面目模糊的脸，低下了头，说“好看啊，好看的要死。”&lt;br&gt;
+然后他便整个人被翻过来，与洪先生四目相对。惨白的脸上镶着的青紫的嘴，都是京剧脸谱上才有的色彩，咿咿呀呀地发出声音来。洪先生摸着张禹的耳朵说“我已经在泰国待了二十三年，我对这个地方没有什么感情，但我就是这么些年都舍不得离开。现在想起来，也许冥冥之中就是在等你。”&lt;br&gt;
+张禹在一瞬间红了眼，然而正在开车的Mon特助突然踩住了刹车，张禹向前一滑，洪先生紧紧拉住了他。&lt;br&gt;
+大梦初醒，恍然想起了鹿天鸣。&lt;br&gt;
+洪先生对露水情缘，确实很温柔。张禹坐起来捡衣服，笑说，“洪先生，如果有一天我死于非命，一定是信了你的鬼话。”&lt;br&gt;
+洪先生一头雾水，不明白他为什么好端端地，突然疏离地讲出这样一番话来。&lt;br&gt;
+“知道为什么是你吗？”&lt;br&gt;
+张禹天真烂漫地笑了，笑的声音像是一只绵羊在哭，“可能是因为我……我…我不知道。”&lt;br&gt;
+洪先生隔着白衬衫吮吸着他的锁骨，一碰过去，张禹就下意识地躲开，但退无可退，只能用左手抵住洪先生的胸口，但左手使不上力气，手腕一翻，一条狰狞的伤疤从黑暗里钻出来，游进了自己眼里。&lt;br&gt;
+啊，原来你误以为我，是任人宰割的。&lt;br&gt;
+左手试着推开什么，没有用。然后又伸出右手去拦，最后洪先生擒住张禹的两只手臂摁在玻璃上，这个人生的白，又一动不动，看起来像是被人折断双臂的石膏雕像。&lt;br&gt;
+洪先生温暖的体液干涸在他身上，他却很平静，像是终于熬夜补完了作业一样如释重负。洪先生的头发在张禹的颈窝上蹭来蹭去，仍是没有反应，人像是凝固了。洪先生的嘴唇吻他，轻轻痉挛着，又惊醒了这个心不在焉的人，张禹茫然地问：做完了吗？&lt;br&gt;
+“张禹，做爱这件事，有的时候是会很疼，但从来没有人把他当成自残。”&lt;br&gt;
+“是。”&lt;br&gt;
+“也不是学生在做功课，做不好也没有人会怪你。”&lt;br&gt;
+“是。”&lt;br&gt;
+“人生得意须尽欢，我想带你一起去这里。”&lt;br&gt;
+带他一起到乐以忘食，乐以忘忧，不知老之将至的极乐世界里去。&lt;/p&gt;
+&lt;h1 id=&#34;&#34;&gt;&lt;/h1&gt;
+&lt;p&gt;炎炎烈日，厉sir步行至一间公共电话亭。这是他第一次主动打电话给官秋山。尽管出于对卧底生命安全的考虑，他作为上线，不该主动拨出这个电话。&lt;br&gt;
+“是我，方便吗？”“我在马桶上，不方便。”&lt;br&gt;
+“现在有一件关于洪先生的事情必须要告诉你，我长话短说。”&lt;br&gt;
+“你对他的了解不可能有我多，我跟鬣狗混了三年，也才见过他几面。”&lt;br&gt;
+“我曾经在重案组见过他，在他１５岁那一年。”&lt;br&gt;
+“哈？犯了什么案子？”“他杀了他母亲。”&lt;br&gt;
+官秋山哑然，他以为洪先生第一次作案，可能是去贩毒、抢劫、甚至有可能是强奸。哪怕是杀人放火，又怎么会……但心中又有些理所应当，弑母确实也像他能够做出的事。&lt;br&gt;
+“那他父亲呢？”&lt;/p&gt;
+&lt;p&gt;“你父亲还会来泰国接你回家。我没有你好运。你知道吗？我母亲死了之后，我父亲也开枪自尽，像是殉情。然后我看到有人从他家里，搬出一箱又一箱的黄金、钞票、还有古董字画。暴殄天物，明明什么都不珍惜，但就是固执地要占有。你说在他眼里，一摊烂泥和一尊雕塑的区别是什么？”&lt;br&gt;
+“雕塑是……干的？泥是湿的……”&lt;br&gt;
+洪先生湿润的唇吻过去，卷过他每一个干燥的角落，“他比你现实。他眼里的区别，只是贵贱。”&lt;br&gt;
+他不明白，一摊烂泥要历经千刀万剐，操、揉、拆、抹，再风干，才能成为雕塑。哪怕是放在香港最穷困潦倒的贫民窟里，哪怕是出自流浪汉之手，也都比他高贵。&lt;br&gt;
+张禹不以为然，笑着问“那你和他的区别又是什么？他把古董字画放在家里，你把我放在９５公寓。只有性没什么可耻的，但要认定这就是爱，你就太可怜了，洪先生。”&lt;br&gt;
+“我只是想知道，她这一生求而不得的东西，是不是根本不存在。”&lt;br&gt;
+“我是没听说过多少，一生一世白头偕老的夫妻。但我相信一生一世这种事情，应该是有的。但要是给你遇上了，才是真的暴殄天物。你又不懂。”&lt;br&gt;
+他将张禹蜷缩的身体舒展开，像是把干花泡在开水里赤裸裸地展开，栩栩如生。&lt;/p&gt;
+&lt;h1 id=&#34;-2&#34;&gt;&lt;/h1&gt;
+&lt;p&gt;“阿洪，这幅图帮我裱起来，我要送到伦敦去。看什么呢？你又不懂！”&lt;br&gt;
+洪京墨点着纸上的姹紫嫣红，说“残花败柳，是吗？”&lt;br&gt;
+“妈妈画的是，有花堪折直须折，莫待无花空折枝。”&lt;br&gt;
+“伦敦的花比香港的艳，看都看不过来，你却要他回来赏假花，他真可怜。”&lt;br&gt;
+女人无暇顾及一个孩子对自己的讽刺，嘴里含着酒，酒里掺着药，疯疯癫癫不停地重复着，人生得意须尽欢，莫使金樽空对月，你父亲和你不同，他一定明白我。他曾经，曾经是那么真心实意地跪下来求我，他求我嫁给他。油彩把她的发梢染成了青色，发梢像毛笔一样扫过画纸，这大概就是那个男人曾经对他说过的，朝如青丝暮成雪。那当然都不是假的，但现在却也是真心实意地，要逃离你。&lt;br&gt;
+“阿洪，我有的时候是真的想掐死你，但偶尔又庆幸生了你。你好像是我的止痛药，我因为你才死不了。”&lt;br&gt;
+“我７岁那年医生就说了，我可能会死在你前面。”&lt;br&gt;
+“可你又顽强地活了……一个两个……天呐，你已经为我多活了八年。你太了不起！”&lt;br&gt;
+洪京墨叹了一口气，“那把这幅画送给我吧，作为我十五岁的，了不起的纪念。”&lt;br&gt;
+这种死物不值得纪念，女人神采奕奕地撕开画纸，满手颜料地捧过洪京墨的脸，像是对着一个他丈夫的赝品：“如果你十八岁之后，也喜欢上一个人，千万不要像妈妈这样爱他，更不要一时兴起和他结婚。花应该长在树上的，你摘下来，它就死了。”&lt;br&gt;
+烛台的火光映进了女人眼里，波光粼粼，美得惊心动魄，像是一场梦，噩梦。&lt;br&gt;
+于是，洪京墨一生都在避免重蹈那个男人的覆辙，他拼尽全力地去爱每一个情人 。于是就在不知不觉间，活成了那个面目可憎的女人，向每一个无辜的人伸手乞讨，讨得却不是钱。&lt;/p&gt;
+&lt;p&gt;“我把他弑父杀母的案子告诉你，是想要提醒你。洪京墨这个人，无论于公于私，都必须死。作为上级，我真的替你骄傲，你居然坚持到了今天，相信Make督察在天之灵，也会感到欣慰。”&lt;br&gt;
+“他不会，从来只会骂我的人。”&lt;br&gt;
+“他是怕你死，怕你死得没有价值……所以我们必须替他们复仇明白吗？”&lt;br&gt;
+“哪怕会输，你也心甘命抵？”&lt;br&gt;
+“是。”&lt;br&gt;
+“我明白了。你只管带着阿禹回香港就好，后面的事交给我。”&lt;br&gt;
+官秋山没有注意到厉sir，其实并没有答应他最后的嘱托。匆忙挂断电话后，把浑身沉积三年的不痛快都顺着马桶冲走了，一打开门，和提着裤子的鬣狗不尴不尬地打了个照面。&lt;br&gt;
+“阿秋，你认识张禹？”&lt;br&gt;
+官秋山系好腰带，堂而皇之地站在鬣狗的面前，掩饰说道“天底下叫阿禹的人成千上万，我说的是其中某一个。”&lt;br&gt;
+“也是远方表弟？”&lt;br&gt;
+官秋山露出了一个漫不经心的笑，刻意撞了鬣狗胳膊一下子，说“你以为我鹿天鸣啊，哪有那么多表弟。”&lt;br&gt;
+鬣狗撇下最后一点尿后，双手蹭着裤子说，“其实鹿天鸣也没有表弟，张禹应该是他的小情人。”&lt;br&gt;
+没用完的厕纸皱成一团，官秋山的笑僵在脸上。就在他想要替张禹说点什么话来开脱时，鬣狗又自顾自地念叨说：“但他是什么人其实也不重要，现在都是洪先生的了。”&lt;br&gt;
+短短一句话，像是在心里插进去了一刀，戳破了他虚张声势的假面，几乎要装不下去，但偏偏就是在台上卖力地继续演：“洪先生……什么时候喜欢香港货了？”&lt;br&gt;
+“什么时候？”鬣狗想了想，突然笑开了怀，拍着官秋山肩膀说道“我的好兄弟啊，就在你醒来前一夜。”&lt;/p&gt;
+&lt;h1 id=&#34;-3&#34;&gt;&lt;/h1&gt;
+&lt;p&gt;洪先生仍在竭尽心力地，对着张禹做着类似插花这样的事情，任他摆弄的张禹，让他想起了自己第一次杀人的场景。那个人和他非亲非故，什么关系都没有，可他却还是杀了他。&lt;br&gt;
+“张禹，你这一生有没有做过那种，醒不过来的噩梦？”&lt;br&gt;
+外面有手在摸来摸去，里面有东西在撞来撞去，张禹一字一顿地回答说“正……在……做…”&lt;br&gt;
+Mon特助清清嗓子高声说道：“洪先生，医院到了。官秋山可能在等你。”&lt;br&gt;
+洪先生眉头一皱，“官秋山是谁？”&lt;br&gt;
+冷汗沁透了后背，张禹左手不听话地一松，衣服又落在了地上。洪先生见状，俯下身替他去捡。&lt;br&gt;
+Mon特助也皱眉，解释说“就是那个因为击杀Make有功，被你破格提拔上来的阿秋。”&lt;br&gt;
+洪先生捂住胸口咳嗽着，“对，好像是有这么个人。算了，猛犸那边耽搁太久了。先回公司。”洪先生记性不好，有时候连自己的本名都会忘记，这是东南亚众所周知的事。洪先生又轻咳几声，看了一眼坐在旁边的张禹，将掉了好几颗扣子的衬衫还给张禹，反问：&lt;br&gt;
+“你是因为鹿天鸣，所以在恨我吗？”&lt;br&gt;
+是恨的，可是和他没有关系，甚至可以通透地想，和你也没有关系。是我救不了他们，也救不了我自己。如果在给他一把枪就好了，他会把枪口对准洪先生的额头，亲眼看着他的脑浆和血液也干涸在自己身上。世界不再天旋地转后，他又看清了洪先生的这一张，深刻的、真实的、死水微澜的脸。13岁之后，他以为自己这一生，是再也不会有这样强烈的恨意，恨到最后连恨都没有了，只剩下强烈。张禹的视线被暖阳融化，整个人像停车以后的引擎，熄灭了。&lt;br&gt;
+“他是因为你心软下不了手，才死在我手里的。”&lt;br&gt;
+他因为我才死的。&lt;br&gt;
+“他这一生活得太煎熬，但却死得很快活。他在天有灵，也会感激我的善心。”&lt;br&gt;
+他这一生太煎熬。&lt;br&gt;
+“他死了，但你的故事还长着。你还会再遇到很多人，随便一个，都比他好。”&lt;br&gt;
+我的故事还长着。&lt;br&gt;
+张禹重复着洪先生对他说的每一句话，姑且算作回答。他只身地跌进洪先生的喉咙里，清晰地意识到，从此以后，自己就再也不会做噩梦，无论何时，无论何地，他睁开眼就身在噩梦里。&lt;br&gt;
+像是做错了什么事遭的惩戒，像是永远没有尽头的轮回。&lt;/p&gt;
+&lt;h1 id=&#34;-4&#34;&gt;&lt;/h1&gt;
+&lt;p&gt;“用我陪你进去吗？”洪先生看了一眼医院，好心地问候着。&lt;br&gt;
+张禹摇了摇头，站在马路边，替他关上了车门。车很快地就开走，像是从未来过一样。张禹失去支撑地瘫坐在地上，看见医院里远远地站着一个人。&lt;br&gt;
+是官秋山。&lt;br&gt;
+“阿秋，我不会做，太难了。”&lt;br&gt;
+“张禹你有没有点香港精神啊，不会做的题也不能空着啊。”&lt;br&gt;
+13岁的张禹把笔胡乱一甩，指着官秋山的作业说道：&lt;br&gt;
+“你是没空着，你在天花乱坠地编！我编不出来答案，明天就让老师骂死我吧。”&lt;br&gt;
+“你太没出息了，再给我看看，应该是能做出来。”&lt;br&gt;
+官秋山把张禹从桌子旁拎起来，又拿过张禹的作业，昨晚上因为洗衣服没有休息好的张禹突然犯困，昏昏沉沉地靠在沙发上，喃喃自语：&lt;br&gt;
+“中四学生当然能做中一的题，你要是做不出来，你的书就是念到狗肚子里去了。 好好写，字迹要工整……”&lt;br&gt;
+“喂！你不许睡觉！你得陪我！”&lt;br&gt;
+好好好，陪着你。半梦半醒，张禹最终勉强重新睁开眼。卧在沙发上，盯着天花板上绿油油的霉斑，一呼一吸，像是走进了森林里。眨了眨眼，张禹突然从沙发上蹦起来，小跑经过官秋山的身后带起了一道的风，吹开了官秋山的衬衫一角，露出了里面汗津津的白背心。&lt;br&gt;
+“跑来跑去的，你不热啊！”&lt;br&gt;
+“看看你家的墙，湿得都能长蘑菇了，不让我睡觉，我就帮你刷刷墙吧。”&lt;br&gt;
+“唉？以前不是连电视机都不会修，现在倒是变聪明，一夜之间，好像什么都会了。”&lt;br&gt;
+张禹跑了出去，稚嫩的声音落在了后面，“阿秋，任何一个人在死了老爸之后，都会这么聪明。”&lt;/p&gt;
+&lt;h1 id=&#34;-5&#34;&gt;&lt;/h1&gt;
+&lt;p&gt;隔壁家的阿禹长大后会是一个什么样的人？官秋山曾经这样问过阿妈，阿妈说，又乖又听话，还容易心软，结婚后一定被老婆欺负的那种男人。那有什么办法能不受别人欺负吗？阿妈想了好久，才摇摇头，说善良的人注定是要被欺负的，是这欺软怕硬的世道不好，不是他哪里不好。&lt;br&gt;
+官秋山正在朝这个站都站不起来的人走过来，鲜艳的记忆像是一条黄色的警戒线，楚河汉界似的把他们两个人隔开。张禹垂着头，清楚地看见了一双鞋子，随即又变得模糊，眼泪掉在了上面。&lt;br&gt;
+“对不起。”&lt;br&gt;
+“和你有什么关系。”张禹打断他。&lt;br&gt;
+“那天你在我家沙发上睡觉，我不应该叫醒你，让你陪我一起。”&lt;br&gt;
+他的一生很煎熬，我的故事还长着。张禹仰起头破涕而笑，重重锤着官秋山的大腿，“你真是……让我恨都恨不起来啊。”&lt;br&gt;
+官秋山只是静静看着他坐在地上，在心里一遍又一遍地默念说，对不起。&lt;br&gt;
+他的小影子，在他看不见的地方被水淹没、窒息、溺死，他就站在岸边，却什么声音都没听到。&lt;br&gt;
+对不起。&lt;/p&gt;
+">隔岸观·第十一章</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://fooogy.github.io/post/ge-an-guan-di-shi-zhang/"" data-c="
+          &lt;h1 id=&#34;&#34;&gt;&lt;/h1&gt;
+&lt;p&gt;1973年，洪先生15岁。但这样描述他或许不够准确，因为那个时候人们提起“洪先生”时，多半是在讨论他贪财好色的父亲。他还只是洪氏的长子嫡孙，洪京墨。&lt;br&gt;
+楼下嘈杂的声音好像消失了，书房里的洪京墨拨开老式唱片机的唱针，在桌上放下英文书后，默默打开了门走下楼梯，一步步路过墙角的盆栽，路过桌底下的碎酒杯，路过那个躺在客厅地毯上，以为自己是一摊烂泥的女人，像是路过一座荒坟。&lt;br&gt;
+“你知道吗？那个女人在英国给他生了一个儿子，没名没分也要生，真是下贱。”&lt;br&gt;
+洪京墨从女人裸露在外的小腿上跨过，不知道在茶几上翻找着什么，说：“如果不是她怀孕那年，香港突然变成了一夫一妻制，她也不至于没名没分。”&lt;br&gt;
+“可就算你父亲还能够再纳妾，我一天不死，她的孩子就永远要低你一头。哈哈哈……阿洪，你真的亏欠妈妈太多了，你要怎么还啊。”&lt;br&gt;
+洪京墨没找到，又跪在地毯上，朝茶几底下的深处，伸出手往里探去，吃力地回复说：“是，我欠你的。”&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;仿佛是察觉到自己有点碍事，穿着华美睡袍的女人翻了个身，又叮叮当当撞翻了好几个酒瓶。她低着头看着翻箱倒柜的洪京墨，凄怨地问道：“阿洪，你为什么不能跟那个孩子一样呢？如果你能正常一点，你父亲是不是就不会丢下我，去找别的女人？”&lt;br&gt;
+他早在你生下我之前就丢下你了，不是这个女人，也会是别的女人。如果要以生下我这件事情来要挟他的话，是不是也得先让我好好活着？洪京墨终于摸到了一个药瓶，随手用女人裙角蹭干净了表面的灰后，拧开瓶罐，四处张望着却没有见到热水，便坦然地把药片放在口中，就这么干嚼着送入腹中。&lt;br&gt;
+“书还没看完，先上楼了。”&lt;br&gt;
+女人像是没有听见似的，只顾着珍惜地看着自己的一只手，那只手空荡荡的，“阿洪，念书能治病吗？它治不了你，吃药都治不了你。书读得再好，你父亲也不会再看你一眼。我们只是他的一枚戒指，现在款式老了，旧了，他就丢在一边了。你只有我，我也只剩下你，你今生今世都不能离开我，因为你欠我啊。”&lt;br&gt;
+洪京墨推开女人的手，面无表情地反问道：“我把命还给你好不好？”&lt;/p&gt;
+&lt;p&gt;＃&lt;br&gt;
+女人凌乱的黑发卷过他的手，洪京墨胸口一痛，从一片狼藉的回忆中醒了过来。他意识到自己正坐在车上，前面开车的人是他的特助——Mon，正在跟他汇报工作。&lt;br&gt;
+“洪先生，市长秘书那边传来消息说，市长身体恢复良好。”&lt;br&gt;
+“嗯。”&lt;br&gt;
+“猛犸催了好几次，问什么时候能再次交易。”&lt;br&gt;
+“不急。”&lt;br&gt;
+“八爷是怕夜长梦多，香港现在的情况太复杂，再不交易恐怕……”&lt;br&gt;
+“告诉他，我知道了。”&lt;/p&gt;
+&lt;p&gt;“洪先生身体不舒服的话，应该多休息。”&lt;br&gt;
+“95公寓那个人身体好点了没有？”&lt;br&gt;
+“他……张禹病好之后，自己搬出去了。”&lt;br&gt;
+“又去住旅馆？他有钱吗？”&lt;br&gt;
+“好像听说这几个月来，一直和一个男人同进同出。”&lt;br&gt;
+“我说为什么将近一个多月没有听到他的消息，原来是找到了新的金主。”&lt;/p&gt;
+&lt;p&gt;“洪先生，那我们和猛犸什么时候重新确认下交易的时间……洪先生你还在听吗？”&lt;br&gt;
+洪先生出神地望着窗外的棕榈树，眼前一片生机勃勃的青色，不由地心情大好：“我只是突然想起一句话，存在比毁灭更重要。”&lt;br&gt;
+“是二战时，捷克总统向希特勒投降时说的话。看来关于某个人，洪先生也有了不战而降的打算。”&lt;br&gt;
+Mon特助对住在95公寓的那一位，颇有了解。是一个名字听起来平平无奇，却注定把一辈子活得惊心动魄的一个男人。先是义无反顾地跟着一个毒贩为爱远走高飞，闹了一出轰轰烈烈的私奔。结果毒贩却背信弃义，出卖了黑白两道，最终是在洪先生手里，落得一个不得好死的下场。而张禹也是个懂得见风转舵的聪明人，用血淋漓的一只手换下了一条命。这在向来是宁可错杀三千，绝不放过一个的洪先生这里，实属罕见。后来的事便更离谱了，听说张禹搬进95公寓的第一天就开始嗑药，但药量太猛，差点自己玩丢了命。&lt;br&gt;
+洪先生在泰国处处都有眼线，Mon特助随便一打听，真假难辨的消息便铺天盖地回复过来：有的人说他在医院洗胃时搞坏了身体，有的人说他染上了毒瘾，有人说他搬到贫民窟里去住了，还有人说他被老男人包养……&lt;br&gt;
+总而言之，Mon特助想要带着洪先生去看看那个人。&lt;br&gt;
+因为那个人，洪先生的心上起了风，是片刻也不得消停。&lt;/p&gt;
+&lt;p&gt;对关于自己的流言蜚语浑然不觉的张禹，正对着毒品调查科的新长官厉sir铁青的脸色，心安理得地吃着午饭。厉sir全名是厉国泰，今年已经五十多岁，本是重案组已经退休两年的老督察。但因毒品调查科元气大伤急需整顿，而被警务处重新返聘，临时接手毒品调查科。此次来泰国出差，是受匿名卧底官秋山所托，带张禹回香港。&lt;br&gt;
+“厉sir你要是骂我骂得还不过瘾的话，就先吃点东西，攒攒力气后再骂一顿。”&lt;br&gt;
+张禹颤颤巍巍地伸出手把筷子放在厉sir的碗边，厉sir却仍是没有消气，手狠狠拍着桌子继续骂道：“我当警察几十年，从没见过你这种混账东西！看看你现在连筷子都拿不动，你还怎么回警署当警察，还怎么拿枪？”&lt;br&gt;
+“可我不是还剩一只手么。”&lt;br&gt;
+“是，你不仅剩下一只手，你还剩下半条命，可真有你的，一个学警居然自作主张要来找卧底。唉……不过那个时候，除了你，还有谁会相信他活着。”&lt;br&gt;
+张禹狼吞虎咽地说道：“Make和他筹划了三年，不能就断在我手里。我还在想，如果找到最后只找到他的尸体，我就替他做下去。”&lt;br&gt;
+厉sir点燃了一支烟，叹了口气“乱枪之下，Make的卧底到底是没有被自己人打死。不幸中的万幸了。”&lt;br&gt;
+“那猛犸这个毒枭，厉sir打算什么时候收网？”&lt;br&gt;
+“香港现在社会动荡，人心不安，警务处很多地方都急需人手。泰国这边又正赶上换届选举，不愿再支援我们一兵一卒。”&lt;br&gt;
+“要是等洪先生和猛犸交易成功，大量毒品可就从泰国流入香港了……”&lt;br&gt;
+“是啊，所以我打算……张禹，街那边停着一辆改装后黑色凯迪拉克，车窗防弹玻璃大约有3厘米厚。是泰国当地的黑社会吗？”&lt;br&gt;
+张禹下意识地拿着筷子回头去看那辆车，然后转过身来，扯着嘴角一笑“还是香港出口到泰国的黑社会呢。”&lt;/p&gt;
+&lt;p&gt;“这个老男人好像看起来，没什么钱。”Mon特助远远望了厉sir一眼，挪揄笑道。虽然那人从头发到鞋底都是整洁的，但和精致没有什么关系，只是一种便宜的干净。&lt;br&gt;
+洪先生只是默默看着那个年过半百的男人，在张禹碗里放了一颗卤蛋。张禹手指动了动用筷子一夹，反倒把卤蛋挤出了碗，男人用筷子敲了张禹的头一下，像是在抱怨他的浪费。他们是什么关系？为什么不像是有肌肤之亲的关系？就像张禹当初和鹿天鸣吃同一块三明治的时候那样，是一种和什么欲望都不相干的纯情。&lt;br&gt;
+一个月没有出现的人，却在自己要回香港的前夕突然出现，不知道是福是祸啊。张禹踏实地把碗底最后一点饭吃光后，拍着厉sir的肩膀说了声“如果他问起我们的关系，我就说你是我父亲了。”&lt;br&gt;
+“我可生不出你这种胡闹的儿子。”&lt;br&gt;
+“对，就是这个态度。”&lt;br&gt;
+张禹从半米高的平台上蹦下来，朝那辆凶神恶煞地凯迪拉克小跑着过去，笑着说“我明天就回香港了，没想到今天居然还能跟洪先生亲自道别。”&lt;br&gt;
+“你要回去？”&lt;br&gt;
+“对，我爸来泰国接我了。”&lt;br&gt;
+居然是父子吗？洪先生顺着张禹手指的方向看过去，那个老男人平静地一口接一口地吸着烟，却从始至终都没有看向自己这边，不知道心里在想什么。这父子俩的脾气秉性，还真是不像。&lt;br&gt;
+“你父亲不是天天打你吗？怎么还跟他回去？”&lt;br&gt;
+“血浓于水嘛，况且我这个人脾气好，从来不记仇。”&lt;br&gt;
+“能跟你父亲打声招呼吗？”&lt;br&gt;
+“还是不要了。我爸脾气很臭，万一说错话得罪了你，多不好。”&lt;br&gt;
+“那你现在进车里来，我送你一点泰国的特产，算是临别纪念。”&lt;br&gt;
+车门打开了，张禹没有敢上去，仍然玩笑着问：“等晚上我再去拿行吗？”&lt;br&gt;
+“你觉得行吗？”&lt;/p&gt;
+&lt;p&gt;Mon特助尴尬地声音比三月的雪还要突兀，轻咳一声，问道：“要不然我先下车，去陪张老先生喝杯茶？”&lt;br&gt;
+“不用！”张禹和洪先生的异口同声地喊道。然后张禹回头看了厉sir一眼，心一横上了车，坐到了洪先生的身边。&lt;br&gt;
+车门开合的一刹那，厉sir也突然望见了洪先生的脸，脑海中猛烈一震，像是想起了什么陈年旧案，还有一张满是血迹和污垢的少年人的脸。但毕竟人生地不熟，他只是眉头紧锁着，无能为力地望着那辆车载着张禹开远。&lt;/p&gt;
+&lt;p&gt;“洪先生……”张禹刚一开口就发现自己因为太紧张，喉咙像生了锈一般嘶哑。他又咽了咽口水，解释说“因为你一个多月都没有来找我，我才以为我可以滚蛋了。你不能秋后算账。”&lt;br&gt;
+“你现在不仅和男人鬼混，还吸上了白粉。你父亲居然还容得下你？”&lt;br&gt;
+他没想到张禹只是轻描淡写地告诉他说，“戒了。”&lt;br&gt;
+洪京墨惊愕地转过头看向张禹，他怎么能把这件事说得那样轻易。洪先生没有相信，五官隐没在午时的阳光后，显得有些嘲讽。&lt;br&gt;
+“那是毒瘾，不是你说戒就能戒的？”&lt;br&gt;
+“这一个月，我也是吃了很多苦头，才好不容易戒掉的。”&lt;br&gt;
+“所以你未经我允许，就这么完完整整，干干净净地回去了。”洪先生的手掌摁住张禹的膝盖，喉管里艰巨地挤出了这几个音节。&lt;br&gt;
+“洪先生要是不甘心放我走，现在出尔反尔，想杀了我也来得及。”&lt;br&gt;
+洪先生欺身上前，凑近张禹的脸问道：“张禹，你是不是真以为我舍不得杀你？我在15岁第一次杀人时，你甚至还没出生呢！你凭什么以为你的三言两语就能影响我？”&lt;/p&gt;
+&lt;p&gt;张禹低头看了一眼自己受困在对方臂弯中的处境，冷静地说道，“我记得你之前跟我说过，香港每个区都活着一个疯女人，我真的见过她们。她们因为无依无靠，堕落成妓女，最后只能惨死街头。”&lt;br&gt;
+“你还说，瘾君子就像她们一样，是一种快乐的堕落。”&lt;br&gt;
+“这一个月来，每当我出现戒断反应，感觉自己撑不下去的时候，我脑子里就会出现这些话。”&lt;br&gt;
+张禹苦笑道，“我如果戒不了毒瘾，还继续不知羞耻地留在泰国，哀求你收留我，那我终有一天会在被你抛弃后，也变成她们这种人。但我不想过这样的人生啊。”&lt;br&gt;
+洪先生这时候想起了自己的父亲，那个在自己出生后，便近乎是死亡的男人。一时间心底满是污烂泥泞，这是那个女人遗传给他的，永远生生不灭的绝望，洪先生毫不迟疑地说，“如果我能和你一生一世呢？”&lt;br&gt;
+张禹仰着头，爽朗地笑道，“相信我，等你将来看我看腻了，只会恨不得掐死我，才想不起来什么一生一世。让我回香港吧，我会永远记得你，可能你偶尔也会想起我。多美。”&lt;br&gt;
+洪先生就这样紧紧拥住了张禹，像是在拥抱人生的反面，“你现在是在求我，给你一个机会，回香港重新开始吗？”&lt;br&gt;
+“对。”张禹吸了一口气，也把双手顺从地搭在洪先生脖子上，“求你了。”&lt;br&gt;
+“回香港后，有什么打算吗？”&lt;br&gt;
+“跟学校申请念完最后的课程，通过毕业考后规规矩矩地做个香港……市民，今生今世再也不踏出香港半步。”&lt;br&gt;
+今生、今世。怎么平白无故地说得这么凄美，又不是生离死别。这四个字投入封闭的空间里，在洪先生的心脏里撞出一圈又一圈的涟漪，每一条细纹都带有一句原生的诅咒。血液堵塞着他的胸口，闷闷的，让他说不出任何答应的话。&lt;br&gt;
+车内一片沉寂，洪先生看见张禹手腕上勉强愈合的伤痕，又看了看自己手掌上，那条第一次杀人时留下来的——可憎的刀疤，蓦然地笑：这一生要怎么活，我都没得选，你凭什么就能选呢？&lt;/p&gt;
+&lt;p&gt;Mon特助及时地关上了后座的车内灯，这一场逼良为娼的好戏，他只能眼不见为净。但眼不见，耳朵却听得更清晰，反倒能对着后视镜的一片漆黑中的干柴烈火，梦游一般地浮想联翩。&lt;br&gt;
+不知道是谁的鞋子掉了下来，一只穿着白袜的脚像钟摆来回晃荡着。洪先生正血气上涌地一把揽过张禹，轻而易举地解开了他的衣服。张禹更是出乎他的意料，没有太过挣扎，可能是天真地以为这是两人的最后一次。&lt;br&gt;
+“Timmy仔有没有跟你说过，你一直都不会接吻。”&lt;br&gt;
+张禹哑然失笑，这一个月只顾着和毒瘾较劲，自己几乎要忘了鹿天鸣这个男人。洪先生一提起，顿时只觉身上像是长满了烂疮，疼得要命，冷漠地回复说，“他在床上只跟我说过，从今以后桥归桥，路归路，老死不相往来。”&lt;br&gt;
+洪先生仿佛也看到了鹿天鸣翻脸无情的嘴脸，摸着张禹的脸笑出声来“看来他真的很讨厌你啊。没关系，慢慢学。”&lt;br&gt;
+慢慢学是什么意思？张禹被压制在座位上，眼前映着洪先生的脸，却突然间什么都听不懂了。而洪先生的上半身突兀地发力，他失去平衡地朝后仰下，脱口而出一声惊呼：“为什么不能放我走？”&lt;br&gt;
+“因为你对我来说，是一味药。虽然没什么用处，但是总能让我苟延残喘，不至于死的太快。”&lt;br&gt;
+轻微的声响从结合处悠悠荡荡传上来，张禹被拽着往下摁，声音很低，重重地沉了下去“我听不懂。”&lt;br&gt;
+&amp;quot;其实我母亲当年跟我说这句话时，我也没听懂。张禹，你知道‘今生今世’和‘一生一世’的区别是什么吗？&amp;quot;&lt;br&gt;
+疼痛从尾椎处聚集，又在一阵阵激烈的颤抖中炸裂成快感。张禹紧绷的手臂冷汗津津，几乎要咬碎了牙，心想着哪有什么区别？不都是心不甘情不愿的一辈子吗？&lt;br&gt;
+洪先生的声音徐徐如风，吹过张禹发烫的耳边：&lt;/p&gt;
+&lt;p&gt;她对我说今生今世，是自欺欺人的威胁。而我现在对你说一生一世，是恳求。&lt;/p&gt;
+">隔岸观·第十章</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://fooogy.github.io/post/ge-an-guan-di-jiu-zhang/"" data-c="
+          &lt;p&gt;其实说它是公寓并不恰当，这实际上是当地的房地产大亨——伯乐，在洪先生某年生日送给他的一套别墅。95号是取中文里九五之尊的象征，几年后房价翻了几番，便更显富贵。但洪先生在这里，前后几年加起来也没住满过一星期，他嫌屋子暗。于是富贵落满了灰，像是九五之尊的亡国之兆。而保镖将张禹安排在这里的原因却很单纯，95公寓的设计属于窗户少的户型，光照差劲的短处此时也成了长处，泰国正逢多事之秋，洪先生的人身安全才第一重要。况且他猜测，洪先生未来几个月只会在这里过夜。&lt;/p&gt;
+&lt;p&gt;那张禹在白天见不见得光，就更是不要紧。&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;“虽然闲置很多年，但我昨夜找人重新收拾过。洪先生今晚可能会来，你别把这里搞得太脏。”&lt;/p&gt;
+&lt;p&gt;张禹随手摸了一把，“洁癖啊？我以为像洪先生这样白手起家的大人物，不在意这些小事。”&lt;/p&gt;
+&lt;p&gt;“你最好把自己也好好洗一洗，浑身是血……”&lt;/p&gt;
+&lt;p&gt;“你也讲点道理，他昨晚上不砍我手，我怎么可能流这么多血？而且我一分钱都没有，我上哪儿去买衣服换？我在医院忙到现在连饭都没吃你怎么不管管？”&lt;/p&gt;
+&lt;p&gt;保镖见张禹一个门一个门地打开看了一眼，像是在找厨房的样子，也替他随遇而安的心态感慨了一番，还真是个天生吃软饭的材料。将整栋别墅都走了一遍的张禹，几乎是在用自己的脚步丈量95公寓这笔不义之财，究竟价值几何。而根据保镖所说的闲置多年来看，看来这种程度的地产他并没有放在眼里。&lt;/p&gt;
+&lt;p&gt;“这以前住过谁？”张禹指着衣柜里的男款衣服问道。&lt;/p&gt;
+&lt;p&gt;“五年前鹿天鸣在这里住过，他在大陆犯了事来洪先生这里请求庇护。”&lt;/p&gt;
+&lt;p&gt;“那你受累帮我扔了。”张禹心底一阵恶心，把合上衣柜后冲保镖冷冷一笑“死人衣服，我可不敢穿。”&lt;/p&gt;
+&lt;p&gt;“也不一定是鹿天鸣留下的。五年前泰国经济还算好，你难道没听说过繁荣‘娼’盛那句话吗？”&lt;/p&gt;
+&lt;p&gt;张禹一愣，“我以为人都是穷困潦倒才去做这一行的，原来经济发达时才有得赚？”&lt;/p&gt;
+&lt;p&gt;“大概只有你是因为没钱才做这个的吧。不过洪先生确实帮很多人都成了富翁，你这段时间好好干，衣锦还乡也不是不可能。”&lt;/p&gt;
+&lt;p&gt;哈哈，衣锦还乡。我这个卧底做到最后，没有被马革裹尸就算是好下场了。张禹尴尬地笑了笑，然后把头低下去，感慨自己的底线日渐下降得厉害，都能和陌生人对这种事情谈笑风生。不过在短暂的羞愧之后，他便思考着洪先生的“这段时间”会有多长，他能在这之前找到官秋山吗？但既然今天在医院没有发现官秋山，看来是没有受伤，毕竟也只剩地下一层没去……&lt;/p&gt;
+&lt;p&gt;张禹心中又想到了另一种可怖的假设，面色倏地一白，保镖看他不太对劲，便翻开药品袋掏出一罐止痛药扔给了张禹。张禹伸出双手一接才发现自己的伤口又绽开了，绷带正丝丝缕缕地往外渗血。张禹心里仍然在胡思乱想，机械地拧开了药罐后胡乱地往嘴里倒着，也顾不得倒下去了几颗，然后又冲进厨房拧开了水龙头，直接接了一捧冷水喝了下去。&lt;/p&gt;
+&lt;p&gt;张禹先是胃部一紧，他还以为是自己空腹吃药的缘故。但随后就感到一股力量直击天灵盖，他猛退几步坐到了地上，他浑身哆嗦着看向保镖，嘴艰难地张着似乎是在求救，但他的话又不清不楚根本连不成句，保镖半句都没听明白。保镖捡起没剩下几粒药片的药瓶闻了闻，便眉头一皱，立刻把头偏了过去。&lt;/p&gt;
+&lt;p&gt;他第一个念头是自己完了。如果张禹是因为自己的失误，一次性吸入过量药品，他死，自己一定就会跟他一起死。保镖下意识地想要夺门而去，但在听到张禹的呻吟声后又停住了脚步。回头见他躺在地上，面色已经惨白到吓人的地步，手腕不断地蹭在地上，把地板搞得满是血污，凄厉非常，居然令他微微动了恻隐之心。然后快步上前，拎着张禹的衣领将他拉到水池前，奋力伸手掏着张禹的喉咙催吐，“吐出来，快点吐出来！”&lt;/p&gt;
+&lt;p&gt;腥膻的气味如海浪一般又涌了上来，眩晕中他想起了鹿天鸣，他便更不顾一切地朝水池中呕吐，像是恨不得连带着灵魂一起呕出。心脏超负荷地狂跳着，仿佛是想撞碎胸膛破体而出似的。张禹抓紧了胸口，感觉四肢都在死死被人钳制着，他连挣扎都做不到。&lt;/p&gt;
+&lt;p&gt;他忘记了，其实没有任何人束缚着他。&lt;/p&gt;
+&lt;p&gt;谁也没有料到，洪先生今夜居然提前回来。保镖在厨房看见了窗外的车，一边焦急地拖着张禹进房间一边叮嘱道：“你别出声，我只说你今晚不舒服。洪先生从来不是个强求的人，可能看你一眼就走。”&lt;/p&gt;
+&lt;p&gt;保镖将门关上后便慌张地去厨房处理血迹，张禹只觉得口干舌燥在床上来回挣扎着，最后居然整个人从床上滚下来。他感觉自己跌跌撞撞地摸索着终于打开了门，却是衣柜的门。两眼一黑，直挺挺地一头栽了进去，落在鹿天鸣的旧时衣物里。&lt;/p&gt;
+&lt;p&gt;“今天，很累吗？”洪先生没想过仅仅一天的时间而已，他向来仪表堂堂的保镖就把自己搞得如此狼狈。衬衫发皱，领带歪掉，甚至连外套也像垃圾一样被丢在厨房地上。&lt;/p&gt;
+&lt;p&gt;“对不起洪先生，今天是我失职。”保镖将黑色外套捡起来穿好，血蹭在黑色衣服上看着只像是湿了，地板仍然是干净的。&lt;/p&gt;
+&lt;p&gt;“如果不是信得过你，听你这句话，我一定要误会。他怎么了？病了？”&lt;/p&gt;
+&lt;p&gt;保镖僵硬地点了点头，心里只期盼着洪先生能扫兴地立刻转身就走。然而洪先生却是拄着拐杖在屋中走了走，越走，越接近那扇门。洪先生深吸一口气后，眼睛忽闪过一道锋利的光。&lt;/p&gt;
+&lt;p&gt;“我很少跟别人提起这件事，就是我有很严重的心脏疾病。先天的，你知道为什么？”&lt;/p&gt;
+&lt;p&gt;“父母遗传？”保镖战战兢兢地回复道。&lt;/p&gt;
+&lt;p&gt;洪先生推开了门后没见到张禹，只见到地上的药瓶。于是他纡尊降贵地放下拐杖，俯下身捡起来看了一眼，冷笑道：“恰恰相反。他们都很健康。我父亲在香港是一个很有威望的贵人，注定不会只有我母亲一个女人。长年累月的孤独里，我母亲尝试滥用麻醉剂。我很不幸，就出生在她最绝望的年华，生下来心脏就是畸形的。后来听我父亲说，我母亲在嫁给他之前，是一个优雅动人的女人，他为了能娶到她甚至不惜戒烟戒酒，做出一副衣冠禽兽的样子。但最后还是我父亲，慢慢把这个女人的美丽折磨成了疯狂。”&lt;/p&gt;
+&lt;p&gt;“好像香港每个区都会住着这样一个女疯子，你见过吗？他们虽然沦落到社会的底层，靠着救济度日，但每一日都很快乐。瘾君子有时候就和疯子一模一样，是一种特别快乐的堕落。”&lt;/p&gt;
+&lt;p&gt;洪先生闭上眼睛，仿佛又看见了那个美丽的疯女人，沉重了叹了一口气，掉下来了一滴泪：“可这快乐如烟如雾，就像是海市蜃楼。我看不惯，所以孤身一人逃出了香港。”&lt;/p&gt;
+&lt;p&gt;洪先生的手抚摸上木制的衣柜门，动作看起来十分轻柔像是爱抚，然而手下冰凉的触感又更像是他在替某人入殓，“这么多年过去，我从攀附权贵的人成为了支配权贵的人，我比所有人的权力加起来还高贵。但只有我自己看得见，其实我家徒四壁，一贫如洗。无病无灾，才是真的富贵。”&lt;/p&gt;
+&lt;p&gt;“你看来，好像一点也不懂得珍惜。”&lt;/p&gt;
+&lt;p&gt;可惜他已经听不到了。张禹缩在衣柜的一角里，用黑暗牢牢套住自己。神志不清的他，好像把自己当成了一件衬衫或者一条领带，甚至也可能是什么别的东西，反正不是活物。&lt;/p&gt;
+&lt;p&gt;是冻僵的植物也好，他还可以不言不语地缺水枯萎。然而他居然是个人，会伤痛会流血会报复的，从来都只有人。&lt;/p&gt;
+&lt;p&gt;洪先生将柜门拉开一道细缝，想起一句老话：A Skeleton in the Cupboard（你的衣柜里藏着一具骷髅）。他一直以为这具骷髅是鹿天鸣，是第一次杀人的自己，是每一个心甘情愿腐烂下去的人。但他在发现张禹的这一瞬间，不是一个口干舌燥的人发现了一个润湿的人，而是一具骷髅发现了一具干尸。&lt;/p&gt;
+&lt;p&gt;洪先生想起自己第一次见到张禹时的情景：&lt;/p&gt;
+&lt;p&gt;一个年轻人站在吧台后面咬着一块三明治，任性把鹿天鸣的酒换成了白水。鹿天鸣只喝了一口就吐在了地上，敲着桌子威胁张禹把威士忌还给他。他嚼着东西含糊不清地说，空腹喝酒不好。然后鹿天鸣就朝他扑了过去，大张开嘴把三明治撕下来半边，狼吞虎咽下去后问：现在可以喝了吗？年轻人愣在原地，把嘴里残存的吐司和青蔬勉强咽下去后，脸上带着一些傲慢地对鹿天鸣说，活人不能被死物奴役。&lt;/p&gt;
+&lt;p&gt;当时洪先生远远看着他们两个人，往日的凄惶和现今的荣光错综复杂地交织在一起，混沌一片，只记得自己的灵魂恨不得飘过去，对张禹说一句，这个世界就应该这样。名利、权势，终将吞噬一切。他听不懂张禹言外之意，其实是警察对毒贩的无情讽刺，但他以为听得懂这句话。因为他多年来始终和所有死物，权、财、色等一直保持着单纯的买卖关系，你无情，我也无意。&lt;/p&gt;
+&lt;p&gt;这种又真实又虚假的关系，简直像是在长期卖淫，只不过作娼的一方是洪先生自己。&lt;/p&gt;
+&lt;p&gt;尾指抖了抖，洪先生最后，还是没有敢打开衣柜。他怕看到张禹真的腐烂在里面。活人是能在一瞬间腐烂的，他在很多人身上都闻到过这种腥臭的味道。难道今生今世，他就只配看着这种自甘堕落的人？这是什么道理？手紧紧攥着的塑料药瓶因为太过用力而变形，瓶盖被弹出来后，洪先生抬手将药片全部砸向衣柜的门。&lt;/p&gt;
+&lt;p&gt;保镖一直在等洪先生发布指令，能够跟他明示张禹明天清醒过来后，究竟是去还是留。但洪先生只对着衣柜说了一句：好自为之。&lt;/p&gt;
+&lt;p&gt;便转身离去。&lt;/p&gt;
+&lt;p&gt;这个月黑风高夜，保镖仍然站在远处，默默看着浴室里暖黄色的灯光留在玻璃上的剪影。在95公寓的浴室内，一支缠绕着纱布和保鲜膜的左手，自然而然地垂落在浴缸边。他为了找官秋山已经四个夜晚都没有睡过觉了，如果不是今夜误食毒品，第五个夜晚应该是躺在床上休息。毒频逐渐麻痹着他一直以来过于紧绷的身体，但他精神上仍然不敢放松，他知道自己这个人天生没有安乐的命，孤独和悲痛就是自己一生的定数。&lt;/p&gt;
+&lt;p&gt;头疼欲裂时，眼前好像依稀漂浮着一张男人狰狞的脸，但自己却被不断被摁回水中，想要看清他面目却又看不真切，耳边只剩下哗啦啦的水声，还有两个人扭打在一起时撕碎衣襟的声音。自己的脖子被那个男人掐着，自己却连手都抬不起来，只能用脑袋死死顶着那个男人进一步的攻击。但很快自己就又被重新摁到浴缸底部，在水底下他看见了上面的男人，耳边轰隆隆地响起了鹿天鸣的一句话：你要死了张禹。&lt;/p&gt;
+&lt;p&gt;在水中闭气三分钟是张禹的极限，但这一回他却在浴缸里躺了将近四分钟。他在等自己的幻觉消失，只有这样他才能分得清外面站着的人是谁。心中一直默念着，我不会死，鹿天鸣。像是在为自己祈祷。&lt;/p&gt;
+&lt;p&gt;张禹气管里突然被呛了一口水，他勉强撑坐起来手捂着脸，浴室里空无一人。他发现自己好像因为药力在不断流泪，眼眶热得发疼。官秋山卧底三年都没染上毒瘾，自己却在卧底的第一夜就这样狼狈，是我运气不够好吗。想到这后，张禹又重重往下一滑，整个人重新浸入冰水中，对不起，Make。我不应该这么想，我运气已经足够好了。&lt;/p&gt;
+&lt;p&gt;官秋山和鬣狗最后赶到时，张禹已经在沉浸在浴缸中多时，手腕上的伤口被泡得发白，浴缸里的水和张禹的身上却微微泛着一点血红之色，简直就像是误入自杀现场。鬣狗忙去和保镖打听，洪先生是否清楚毒品的来源，得知张禹什么也没来得及说后松了一口气，拍着保镖的肩膀就许诺要请他去喝酒。而官秋山则是把张禹扶着坐起来后，就在忙着翻衣柜，有没有张禹能穿的衣服给他换上。青梅竹马一起长大的友谊就是有这点好处，哪怕是在一丝不挂的久别重逢里，也不会觉得任何羞耻，毕竟比这更不堪的场面又不是没见识过。张禹也曾经把醉得像尸体一样的自己背回出租屋，路过的人回头望过去，还以为是一个学生在背自己不争气的酒鬼老爸回家。路人不会知道张禹其实没有父亲，但这样想也没错。他和Make始终扮演着类似父亲一样的角色，陪他玩陪他长大。不出意外的话，张禹长大后会成为另一个Make或者官秋山，就像他们的小影子。&lt;/p&gt;
+&lt;p&gt;苏健秋将他的小影子赤身裸体地从浴缸里捞出来时，从不离身的保镖立刻取过浴袍给张禹蒙上，也不知道这尴尬是在为自己，还是在替对方。&lt;/p&gt;
+&lt;p&gt;“对不起，搞错你们的药。”&lt;/p&gt;
+&lt;p&gt;“别挡着，我现在必须快点带他去洗胃。”&lt;/p&gt;
+&lt;p&gt;“洪先生没有告诉我张禹可以离开。”&lt;/p&gt;
+&lt;p&gt;“那我现在就告诉你，如果他死了，你也会死。”&lt;/p&gt;
+&lt;p&gt;保镖没有拦住官秋山，而鬣狗则是盯着官秋山的背影看了许久，直到官秋山带着张禹像帆船一样，彻底消失在街道的尽头。&lt;/p&gt;
+&lt;p&gt;黎明降至，曙光像潮水一样涌进了天空。这时候的街上并没有行人，这个城市还没有醒过来，只有性工作者们在和出租车司机讨价还价，他们是城市醒过来之前就奔回家睡觉的特殊群体，是灯红酒绿中的倦鸟归巢。1996年的风吹过来，这一年距离亚洲金融风暴还有大半年，距离香港回归还有将近两百天。官秋山的皮衣像飞鸟的翅膀一样张开着。他眼里这股风和往年比起来并没有什么特别。一直默默趴在他后背上的张禹猛然惊醒，抬头迷茫地看着官秋山的背影，左手像是感觉不到痛似的，攀上去狠狠捏了一把前面人的侧脸，说：&lt;/p&gt;
+&lt;p&gt;“谁啊？”&lt;/p&gt;
+&lt;p&gt;机车行驶的速度极快，风吹得张禹左手的伤口重新裂开，官秋山的前襟和肩膀都蹭满了血。官秋山突然觉得自己的手也在疼，但幸好张禹他伤在左手，以后回到警局大概还是能……不过，他考督察最后真的考上了吗？官秋山看着后视镜里的脑袋，发现张禹虽然睁开了一只泛着水光的眼，但意识好像还是没有清醒。他释然一笑，活着就好了，还能不能做警察这件事在生死关头面前，还真不值一提。&lt;/p&gt;
+&lt;p&gt;“是西门吹雪来救他朋友了。”&lt;/p&gt;
+&lt;p&gt;“我就是西门吹雪啊。”&lt;/p&gt;
+&lt;p&gt;“对，谢谢你。谢谢你回头来救我。”&lt;/p&gt;
+&lt;p&gt;不用谢，输……终于心安的张禹在再次陷入昏迷之前，好像想起了一句话，是输人不输阵……可这话谁说的，是谁对自己说来着。&lt;/p&gt;
+&lt;p&gt;是官秋山。&lt;/p&gt;
+&lt;p&gt;他今生今世的挚友——官秋山。&lt;/p&gt;
+&lt;h2 id=&#34;&#34;&gt;&lt;/h2&gt;
+&lt;p&gt;1996，秋风萧瑟，洪波涌起。&lt;/p&gt;
+&lt;p&gt;山雨欲来风满楼。&lt;/p&gt;
+">隔岸观·第九章</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://fooogy.github.io/post/ge-an-guan-di-ba-zhang/"" data-c="
+          &lt;p&gt;疼疼疼……Make轻点轻点……疼！&lt;/p&gt;
+&lt;p&gt;打你又打不过，叫你跑你还不跑，张禹你吃错药啊？&lt;/p&gt;
+&lt;p&gt;输人不输阵嘛。&lt;/p&gt;
+&lt;p&gt;当时我和Make在慈云山踢球踢输了，对方太粗野，我和他气得揪着他们领子就要打一架……但我和Make下手狠跑的也快，来劝架的阿禹反而被落在最后面，一个没留神，就被对方带头的那个狠狠踢了一脚。我当时只听到身后唉哟一声，回头去看，人却是趴在地上，像是在羊在吃草。&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;马上就要从张禹身上踩着追过来的那几个人，一见到官秋山回头，当下发怵，竟是不再恋战掉头就跑。&lt;/p&gt;
+&lt;p&gt;官秋山把张禹从地上拎起来后就一直细心搀扶着，两个人跟着Make的背影慢慢在后面走着。张禹疼得呲牙咧嘴，喊着说官秋山真够义气，还记得回头来救他了。夕阳西下的余晖照在全是伤的脸上，刚刚心中的不快都烟消云散。那时候张禹的个子和官秋山差不多高，还不知道几年之后，他就不能再这么轻松地和官秋山勾肩搭背了。&lt;/p&gt;
+&lt;p&gt;三年之后又三年，官秋山和Make一样报考了警校，甚至他相信，张禹在毕业后也会如此。三个在屋邨一起长大的少年，人生好像注定是差不多的，但实际上他们三人在做警察的资质上确实天差地别。Make外表粗犷性格激进浮躁，但心内细腻，所以一入职就能屡建奇功。张禹看似勤恳忠厚，但身上好像隐隐约约藏着一股狠劲，很多老师都看不到这一面，只摸着他的头说阿禹长大后一定会被女人欺负得很惨。而看着张扬的官秋山，相貌上虽英武不凡，但内里不如Make志向远大，甚至都可能不如张禹。是三人中最渴望平凡生活的那一个。每一根亢奋的神经都在日复一日地训练中变得舒缓，又从舒缓变得迟钝。直到他在警校的格斗赛中取得最高分后，已经正式成为警察的Make认真地问他，要不要做卧底。&lt;/p&gt;
+&lt;p&gt;官秋山幡然醒悟，一直以来都非常迟钝的那根神经，仿佛就是为这一瞬间做准备。钝感，能让他在漫长的卧底岁月里活下来。&lt;/p&gt;
+&lt;p&gt;他在毕业前八周就退学。出发前一夜，阿禹买了很多啤酒和烧鸡给他践行。啤酒很苦，烧鸡很柴，张禹一如既往地话很多，没一句能够真正地听进去。但官秋山一直对一句话印象很深：&lt;/p&gt;
+&lt;p&gt;“阿秋，我知道你要去做什么事，我真的很羡慕你。”&lt;/p&gt;
+&lt;p&gt;“羡慕我要去送死啊。”&lt;/p&gt;
+&lt;p&gt;“阿秋，英雄是不会死的。”&lt;/p&gt;
+&lt;p&gt;那天晚上的阿禹眼睛闪闪发光，官秋山察觉自己冥冥之中，成就了一种隐忍的伟大。他和Make就是这样，仅仅只是各自活着，就能深深影响着张禹的一生。&lt;/p&gt;
+&lt;p&gt;可是阿禹，你知道为什么说造化弄人吗？&lt;/p&gt;
+&lt;p&gt;就是人生命里每一个选择，都不过是冲动使然。我的心中有情有犹豫，我不够好也不够坏，我不是西门吹雪，我没有英雄梦想，我也会死。&lt;/p&gt;
+&lt;p&gt;官秋山从回忆里睁开了眼睛，没有被脱掉裤子上药哀嚎的张禹，也没有满手跌打药酒味道的Make，只有他在道上的大哥鬣狗，正靠着椅子低头酣睡，医生来输液时都没能打扰到他。因为洪先生的医院只做自己人的生意，从不对外开放，所以整个病房里空荡荡一片，虽然说这样才安全，但一直看着的话却不免有些华美的瘆人。&lt;/p&gt;
+&lt;p&gt;鬣狗浑身一抖，顶着两只乌青的眼抬起头，看见坐着的官秋山吓得差点从椅子上摔下去，“你醒了！”&lt;/p&gt;
+&lt;p&gt;官秋山点点头，却并不想和鬣狗说话。原本坐在这里的等自己醒来的人，应该是Make和张禹才对。看着自己被针头插得浮肿的两只手，手又摸上胸前的纱布。自己被警队同事误伤留下来的伤口依然很疼，所幸枪枪穿身而过，都不致命。官秋山想，Make当年一定是看准了自己福大命大，才会推荐自己去做卧底的吧。&lt;/p&gt;
+&lt;p&gt;官秋山头靠在一旁，问鬣狗“那天的交易怎么会有警察？Timmy仔为什么会知道谁是警察？”&lt;/p&gt;
+&lt;p&gt;鬣狗摇了摇头，“具体的事情我也不知道，只听说洪先生昨夜处决了鹿天鸣，我猜鹿天鸣大概是做了条子的线人，但出卖良心的价钱可能是没谈拢，所以鹿天鸣就和他们同归于尽了。”&lt;/p&gt;
+&lt;p&gt;同归于尽吗？官秋山笑得不太自然，又勉强地问“一个活口没留？”&lt;/p&gt;
+&lt;p&gt;“昨天我听医院人说，只有鹿天鸣一个远方亲戚活下来了，反正条子是死光了。对了，洪先生一直对外宣称是你杀了Make，你是真这么厉害还是运气好？”&lt;/p&gt;
+&lt;p&gt;官秋山欲言又止，接不上这句话。一转头，突然看见洪先生的保镖站在病房门口，手里拿着药品一动不动，不知道站了多久。鬣狗顺着官秋山的目光看过去，热情地打招呼说，“您这几天受累了，我兄弟终于醒了，让洪先生不用再担心。”&lt;/p&gt;
+&lt;p&gt;保镖面无表情，只说着，“看见昨天晚上送过来的那个人了吗？”&lt;/p&gt;
+&lt;p&gt;“隔壁那个死小孩跑了？我还以为他终于安静下来是睡觉去了，原来是跑了？我……帮你一起找找？”&lt;/p&gt;
+&lt;p&gt;保镖拒绝了鬣狗的好意，转身离开，神色里是掩饰不住的焦虑。官秋山本来想问，到底那个和自己梦里的张禹重叠在一起，哀嚎了一晚上的死小孩是谁。但一想到如果是警察落在洪先生手里，大概没有几率活下来。逃走的应该只能是鹿天鸣那个亲戚吧。于是这一问反倒没能说出口，生生咽了下去。&lt;/p&gt;
+&lt;p&gt;他盯着鬣狗的脸半晌，想着Make已死，他一个卧底警察失去了上线，那他和罪犯还有什么区别？&lt;/p&gt;
+&lt;p&gt;“鬣狗，你之前一直说不嗑药的人不像古惑仔。”&lt;/p&gt;
+&lt;p&gt;“你大难不死突然转性了，也想试试？”&lt;/p&gt;
+&lt;p&gt;官秋山点点头，恍惚间他好像又看到了张禹，他想重新回到那个临别的长夜，告诉张禹说：只有英雄才会死。&lt;/p&gt;
+&lt;p&gt;又或者，他们正是因为死去，才成为了英雄。&lt;/p&gt;
+&lt;p&gt;“医生你看看我，我觉得我不只手断了，可能肝啊脏啊还有内伤。浑身上下哪里都在疼。”&lt;/p&gt;
+&lt;p&gt;“该缝合的已经缝合，该上药的已经上药。你可能是心理影响了生理，不去想就不疼。”&lt;/p&gt;
+&lt;p&gt;“那这个医院有没有精神科，我再开一点治心病的药？”&lt;/p&gt;
+&lt;p&gt;“你需要的不是吃药，而是休息。”医生摘下眼镜，眼底的两团乌青也从口罩边缘浮现出来，疲惫地应付道，“从昨晚到今天，你几乎要把整个医院的内科外科都走一遍，警察搜查都没你这么仔细。要不是你是个男人，我怀疑你连妇产科都会去。”&lt;/p&gt;
+&lt;p&gt;“我只是太惜命，别笑我了。”张禹单手扶着墙走出住院部的感染科，看着电梯旁的楼层说明，心里盘算着官秋山有没有可能在骨科、神经内科等科室。作为卧底失联的时间过长，只有两种可能性，不是变节，就是死亡。张禹确信官秋山不会叛变，但可能是遭遇了比死亡还要不堪的折磨。但无论他现在是残疾了还是失忆了还是被非法拘禁在某处，总之，活要见人，死要见尸。&lt;/p&gt;
+&lt;p&gt;就在张禹正盯着自己模糊的倒影，心中对官秋山的下落无限展开想象时，电梯门开了，将张禹的倒影粗暴地撕开，一左一右地隐没在两边。张禹看清来人的面孔后，将悲壮的笑容春风化雨一番，又和善又恭敬地问道，“洪先生找我有事吗？我下午还预约了四个检查。但如果他现在就要找我的话，我可以改天再约。”&lt;/p&gt;
+&lt;p&gt;保镖一手拎着药品，一手举着手机，沉默了片刻后，按照听筒传来的声音回答说：“洪先生说，今日医院有一台重要的手术要做。你先跟我回去，他事情办完就来找你。”&lt;/p&gt;
+&lt;p&gt;“好。”&lt;/p&gt;
+&lt;p&gt;“洪先生还有话要跟你说。”&lt;/p&gt;
+&lt;p&gt;保镖将电话贴在张禹的耳朵上，凉的张禹打了个寒颤，他听见洪先生问“你在找人？”&lt;/p&gt;
+&lt;p&gt;冰冷的声音像毒蛇一样钻进耳朵，张禹下意识地抬头看了一眼医院的监控器，洪先生现正透过它凝视着自己。张禹若无其事地，假装想象不到洪先生朝晴暮雨的脸，镇定地从喉咙里逼出来了几个字：“我在找医生。”&lt;/p&gt;
+&lt;p&gt;“心病还需心药医，明天晚上我一定抽出时间来陪你，不要再折磨我的医生们了。”&lt;/p&gt;
+&lt;p&gt;“洪先生以为，我在故意引起你的注意啊？”&lt;/p&gt;
+&lt;p&gt;“难道不是？”&lt;/p&gt;
+&lt;p&gt;“讲讲道理吧，鹿天鸣这个人吸毒史太长，我也怕有什么脏病在身上。如果要和洪先生长期交往，我就算不为自己想，也得为您身体想。”&lt;/p&gt;
+&lt;p&gt;洪先生好像在电话的另一端笑了，什么也没再说，只是挂断了电话。张禹松了一口气，步履蹒跚地走近电梯里，问保镖是否要跟自己一起更上一层楼。保镖不言不语，只替手脚都不方便的张禹按下了电梯的关门键。&lt;/p&gt;
+&lt;p&gt;电梯向上而行，迟来一步的鬣狗推着官秋山的轮椅赶到后又等了很久。官秋山虚弱地窝在轮椅上，像是个自暴自弃地绝症患者。他一生中很少有这样一蹶不振地时候，一会儿心乱如麻，一会儿万念俱灰。鬣狗更是不知道官秋山为何这样疲倦，鼓励着拍了拍他的肩膀，姑且算是安慰。&lt;/p&gt;
+&lt;p&gt;“阿秋，我们出去后马上就找点刺激的货玩玩，你大难不死，福气都在后面呢。”&lt;/p&gt;
+&lt;p&gt;这时电梯门重新打开，只看见四五个医生环绕着一张病床，鬣狗摆了摆手，说自己不去地下一层。官秋山怔怔地看着电梯门关上，想着地下一层好像就是被他们戏称为“鬼门关”的地方。凡是被推到这里来的人，便是一只脚踏进了坟墓。官秋山猜这个有去无回的鬼门关里，一定躺着着很多自己认识很久的，或者没来得及认识的人。&lt;/p&gt;
+&lt;p&gt;他应该陪所有人一起下地狱。&lt;/p&gt;
+&lt;p&gt;“今天玩的开心吗？听说我的人被你使唤地乱成一团，差点搞砸了今天的手术。”&lt;/p&gt;
+&lt;p&gt;“医院有什么好玩的？我是真心实意地在看病。不过托您的福，医生说我的左手只要积极复建，拿筷子还是有可能的。”&lt;/p&gt;
+&lt;p&gt;洪先生在电话里笑出了声，“你如果是因为拿不动筷子而被活活饿死，传出去一定很好笑。”&lt;/p&gt;
+&lt;p&gt;“我最后怎么死就不劳洪先生费心了。您今晚过来吗？”&lt;/p&gt;
+&lt;p&gt;“事情很多，不一定。你想见我吗？”&lt;/p&gt;
+&lt;p&gt;“我的左手刚跟我说，它很疼。我的右手刚问我，下一次跟你做完，是不是就要切它了？”&lt;/p&gt;
+&lt;p&gt;“年轻人胸怀应该宽广些，一只手换一条命，这是多少人哭着求我都没有的待遇。”&lt;/p&gt;
+&lt;p&gt;“你这么说好像确实是我不对，那我今天跟你和解了。我不再计较你废我一只手，你也不要再想着杀我。”&lt;/p&gt;
+&lt;p&gt;电话挂断后洪先生才反应过来，自己好像莫名其妙地跟张禹做了一笔赔本买卖。&lt;/p&gt;
+&lt;p&gt;而在城市的另一端，试图用毒品自杀却未遂的官秋山，正阴沉着一张脸把货塞回到鬣狗手中：“你的货怎么跟白水似的？还是变质的白水，又酸又苦。”&lt;/p&gt;
+&lt;p&gt;“啊？”&lt;/p&gt;
+&lt;p&gt;鬣狗仔细嗅了嗅空瓶罐，像是突然想起了白日里医院的混乱，猛拍着大腿叫道：坏了！我的货和别人的药拿错了。&lt;/p&gt;
+&lt;p&gt;官秋山倚着门框无奈道：“什么啊？”&lt;/p&gt;
+&lt;p&gt;“我的货被洪先生的人拿走了，不行不行太危险了，我现在就得去找回来。”&lt;/p&gt;
+&lt;p&gt;见鬣狗慌乱的样子，官秋山不以为然，在沙发上伸着腿坐下后，拿起茶几上的水就猛地往肚里灌，说：“急什么？直接告诉洪先生那边的人搞错了，天亮之后再换回来不就没事？”&lt;/p&gt;
+&lt;p&gt;“那是张禹的药，他要是今天晚上吃错了，我和那个保镖一定会被弄到残废。”&lt;/p&gt;
+&lt;p&gt;忽然有什么东西炸开了，他听到一声巨响，随后手上像是被火灼伤一样，有点疼。官秋山低头一看，他握碎了手里的玻璃杯子，玻璃深深嵌在掌纹里，鲜血横流。&lt;/p&gt;
+&lt;p&gt;“你刚说谁？”&lt;/p&gt;
+&lt;p&gt;鬣狗被官秋山的手劲吓了一跳，缓了好一会才解释道“我说洪先生啊！他一定以为我们是故意卖给张禹吃的，可我怎么敢做生意做到他身边去……”&lt;/p&gt;
+&lt;p&gt;官秋山不敢问得太仔细，只颤抖着说了一句“张禹他……是谁？”&lt;/p&gt;
+&lt;p&gt;“他就是鹿天鸣那个香港表弟，但听说洪先生只是废了他一只手，没杀他。命可真大……”&lt;/p&gt;
+&lt;p&gt;“我现在就跟你去找……货。他现在在哪儿？还在医院？”&lt;/p&gt;
+&lt;p&gt;“在洪先生的95公寓。”&lt;/p&gt;
+">隔岸观·第八章</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://fooogy.github.io/post/ge-an-guan-di-qi-zhang/"" data-c="
+          &lt;h1 id=&#34;&#34;&gt;&lt;/h1&gt;
+&lt;p&gt;像是地壳运动颠覆山脉为湖泊，洪先生伸出双指抚平他紧皱的眉头，拇指的指尖又刮过他的眼眶，泪渗出眼角流进鬓角深处。洪先生看着他，好端端生出些温柔怜惜的感情，这个年轻人注定要成为自己宁可错杀三千的之一了，不再继续挣扎了吗？或许我下一秒就会回心转意，为你生出点良心呢？&lt;/p&gt;
+&lt;p&gt;看起来心不在焉的张禹，其实脑中正进行着堪比纳粹集中营程度的自救。我要窘迫，还是放荡，我要欲拒还迎还是宁死不屈？整个人被折叠又折叠之后，他终于再看不见洪先生的脸。这样也好，避开四目相对就是在避开被看穿的风险。这让他有几分心安的同时又下意识绷紧了意识。可惜意志力再强也是徒劳无益，看不见的肢体和动作里如数落在脑海里，皮肤上所感知到的一切触碰、研磨、碾压都会异常清晰地传遍每一处角落。处于趋利避害的人性他总是不自觉地往前爬，直到自己退无可退。而洪先生则对他的一切反应了然于胸。既然决定好要摘下还没熟透的果实，他就要做好一口吃下去只能尝到满嘴酸苦的心理准备。&lt;/p&gt;
+&lt;p&gt;毕竟，洪先生苦中作乐多年，早已失去味觉，闻着香就足够，尝不出半点甘甜又何妨。&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;身底下闷闷的声音传过来，洪先生稍稍放缓动作，扭过张禹的头问，什么声音？&lt;/p&gt;
+&lt;p&gt;张禹连忙手挡住嘴，摇着头否认。然后洪先生就像古战场上才会见到的攻城木那样，一下接一下地撞上来，而他死死咬住枕头，倔强地再也没发出任何声音。&lt;/p&gt;
+&lt;p&gt;两个人的高潮来得比想象中要快，可能是因为洪先生心善有耐性，再干涩的枯井也能由浅入深地抽出清泉来。洪先生第一次射精结束后，张禹的双腿却还在微微颤抖，他能感觉到自己的生命好像也在缓缓流淌出去。&lt;/p&gt;
+&lt;p&gt;Make，我好像太没用，这么快就要跟上你了。&lt;/p&gt;
+&lt;p&gt;官秋山啊，如果我死了，你千万要讲义气地替我报仇，如果你还活着……&lt;/p&gt;
+&lt;p&gt;胡思乱想一番后的张禹有些头昏，身前身后都有点火辣辣地疼，他趴在床铺上，心中却是一片死寂。目光下扫，惊愕一抖。自己和鹿天鸣做过这么多次，好像还是第一次流这么多血。张禹的手覆盖在床上挡住了暗沉的血迹，像是把一朵红得鲜艳的花从枝头上折了下来，把自己也折下来。&lt;/p&gt;
+&lt;p&gt;“像花虽未红……如冰虽不冻……这是好几年前的粤语老歌了，洪先生听过吗？”&lt;/p&gt;
+&lt;p&gt;听到张禹哼出了两句不成调的歌，洪先生眼皮微微一颤，仿佛也看见了红红的罂粟花开在金三角的土地上，而自己就是其中最凄艳的一朵。可物离乡贵，人离乡贱。和予人欢愉的罂粟相提并论，自己又是不配。捂住嘴轻轻咳嗽几声，却又欲言又止。&lt;/p&gt;
+&lt;p&gt;最后只是一垂眼，淡淡道：&lt;/p&gt;
+&lt;p&gt;“花会萎谢，人也不能免俗。这支粤语歌太悲，有曲终人散之兆。”&lt;/p&gt;
+&lt;p&gt;张禹眼角摇晃出眼泪，解释说“这本就是首怀念的歌，就当作我在怀念Timmy仔。”&lt;/p&gt;
+&lt;p&gt;“他的死，真值得你伤怀至此吗？”&lt;/p&gt;
+&lt;p&gt;大概就是因为世界上还有张禹这样的人，把所有关于愧疚的份额都占满了，以致于洪先生无论怎样作恶多端，从来也不曾惭愧过。洪先生又温和地插入进来，然后不由地也弓着腰把手扣上去，摸着张禹的手一起陷入在血痕里，心中突然生出了新的打算，扭过他的头吻了过去。洪京墨手掌上有一道狭长的伤疤，横冲直撞地切断了生命线和爱情线，从虎口一路蜿蜒到尾指。张禹不明所以地皱着眉，分开后，又不小心低头看见散落在地上的照片，其中一张被压在最底下，只能看到照片上的人一只手。但是张禹一眼就认出来了，那不是别的人，那是Make。&lt;/p&gt;
+&lt;p&gt;嗡地一声，张禹将手抽出来抓住胸口。&lt;/p&gt;
+&lt;p&gt;“你怎么了？”&lt;/p&gt;
+&lt;p&gt;心中沉淀下去的怨恨乍惊乍起，顿时间泪如雨下，眼底心底凄凉无底，只想对自己的脸扇几巴掌清醒一点。&lt;/p&gt;
+&lt;p&gt;身底下自暴自弃的大哭吓到了洪先生，他不禁疑惑，有这么疼吗？已经很轻了。&lt;/p&gt;
+&lt;p&gt;“对不起，我只是……我突然有点想家了”&lt;/p&gt;
+&lt;p&gt;洪先生不能明白，张禹崩溃的感情强烈到无法形容是为何而崩溃。不仅恨Make尸骨未寒，恨官秋山生死未卜，也恨他自己居然要借着他们三个的感情来逢场作戏。但若为了顾全大局，能做好这最后一出戏也无可厚非。可他更恨自己耽于往昔，深陷在伤痛中不能抽离，实在太没用。手紧紧攥着床脚，又想起洪先生给的枪，自己居然没用来杀人。今生今世，再也不会有这么好的机会。&lt;/p&gt;
+&lt;p&gt;你是想要回香港吗？一句话说出口，洪先生才突然发觉，自从自己1973年离开香港，这几十年除却梦里，竟是再未回去过。洪先生心中顿觉酸楚，“其实我和你不同，我是20年前的香港人。70年代的香港，遍地都是带着殖民色彩的掮客。贪污腐败的政治掮客、哄抬物价的经济掮客、还有太多绅士名媛也做掮客，但身上永远带着一种……烈得呛人的上等人味。这种味道把香港搞得太脏了，所以我才千辛万苦地逃出来。你之前说今年……多大年纪？”&lt;/p&gt;
+&lt;p&gt;张禹脸蹭过床铺，擦干净眼泪，嗫嚅着“我，20岁。”&lt;/p&gt;
+&lt;p&gt;像是没有听见，洪先生只身陷入了深深的回忆中，“我逃出香港的时候不过15岁。我那时候躲在货船上，不知道在海上漂了多少天才到越南边境。又兜兜转转，最后来到泰国扎根落地。”&lt;/p&gt;
+&lt;p&gt;“逃？”&lt;/p&gt;
+&lt;p&gt;洪先生盯着张禹颤抖着的背影，像是看到了当年那个仓皇失措的自己，“对，是逃。我当时在香港杀了人。那是我第一次杀人，害怕得不得了。幸好遇到了来香港带货的Timmy仔，他跟我说，我可以搭他们家亲戚走私毒品的邮轮偷渡出国。那时候都很单纯，真怀念那时候。”&lt;/p&gt;
+&lt;p&gt;我那时候那么年轻，那么容易相信，那么完整。&lt;/p&gt;
+&lt;p&gt;因为是第一次杀人，所以才会拿不稳刀割伤了手吗？张禹偏过头盯着洪京墨掌心的疤，“但你今天把他也杀了。”&lt;/p&gt;
+&lt;p&gt;“阿禹，洪先生今天杀他是因为他做错了事。而不是因为我不喜欢他。”&lt;/p&gt;
+&lt;p&gt;张禹苦笑，这个男人是真的沧桑历尽，所以讲话永远都是一副老年人奚落小孩的口吻。苏健秋曾经抱怨过Make少年老成，十几岁就活得像个凶神恶煞的中年大叔，但和洪先生相比又是鲁莽有余，城府不足。Make也说，这种老派古董男就像是过期的方糖，表面上闻着自然还是香的，其实内里藏污纳垢。但碍于情面不能吐出来，又咽不下去，只好恭恭敬敬含着。&lt;/p&gt;
+&lt;p&gt;不过这情面是碍于他位高权重的情面，而不是碍于他已经不惑的年岁。洪先生一生最满意的成就，就是多亏了自己，才让很多庸人名利双收，但他其实一直对外界判断错误。&lt;/p&gt;
+&lt;p&gt;是多亏了社会上永远有人要追名逐利，他才被恭维。&lt;/p&gt;
+&lt;p&gt;“是，洪先生最怕背叛。是他死有余辜。”&lt;/p&gt;
+&lt;p&gt;“我不怕背叛，我只是可惜。人一旦背叛我，无论我有多么舍不得，这个人都不能再留。”&lt;/p&gt;
+&lt;p&gt;洪先生声音低沉，停顿片刻又闭上了眼，“我可能是害怕分别。有时候恨不能变盲，这样许多人许多事，就都眼不见为净。”&lt;/p&gt;
+&lt;p&gt;张禹猛地回起头，脸上闪过一丝惊讶，“你到底遭到过什么人的背叛？”&lt;/p&gt;
+&lt;p&gt;洪先生突然捂住张禹的嘴，将他的头压下去，就像是怕他再说出什么越界的话，自己就真的不得不杀他了。然后放肆地欺身向前继续顶撞着，然后抽出手默默拿回了放在桌上的匕首，张禹在床上看见了刀的光影，突然开口问道：&lt;/p&gt;
+&lt;p&gt;“洪先生你记不记得，鹿天鸣最后好像跟我说，他死都不会放过我。”&lt;/p&gt;
+&lt;p&gt;洪先生快乐地笑了，“不要怕，那是在说我。”&lt;/p&gt;
+&lt;p&gt;张禹翻过身来将额头抵近亲吻他的匕首，呼出的热气碰在洪先生的手腕上，令他手心连着心头一起作痒。&lt;/p&gt;
+&lt;p&gt;“那洪先生，你现在也要杀我吗？像杀他一样。”&lt;/p&gt;
+&lt;p&gt;做错事的人当然要受罚，那张禹做错了什么呢？洪先生的身下仍然剧烈摇晃着撕裂对方，但握刀的手却很温柔。刀锋下移，刀背一一经过张禹的眉心、眼睛，嘴唇，最后在张禹的下巴位置来回点着，好像是在思考在哪里下刀会比较凄美。仿佛闭上眼睛就能看到鲜血和精液同时喷射出来的奇观。但不知为何，闭上眼睛后洪先生突然想起鹿天鸣最后说的话，张禹你生是我的人，死是我的鬼。&lt;/p&gt;
+&lt;p&gt;如果现在就这么简单朝着他的喉咙刺下去，岂不是成全了鹿天鸣要和张禹九泉之下，继续做一对亡命鸳鸯的心思。但鹿天鸣好像没有任何犹豫地就背叛了我，我为什么还要这么好心啊？我是洪先生。随后一笑，好像是这么一回事。他是洪先生，他怎么能和鹿天鸣那样丧尽天良的人沆瀣一气。&lt;/p&gt;
+&lt;p&gt;从1973年到1996年，他从一个少年逃犯长成了一位华人大亨。他是东南亚所有克勤克俭，劳心劳力的犯罪者们，最后伟大的福音。是正人君子。&lt;/p&gt;
+&lt;p&gt;最后将刀收回，只是轻描淡写两句：“既然同是天涯沦落人，我便不会害你。”&lt;/p&gt;
+&lt;p&gt;张禹心中冷冷想到，哦，是这样吗？&lt;/p&gt;
+&lt;p&gt;而后洪先生专注在沉寂的空气之中，又问，“我看你朝Timmy仔开枪时用的好像是左手，是左撇子吗？”&lt;/p&gt;
+&lt;p&gt;张禹斜眼看见洪先生手下凌厉的刀刃，眼前一瞬间闪过鹿天鸣后，突然想要拼命抽出自己的手，但还是被洪先生死死摁在床上动弹不能。他浑身颤抖不止只好闭上了眼睛，好像是洪先生朝自己吻过来。仓皇失措之中顾不得抵御对方唇舌的侵略，随后耳边就听到了匕首隔开皮肉的声响，脑子里先是撕心裂肺地一痛，又恍惚露出来了微茫的笑意。&lt;/p&gt;
+&lt;p&gt;洪先生最后只是挑断了他左手的手筋，那么他今天就是暂时不用死了。于是彻底松了一口气，瘫死在床上。&lt;/p&gt;
+&lt;p&gt;洪先生从张禹的身体里退出来，为他有风度地披上外套，很快地便从地上摸到了拐杖走出房间。张禹依然还像条用过的毛巾一样，一半还挂在床上，另一半却趴在地板上。左手手腕上筋骨具裂，皮肤外翻，像在呕血的鱼唇。手腕上汩汩流出的鲜血又顺着手臂倒流回肩膀，又更像是沾上血液濡湿身体能再多苟活几时的鱼了。他感觉腿下的地板有些凉，光裸的后背上只盖着洪先生留给他的一件外套。只觉得浑身上下都像是生锈的破铜烂铁，想要坐起来把衣服穿上，又更想一直躺下去躺倒死。但终于在浓稠的黑夜里，他站了起来像是一根搅拌棍，搅弄一杯咖啡一样地在地上走了一圈，淌了一圈的血又像是在咖啡上拉花。单手捡起了衣服勉强套进去，衣料摩擦左手时宛如经受凌迟，他却只惋惜着自己最后一件干净的外衫，到底也是脏了。&lt;/p&gt;
+&lt;p&gt;衣袖被鲜血打湿一角后，血迹就像水草一样攀爬至整个衣袖，滴落在地板上又被他踩在脚底，摇摇晃晃地走着，最后终于借着月光看清了这具死不瞑目的尸身。&lt;/p&gt;
+&lt;p&gt;有人吸食毒品，便有了毒贩毒贩。有人贩卖毒品，便有了毒品调查科。乐极生悲，盛极必衰，人生种种境遇，不过是实现欲望和偿还代价之间的有借有还。张禹用右手捡起那只断手，妥当地放回在了鹿天鸣身旁，看着他干裂的嘴唇，想起了两个人所讲的第一句话：阿sir你的水能给我喝一口吗。这个可恨的毒贩终于是死在了他最喜欢的毒品手里，不知道算不算是死得其所。那自己最终是不是也应该为毒贩而死？&lt;/p&gt;
+&lt;p&gt;忘了，我又不是警察。我有什么资格……可是Make又凭什么死在你种人手里，鹿天鸣你只有一条命你要怎么还他们。灵魂被仇恨撕裂时胜过身体上的疼痛千万倍。最后，张禹面如死灰，喉咙嘶哑，只能发出胡琴一样的声音同他告别：&lt;/p&gt;
+&lt;p&gt;“鹿天鸣，我是真想过带你回去，可是香港已经没有死刑……”&lt;/p&gt;
+&lt;p&gt;手捂住干涩的眼睛，却是半行眼泪都流不出来。&lt;/p&gt;
+&lt;p&gt;保镖在朝洪先生走近的这几步路里，突然发觉今晚的洪先生比平时面善了些许，脸上甚至有一派如鱼得水的快活气象。&lt;/p&gt;
+&lt;p&gt;“老板，张禹怎么处理。”&lt;/p&gt;
+&lt;p&gt;“一整晚听下来，有什么评价给他？”&lt;/p&gt;
+&lt;p&gt;保镖看了一眼屋内半死不活的张禹，简明扼要地说：“天真懵懂、深不可测。”&lt;/p&gt;
+&lt;p&gt;“觉不觉得他很像当年的我……”&lt;/p&gt;
+&lt;p&gt;“您指的是，他和您当年一样背井离乡吗？”&lt;/p&gt;
+&lt;p&gt;自己走在人生的中段还能遇上这么一个人，大抵也算是有缘。莫非是上了年纪，怎么总是情不自禁地开始回忆往事。洪先生拄着拐杖低头笑了，而后笑容化成沦落人的悲愁。往事如风干的旧年历一样模糊，而鹿天鸣死不瞑目的那张脸依旧清晰可见。&lt;/p&gt;
+&lt;p&gt;阿洪，你将来去泰国发财了一定要记着我的好啊。&lt;/p&gt;
+&lt;p&gt;我都不知道你是谁，我怎么记着你？&lt;/p&gt;
+&lt;p&gt;鹿天鸣。我们村里都叫我Timmy仔。&lt;/p&gt;
+&lt;p&gt;鹿天鸣当时憨厚地嘿嘿一笑，欢天喜地地站在岸边朝自己摆手，就像是自己也逃脱了香港这个吃人的洞窟一样欢喜。天鸣……Timmy仔，原来已经过去23年了。&lt;/p&gt;
+&lt;p&gt;“先送医，给他把手筋接上。再给他找一个别太偏也别太吵闹，好一点的住所。不想他像我当年那样，流浪街头。”&lt;/p&gt;
+&lt;p&gt;“是。”&lt;/p&gt;
+&lt;p&gt;“鹿天鸣勾结警察这件事便到今天为止……对，之前在枪战时重伤的那个青年人醒了吗？”&lt;/p&gt;
+&lt;p&gt;“还在医院昏迷着。”&lt;/p&gt;
+&lt;p&gt;“他杀了Make这个警察，算是我的恩人。要是真醒不过来……便找个时间做掉，给他个痛快。”&lt;/p&gt;
+&lt;p&gt;“……我知道了，洪先生。”&lt;/p&gt;
+&lt;p&gt;“他叫什么名字来着。”&lt;/p&gt;
+&lt;p&gt;“官秋山，我们都叫他阿秋。”&lt;/p&gt;
+">隔岸观·第七章</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://fooogy.github.io/post/ge-an-guan-di-liu-zhang/"" data-c="
+          &lt;p&gt;“小孩，你和Timmy仔是在香港认识的？能跟我说说吗？香港可是我这一生素未谋面的故乡。”&lt;/p&gt;
+&lt;p&gt;洪先生极有耐心地亲吻着张禹，然而这个问句钻进脑子里像是被投了剧毒，张禹身体一僵。这是个陷阱吧，想要思考出一个严谨考究的回答，他第一次见鹿天鸣时对方已经是镣铐在身。顿时又脑袋一片空白，这个问题只是横在脑子里，不知道应该如何继续。&lt;/p&gt;
+&lt;p&gt;洪先生看着张禹茫然无措地表情突然觉得有点好笑，“有这么难吗？不记得了？那第一次上床还记得吗？”&lt;/p&gt;
+&lt;p&gt;张禹小心翼翼地挑拣着字句，说“我吃了很多药……我只记得他好像跟我说了很多话。”&lt;/p&gt;
+&lt;p&gt;“他说什么？”&lt;/p&gt;
+&lt;p&gt;“记得一句，你相信我，放松一点。”&lt;/p&gt;
+&lt;p&gt;洪先生突然坐起来解开了张禹的手铐，又撇到地上。和颜悦色地笑道，希望我这样做，你也能轻松一点。&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;双手突然重新掌握了主动权后，反而有一种无处安放的尴尬。张禹最后试探性地伸出手，轻轻搂上洪先生的脖子，然后拉着他一起躺下，“我能相信你吗？”&lt;/p&gt;
+&lt;p&gt;洪先生又笑了，解下皮带扣抽出整条腰带，缠绕住张禹的脖子，眼神一冷，“这句话，应该是我问你。”&lt;/p&gt;
+&lt;p&gt;皮带正勒在脖子上慢慢渗进皮肤里，张禹的左手死死抠着皮带给自己留有一线生机，费力地说：“我只知道我没说谎。我不是警察，我把来泰国这件事一直当成度假。我没想卷入任何一场是非，鹿天鸣勾结警察出卖你和我没有关系。信我还是杀我，你自己选。”&lt;/p&gt;
+&lt;p&gt;洪先生在心里重复着，信你还是杀你？说的真是以死明志视死如归啊？但我明明可以相信你，再杀你。也可以不信你，偏偏留着你。这怎么可能是泾渭分明的两件事。这时，洪先生突然之间反应过来，张禹这个人其实活得太过简单，不知道人性之复杂既能让人一念成佛，对眼前的羔羊放下屠刀，也能让人舍身投入地狱大开杀戒。&lt;/p&gt;
+&lt;p&gt;洪先生最后选择把皮带和最后一点衣物一起扔在了地上，又妥当地拉下张禹的裤子拉链，一张阴沉的脸突然转晴，“现在你和Timmy仔各执一词，不如来当面对质吧，趁你们还活着。”&lt;/p&gt;
+&lt;p&gt;鹿天鸣被人拖进来时张禹还以为被拖进来的其实不是一个人，而是一袋有毒有害的重污染垃圾。他整个人正烂在地上萎靡不振，原本应该长着一只手的地方现在空荡荡的，没有毒品慰藉的躯体也空荡荡，活生生的一具行尸走肉。这样的一个鹿天鸣，到底还能再说得出什么？&lt;/p&gt;
+&lt;p&gt;然后张禹抬眼，拖着鹿天鸣走进来的那个保镖还拿着一个牛皮纸袋，鼓鼓囊囊的，不知道都装了什么。张禹心下一沉，想到毒品调查科的行动如果没有洪先生动作快，那么纸袋里的资料就有可能属于自己，原本的自己。&lt;/p&gt;
+&lt;p&gt;这时地上的那一滩烂泥出声了，但还是神志不清，张禹甚至疑惑鹿天鸣是不是根本认不出自己，“洪先生……张禹就是个骗子，他是想要引诱你，你一定要杀了他，你要杀了他，不然他会害死你……就像他现在来害我一样。洪先生……杀了他……”&lt;/p&gt;
+&lt;p&gt;“我到底害你什么了？”张禹发自肺腑地，真情实感地问出了这一句。&lt;/p&gt;
+&lt;p&gt;“洪先生我错了……你给我点货吧，我撑不住了，我快不行了……”&lt;/p&gt;
+&lt;p&gt;鹿天鸣可怜地呻吟着，洪先生回过头看向张禹，面露几分为难，“如果你想永远留在我身边，你就应该和过往一刀两断。”&lt;/p&gt;
+&lt;p&gt;保镖心领神会地点了点头，立刻掏出手枪卸下来弹夹，将子弹一颗又一颗地取出后，将只剩唯一一颗子弹的手枪递给了张禹，张禹左手接过来，盯着枪怔怔出神。&lt;/p&gt;
+&lt;p&gt;这场面有点滑稽，两个保镖都将枪口对准了张禹。只要张禹有任何异动，就会像古老的枪决一样，被两发子弹打穿，一颗对准脑干，一颗对准心脏。张禹静静走下床，左手持枪站在鹿天鸣的身前。这时保镖将牛皮纸袋打开，将里面毫无保留地全部倾倒出来，上下翻飞散落一地的，都是扫毒组同事们的照片。&lt;/p&gt;
+&lt;p&gt;今天收网之后，未来的张sir这个暑假想没想好怎么过？让Make做东。&lt;/p&gt;
+&lt;p&gt;我做东也可以，但除非他真的考督察的面试合格。&lt;/p&gt;
+&lt;p&gt;张禹却是看都不敢去看，只怕自己控制不住情绪露出了马脚。但其实又可能早已被人看穿，他不知道，他不在乎了。他现在只想一枪崩了鹿天鸣，他在警校的射击成绩是第一名，他甚至相信自己的速度只要够快，转过身射杀洪先生也不是一点没有可能，但手指颤巍巍地勾向扳机又突然缩回。现在不是自己还能任性妄为的时候，洪先生现在在想什么，是要借自己的手杀了鹿天鸣吗？还是什么都没想，只是觉得看一对怨侣自相残杀很有意思。这一枪真的开下去自己还能活吗……&lt;/p&gt;
+&lt;p&gt;阿禹，你这么喜欢枪应该和Make一起去考警察啊。&lt;/p&gt;
+&lt;p&gt;我不是喜欢枪，我是喜欢一切巨响，很有震撼感，很舒服。&lt;/p&gt;
+&lt;p&gt;Make，阿禹以后如果不做警察，一定会去犯罪……&lt;/p&gt;
+&lt;p&gt;不能再想了，现在不是怀念他们的时候。张禹双眼恨意滔天，终于朝鹿天鸣按下扳机。&lt;/p&gt;
+&lt;p&gt;砰——左手一痛整个人都被震到地板上，后脑重重地撞向床板。张禹这一枪射偏了，只从鹿天鸣的耳旁擦过去，但即使只是擦过，他也被子弹击碎了半只耳朵。鹿天鸣捂着不断渗血的耳朵不断哀嚎，一时天旋地转只剩下耳边不绝的枪响。&lt;/p&gt;
+&lt;p&gt;“阿洪！警察来了，警察来抓你了……你快上船，快跑啊……”&lt;/p&gt;
+&lt;p&gt;陷入幻觉里的鹿天鸣被一声枪响带到了童年时代，而张禹却被这一声带回了现在。他望着墙壁上那个被自己故意射歪留下的弹孔，意识到自己好像错过了洪先生给的一个机会。&lt;/p&gt;
+&lt;p&gt;一个自我了断的机会。&lt;/p&gt;
+&lt;p&gt;张禹左手上还残留着一些火药味，他捂住眼睛说道：“我不想留在你身边，我也不想和任何人一刀两断，我现在只想活下去。”&lt;/p&gt;
+&lt;p&gt;洪先生仍然是赤身裸体地坐在床上，像是美术学院供人创作里的雕塑，双眼深深地望着地上的人。他总是这样，心里越是在意，脸上就越是淡漠，“Timmy仔，人做错事就要认罚。我最后给你一次机会，你有没有出卖过我？”&lt;/p&gt;
+&lt;p&gt;“我没有，我真的没有洪先生。我怎么敢……我求你救救我吧，我真的撑不下去了。”&lt;/p&gt;
+&lt;p&gt;洪先生长叹一声，心里只是满满的可惜，“活人怎么能被死物奴役。算了……你多年前有恩于我，我如今也只能变本加厉地回报你，才不算忘本。”&lt;/p&gt;
+&lt;p&gt;张禹看见又有一位保镖走进来，手上拿着一支针管，针尖萤萤一点光，像是毒蛇的尖牙，然后尖牙咬在了鹿天鸣的颈动脉，溶液争先恐后地侵略进鹿天鸣的血管，鹿天鸣起初很快乐，犹入无人之境，连浑浊了二十几年的身体也突然变得轻盈，世界突然安静了下来。&lt;/p&gt;
+&lt;p&gt;鹿天鸣眯着眼睛，突然看清了衣衫不整的张禹，哈，瞧瞧这张不人不鬼的脸啊。&lt;/p&gt;
+&lt;p&gt;洪先生，张禹是警察，他是来抓我们的……你一定要……&lt;/p&gt;
+&lt;p&gt;鹿天鸣突然浑身猛烈抽搐着，在享受和剧痛之中跌宕起伏。张禹冷冷的眼越来越模糊，洪先生的声音也听不见，所有的感官都在退化，他用仅剩下的那只鲜血淋漓的手扼住喉咙，不可置信地死盯着张禹的方向，你要死了张禹，是你张禹要死了才对。&lt;/p&gt;
+&lt;p&gt;张禹被洪先生一把拽回到床上后，闭上了眼睛。然后裤子也终于完全被扯了下去，一如他终于荡然无存的羞耻心。&lt;/p&gt;
+&lt;p&gt;张禹，所有人都死了为什么你还活着？你背叛了他们，你应该陪他们一起去死！你下地狱！&lt;/p&gt;
+&lt;p&gt;洪先生突然低下头在张禹的耳边说，“不敢听的话，捂住耳朵就听不见了。”&lt;/p&gt;
+&lt;p&gt;张禹突然用枕头盖住自己的头，但鹿天鸣垂死时的咒骂，还是不断地从枕头的棉花缝隙里钻进耳朵里，他又捂住耳朵，但一字一句还是清晰可闻。张禹尽力把自己缩进去像是一个蚕蛹，藏在枕头里艰难地呼吸着。&lt;/p&gt;
+&lt;p&gt;张禹！你生是我的人死是我的鬼，我死也不会放过……&lt;/p&gt;
+&lt;p&gt;洪先生这时候压了过来，令张禹几乎分不清现在要发生关系的这个男人到底是谁，如果他能把这层皮扒下来灵魂逃出去就好了，他就自由了，他就和鹿天鸣一样自由。生是你的人，死是你的鬼。都说人之将死其言也善，可鹿天鸣的临终遗言怎么就听着这么刺耳。如果自己快要死了，我一定不会说这种可笑的话。我会说什么？我不会唱歌吧，我认识的人好像都死光了，没有人能够为我唱挽歌。&lt;/p&gt;
+&lt;p&gt;张禹胡思乱想时却突然眼前一亮。是鹿天鸣终于咽了气，洪先生把枕头抽出来了。他看着这张脸，上面写满了慌乱和愧疚，但是却没有半点恐惧，洪先生好奇地问道，“你的男人就这么死了，你怎么不难过？”&lt;/p&gt;
+&lt;p&gt;张禹顿觉无语，平静对上洪先生的灼灼目光，粲然一笑道，“反正我不知道哪天也会死，还替他难过什么。”&lt;/p&gt;
+&lt;p&gt;是个聪明人，洪先生被这种自知之明打动，不自觉地吻了上去，一边吻着一边不疾不徐地侵略着张禹的身下，张禹知道自己的报应要来了，哪怕他一件背叛的事都没来得及做。&lt;/p&gt;
+&lt;p&gt;被进入的刹那张禹突然痛呼出声，洪先生居高临下地问道，“你以前没做过吗？”&lt;/p&gt;
+&lt;p&gt;“我好像说过一遍了，当时吃了很多药。你想要招妓的服务，我真的给不了，不然你也给我来一针？”&lt;/p&gt;
+&lt;p&gt;“我好像也说，活人不要被死物奴役，清醒才能活得长久。”&lt;/p&gt;
+&lt;p&gt;“这就是你哪怕在上我的时候，都不忘记盯着那把刀的理由？”&lt;/p&gt;
+&lt;p&gt;被看出来了，洪先生收回眼神后低头一笑，心里遗憾地想，如果张禹没有这么多的花花心思，他或许还是能够活下去的。既然天亮之后这个小孩就要死了，那么就在天亮之前，好好珍惜这黄粱一梦。&lt;/p&gt;
+&lt;p&gt;张禹冷汗微微，僵直的身体语言继续出卖着自己没有任何经验的事实。他控制不住地望向鹿天鸣的尸体，我不能靠药了鹿天鸣，要靠喜欢也完全来不及了，我要怎么活下去……可惜鹿天鸣已经死了，对他的困境无能为力。整个人浑身脓血地仰在地上，脚下还踩着每一位不幸殉职香港警察的照片。&lt;/p&gt;
+&lt;p&gt;想起鹿天鸣好像说过的一句话，张禹的生命力突然之间像是重新回到了这架皮囊里，一滴眼泪一闪而逝，他突然用力地拥吻着洪先生，反客为主地压了下去。&lt;/p&gt;
+&lt;p&gt;这是受了什么刺激？洪先生吃惊地捂住胸口，然后躺着不动看着张禹做最后的垂死挣扎。&lt;/p&gt;
+&lt;p&gt;“洪先生，我今年才二十岁，如果不来泰国的话我一定会安安稳稳过完下半辈子。如果你今天不杀我，我一定永远记得你的大恩大德，滚回香港好好念书，再也不踏出香港半步。从此以后你有什么用得上我的地方，你尽管开口，我能做的我一定做。只要您留我一命，赴汤蹈火万死不辞。”&lt;/p&gt;
+&lt;p&gt;洪先生扯动了嘴角，似乎对这样真诚的求生欲十分受用。&lt;/p&gt;
+&lt;p&gt;“这么想回香港，是还有什么牵挂吗？”&lt;/p&gt;
+&lt;p&gt;没有。张禹脱口而出，又趴在洪先生的胸膛上，两个人的肉体紧紧契合在一起，灵魂则各有所图，张禹说话的声音都变了调，真诚地看着洪先生的眼睛说，&lt;/p&gt;
+&lt;p&gt;“我只不过是想活下去，非常，非常想。”&lt;/p&gt;
+">隔岸观·第六章</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://fooogy.github.io/post/ge-an-guan-di-wu-zhang/"" data-c="
+          &lt;h1 id=&#34;&#34;&gt;&lt;/h1&gt;
+&lt;p&gt;于是张禹便一个人和鹿天鸣那只断手，待在旅馆里整整三天。他这三天里一直在看去泰国音像店租回来的DVD。旧旅馆的旧电视机嗡嗡作响，黑色房间里的墙面晃动着胶片的暗黄颜色，人生如戏，一帧帧落入他的眼眸。张禹窝在沙发里，脚边落了一地的烟头，还有喝完的玻璃酒瓶。这时门被推开了，屋外黄昏从门缝里泄露进来。他转过头望去，是洪先生的两个保镖疾步靠近张禹。&lt;/p&gt;
+&lt;p&gt;三天未进食的张禹突然像是一张纸一样被两个人拽起来堵在墙角里，一人钳制住他的双手，另一人从下往上粗暴地摸查他的身体。然后又被翻了个面，最终被两个人拷在床脚，像是等待处决的要犯。然后张禹抬头看见，洪先生拄着拐杖从那扇门里出现，像一个从荧幕里走出来的人物。先是面目晦暗不明，最后站在自己面前。&lt;/p&gt;
+&lt;p&gt;毒瘾发作的鹿天鸣被洪先生找到时，就是他再一次出卖警方时。张禹对这一点，从来都是毫无怀疑。&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;“以前鹿天鸣每一次搞失踪，都会让我担惊受怕。但现在看到了洪先生，我又不怕了，他应该没死。”&lt;/p&gt;
+&lt;p&gt;“现在不叫表哥了。”&lt;/p&gt;
+&lt;p&gt;洪先生的身影完全遮挡住了张禹，洪先生的势力也已经完全包围住了这家旅馆。张禹做出一副英勇就义般的苦笑，若无其事地将手搭在床上，好让自己轻松一点，又笑了：&lt;/p&gt;
+&lt;p&gt;“他本来就不是我表哥。”&lt;/p&gt;
+&lt;p&gt;洪先生问，“张禹，你为什么来泰国？”&lt;/p&gt;
+&lt;p&gt;“因为鹿天鸣啊。”&lt;/p&gt;
+&lt;p&gt;“就为了一个男人？”&lt;/p&gt;
+&lt;p&gt;“对，就为了一个男人我辍学了。亲人、朋友、人生……都这样被我丢下了。我很了不起吧！”&lt;/p&gt;
+&lt;p&gt;“Timmy仔说……”&lt;/p&gt;
+&lt;p&gt;张禹漫不经心地瞥了一眼床上的褶皱，手指细细摩挲着，“我猜他说，张禹是个扫毒科的警察。想方设法地勾引他上床，努力要套出交易信息进行埋伏。但我贪得无厌，还想要往你的床上爬，用扳倒洪先生这个功劳继续升官发财。但是他鹿天鸣英勇无双，很快地就发现我的真实身份，被我囚禁后不惜咬断自己的手腕也要告诉洪先生小心提防我。有情有义的毒枭和利欲熏心的卧底，这真是一出好戏，对吧。”&lt;/p&gt;
+&lt;p&gt;“Timmy仔毒瘾发作时说的话，其实我是真的没怎么听懂。但是经你这么一翻译，确实茅塞顿开。”洪先生在房间里四处漫步，忽然顿住，用拐杖敲了敲地上的药水，药瓶被碰倒，滚向了张禹。&lt;/p&gt;
+&lt;p&gt;“这是什么？止痛药？”&lt;/p&gt;
+&lt;p&gt;“他毒瘾发作时总是挺不过去，我的钱都被他偷走了，只能卖到这些。”&lt;/p&gt;
+&lt;p&gt;洪先生轻笑一声，“你对他倒算是尽心，可惜，他不领情。现在毒瘾攻心，只想胡乱反咬你一口，好让你做他的替罪羊。”&lt;/p&gt;
+&lt;p&gt;张禹胃里的酒精翻江倒海般涌上来，难受地挤出几个字，“警察埋伏导致洪先生交易失败的事，总要有一个人来负责。”&lt;/p&gt;
+&lt;p&gt;洪先生握在手里的拐杖突然重重敲在张禹脚下的地板，“我是要找这个真正出卖集团的人，而不是随便杀几个人泄愤，听得懂吗？”&lt;/p&gt;
+&lt;p&gt;“可是鹿天鸣他说的都是真的，我就是警察，是我勾引他套取情报。你杀了我，也算对大家都有个交代。”&lt;/p&gt;
+&lt;p&gt;洪先生单膝跪下，温情脉脉地抚摸过张禹眼睛，问，“那张警官告诉我，你的警员编号是多少。”&lt;/p&gt;
+&lt;p&gt;“我……”&lt;/p&gt;
+&lt;p&gt;张禹眼睛中闪过去的片刻茫然立刻被洪先生捕获在手，于是一巴掌闪过去，张禹头狠狠撞在床脚上，眼睛睁都睁不开了，然后又被洪先生提着领子拎起来。&lt;/p&gt;
+&lt;p&gt;“现在可以开始说实话了吗？告诉我，你到底是谁，你要做什么。”&lt;/p&gt;
+&lt;p&gt;“我叫张禹”手铐来回碰撞发出清脆的声响，张禹举着手似笑非笑地看着洪先生，“我现在什么身份也没有，什么事也做不了。怀疑我的话，去查啊。”&lt;/p&gt;
+&lt;p&gt;洪先生松开手，张禹摔回到床上。&lt;/p&gt;
+&lt;p&gt;“我派人去鹿天鸣的广东老家查过你。但看过你的照片后，只有一个男人说对你有点印象，还见过鹿天鸣和你坐在同一辆车上。但你和鹿天鸣的关系应该……”&lt;/p&gt;
+&lt;p&gt;“其实我也不知道我和他算什么关系，一起上过床，但他又说过他不喜欢我。我没有钱弄不到海洛因，捆住他只是为了帮他戒毒。但他宁愿断手断脚也要逃，我有什么办法。”&lt;/p&gt;
+&lt;p&gt;“鹿天鸣不会无缘无故地出卖我，他在这段时间是不是出了什么事。”&lt;/p&gt;
+&lt;p&gt;张禹卧在床上，像一个胚胎孕育在子宫当中，他逐渐蜷缩成一团，仔细回忆着：“他的制毒工厂发生了爆炸，他全家都死光了……只有他一个人活了下来。但他立刻就被警察逮捕，变节得很快，一扭头就去做了警方的污点证人，希望靠着逮捕你和猛犸的两个大功，换个死缓。”&lt;/p&gt;
+&lt;p&gt;“然而在交易那天，Timmy仔突然指着一个人说那人是警察，引起双方争斗。原来他背叛了我之后，又背叛了警察一次。呵……”&lt;/p&gt;
+&lt;p&gt;“本来以为他从警察手里逃出来就没事了，但没想到他的车被你撞了，所以又只能等伤养好再一起离开。”&lt;/p&gt;
+&lt;p&gt;洪先生眼睛眯起来，搭在张禹腰上的手慢慢下沉，“小孩，既然是想要亡命天涯，那为什么你们当时，没有坐同一辆车呢？”&lt;/p&gt;
+&lt;p&gt;张禹将脸埋进床里，肩膀连着整个后背都在颤抖。洪先生将他彻底掰过来，好能直视着张禹的眼睛。然后这个阅尽千帆铅华洗尽的中年人，在这双眼睛里，看到了世界上最生动的情感。不像是爱，不像是痴恋，但又完全没有半点虚情假意。总之他看不穿，这种生动的情感算是什么。&lt;/p&gt;
+&lt;p&gt;张禹火烧火燎的胃部终于疼得掉下来了一滴眼泪，牙齿咬着嘴唇说：&lt;/p&gt;
+&lt;p&gt;“还不够明显吗，因为一直都是我穷追不舍跟着他，他从没想过要带我一起走。”&lt;/p&gt;
+&lt;p&gt;洪先生轻叹一声后坐在了床边，低头看着脸色苍白浑身冷汗的张禹，语气柔下来，“你知道他已经结婚了吗？”&lt;/p&gt;
+&lt;p&gt;这个是真的不清楚。张禹摇了摇头，努力揣摩着一个感情被毒枭玩弄的大学生心情，脸上又显现出几分可怜的神色来。洪先生不由自主地拍了拍这个为情所困的年轻人，然后抽出身后贴身佩带的匕首放在桌子上。身子一点点倾斜俯下，双手束紧张禹的腰，腹股间生出一种神圣的冲动。张禹听见心脏响亮的搏动声，听见血液流过全身的声音，最后听见的是，洪先生用着像是在问要不要和我一起玩的语气，问着他：&lt;/p&gt;
+&lt;p&gt;“既然鹿天鸣背叛了我们，那我们是不是应该报复回去？”&lt;/p&gt;
+&lt;p&gt;张禹别过头避开洪先生玩味的眼，问“能别用这种眼神看我吗？我突然感觉我像个妓女。”&lt;/p&gt;
+&lt;p&gt;“妓女只用迎合男人，而我需要却迎合三教九流。阿禹，我比你更懂怎么做娼妓。”&lt;/p&gt;
+&lt;p&gt;拐杖咣当一声扔在地上，张禹衬衫一颗颗纽扣被撕开后踢下了床，盖住了拐杖。这张床像是一座孤岛，他是孤岛上唯一生还的人。那件白衬衫就像是有朝一日撕开真相，被踢下孤岛淹死的自己，而洪先生从头到尾，却可能仅仅失去了个——拐杖一样的玩意罢了。但无论如何这场亦真亦假的棋局其实从这一刻起，真正开始。&lt;/p&gt;
+&lt;p&gt;孤注一掷，落子无悔。&lt;/p&gt;
+&lt;p&gt;性是什么？&lt;/p&gt;
+&lt;p&gt;是忠贞的人民打开城门缴械投降，是侵略者将旗帜插在城门上随风飘荡。&lt;/p&gt;
+&lt;p&gt;爱是什么？&lt;/p&gt;
+&lt;p&gt;是侵略者与俘虏之间永远隔着的一层薄膜，是界限，是安全套。&lt;/p&gt;
+&lt;p&gt;人生来就是欲望的动物，性是人七情六欲中最低级的欲望，而爱是人在低级里能够开出来得最美丽的罂粟花。所以动物性与神性两面一体的洪先生，在花花丛林世界里，见过最多的不是人，而是无爱的衣冠禽兽。洪先生不愿放低身份，自认为是博爱，是大爱。爱饱经风霜也爱少不更事，爱党同伐异也爱与子同仇，爱犯罪也爱慈善，爱虚伪也爱真挚，爱每个记不住名字灵魂也爱记性不好的自己。&lt;/p&gt;
+&lt;p&gt;性是洪先生爱这个世界的仪式，爱世界是他作为孤魂野鬼，最后一点良心上的乡愁。&lt;/p&gt;
+">隔岸观·第五章</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://fooogy.github.io/post/ge-an-guan-di-si-zhang/"" data-c="
+          &lt;h1 id=&#34;&#34;&gt;&lt;/h1&gt;
+&lt;p&gt;《金瓶梅》一书说：世上人，营营逐逐急急巴巴，跳不出七情六欲关头，打不破酒色财气圈子。而洪先生却是自诩为红尘滚滚里最清涟的花一朵。黑道上的买卖总不外乎组织卖淫、开赌场、贩毒这三样。洪先生是泰国黑道上将这老古董行当翻新来做的第一人。所以人称他洪先生，算是敬语，又像是诨名。&lt;/p&gt;
+&lt;p&gt;赌徒们前赴后继地把钱输入赌场，洪先生便拿着干干净净的钱去贩毒制毒。瘾君子以贩养吸总有走投无路一日要买儿卖女，那便将男的送去做苦力，女的送去买皮肉。但钱赚得快，来路却不明不白，还得再和香港那边的英国长官一起把钱洗一遍。就算钱越洗越少，也总能把比乞丐还脏的钱洗得像个处女一样干净。一个高官退场，就得有另一个高官上台，以和为贵，那旧关系就要重新用新的钱重新打通。&lt;/p&gt;
+&lt;p&gt;而洪先生作为大老板，酒色财气无所不沾，又是从不经手。倒成了出淤泥而不染的，正人君子。&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;门口六个，吧台四个，桌边四个，身后还站着两个。张禹咂嘴感慨，洪先生这得是做了多少亏心事，只不过来十万万俱乐部吃个午餐，也要如此兴师动众，好大阵仗。&lt;/p&gt;
+&lt;p&gt;“老板，这回是个孕妇，还剩8周就能生产。”&lt;/p&gt;
+&lt;p&gt;“怀孕对器官有影响吗？”&lt;/p&gt;
+&lt;p&gt;“没有。”&lt;/p&gt;
+&lt;p&gt;“那就好。市长秘书委托时说，现今大选在即，一天都等不起。”&lt;/p&gt;
+&lt;p&gt;“是……明白。”&lt;/p&gt;
+&lt;p&gt;“小孩，你过来。”&lt;/p&gt;
+&lt;p&gt;他是在叫谁？嘴里还嚼着糖的张禹动作一滞，舌尖卷着糖块咬在上下牙之间，甜得直教他心里一阵又一阵的发紧。唾液融成糖水后又不得不赶快紧张地送下去，喉结一滚，又更像是性暗示。张禹重新把眼神投给坐在他面前的洪先生。&lt;/p&gt;
+&lt;p&gt;“就是你，过来。”&lt;/p&gt;
+&lt;p&gt;张禹走出吧台。&lt;/p&gt;
+&lt;p&gt;“我记得Timmy仔跟我说过，你是他远房表亲。”&lt;/p&gt;
+&lt;p&gt;张禹抹干净嘴唇，笑问：“原来他是这么说的啊。我以为他会说我是他新收的马仔。”&lt;/p&gt;
+&lt;p&gt;洪先生问：“Timmy仔的伤好点了吗？日韩那边一直都在找他，说有些坏账要同他清一清。”&lt;/p&gt;
+&lt;p&gt;“还没有。他那天开车撞坏了头，说话总是颠三倒四的，真是痴了线。”张禹笑着摇了摇头。&lt;/p&gt;
+&lt;p&gt;洪先生晃晃杯，问张禹说：这一杯酒是你给我调的吗？&lt;/p&gt;
+&lt;p&gt;张禹微笑点头，但洪先生只是举起杯嗅了几下就又放下：“味道很美，可惜……我很少饮酒。”&lt;/p&gt;
+&lt;p&gt;“对不起，我不知道。那您明日再来鹿天鸣……表哥这里用午餐，我给您换成清水。”&lt;/p&gt;
+&lt;p&gt;“Timmy仔脑子清楚了以后，记得让他快点给日韩那边一个交代。做生意，赔钱不要紧，信誉不能丢。”&lt;/p&gt;
+&lt;p&gt;“是，我会及时转告给他。”&lt;/p&gt;
+&lt;p&gt;张禹带着从俱乐部打包的便当回旅馆时，鹿天鸣正趴在床上伸出腿，拼力用脚趾去夹散落在地上的一根筷子。张禹将便当袋子放在地上，一脚将这根筷子踢到了墙角。&lt;/p&gt;
+&lt;p&gt;“你如果再想着怎么溜门撬锁，以后就只能吃面包了。”&lt;/p&gt;
+&lt;p&gt;“张sir今天勾引到洪先生了吗？”&lt;/p&gt;
+&lt;p&gt;“没有。我还给他开了一瓶你俱乐部里的好酒，但他只舔了一口……”&lt;/p&gt;
+&lt;p&gt;鹿天鸣冷眼望着他，“你是废物吗？我不是跟你说过他有隐疾……啊……你是故意买破绽给他看的吧？小心聪明反被聪明误，挖了一个个陷阱给别人跳，反倒活埋了自己”鹿天鸣最后嘲讽一笑，不知这场好戏到底要如何收场。&lt;/p&gt;
+&lt;p&gt;张禹一勺子将鹿天鸣的嘴堵住：“闭嘴，吃你的饭。”&lt;/p&gt;
+&lt;p&gt;“闭上嘴怎么吃饭！”&lt;/p&gt;
+&lt;p&gt;张禹很讨厌给鹿天鸣喂饭这件事，因为他知道鹿天鸣吃过饭就会吵着解手，解手后就会在浴室里洗个澡，洗完澡就会拖着张禹在浴室里发生一场性爱，性爱过半便总是不忘逃跑的事，最终又还是以两个人在浴室大打出手为落幕。鹿天鸣虽然身形高大，但毕竟嗑药嗑虚了身体。所以这半周下来，鹿天鸣身上的伤原本好了七七八八，但又被张禹日复一日地揍出了个五颜六色。&lt;/p&gt;
+&lt;p&gt;鹿天鸣看着乏味的便当打了哈欠，用另一只手揉了揉眼睛：&lt;/p&gt;
+&lt;p&gt;“阿sir你昨天好像有点反应了，是不是又换了一种药吃。”&lt;/p&gt;
+&lt;p&gt;“我真不想和你在吃饭的时候讨论这件事。”&lt;/p&gt;
+&lt;p&gt;“但你靠吃药才能上床，真不是个长久之计。你今天不要吃药了，我们再试试。”&lt;/p&gt;
+&lt;p&gt;张禹突然觉得鹿天鸣说的有几分道理，于是将饭盒放在地上，脱掉了上衣跨坐在鹿天鸣的身上。但在鹿天鸣用那只没被铐住的左手攀爬上腰际时，张禹胃部急剧收缩，然后只觉一股辛辣的暖流直逼喉咙。张禹连滚带爬地跑进浴室，对着马桶不停干呕。&lt;/p&gt;
+&lt;p&gt;而后，鹿天鸣被张禹这幅扫兴的样子败坏了性欲，也彻底败坏了食欲。于是重新躺回床上开始装尸体。&lt;/p&gt;
+&lt;p&gt;张禹漱口回来后，拍了拍尸体的腿，像是在表示抱歉。但尸体翻过了身，背对着张禹不冷不淡地说：&lt;/p&gt;
+&lt;p&gt;“张禹，不只你不喜欢我，我也不喜欢你。”&lt;/p&gt;
+&lt;p&gt;“我知。”&lt;/p&gt;
+&lt;p&gt;“但有些人就是能跟不喜欢的人上床，我是这种人，但你不是。”&lt;/p&gt;
+&lt;p&gt;“我知。”&lt;/p&gt;
+&lt;p&gt;“所以将来在洪先生身边卧底，你是要靠药，还是靠喜欢？”&lt;/p&gt;
+&lt;p&gt;这一问，张禹突然没有什么话能够答上。&lt;/p&gt;
+&lt;p&gt;这时，侧卧在床上的鹿天鸣突然四肢不断抽搐，胸口震颤，好像呼吸很困难的样子。&lt;/p&gt;
+&lt;p&gt;“鹿天鸣你发什么神经？”&lt;/p&gt;
+&lt;p&gt;“给我……”&lt;/p&gt;
+&lt;p&gt;鹿天鸣蜷缩成一团，小声嘀咕着什么话，张禹凑近想要听清后就被鹿天鸣一把拽住，奋力摇着他，低三下四地恳求说：“给我K粉好不好。”&lt;/p&gt;
+&lt;p&gt;毒瘾犹如附骨之疽，排山倒海式的朝他淹过来。从头顶到脚底每一处关节都在疼，每一处皮肤都在痒。他心脏里像是有一座火山，而岩浆要从毛孔里往外渗，要从耳朵眼睛鼻子嘴巴里往外流淌。吸食毒品时那胜似千百回高潮的一晌贪欢，现在都成了纯度最高的劫难。&lt;/p&gt;
+&lt;p&gt;张禹看着鹿天鸣脸上的伤，和他胳膊上腿上遍布全身的针孔和疤痕，嘴里只勉强挤得出三个字来回应：我没有。&lt;/p&gt;
+&lt;p&gt;“你是扫毒的警察，你怎么会没有。我求你了，快给我吧……我求你……”&lt;/p&gt;
+&lt;p&gt;“我帮不了你，你别求我。”&lt;/p&gt;
+&lt;p&gt;张禹刚像站起来就被鹿天鸣强硬地摁住，最后两个人同时滚落到地板上。张禹勉强想要回过头去看他一眼，又被他用嘴堵住，从额头舔到耳后，尽可能地卑微讨好着说，“张sir，一夜夫妻百日恩，看在我们同床共枕这么些天的份上，我求你给我药！你给我一点点海洛因就好……”&lt;/p&gt;
+&lt;p&gt;吸毒、陷入癫狂、又只剩空虚、那便再吸毒……如此周而复始，不能自拔。这还算是一个人吗？&lt;/p&gt;
+&lt;p&gt;张禹终于挣脱开鹿天鸣的桎梏，但鹿天鸣的精神显然已经崩溃错乱，涕泗横流朝张禹爬过去，可手脚又被铐住，像是地狱来索命地恶鬼张牙舞爪地嘶吼：“我求你，我再也不打你了。老婆我错了……我再也不打你了。求你给我海洛因吧，我不是人我是鬼，我是禽兽。爸，我错了我错了……老婆你别打我了我不想死……”&lt;/p&gt;
+&lt;p&gt;已经开始出现幻听、幻视……不能再放任他这样下去，会要人命的。张禹疾步上前把床单从鹿天鸣身体底下拽出来，将他整个人像捆绑螃蟹一样捆绑住。又努力无视了鹿天鸣各种不堪入耳的咒骂和求救，心平气和地找毛巾塞住了鹿天鸣的嘴。&lt;/p&gt;
+&lt;p&gt;“我去帮你买戒毒药水，你等我回来。”&lt;/p&gt;
+&lt;p&gt;张禹捡回T恤，默默地穿好衬衫，又收拾好地上凉掉的便当，最终回过头看了鹿天鸣，竟然有点羡慕他能够这样不清醒地活着。一声不响地走出门去。将手中的垃圾扔在旅馆前的铁桶里，缓步走到公共电话亭，播出了一个电话。&lt;/p&gt;
+&lt;p&gt;树影落在电话亭上，玻璃上斑驳的刮痕映照在张禹的脸上。&lt;/p&gt;
+&lt;p&gt;“您好，我是学警张禹，我……没有正式入职，所以警局也查询不到我的档案。我是和扫毒科的Make一起来泰国的，因为不是正式警员，只负责外围警戒工作……现在扫毒科的新长官是谁？我能跟他对话吗？”&lt;/p&gt;
+&lt;p&gt;“厉sir您好，在Ma……麦督察殉职后，他的卧底有没有联系过你？还没有……好。那你们有没有去找……我知道……我明白……我懂重新整顿需要时间。”&lt;/p&gt;
+&lt;p&gt;“能最后再麻烦您一件事吗？将之前逮捕的要犯鹿天鸣的资料，一字不漏的全部说给我听。然后再帮我去走一遍广东省博社村，也就是鹿天鸣老家……”&lt;/p&gt;
+&lt;p&gt;“是，您没猜错。在找到卧底之前，我就是卧底。”&lt;/p&gt;
+&lt;p&gt;张禹抬头看了一眼二楼的窗户，仿佛能看到那个晚上站在窗户后边的自己。将电话挂断，又折回到旅馆付了下半周的房费。最后跟旅店老板租了一辆摩托车，轰隆轰隆地骑去了最近的药店，看能不能卖到戒毒药剂。但跑了许多家药店仍然是一无所获，购买戒毒药剂需要向政府报备后统一去戒毒医院领取。所以张禹最后只买到了一些止痛药，也不知能否派得上用场。&lt;/p&gt;
+&lt;p&gt;但当他再回到旅馆二楼时，只见门是敞开着的，地上还有一滩血迹。再拎着装有药品的塑料袋走近几步，屋内已不见鹿天鸣的身影，而自己的包也不翼而飞了，护照和钱都在里面。而现在只有被扯碎的床单搞得满地狼藉，和床上只剩下一只断手。定睛一细看，伤口形状像是被他用牙齿生生咬断的，张禹心中几分悲哀地想着：病入膏肓、药石罔效，这就是毒瘾吗。&lt;/p&gt;
+">隔岸观·第四章</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://fooogy.github.io/post/ge-an-guan-di-san-zhang/"" data-c="
+          &lt;h1 id=&#34;&#34;&gt;&lt;/h1&gt;
+&lt;p&gt;鹿天鸣原本只想做个本本分分、厚道心善的贩毒公民，却偏偏被他们缉毒警缴了货，不但家破，人也要亡。种植罂粟每一亩只能赚一百美金，所以他从种植到加工到销售包揽下来，只为减少别人抽成，可是半生蝇营狗苟好不容易打拼下来的一片天，都被这群死警察害的付之一炬，成了泡影。见张禹心不甘情不愿地配合着这场性爱，只遗恨高潮来得比这个警察人还要迟，你说的话这么好听，但为什么不能再早一点呢。&lt;/p&gt;
+&lt;p&gt;“洪先生一生无妻无子，所以很多人都误以为他喜欢男人。但其实我知道，他只是不喜欢人。但他又对那些露水情缘很温柔，有的时候都不用亲自动手，温存过后再抛弃，很多孩子就崩溃自杀了。而他听了，却更开心。觉得别人能够为他而死，更有趣。”&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;话了，鹿天鸣直接在张禹身上坐了起来，手扶着床头借力，想要换个姿势继续逞凶作案。&lt;/p&gt;
+&lt;p&gt;“所以张禹，如果你想要长期潜伏下去，你就不能和那些鸭子一样……喂！还活着吗？醒醒！”&lt;/p&gt;
+&lt;p&gt;张禹的头随着身体的颠簸自然地偏向一旁，也不知道是在鹿天鸣自说自话的哪个时候，就独自默默地疼晕过去了。鹿天鸣一边用力摇着下半身一边用头撞着他的脸，终于将张禹的意识撞了回来。&lt;/p&gt;
+&lt;p&gt;张禹好像还在流泪，鹿天鸣伸出舌头舔了舔，然后又开始庆幸张禹刚才对于关灯这件事的坚持。命运把他们推着走到当下的一瞬，实在是太令人难堪。这个缉毒警察几天前才知道自己这个毒贩的真实姓名，说的第一句话是“你是广东哪里人”，最亲密的动作，不过是在他被Make拷在车上时，张禹举着矿泉水喂他水，然后他就被Make临时借调去交易现场的外围盯梢。&lt;/p&gt;
+&lt;p&gt;但鹿天鸣当时喝下的水已经变成了汗液、精液全部散了出去。而好心喂自己一口水喝的张禹，现在却像个干涸而死的鱼，滑溜溜地躺在自己的身底下，做到昏死过去，又被做醒。&lt;/p&gt;
+&lt;p&gt;于是鹿天鸣卷着张禹的身体一起换了个姿势，张禹脸埋在枕头里大口喘着气，明明无法呼吸但却翻不过身来。张禹又试着回扭过头，推了推鹿天鸣厚重的肩膀。然而体能满分的他半点力气也没有使出来，又被肩膀重新重重压陷下去。心中惨然一亮，鹿天鸣是想要趁机把自己捂死在床上。&lt;/p&gt;
+&lt;p&gt;身后的疼痛越来越强烈地腐蚀到每一寸肌肤、骨骼，体内的情欲却如同惊涛骇浪翻涌上来，又覆盖在疼痛上面。呼吸越来越吃力，刺到最深位置时，两个人的身体几乎是没有任何缝隙的，被汗液紧紧粘在一起，又使他没有空间能够发力，好爬出去。&lt;/p&gt;
+&lt;p&gt;微茫的呼吸之中，他恍然间看到了一束白光从空中劈开，然后白光把正片天空都染成红色。濒死的张禹突然想起来了那道白光是什么，那是一台老旧的电视机，在彻底罢工之前最后的提示。&lt;/p&gt;
+&lt;p&gt;喂！阿秋！你们家电视怎么又坏了！今晚大结局欸……&lt;/p&gt;
+&lt;p&gt;打雷了短路不行啊！你快去修。&lt;/p&gt;
+&lt;p&gt;你家的电视只有Make会修，我不会啊。&lt;/p&gt;
+&lt;p&gt;唉，要是Make在就好了。但也不能什么都不做，就这么死撑吧。像两个白痴。&lt;/p&gt;
+&lt;p&gt;那……我们？&lt;/p&gt;
+&lt;p&gt;最后Make回来的时候，只看到两个十来岁的少年累到睡着，青靓白净那一个留着口水像条羔羊，躺在沙发上。黝黑发亮那一个像条牧羊犬靠在沙发边。而电视机幽幽发着红光，他看过去，是电视剧，决战紫禁之巅。&lt;/p&gt;
+&lt;p&gt;张禹半梦半醒之间，恍惚听见官秋山跟自己说：&lt;/p&gt;
+&lt;p&gt;阿禹别睡了，快起来。&lt;/p&gt;
+&lt;p&gt;快起来。&lt;/p&gt;
+&lt;p&gt;张禹感觉自己的一条腿被抬了起来，原来是鹿天鸣将左手撞脱臼后从手铐里挣脱出来了。张禹眼前一震，立即翻身一脚踩住鹿天鸣的左手不让他继续活动。鹿天鸣被这一下踩得差点直接疼背过气，直接反击抽插得更为激进。张禹吃痛小腿痉挛，又被鹿天鸣抢夺了先机，整张脸被他用枕头死死捂住。&lt;/p&gt;
+&lt;p&gt;身底下顶弄着，但手上的动作却很温柔，抚摸着张禹的脖颈。虽然这只左手因为脱臼，呈现出一种诡异的无力感。但他仍然试图用这只断手，狠狠扇张禹一巴掌。&lt;/p&gt;
+&lt;p&gt;但在枕头重新拿开的一瞬间，这一巴掌却没有落在张禹的脸上，而是被张禹迎头一击，装得鼻血直流。随后张禹将鹿天鸣这只脱臼的手狠狠捏住，用力一抬重新给他接了上去。又迅速取过手铐将鹿天鸣的一只脚铐在了床尾。鹿天鸣现在右手、左脚都被狠狠锁住，比起张禹来，倒更像是一起强奸案中的受害者了。&lt;/p&gt;
+&lt;p&gt;鹿天鸣又骂了一句粗口，用左手一把将张禹重新拽了过来，张禹刚的奋力一击已经耗尽了最后一点力气，生生被他拖了过去，像是被渔船网住的鱼一样被鹿天鸣死死困住在身底下。&lt;/p&gt;
+&lt;p&gt;很快，阴暗的房间里就真的只剩下肉体的拍打声，还有粗重的喘息声。鹿天鸣只要一想到张禹可能这一生都无法拜托自己的阴影，他就觉得身心舒畅像喝了烈酒。于是借着酒意好心规劝：&lt;/p&gt;
+&lt;p&gt;“阿sir，洪先生如果有一天要杀你，你记得也要像刚才那样起来。只有这样才不会死……”&lt;/p&gt;
+&lt;p&gt;张禹嘴艰难地张开又合上，似乎想要再套出什么话来。鹿天鸣看着张禹因为缺氧而涨红的脸色，神色有些复杂，低头与他认真地交换了一个吻。张禹的鼻尖蹭过鹿天鸣脸上的伤口，又接住了鹿天鸣湿嗒嗒的泪。&lt;/p&gt;
+&lt;p&gt;鹿天鸣单手拥住张禹，将头埋在他的肩上，说了一声抱歉，然后向前一挺，终于射进了张禹的灵魂里。&lt;/p&gt;
+&lt;p&gt;张禹捡起一件衬衫随意披在身上，透过窗子往外面看去。他以前还在香港上学时，也听说过扫黄组怎样做事。人成了货品供嫖客挑挑拣拣，一天接客几十次的都有，但钱却只能拿一小部分。政府甚至还派过许多志愿者去给妓女的孩子们教书，以为认字了总能不一样。&lt;/p&gt;
+&lt;p&gt;但几年过去，妓女老了，老妓女的孩子又成了新的妓——生生世世祖祖辈辈男盗女娼，寄生在红灯区一张张污秽的床铺上。生下来就学会在苦难里寻欢作乐了，找到一丁点甜头就能够满足地活下去，像是做错了什么事遭的惩戒，像是永远没有尽头的轮回。&lt;/p&gt;
+&lt;p&gt;他低头看见楼下的街灯底躺着一个穿着短裙的浓妆泰国女人，也可能是长得像女人的一个男人。他刚才吃的药就是从这个女人手里买过来的。现在这个女人的妆全花了，脸上又黑又红，黑的是睫毛膏红的是唇印，破碎的内裤就扔在她脸边，她抓起内裤站起来，擦了擦屁股就扔，然后一瘸一拐地数着纸币走远。&lt;/p&gt;
+&lt;p&gt;这个女人可能是生活所迫，可能是有重病的老母、上学的孩子急等着用钱，才不得不依附黑道找一条生路。在这个人人争着出卖良心而不能的时代，出卖肉体换来的钱都算是来得干净。可他不一样，他连钱都不要，他好像……还不如这个妓女正大光明。&lt;/p&gt;
+&lt;p&gt;张禹像是提前在这个女人身上看到了自己的故事结局，却仍不死心，想要走出这盘死局。就像是一颗棋子从棋盘上跳出来。但随后肩膀又一抖一抖地笑了，他如今朝不保夕，只恨二楼太低，摔不死自己。&lt;/p&gt;
+&lt;p&gt;鹿天鸣看着张禹药效明显还没完全散，后背上脖子上还是通红一片。只有脸被月光映衬得亮亮的，宛如以泪洗面。但他又明白，张禹后半辈子的眼泪都在刚才这场性交里流了个干净，再也没可能哭出来。&lt;/p&gt;
+&lt;p&gt;“阿sir你……还有烟吗？能给我一根吗？”&lt;/p&gt;
+&lt;p&gt;鹿天鸣伸出舌头卷起张禹递过来的烟，又乖乖地低下头，耐心等着张禹把烟点燃。打火机的蓝色火焰在黑夜里孤独地跳动着，鹿天鸣一侧过头，就看到了张禹贴在额头上的细发，和湿淋淋的脸。嘴唇一张将烟雾吐出来，像是在亲吻一朵白色玫瑰花。他心想，如果明天张禹的警察身份就会暴露，那自己是不是应该今天就做掉他永绝后患。但这样不道德的念头没有持续太久，他好像就突然明白了几分洪先生看中张禹的原因。&lt;/p&gt;
+&lt;p&gt;当时，在上楼和猛犸交易之前。洪先生曾背着手走在他前面，问他“这个年轻人说话很有趣，叫什么名字？还在念书吗？在哪所大学？”&lt;/p&gt;
+&lt;p&gt;洪先生鲜少这样打听一个人，于是鹿天鸣突然被这再平常不过的寒暄为难住了。他只记得别人叫那个瘦瘠身材的小警察，被Make督察叫做阿禹。至于别的，一概不知。于是鹿天鸣开始硬着头皮胡诌道：&lt;/p&gt;
+&lt;p&gt;“那是我表弟。这孩子也只是看着老实，十几岁在学校就只顾着拍拖，早早就辍学了。我看他在家被他爸妈打得可怜，所以介绍他来我这个俱乐部打工。叫他阿禹就行。”&lt;/p&gt;
+&lt;p&gt;“看起来是个听话的乖孩子，打他做什么？”&lt;/p&gt;
+&lt;p&gt;为人父母打孩子不是平常事吗？还要问听不听话？乖不乖？鹿天鸣心里暂时也没有想到更好的说辞，却突然顿悟自己好像终于抓到了报复的机会，先是不怀好意地嗤笑一声，又继续说：“是他在大学爱上了一个男同学，他爸才打他的。不过洪先生你还是不要太关注他，他对男朋友的死心塌地的，怎么打他都拆不散。”&lt;/p&gt;
+&lt;p&gt;洪先生叹了一口气说道：&lt;/p&gt;
+&lt;p&gt;“太单纯的感情，注定难长久，早晚还是要散的。也许到那个时候，他也就能回家去了。”&lt;/p&gt;
+&lt;p&gt;当时鹿天鸣还回过头，透过渐渐合拢的门缝最后瞥了张禹一眼。一边悄悄捻碎警方放在自己身上的窃听设备，一边幸灾乐祸地默念道：&lt;/p&gt;
+&lt;p&gt;我救了你，阿sir.&lt;/p&gt;
+&lt;p&gt;然而事情发展到今天这步田地，行动已经失败的如此彻底。自己当时一句戏言，却成了张禹以为能重新捡起洪先生这条线索的全部希望。可洪先生这一点微不足道的在意，不过是看他年轻不世故，好玩罢了。玩过了无论随便丢在哪里，都不会引起别人的注意。现在两个人待在房间里只是稍作休息，鹿天鸣看着天边的亮光，却无端生出几多恐怖的心情来。真跟洪先生玩下去的话，怕是结局不会比他的兄弟们更好。&lt;/p&gt;
+&lt;p&gt;张禹的药效终于也差不多褪去，正无力地靠在床脚上喘着气。鹿天鸣也不在乎手还被铐着，侧着身子躺在床上地吸着烟。嘴唇粘着烟，烟灰落在枕头上烫出一个个黑点。烟卷上一点微弱的火光，照在这个少年警察年轻，而且丝毫没有伤痕的肉体上。整个人浑身赤裸裸地，只披着一件衬衫，看起来真像一尊天使雕塑，太漂亮了。37岁的鹿天鸣抬头望着天边孤月，想起来了自己的妻，工厂爆炸发生后，这是他第一次能够有时间，完整地怀念完一个人。后来他又洒了两滴眼泪来祭奠自己亡故的一家人。虽然仅剩的对他父母的回忆，不外乎是打骂这些。鹿天鸣自嘲地咧嘴一笑：&lt;/p&gt;
+&lt;p&gt;老爸，你说的对，我还真是个无可救药的坏孩子啊。&lt;/p&gt;
+">隔岸观·第三章</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://fooogy.github.io/post/ge-an-guan-di-er-zhang/"" data-c="
+          &lt;h1 id=&#34;&#34;&gt;&lt;/h1&gt;
+&lt;p&gt;鹿天鸣苏醒过来时，睁开眼睛就看到张禹那张丧家之犬般的脸。他第一想到的是自己又被警方逮捕，于是拔下针头就翻下床想要逃。但走到门口时，却发现门外只有三三两两的医生在走动，并没有便衣看守。反倒有几张熟面孔，也都是洪先生身边的人。他回过头盯着张禹，恍然大悟地一笑。&lt;/p&gt;
+&lt;p&gt;大概这次算是张禹被俘了。&lt;/p&gt;
+&lt;p&gt;鹿天鸣惜命地把针头重新扎进静脉里，安安稳稳地躺回床上说“阿sir，风水轮流转，现在轮到你来坐监了。”&lt;/p&gt;
+&lt;p&gt;张禹扭过头，没有看他。&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;“毒品调查科现在死的死，亡的亡，你怎么还不逃命去。我毕竟是帮着警察出卖过洪先生一次，现在做贼心虚得不得了。你尽管放心滚回香港，我和你桥归桥，路归路，老死不相往来。”&lt;/p&gt;
+&lt;p&gt;双方枪战时，他亲眼目睹Make已经牺牲，那阿秋就算没有暴露，恐怕也是凶多吉少了。张禹没有说话，脸上也没有什么表情。鹿天鸣坐直了身子戏谑一笑，又继续打趣道：“你该不会以为凭你自己一条命，还能重新逮捕我归案吧。这里是泰国，我的地盘。你再不回家上学，爸爸妈妈会担心你的啊，我的……好！弟！弟！”&lt;/p&gt;
+&lt;p&gt;鹿天鸣一下又一下地拍着张禹的脸，张禹反倒露出了一个近乎天真的笑容：“交易之前，你不是已经跟洪先生说，我这个弟弟辍学来投靠你吗？现在你又受了伤，我得好好照顾你。表——哥——”&lt;/p&gt;
+&lt;p&gt;鹿天鸣突然有种搬起石头砸自己的脚的感觉。&lt;/p&gt;
+&lt;p&gt;于是躺在病床上的鹿天鸣当时就恼羞成怒，猛地转过身将张禹摁倒在床上，整个人都倾覆上去，掐着张禹脖子威胁说：&lt;/p&gt;
+&lt;p&gt;“我知道你在想什么，但我告诉你，不是什么人都能做卧底的。如果验货的人让你跟着一起吸，你敢吗？如果洪先生要你帮他杀人，你敢吗？现在他像我这样压着你，你敢跟他一起做下去吗？不敢就滚回香港！”&lt;/p&gt;
+&lt;p&gt;好在张禹在警校的体能和近身搏斗一直都是满分，双腿狠狠夹住鹿天鸣的腰坐起身还击，但就在挥着拳头砸向鹿天鸣太阳穴时，鹿天鸣的一句话令它浑身一僵，手上顿时就卸了力。&lt;/p&gt;
+&lt;p&gt;“我说的没错，你就是不敢，阿sir。”&lt;/p&gt;
+&lt;p&gt;拳头停在太阳穴上，悻悻地落下，张禹最后漠然地说：&lt;/p&gt;
+&lt;p&gt;“我不会让这种事情发生在我身上，表哥。”&lt;/p&gt;
+&lt;p&gt;鹿天鸣喘着粗气松开手，活动了一些差点被张禹扭到脱臼的右手，看着张禹视死如归的一张脸，又忍不住往好的方面推演，或许他现在能让张禹放弃这场死间计划。&lt;/p&gt;
+&lt;p&gt;“阿sir，如果你要长期卧底的话，是得考虑到最坏的一种情况。就算我跟洪先生说你是个为爱走远走东南亚的基佬，听起来好像是有特别充分的……反叛啊堕落啊的理由。但你根本不喜欢男人，你骗不过他。”&lt;/p&gt;
+&lt;p&gt;什么才算是命运呢？大抵就是自己明明还有后路可退，明明根本连被牺牲的身份都不具备。但在Make死亡，官秋山生死未卜的情况下，他就是不能够心安理得地滚回香港去。他要追踪下去，直到和香港那边重新取得联络，直到确认官秋山的生死。&lt;/p&gt;
+&lt;p&gt;这条跟了好几年的线，不能就这样被鹿天鸣这么一个阴险小人全部断送，不值得。&lt;/p&gt;
+&lt;p&gt;命运，是他人站在这里，一眼就望到了好的、坏的很多种结局，但他心里却明白，他其实只有唯一的一条路可以选。&lt;/p&gt;
+&lt;p&gt;见张禹干脆利落地转身要走出病房，鹿天鸣对着张禹的背影又发出一阵又一阵的耻笑，笑声越来越响，越来越声嘶力竭，吵闹得快要将张禹灵魂深处所有不堪一击的脆弱都唤醒。&lt;/p&gt;
+&lt;p&gt;“阿sir想要去找一只鸭子现学现卖，也不是不行。但你怎么知道出了这个医院，就没有洪先生的眼线呢？这次交易猛犸没有亲自出面，但我和洪先生还是把你们这些警察耍得团团转，一个行动组几十条人命啊……这样的深仇大恨你也能睡下去？”&lt;/p&gt;
+&lt;p&gt;张禹握着门柄的手青筋直露，他“说完了吗？”&lt;/p&gt;
+&lt;p&gt;“没说完。我知道在你们警察眼里，我和洪先生应该是没什么区别，都该判死刑。但我犯的罪名肯定没洪先生那么多……”像是贪玩的孩子找到了更刺激的新游戏，鹿天鸣于是满脸狰狞地，几乎是一字一顿地朝张禹威胁道：“你敢不敢跟我睡一夜，看看自己到底有没有活着从洪先生床上爬下来的本事！”&lt;/p&gt;
+&lt;p&gt;于是从医院出来后，鹿天鸣就拖着张禹拽他进了红灯区的一家旅馆。两个人在隔音不好的旅馆房间里，听着楼上楼下传过来肉体的拍打声，还有粗重的喘息声。然而鹿天鸣刚伸出手搭在张禹的肩膀上就被他反锁住双手拷在了床头上。他骂骂咧咧地回过头看张禹，只见他待在原地半天不动，终于缓缓抬起手，摸索室内的照明灯开关在哪个位置。&lt;/p&gt;
+&lt;p&gt;“关灯有用吗？关上灯就不是你张禹了吗？”&lt;/p&gt;
+&lt;p&gt;“你收声……”张禹没有被鹿天鸣激怒，执意关上了灯。在一片漆黑里一件又一件地脱掉衣服，鹿天鸣看不清他人在哪里，只能听到衣服一件件落在地板上的声音。然后便是更长时间的死寂，就在鹿天鸣以为张禹要站在原地站成一座雕像时，他听到了脚掌踩着地板发出来的咯吱咯吱声。张禹朝这边走过来了。&lt;/p&gt;
+&lt;p&gt;但这一场相互挑衅的性爱互博，在张禹强烈的本能抗拒之下，直到天亮鹿天鸣也没能真正地插入一次。&lt;/p&gt;
+&lt;p&gt;所以鹿天鸣现在也不比张禹轻松几分，下体仍然高高仰着头，他的双手却不能从手铐里抽出来抚慰被撩拨出来的性欲。张禹更是像个废物似的，只能揪着对方的头发发出一声声质问：自己想要逃命就逃好了，为什么要把所有人赶尽杀绝……&lt;/p&gt;
+&lt;p&gt;“阿sir，如果你没有铐着我的手，我现在还能给你一个拥抱。”&lt;/p&gt;
+&lt;p&gt;张禹拽着鹿天鸣的头发不停摇着，“如果不是现在必须留着你，我真恨不得一刀结果你！”&lt;/p&gt;
+&lt;p&gt;“你以为我不想杀你吗！”&lt;/p&gt;
+&lt;p&gt;张禹猛地一巴掌将鹿天鸣的头扇向一边，然后便捡起地上的裤子草率穿上，光着上半身就摔门而去。鹿天鸣还以为张禹这是终于回心转意不做卧底了的意思，心里松了一口气，开始专心研究自己怎么把手从手铐里解脱出来。但他还没等把手彻底挣脱出来，就看见张禹磕磕绊绊地又撞开门回来了。&lt;/p&gt;
+&lt;p&gt;“你这是良心发现要回来给我解开手铐？”&lt;/p&gt;
+&lt;p&gt;但张禹听起来越来越不对劲，后背靠着门一直往下滑去，最后甚至直接跪坐到了地板上。鹿天鸣瞳孔一震，看着张禹佝偻着身子全身发抖，手上死死抠着地板，正一点一点地朝自己这边挪过来。&lt;/p&gt;
+&lt;p&gt;鹿天鸣欲言又止地问道：“阿sir，你吃了多少药……”&lt;/p&gt;
+&lt;p&gt;张禹眼前一片腥红，耳边充斥着各种妓女和嫖客的声音。恍惚中只感觉得到自己好像终于摸到了床脚，然后拽着床单把沉重的身体拉了上去，最后摸到了鹿天鸣的小腿、膝盖，然后斜斜地躺在床上的另一边，等药效的后劲再上来一波，等药物催生出来的性欲像泥淖一样把自己淹没，他就能和鹿天鸣这个人尽力做下去了。只要他今天晚上能挨过去，那他就一定能把这一个人换成另一个人，再挨过去一遍。&lt;/p&gt;
+&lt;p&gt;鹿天鸣听着张禹黑暗里越来越乱的呼吸声，掐算着药效也差不多到时候挥发了，重新骑坐在了他的身上。张禹颤巍巍地伸出手搂紧了鹿天鸣，二人肌肤紧紧相贴，但谁也看不清谁的脸。鹿天鸣的下体弹在张禹的大腿上来回刮蹭，激得张禹一阵阵打颤。&lt;/p&gt;
+&lt;p&gt;“阿sir，我手铐着，你得自己把裤子脱下去。”&lt;/p&gt;
+&lt;p&gt;手伸下去拉开了裤子拉链，鹿天鸣感慨用了药果然大不一样，张禹现在终于起了点反应。但他总不能永远靠着药吧，随后鹿天鸣又咒骂自己多管闲事。只要等到洪先生和猛犸的交易结束，他尽早出国避难去就好，何必在乎张禹这个名义上表弟，今后到底是死还是活。&lt;/p&gt;
+&lt;p&gt;“阿sir你今天这个药……还是要少吃。我怕你死在床上。”&lt;/p&gt;
+&lt;p&gt;虽然冷清的身体终于在药物的催化下，萌生了些许快感。但仍不能抵消鹿天鸣彻底插入时，几乎将他顶到昏厥的剧痛。其实张禹不是没有想象过今后的处境，他只是以为自己既然抱着必死的决心，就不会再害怕任何事。但在这一刻，他却生出了一个可怕的念头。他想，如果死的不是他们，而是自己就好了。如果最后活下来的是他们中的任何一个，他们一定能够知道，要怎么从这场恶战里全身而退。&lt;/p&gt;
+&lt;p&gt;Make，如果死的是我就好了，我死不足惜。&lt;/p&gt;
+&lt;p&gt;可他偏偏命不该绝。&lt;/p&gt;
+&lt;p&gt;这个念头像粘液，顺着他的大腿一直滑到脚底。&lt;/p&gt;
+&lt;p&gt;“其实我第一次见洪先生的时候，他还不是洪先生。他跟我说，因为有人要吸毒，所以才要有人贩毒。阿sir，可为什么我的罪判得比他们重，凭什么？始作俑者应该是吸毒的人才对吧。”&lt;/p&gt;
+&lt;p&gt;鹿天鸣一番话说得真情实意，甚至还有点委屈在其中。“鹿天鸣……”张禹在摇晃之中，凌乱的头发挡住了眼睛，嘶哑着声音说，“你们整个博社村都在制毒，连几岁的孩子都在运毒。缉毒也是在为他们考虑……啊——”&lt;/p&gt;
+&lt;p&gt;鹿天鸣猛烈入侵，阴狠地说道：“阿sir，，我第一次被我父母打着去带货也不过14岁，我1973年就留下案底了。那个时候怎么没有一个警察来跟我父母族人说，替我考虑考虑！”&lt;/p&gt;
+&lt;p&gt;张禹尽力忽略着体内一颤一颤的来回，想着1973年的自己在哪里。然后他就自然而然地想到了官秋山。对……好像是这样，1973年的话……连官秋山也才刚出生。他还说自己是为香港法制而出生的，因为第二年就有了廉政公署。但可惜的是，官秋山还没毕业就去做了卧底，一天警察都没做过……&lt;/p&gt;
+&lt;p&gt;张禹在强劲的药效里仍然死撑着最后一点理智，问道，“原来你跟洪先生……很早就认识了……”&lt;/p&gt;
+&lt;p&gt;鹿天鸣低头看着张禹，想不通支撑着张禹到现在都没崩溃的，到底是什么。&lt;/p&gt;
+&lt;p&gt;“是。我第一次运毒就被警察抓进了监狱。是洪先生告诉我说，香港警察只抓穷人，不抓坏人。他教会了我怎么贿赂警官。其实那一年他也才15岁，但他是个犯罪天才……阿sir，你在套我话？”&lt;/p&gt;
+&lt;p&gt;鹿天鸣对警察的怨恨比村里池塘下的淤泥还要深，但凭什么张禹在自己这滩烂泥底下还在振振有词，说几岁的孩子。于是瞬间被唤醒了所有灵魂深处的情绪，发疯一般地把这场性爱彻底变成强暴。当在对方刻意折磨，侮辱时，张禹想要借着药力进入状况就更是难上加难，撕心裂肺地叫出了声，但鹿天鸣没有在意张禹的感受，也把眼泪疾风骤雨地砸在张禹的脸上：&lt;/p&gt;
+&lt;p&gt;“阿sir，我没念过书。如果你要跟我讲法律，我讲不过你。但我想跟你讲道理，我鹿天鸣走到今时今日，从来都没得选。我除了制毒、贩毒、吸毒……我什么都不会……洪先生最恨人骗他，而我已经骗过他一次，只是命好，你们扫毒警察都死光了，才没被他发现。我不能让你去他身边，我求你回香港吧，我想回都不敢回……”&lt;/p&gt;
+&lt;p&gt;张禹听见了水声，像是在湖泊里扔下一片碎石，咕咚一声。他分不清脸上流淌着的是谁的眼泪，但他心中的无限绝望突然想湖泊的波纹一样散开来。&lt;/p&gt;
+&lt;p&gt;香港，我也想回去。但我是和他们一起来的，他们现在还在这，永远地留在这了。&lt;/p&gt;
+&lt;p&gt;我要怎么一个人回去。&lt;/p&gt;
+&lt;h1 id=&#34;-2&#34;&gt;&lt;/h1&gt;
+">隔岸观·第二章</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://fooogy.github.io/post/ge-an-guan-di-yi-zhang/"" data-c="
+          &lt;h1 id=&#34;&#34;&gt;&lt;/h1&gt;
+&lt;p&gt;1996年，12月底，泰国一家旅馆内。&lt;/p&gt;
+&lt;p&gt;“插进去的就算再抽出来，也不等于从来没有插进去过，听得懂吗？”&lt;/p&gt;
+&lt;p&gt;张禹低声应了一下后，深吸了一口气。但这一口气还悬在喉咙里没来得及呼出时，就变成了哀嚎。他被鹿天鸣单刀直入地猛烈撞击，将刚才脱衣服的勇气全部都撞散了。张禹突然拼命地推开鹿天鸣，想要从他身体地下爬出去。&lt;/p&gt;
+&lt;p&gt;“张禹！我甚至都没插进去你就受不了？那以后无数个日日夜夜你还要不要活！我还要不要活！”&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;张禹呼吸急促起来，他感觉黑暗中鹿天鸣用双臂困着自己的头不让自己躲闪，他只能向前看，感受身上这个人吞吐在脸上的气息。大概几秒钟之后，身后又是硬生生连着挨了好几下，疼的掉出眼泪，但仍然咬着牙没有发出声音。&lt;/p&gt;
+&lt;p&gt;“阿sir你相信我，放松一点……你不要一直想这件事！我根本进不去……你有没有什么美好回忆？”&lt;/p&gt;
+&lt;p&gt;听到这些话，张禹也平明去回忆一些别的事情分散注意力，但他偏偏就是做不到。他没有什么美好的回忆了，只剩下一个伤亡无数的惨痛结局。几天前，扫毒科在香港一家医院抓捕到鹿天鸣，他是毒品交易的掮客，真实姓名叫鹿天鸣，来自广东一个全族贩毒的村子。旗下制毒工厂的制毒数量，已足够判他几十次死刑。但他是个贪生怕死的人，手铐刚一给他戴上，鹿天鸣便将他的上线洪先生和下家猛犸尽数招供。甚至主动配合扫毒科工作，来曼谷接应洪先生的货。一路上喋喋不休，只求借此机会能戴罪立功，将来量刑时判个死缓给他。&lt;/p&gt;
+&lt;p&gt;“鹿天鸣和洪先生两个人准时进入交易现场，后面的事可都看你们了，Make！阿秋！”&lt;/p&gt;
+&lt;p&gt;声音顺着无线电波传进交易现场的卧底官秋山耳中。到底是从没有实战经验的学警，说话时的声音还像小时候一样，汇报做得像撒娇。官秋山双手环胸，没忍住嘴角微微一扬，竟是笑了。&lt;/p&gt;
+&lt;p&gt;“阿秋，鹿天鸣不知你是卧底，动起手来你要当心。”&lt;/p&gt;
+&lt;p&gt;“我如果还用你来提醒我，卧底这三年命早没一万遍了。今天收网之后，未来的张sir这个暑假想没想好怎么过？让Make做东。”&lt;/p&gt;
+&lt;p&gt;“这么好！”&lt;/p&gt;
+&lt;p&gt;“我做东也可以，但除非他真的考督察的面试合格。”控制处的Make的声音突然出现，吓得张禹不自觉一抖，一种无关考试失败的预感钻到了他的心里。&lt;/p&gt;
+&lt;p&gt;官秋山的监听信号彻底消失之前，给张禹留下的最后一句断断续续的话是：&lt;/p&gt;
+&lt;p&gt;鹿天鸣反水。&lt;/p&gt;
+&lt;p&gt;现在躺在鹿天鸣身下的张禹中间几度想要呕吐，但又哽咽在喉咙里，只能控制不住地发抖。&lt;/p&gt;
+&lt;p&gt;“阿sir，你要不跟我聊点别的吧，你不要再抖了……张禹我说你不要再抖了！”&lt;/p&gt;
+&lt;p&gt;鹿天鸣的两只手都被张禹拷在床头上动弹不得，他只好用用肘部杵在枕头上，将张禹的头死死困在自己的臂弯里。房里没有开灯，他看不清张禹的脸。但他突然觉得这个被剩下的警察好可怜，顷刻之间，就遭遇这样命运剧变。但转念一想，又觉得自己全家死光，就算是再逼良为娼千百遍也难消心头之恨。虽然冤有头债有主，他的悲剧和张禹没有任何关系，但谁让张禹是个警察呢。鹿天鸣低头胡乱与他亲吻，也不知是张禹的脸还是额头，不知是冷汗还是眼泪，只是一片冰凉。&lt;/p&gt;
+&lt;p&gt;“阿sir，你就听我一句劝，回香港去吧。看看你现在，洪先生一下手你肯定会暴露身份，你是卧底的事情一暴露，就算我逃到天涯海角，我肯定也活不成。你不想和我死一起吧，我也不想，传出去多恶心。”&lt;/p&gt;
+&lt;p&gt;“你收声……”张禹起伏不定的胸口吐出醉酒后浑浊的气息，手扣住鹿天鸣的肩膀咬牙死撑着说道，“再来一次，这次一定能……”&lt;/p&gt;
+&lt;p&gt;一句粗口憋在喉咙里没念出来，鹿天鸣又试着挺身而入一次，但又一次地无法插入。张禹整个人绷紧成一根琴弦，无论他怎么拼命指挥着士兵刺刀进攻，这个琴弦就是斩不断。鹿天鸣朝地上啐了一口唾沫，骂出了刚才那句粗口。&lt;/p&gt;
+&lt;p&gt;“张禹你要不要吃点药……我没有让你吸白粉！我是说你要不要搞点催情的那种，不然我总觉得我是在强奸你……”&lt;/p&gt;
+&lt;p&gt;张禹抽出一直被压在身下的胳膊，弓着身子从鹿天鸣的腋下翻滚到地上，背靠冰冷的地板大口喘着气休息，然后抓起床单擦着自己身后黏腻的，分不清是体液还是血液的地方。&lt;/p&gt;
+&lt;p&gt;鹿天鸣偏过头看向坐在地板上的张禹，疲惫不堪地说道：“阿sir，你们整整一组人都死没了，只活了你一个。你到底还有什么不满意的，为什么一定要去洪先生身边卧底。你跟我都睡不下去，又怎么……与其等你身份暴露，被洪先生先奸后杀那一天，你真不如现在杀了我，我还能留个全尸。”&lt;/p&gt;
+&lt;p&gt;张禹抖着腿勉强站起身，抓着鹿天鸣后脑的头发让他不得不直视自己。鹿天鸣借着月光看清了张禹气到颤抖的嘴唇一动一动地说：“鹿天鸣……你想要逃命就自己逃好了，为什么要把所有人赶尽杀绝……”&lt;/p&gt;
+&lt;p&gt;鹿天鸣从被警方抓获的那一刻起，就根本没打算过戴罪立功。他引诱毒品调查科来泰国的目的就是刻意挑起警方和洪先生的交火，好让他可以趁乱逃之夭夭。但他没想到在毒品调查科几乎是全军覆没的情况下，张禹居然开着别人的一辆车死死跟在鹿天鸣后面，像是恨不得把自己撞死在街道上。&lt;/p&gt;
+&lt;p&gt;鹿天鸣转弯时透过后视镜，看见仍然对自己穷追不舍的张禹，只恨自己的弹夹已打空。其实那个时候的张禹也不知道，自己一个手无寸铁，甚至都不算是正规警察的学警，怎么就敢和鹿天鸣以命相搏。但他本能地跟着前面的车猛打方向盘，也右转。但鹿天鸣等到张禹的车刚冒出一个头来，便倒车硬撞上去。&lt;/p&gt;
+&lt;p&gt;然而张禹因为被鹿天鸣撞出车道后，反倒逃过一劫。因为这时一辆明显超速的越野车擦着墙边就从狭窄的车道挤出来，正面迎上鹿天鸣的车。&lt;/p&gt;
+&lt;p&gt;砰地一声将鹿天鸣连车带人撞出去十多米远。&lt;/p&gt;
+&lt;p&gt;见鹿天鸣满头鲜血，已经在车里昏迷。张禹想要立刻出去查探他的情况，但因为车门严重受挤变形，怎么踢都踢不开。张禹回头看了一眼碎成蛛网的挡风玻璃，刚抬手握拳想要锤上去，就看到那辆越野车走下来了一个人。张禹有印象，其中一个瘦瘦高高的人是洪先生身边的人。那车里的人，应该就是洪先生。&lt;/p&gt;
+&lt;p&gt;但卧底三年的官秋山没有跟洪先生一起，难道他已经暴露了吗？还是说……已经牺牲了？&lt;/p&gt;
+&lt;p&gt;正午时分，日头已经升到每个人的头顶之上。地上稀稀落落地蹭出了一道血痕，鹿天鸣是被两个人搀着扶进越野车里，也不知伤得严不严重。隔着厚重的防弹车窗，张禹只能看到车内一个虚飘飘的人影，是洪先生。&lt;/p&gt;
+&lt;p&gt;张禹注视着他们良久。洪先生淡然一笑，朝张禹好心问道：&lt;/p&gt;
+&lt;p&gt;“需要帮忙吗？，小孩。”&lt;/p&gt;
+">隔岸观·第一章</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://fooogy.github.io/post/ge-an-guan-qian-yan/"" data-c="
+          &lt;p&gt;这一天是1月1日，我有一个不敢说与旁人听的秘密：我将要结婚。尽管我只见过他一面，但我想这个人应该——也是真心爱我。&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;但当我对他说出这句话时，他却转过身去背对着我。漫不经心地问要不要喝一杯咖啡。先慢慢抚弄过滤纸的皮肤，将它对折又对折。手指再从折叠位置轻轻伸进去一勾，像在草原上撑开一顶帐篷一样，撑开圆锥状的滤纸，插入壶口。最后沿着滤纸的外沿一圈又绕一圈，细细浇上滚烫的热水。&lt;/p&gt;
+&lt;p&gt;他认真看着我的眼，将掌纹紧紧贴着我的手背上。说想要讲一个故事给我听，故事关乎他的从前。&lt;/p&gt;
+&lt;p&gt;轰地一声，我的心里有种怅然若失的不良预感。他对我说，他的从前是由三个字组成的：黄、赌、毒。&lt;/p&gt;
+&lt;p&gt;黄是黄粱一梦，赌是孤注一掷，毒是无毒不丈夫。&lt;/p&gt;
+&lt;p&gt;低头看着咖啡粉抖落在白净的滤纸上生根发芽。又注入热水，粉末像是在床单上翻滚、抽搐，白沫不断湮灭又不断浮现。灰蒙蒙的热气扑到我的脸上，眼眶一热。&lt;/p&gt;
+&lt;p&gt;颜色会淡去、香会凉透。&lt;/p&gt;
+&lt;p&gt;而我更不敢告诉别人的是，今生今世，所爱所想，不过是片欺天罔地的蜃楼。&lt;/p&gt;
+">隔岸观·前言</a>
+      </div>
+      
+    </div>
+    <div class="page">
+      <div id="page_ul"></div>
+    </div>
+  </div>
+</div>
+<script>
+  !function () {
+    let searchMask = document.querySelector('#search_mask');
+    let result = document.querySelector('#result');
+    let items = document.querySelectorAll('.item');
+    let searchBox = document.querySelector('#search');
+    let statCount = document.querySelector('#stat_count');
+    let statTimes = document.querySelector('#stat_times');
+    let pageUl = document.querySelector('#page_ul');
+    let close = document.querySelector('#close');
+    
+    close.addEventListener('click', function() {
+      searchMask.style = 'display: none;'
+    })
+
+    let finds = [];
+    let contents = [];
+    let pageSize = 10;
+    items.forEach(item => {
+      let a = item.querySelector('a');
+      contents.push({
+        title: a.innerText,
+        details: a.dataset.c,
+        link: a.href
+      })
+      item.remove();
+    })
+
+    function insertStr(soure, start, count) {
+      let newStr = soure.substr(start, count);
+      return soure.slice(0, start) + '<em>' + newStr + '</em>' + soure.slice(start + count);
+    }
+
+    pageUl.addEventListener('click', function(event) {
+      let target = event.target;
+      if (target.__proto__ === HTMLSpanElement.prototype) {
+        appendResults(parseInt(target.dataset.i));
+      }
+    })
+
+    function appendResults(index) {
+      let htmlResult = '';
+      let start = index || 0;
+      let end = Math.min(start + pageSize, finds.length);
+      for (let i = start; i < end; i++) {
+        const current = finds[i];
+        let html = current.title;
+        let sum = 0;
+        let positions = current.positions;
+        positions.forEach(position => {
+          html = insertStr(html, position.start + sum, position.count);
+          sum += 9;
+        })
+        htmlResult += `<div class="item"><a class="result-title" href="${current.link}">${html}</a></div>`;
+      }
+      result.innerHTML = htmlResult;
+      pageUl.innerHTML = '';
+      let count = finds.length / pageSize;
+      let lis = '';
+      if (start !== 0) {
+        lis += `<span class="fa fa-angle-left" data-i='${start - 1}'></span>`;
+      }
+      for (let i = 0; i < count; i++) {
+        lis += `<span class='${i === start?'current':''}' data-i='${i}'>${i+1}</span>`;     
+      }
+      if (start+1 < count) {
+        lis += `<span class="fa fa-angle-right" data-i='${start+1}'></span>`;  
+      }
+      pageUl.innerHTML = lis;
+    }
+
+    function search(delay) {
+      let timer = null
+      return function () {
+        clearTimeout(timer)
+        timer = setTimeout(() => {
+          let start = Date.now();
+          let segments = searchBox.value.split(' ').filter(c => c != '');
+          if (segments.length <= 0) {
+            return;
+          }
+          finds = [];
+          let htmlResult = '';
+          contents.forEach(content => {
+            let title = content.title;
+            let positions = [];
+            let find = false;
+            segments.forEach((segment) => {
+              if (content.title.includes(segment)) {
+                find = true;
+                positions.push({
+                  start: content.title.indexOf(segment),
+                  count: segment.length
+                })
+              } else if (content.details.includes(segment)) {
+                find = true;
+              }
+            });
+            if (find) {
+              finds.push({
+                title: content.title,
+                link: content.link,
+                positions
+              });
+            }
+          })
+          appendResults(0);
+          statCount.textContent = finds.length;
+          statTimes.textContent = Date.now() - start;
+        }, delay)
+      }
+    }
+    searchBox.addEventListener('input', search(200));
+  }()
+</script>
+
+<input hidden id="copy" />
+<script>
+  let language = '';
+  if (language !== '') {
+    let map = new Map();
+    if (language === 'en') {
+      map.set('search', 'Search');
+      map.set('category', 'Categories');
+      map.set('article', 'Articles');
+      map.set('tag', 'Tags');
+      map.set('top', 'Top');
+      map.set('publish', 'published');
+      map.set('minute', ' minutes');
+      map.set('read-more', 'Read More');
+      map.set('view', 'View');
+      map.set('words', ' words');
+      map.set('category-in', 'category in');
+      map.set('preview', 'Meta');
+      map.set('index', 'Toc');
+      map.set('no-archives', "You haven't created yet");
+      map.set('archives', " articles in total");
+      map.set('cloud-tags', " tags in total");
+      map.set('copyright', "Copyright: ");
+      map.set('author', "Author: ");
+      map.set('link', "Link: ");
+      map.set('leave-message', "Leave a message");
+      map.set('format', "Links Format");
+      map.set('site-name', "Name: ");
+      map.set('site-link', "Link: ");
+      map.set('site-desc', "Desc: ");
+      map.set('stat', " related results, taking ");
+      map.set('stat-time', " ms");
+      map.set('site-img', "Image: ");
+    }
+
+    if (map.size > 0) {
+      let lanElems = document.querySelectorAll('.language');
+      lanElems.forEach(elem => {
+        let lan = elem.dataset.lan, text = map.get(lan);
+        if (elem.__proto__ === HTMLInputElement.prototype) {
+          elem.placeholder = text
+        } else {
+          if (elem.dataset.count) {
+            text = elem.dataset.count + text;
+          }
+          elem.textContent = text;
+        }
+      })
+    }
+  }
+  //拿来主义(真香)^_^，Clipboard 实现摘自掘金 https://juejin.im/post/5aefeb6e6fb9a07aa43c20af
+  window.Clipboard = (function (window, document, navigator) {
+    var textArea,
+      copy;
+
+    // 判断是不是ios端
+    function isOS() {
+      return navigator.userAgent.match(/ipad|iphone/i);
+    }
+    //创建文本元素
+    function createTextArea(text) {
+      textArea = document.createElement('textArea');
+      textArea.value = text;
+      textArea.style.width = 0;
+      textArea.style.height = 0;
+      textArea.clientHeight = 0;
+      textArea.clientWidth = 0;
+      document.body.appendChild(textArea);
+    }
+    //选择内容
+    function selectText() {
+      var range,
+        selection;
+
+      if (isOS()) {
+        range = document.createRange();
+        range.selectNodeContents(textArea);
+        selection = window.getSelection();
+        selection.removeAllRanges();
+        selection.addRange(range);
+        textArea.setSelectionRange(0, 999999);
+      } else {
+        textArea.select();
+      }
+    }
+
+    //复制到剪贴板
+    function copyToClipboard() {
+      try {
+        document.execCommand("Copy")
+      } catch (err) {
+        alert("复制错误！请手动复制！")
+      }
+      document.body.removeChild(textArea);
+    }
+
+    copy = function (text) {
+      createTextArea(text);
+      selectText();
+      copyToClipboard();
+    };
+
+    return {
+      copy: copy
+    };
+  })(window, document, navigator);
+
+  function copyCode(e) {
+    if (e.srcElement.tagName === 'SPAN' && e.srcElement.classList.contains('copy-code')) {
+      let code = e.currentTarget.querySelector('code');
+      var text = code.innerText;
+      if (e.srcElement.textContent === '复制成功') {
+        console.log('复制操作频率过高');
+        return;
+      }
+      e.srcElement.textContent = '复制成功';
+      (function (elem) {
+        setTimeout(() => {
+          if (elem.textContent === '复制成功') {
+            elem.textContent = '复制代码'
+          }
+        }, 1000);
+      })(e.srcElement)
+      Clipboard.copy(text);
+    }
+  }
+
+  let pres = document.querySelectorAll('pre');
+  pres.forEach(pre => {
+    let code = pre.querySelector('code');
+    let copyElem = document.createElement('span');
+    copyElem.classList.add('copy-code');
+    copyElem.textContent = '复制代码';
+    pre.appendChild(copyElem);
+    pre.onclick = copyCode
+  })
+
+</script>
+<script src="/media/js/motion.js"></script>
+
+<script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+<script>
+  var scroll = new SmoothScroll('a[href*="#"]', {
+    speed: 200
+  });
 </script>
 
 
-  <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
-  <script>
-    hljs.initHighlightingOnLoad()
-  </script>
 
-
-
-
-
-  </body>
 </html>
