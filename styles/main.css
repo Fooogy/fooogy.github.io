@@ -2246,7 +2246,9 @@ body {
         background: ${params.pageBgColor};
       }
     `
-  }.box-shadow-wrapper {
+  }.box-scale > #landlord {
+      transform: scale([0,1]);
+    }.box-shadow-wrapper {
       box-shadow: none !important;
     }body {
       cursor: default;
