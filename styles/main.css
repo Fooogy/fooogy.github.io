@@ -2113,7 +2113,7 @@ pre > span.copy-code:hover {
   font-weight: bold;
 }
 body {
-      background-color: #f1f3f5;
+      background-color: #f8f9fa;
     }.header {
         width: 960px;
         margin: 0 auto;
@@ -2220,7 +2220,7 @@ body {
       color: #fc6423;
       border-bottom-color: #fc6423;
     }.bg-color {
-      background-color: #dee2e6fe;
+      background-color: #e9eceffe;
     }
     .site-meta {
       background: #adb5bd !important;
