@@ -2113,7 +2113,7 @@ pre > span.copy-code:hover {
   font-weight: bold;
 }
 body {
-      background-color: #eee;
+      background-color: #ced4da;
     }.header {
         width: 960px;
         margin: 0 auto;
@@ -2227,19 +2227,19 @@ body {
       background-color: #fffffffe;
     }
     .site-meta {
-      background: #000 !important;
+      background: #495057 !important;
     }
     .head-top-line {
-      background: #000;
+      background: #495057;
     }
     .brand {
-      background: #000000fe;
+      background: #868e96fe;
     }
     .main-title, .brand {
-      color: #FFF !important;
+      color: #e9ecef !important;
     }
     .mist .site-title i {
-      background: #FFFFFFfe;
+      background: #e9eceffe;
     }if (params.pageBgColor && params.pageBgColor !== '#ffffff') {
     result += `
       body {
