@@ -8,7 +8,7 @@
 <meta name="keywords" content="Gridea静态个人博客">
 <meta name="description" content="Curiosity &amp; Creativity">
 <meta name="theme-color" content="#343a40">
-<title>隔岸观·第二十一章 | A Dream of Fooogy</title>
+<title>A Dream of Fooogy</title>
 <link rel="shortcut icon" href="/favicon.ico?v=1611431616013">
 <link rel="stylesheet" href="/media/css/gemini.css">
 <link rel="stylesheet" href="/media/fonts/font-awesome.css">
@@ -38,8 +38,6 @@
 
 
 
-  <meta name="description" content="隔岸观·第二十一章" />
-  <meta name="keywords" content="" />
 </head>
 
 <body>
@@ -75,7 +73,7 @@
             
               
             
-            <li class="nav-item ">
+            <li class="nav-item nav-item-active">
               
               
                 <a href="/" target="_self">
@@ -174,290 +172,75 @@
     <div
       class="section-layout gemini ">
       <div class="section-layout-wrapper">
-        
-
-<div class="sidebar">
-  
-    <div class="sidebar-box box-shadow-wrapper bg-color right-motion" id="sidebar">
+        <div id="sidebarMeta" class="sidebar">
+    
+<div class="sidebar-wrapper box-shadow-wrapper bg-color">
+  <div class="sidebar-item">
+    <img class="site-author-image right-motion" src="/images/avatar.png"/>
+    <p class="site-author-name">Fooogy Homicide</p>
+    
+    <div class="site-description right-motion">
       
-      <div class="sidebar-body gemini" id="sidebar_body">
-        
-          
-            <div style="opacity: 1;">
-              <div class="toc-box right-motion">
-  <div class="toc-wrapper auto-number no_compress"
-    id="toc_wrapper">
-    <ul class="markdownIt-TOC">
-<li></li>
-<li></li>
-<li></li>
-</ul>
-
+      
+      
+        <p>不疯魔不成活</p>
+      
+      
+    </div>
+    
   </div>
+  <div class="sidebar-item side-item-stat right-motion">
+    <div class="sidebar-item-box">
+      <a href="/archives/">
+        
+        <span class="site-item-stat-count">29</span>
+        <span class="site-item-stat-name language" data-lan="article">文章</span>
+      </a>
+    </div>
+    <div class="sidebar-item-box">
+      <a href="">
+        <span class="site-item-stat-count">0</span>
+        <span class="site-item-stat-name language" data-lan="category">分类</span>
+      </a>
+    </div>
+    <div class="sidebar-item-box">
+      <a href="/tags/">
+        <span class="site-item-stat-count">0</span>
+        <span class="site-item-stat-name language" data-lan="tag">标签</span>
+      </a>
+    </div>
+  </div>
+  
+    
+  
+  
+
+
 </div>
-
+</div>
 <script>
-
-  let lastTop = 0, lList = [], hList = [], postBody, lastIndex = -1;
-  let active = 'active-show', activeClass = 'active-current';
-  let tocWrapper = document.querySelector('#toc_wrapper');
-  let tocContent = tocWrapper.children[0];
-  let autoNumber = tocWrapper && tocWrapper.classList.contains('auto-number');
-
-  function addTocNumber(elem, deep) {
-    if (!elem) {
-      return;
-    }
-    let prop = elem.__proto__;
-
-    if (prop === HTMLUListElement.prototype) {
-      for (let i = 0; i < elem.children.length; i++) {
-        addTocNumber(elem.children[i], deep + (i + 1) + '.');
+  let sidebarMeta = document.querySelector('#sidebarMeta');
+  let scheme = 'gemini';
+  let sidebarWrapper = document.querySelector('.sidebar-wrapper');
+  if (sidebarMeta && (scheme === 'pisces' || scheme === 'gemini')) {
+    document.addEventListener('scroll', function(e) {
+      if (document.scrollingElement.scrollTop > parseInt(sidebarMeta.style.marginTop) + 10) {
+        sidebarWrapper.classList.add('home-sidebar-fixed')
+      } else {
+        sidebarWrapper.classList.remove('home-sidebar-fixed')
       }
-    } else if (prop === HTMLLIElement.prototype) {
-      // 保存li元素
-      if (elem.children[0] && elem.children[0].__proto__ === HTMLAnchorElement.prototype) {
-        lList.push(elem);
-      }
-      for (let i = 0; i < elem.children.length; i++) {
-        let cur = elem.children[i];
-        if (cur.__proto__ === HTMLAnchorElement.prototype) {
-          if (autoNumber) {
-            cur.text = deep + ' ' + cur.text;
-          }
-        } else if (cur.__proto__ === HTMLUListElement.prototype) {
-          addTocNumber(cur, deep);
-        }
-      }
-    }
-  }
-
-  function removeParentActiveClass() {
-    let parents = tocContent.querySelectorAll('.' + active)
-    parents.forEach(function (elem) {
-      elem.classList.remove(active);
     });
   }
-
-  function addActiveClass(index) {
-    if (index >= 0 && index < hList.length) {
-      lList[index].classList.add(activeClass);
-    }
-  }
-
-  function removeActiveClass(index) {
-    if (index >= 0 && index < hList.length) {
-      lList[index].classList.remove(activeClass);
-    }
-  }
-
-  function addActiveLiElemment(elem, parent) {
-    if (!elem || elem === parent) {
-      return;
-    } else {
-      if (elem.__proto__ === HTMLLIElement.prototype) {
-        elem.classList.add(active);
-      }
-      addActiveLiElemment(elem.parentElement, parent);
-    }
-  }
-
-  function showToc() {
-    if (tocWrapper) {
-      postBody = document.querySelector('#post_body');
-      for (let i = 0; i < postBody.children.length; i++) {
-        if (postBody.children[i].__proto__ === HTMLHeadingElement.prototype) {
-          hList.push(postBody.children[i]);
-        }
-      }
-      if (tocWrapper.classList.contains('compress')) {
-        tocContent.classList.add('closed');
-      } else if (tocWrapper.classList.contains('no_compress')) {
-        tocContent.classList.add('expanded');
-      } else {
-        if (hList.length > 10) {
-          active = 'active-hidden'
-          tocContent.classList.add('closed');
-        } else {
-          tocContent.classList.add('expanded');
-        }
-      }
-    }
-  }
-
-  (function () {
-    // 处理不是从#一级标题开始目录
-    if (tocContent.children.length === 1 && tocContent.children[0].__proto__ === HTMLLIElement.prototype) {
-      let con = tocContent.children[0].children[0];
-      tocContent.innerHTML = con.innerHTML;
-    }
-    let markdownItTOC = document.querySelector('.markdownIt-TOC');
-    let innerHeight = window.innerHeight;
-    markdownItTOC.style = `max-height: ${innerHeight - 80 > 0 ? innerHeight - 80 : innerHeight}px`
-    addTocNumber(tocContent, '');
-  })();
-
-  document.addEventListener('scroll', function (e) {
-    if (lList.length <= 0) {
-      return;
-    }
-    let scrollTop = document.scrollingElement.scrollTop + 10;
-    let dir;
-
-    if (lastTop - scrollTop > 0) {
-      dir = 'up';
-    } else {
-      dir = 'down';
-    }
-
-    lastTop = scrollTop;
-    if (scrollTop <= 0) {
-      if (lastIndex >= 0 && lastIndex < hList.length) {
-        lList[lastIndex].classList.remove(activeClass);
-      }
-      return;
-    }
-
-    let current = 0, hasFind = false;
-    for (let i = 0; i < hList.length; i++) {
-      if (hList[i].offsetTop > scrollTop) {
-        current = i;
-        hasFind = true;
-        break;
-      }
-    }
-    if (!hasFind && scrollTop > lList[lList.length - 1].offsetTop) {
-      current = hList.length - 1;
-    } else {
-      current--;
-    }
-    if (dir === 'down') {
-      if (current > lastIndex) {
-        addActiveClass(current);
-        removeActiveClass(lastIndex)
-        lastIndex = current;
-        removeParentActiveClass();
-        lList[current] && addActiveLiElemment(lList[current].parentElement, tocContent);
-      }
-    } else {
-      if (current < lastIndex) {
-        addActiveClass(current);
-        removeActiveClass(lastIndex);
-        lastIndex = current;
-        removeParentActiveClass();
-        lList[current] && addActiveLiElemment(lList[current].parentElement, tocContent);
-      }
-    }
-  });
-
-
-  window.addEventListener('load', function () {
-    showToc();
-    document.querySelector('#sidebar').style = 'display: block;';
-    tocWrapper.classList.add('toc-active');
-    setTimeout(function () {
-      if ("createEvent" in document) {
-        let evt = document.createEvent("HTMLEvents");
-        evt.initEvent("scroll", false, true);
-        document.dispatchEvent(evt);
-      }
-      else {
-        document.fireEvent("scroll");
-      }
-    }, 500)
-  })
-
-</script>
-            </div>
-          
-        
-      </div>
-    </div>
-  
-</div>
-<script>
-  const SIDEBAR_TITLE_ACTIVE = 'sidebar-title-active';
-  const SIDEBAR_BODY_ACTIVE = 'sidebar-body-active';
-  const SLIDE_UP_IN = 'slide-up-in';
-
-  let sidebar = document.querySelector('#sidebar'),
-  tocSideBar = document.querySelector('#tocSideBar'),
-  metaSideBar = document.querySelector('#metaSideBar'),
-  postToc = document.querySelector('#post_toc'),
-  postSiteMeta = document.querySelector('#post_side_meta'),
-  sidebarTitle = document.querySelector('.sidebar-title'),
-  sidebarBody = document.querySelector('#sidebar_body');
-
-  tocSideBar && tocSideBar.addEventListener('click', (e) => {
-    toggleSidebar(e);
-  });
-
-  metaSideBar && metaSideBar.addEventListener('click', (e) => {
-    toggleSidebar(e);
-  });
-
-  function toggleSidebar(e) {
-    let currentTitle = document.querySelector("."+SIDEBAR_TITLE_ACTIVE);
-    if (currentTitle == e.srcElement) {
-      return ;
-    }
-    let current, showElement, hideElement;
-    if (e.srcElement == metaSideBar) {
-      showElement = postSiteMeta;
-      hideElement = postToc;
-    } else if (e.srcElement == tocSideBar){
-      showElement = postToc;
-      hideElement = postSiteMeta;
-    }
-    currentTitle.classList.remove(SIDEBAR_TITLE_ACTIVE);
-    e.srcElement.classList.add(SIDEBAR_TITLE_ACTIVE);
-
-    window.Velocity(hideElement, 'stop');
-    window.Velocity(hideElement, 'transition.slideUpOut', {
-      display: 'none',
-      duration: 200,
-      complete: function () {
-        window.Velocity(showElement, 'transition.slideDownIn', {
-          duration: 200
-        });
-      }
-    })
-    hideElement.classList.remove(SIDEBAR_BODY_ACTIVE);
-    showElement.classList.add(SIDEBAR_BODY_ACTIVE);
-  }
-
-  postToc && postToc.addEventListener('transitionend', function() {
-    this.classList.remove(SLIDE_UP_IN);
-  });
-
-  if (sidebarBody) {
-    if (sidebarBody.classList.contains('pisces') || sidebarBody.classList.contains('gemini')) {
-      let hasFix = false;
-      let scrollEl = document.querySelector('.main-continer');
-      let limitTop = document.querySelector('#nav_ul').children.length * 42 + 162;
-      window.addEventListener('scroll', function(e) {
-        if (document.scrollingElement.scrollTop >= limitTop) {
-          if (!hasFix) {
-            sidebar.classList.add('sidebar-fixed');
-            hasFix = true;
-          }
-        } else {
-          if (hasFix) {
-            sidebar.classList.remove('sidebar-fixed');
-            hasFix = false;
-          }
-        }
-      });
-    }
-  }
-  
-</script>
-        <div class="section-box box-shadow-wrapper">
-          <div class="section bg-color post post-page">
-            <header class="post-header">
+  </script>
+        <div class="section-box gemini">
+          <section class="section  posts-expand slide-down-in">
+            
+  <article class="post-list-box  post box-shadow-wrapper">
+    <div class="article-wrapper bg-color">
+      <header class="post-header">
   <h1 class="post-title">
-    <a class="post-title-link" href="https://fooogy.github.io/post/ge-an-guan-di-er-shi-yi-zhang/">
-      隔岸观·第二十一章
+    <a class="post-title-link" href="https://fooogy.github.io/post/ge-an-guan-qian-yan/">
+      隔岸观·前言
     </a>
   </h1>
   <div class="post-meta">
@@ -465,160 +248,88 @@
     <span class="meta-item pc-show">
       <i class="fa fa-calendar-o"></i>
       <span class="language" data-lan="publish">发布于</span>
-      <span>2020-11-19</span>
+      <span>2020-06-09</span>
       <span class="post-meta-divider pc-show">|</span>
     </span>
     
     <span class="meta-item">
       <i class="fa fa-clock-o"></i>
-      <span>15<span class="language" data-lan="minute">分钟</span></span>
+      <span>2<span class="language" data-lan="minute">分钟</span></span>
     </span>
     <span class="meta-item">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-file-word-o"></i>
-      <span>4278<span class="pc-show language" data-lan="words">字数</span></span>
-    </span>
-    
-    
-    
-    <span id="/post/ge-an-guan-di-er-shi-yi-zhang/" data-flag-title="隔岸观·第二十一章" class="meta-item pc-show leancloud_visitors">
-      <span class="post-meta-divider">|</span>
-      <i class="fa fa-eye"></i>
-      <span><span class="language" data-lan="view">浏览量</span>：<span class="leancloud-visitors-count"></span></span>
+      <span>397<span class="pc-show language" data-lan="words">字数</span></span>
     </span>
     
   </div>
 </header>
-            <div class="post-body next-md-body" id="post_body">
-              <p>官秋山没想到，Macbeth也会全然不顾法国泰国两国时差的存在，在自己刚洗漱完毕准备换睡衣歇下时，就被对方的一同来电吵到睡意全无。<br>
-“秋！多亏了那个虚伪的美国政客有定期浏览色情视频的癖好！我在追查他的邮件往来时，居然找到了张禹的线索！”<br>
-“什么线索？”<br>
-“我起初只是怀疑这名政客和洪京墨有某种秘密交易，但是因为账户上根本看不出来什么，我就只能默默窃听着手机通话做记录。这是他今天下午5点32分，在洛杉矶的一家餐厅用餐时拨出的两通电话，你打开邮箱听一遍。”<br>
-官秋山连忙从床铺上翻身滚下来，坐在办公桌前打开电脑。然而认真听过一遍后，不由得失望，似乎只是两人普通的问候。Macbeth将音频调到最高音量后，又嘱咐官秋山再仔细听一遍。音频第二遍播放时，官秋山闭上眼睛沉下心来，突然瞳孔一震，在二人的交谈中，他好像听到了一声惨叫。<br>
-“秋！我和你一样！我当时也以为声音一定是来自洪京墨方。但在我调出了那家餐厅的监控录像后，我发现他只是按照往日习惯，一边吃饭，一边使用手提电脑观看色情影片而已，这一声尖叫之后，他也迅速把音量调的更低，完全超出了窃听器能够捕捉的限度。时间紧张，监控录像的画面清晰度我只能处理成这样，你再好好看看吧。”<br>
-“那不是张禹。”</p>
-<!-- more -->
-<p>“秋！你看都不看就下结论？”Macbeth只以为是官秋山在逃避现实，所以丝毫没有怀疑这个来之不易的线索，是否破绽百出。<br>
-“Macbeth，我当初以为张禹还活着，是因为洪京墨杀人不会只开一枪，他一定会把弹匣里所有的子弹都用光。无论是用枪还是用刀，凡是死在他手下的人，没有一个是有全尸的……”官秋山左眼突然掉下来一滴泪，砸进了电脑键盘的沟壑之中，像一架故障的客机一头扎进了峡谷。官秋山捂住眼睛，解释道：“可如果阿禹真的还活着，洪京墨没有必要用这么曲折的手段来……”<br>
-“秋。或许是陷阱，或许是误会，但是不把鱼线收回来的话，你怎么知道自己究竟钓到了什么？你必须现在立刻确认那是不是张禹本人！他生、他死，关系到我们接下来的工作部署！ ”<br>
-“视频太模糊了，我无法确认。”<br>
-“秋！”<br>
-官秋山好像听见Macbeth重重叹了一口气，像撞钟一样闷在自己的心上，又自说自话道：“秋，就算不是张禹，也同样是一条人命。洪京墨分享视频链接时的定位是在泰国，我准备按照这个方向追查下去。你还继续跟吗?”<br>
-“我一直都在泰国，最近几天在曼谷京畿警察署，商议引渡‘猛犸’回港的事。在这之前，我还想办法怎么能和怒汉神探见上一面，这两年一直受他照顾，我……想亲自跟他告别。”<br>
-Macbeth放声大笑：“‘怒汉神探’之所以被称呼为‘怒汉神探’，而不只是‘神探’，就是因为他性格太激烈易怒了，我劝你离他远点吧，狂躁症是会相互传染的。”<br>
-“砰——”<br>
-Macbeth突然听见官秋山那边发出一连串的噪音，怀疑是泰国警察间发生了争执，在推搡之中踢翻了椅子之类的。官秋山电话还没挂断便急着走出休息室，原来只是几个警察控制住了一个凶神恶煞的年轻人，将他死死扣在地砖上。仔细看过去，那年轻人脸上还一片又一片的挂着伤，姹紫嫣红，好看得很。<br>
-“放开过！我是目击证人！我要报案！”<br>
-听对方的口音好像是华人，官秋山饶有兴趣地走近，蹲在年轻人面前，问道：“证人，你叫什么名字啊？”<br>
-年轻人勉强伸出一只手去拽官秋山，像是打招呼一般介绍说：“警官我叫Han！Han！今天在山海酒店发生了一起杀人案，一起凶手是某个大人物的凶杀案……”<br>
-一泰国警察提醒道：“秋警官！你千万别信他的鬼话，这人有敲诈勒索罪的前科，是个惯犯！”<br>
-Han的左手握成拳头一下又一下重重锤着地面，“那是诬陷！你们这些废物警察！中森施予明明就是为情自杀而死！证据确凿！如果是不实报道，俞溪桥为什么不敢让中森施予跟我当面对质啊！”<br>
-官秋山问：“什么证据？”<br>
-“什么证据都有！中森施予自杀案我不但有人证，还有……”<br>
-“我是问山海酒店杀人案，你有什么证据？你说的大人物又是谁？”官秋山对名人绯色秘闻没有任何兴趣，直接打断Han的话，一字一顿地问道，“洪、京、墨？”<br>
-一听到这个名字，几名警察脸上的表情都瞬间严肃起来，Han见身边几名警员都冷静了下来，也坐起身子来，说：“秋警官，如果我愿意的话，其实我能将我所闻所见，全部以匿名爆料的形式印刷、发售出去，不但钞票有得赚，还不用得罪人！可我偏偏就是命中注定要做个好人吧，我选择了再相信司法一次！只不过……警官你值得我相信吗？”<br>
-“可能你无法理解，但与洪京墨相关的任何事，我都不会全信。”<br>
-官秋山郑重其事地朝对方伸出一只手，Han也立刻回握了过去，然后凑近官秋山的耳侧，悄声说。<br>
-“秋sir，我今天看到一个人被拖进了山海酒店，再也没出来。”<br>
-“一个酒鬼直接在酒店过夜……”<br>
-“可一个小时后，我看见有人驾车送洪京墨从酒店离开。又过了半小时，拖着那人进酒店的其他几人也出来了，还拎着一个行李箱。我想那里面装着的，肯定不是衣物吧！就多跟了他们几段路。他们原本已经把行李箱直接埋在山里了，但我怕天黑之后，我再回山里就找不到这条路了！所以就等他们走后，直接挖出来了！但我没敢打开！我毕竟从没见过尸体！我现在把行李箱藏在山海酒店附近的垃圾桶内了，现在正是垃圾倾倒的时间，等清洁工发现尸体，他一报案，你们就立刻抵达现场！这是不是就叫证据确凿！”<br>
-“只可惜事情难料……咳咳咳……”官秋山抬起头，看见一位严严实实地戴着口罩，说话声音微弱虚浮的人突然出现在门口，在又咳了几声后，解释说：“鄙人鹿游原，是伯乐地产的法律顾问。我可能……”鹿游原手一抬，解释道：“无意中破坏了这位Han公子的抛尸现场。”</p>
-<h1 id=""></h1>
-<p>西子印象唱片公司，行政总裁办公室。<br>
-“视频已经分享给好几位大客户了。听说这几位最近都被联邦调查局盯得死死的，除了这种消遣，是一句话也不敢多说，一步路都不敢多迈啊。”俞溪桥在座椅上转了几圈后，直接将腿架在办公桌上，又点开电脑里的视频重新看了一遍，然后朝Mon鼓掌惊叹到：“没想到这种性爱录像带都能拍出艺术性来，Mon，你们‘鸿蒙兄弟’做电影真是做得太迟了些。金松柏电影节最佳影片的奖杯，应该十年前就放在你的办公桌上才对啊！”<br>
-俞溪桥话了，还敲了敲Mon特助身下坐着的办公桌。Mon先是嫌恶地站远了一点，又因为实在听不过去电脑里黏腻的声音，快步走上前急着把视频静音，办公室里又恢复了清静。<br>
-“官秋山那边也该看到视频了吧。警方一直没什么动作，难道是没相信？”<br>
-俞溪桥伸了一个懒腰，抬腿踢了Mon一脚：“倪宿和张禹长得像，可是你亲口说过的啊！”<br>
-Mon闭上眼睛仔细回想张禹的脸，却是越回想越模糊。原本对张禹还留有的印象，在见过倪宿本人之后，更是忘了个一干二净。<br>
-“毕竟我只见过他两面。而且两次……都不是特别方便的场合。”<br>
-俞溪桥紧紧盯着电脑屏幕里，那张摇晃着的，属于倪宿的，孩子气的脸。视频播放结束，画面一暗，正好映出他背后悬挂的那幅山水画，上面还有名家亲题的藏头诗：<br>
-半烟溺半雨，过溪过桥去。<br>
-谁言鱼水欢，水竭鱼枯鳞。<br>
-俞溪桥缓缓问道：“听说洪先生是个念旧情的人，他应该还留着张禹的遗物吧。”<br>
-Mon一惊，问：“你是想……”<br>
-两人交换后眼神后，Mon心领神会地一笑，拍了拍俞溪桥的肩膀，大声说道：“桥大经纪居然现在才走上犯罪的道路，这大好年华还真是蹉跎了。寻找遗物的事交给我，绝对能提取到他的指纹，你就负责把指纹……”<br>
-俞溪桥将电脑关闭后站起身，胸有成竹地保证道：“留在一个能被官秋山发现的地方。”<br>
-这样一来，张禹不就“活”了吗？</p>
-<h1 id="-2"></h1>
-<p>“秋警官，你认识他？”<br>
-官秋山点头，又看着地上那具遗体，面带愧疚地说：“鬣狗是我卧底时期跟过的老大，对我很好。”<br>
-痕迹检查科的人正蹲在地上检查尸体，突然自言自语地说道：“杀人习惯也会突然改变的吗？”<br>
-“什么改变了？”<br>
-“我们以前不是讨论过，洪京墨为什么在杀人时非要把所有子弹都用光不可吗？我说，可能是因为第一次杀人时年纪太小，对方又是体格健壮的成年人，所以他只敢在对方死后再进行报复性虐待，后来就演变成为了一种虐尸的习惯，其实是一种自卑心……但是这回情况完全不同，死者身上的轻伤全是生前留下的，除了颅骨这一处致命伤，和后背肌肉严重撕裂的一道贯穿伤，死后完全没有……”<br>
-“他不再害怕背叛了。”官秋山打断道。<br>
-“对啊。可能不知道从什么时候起，他只需要一颗子弹就能……”<br>
-“杀他的凶器是刀吗？”官秋山又打断道。<br>
-“嗯？不是，我看他头发丝里还有后背的伤口里，都夹带着一些碎瓷片，初步怀疑是先被瓷器重击头部，然后又被碎片插进后背里。庆幸是瓷器吧，很容易就能留下指纹来。虽然肯定不会是洪京墨的，但能找到他手下人的指纹……”<br>
-“我看未必……咳咳咳……”鹿游原一路咳嗽着一路朝警戒线走近，说道：“这个行李箱曾被掩埋，和挖掘，又被Han公子遗弃在垃圾箱中。他单单知道会有清洁工来清理，却不知道还有许多无家可归的流浪汉在此觅食。一个晚上过去了，可能就被某个流浪汉当作宝贝似的捡了出来，擦拭干净，看里面还有没有值钱东西。结果打开一看，咳咳咳……却只发现一具血淋林的尸体，吓得立刻将行李箱扔在了街上，只顾得逃命去了。再之后……就是某个不知天高地厚的臭小子开着车，连人带行李箱，通通像棉花糖一样被卷进车底……”<br>
-Han两手向下一摊，双眼向上一翻，“能把犯罪故事讲得这么细致，不去当推理小说家真是可惜了。”<br>
-“Han公子喜欢看推理小说吗？我因为法务部工作的关系认识不少名作家，前几天还和温老在电话会议中聊起‘犯罪三部曲’……”<br>
-“三流作家而已，我是记者，只喜欢看得见摸得着的新闻报道。”<br>
-“看得见摸得着是吗？咳咳咳……”鹿游原掩面咳嗽几声后，又问道：“你在警局说，自己没敢打开行李箱是因为从没见过尸体，又说自己当年报道中森施予自杀案是证据确凿。难道不曾亲眼目睹，就敢报道说他因自杀身亡？当年欠俞溪桥一万美金的债务还清了吗？现在就敢随意搬动尸体破坏现场……咳咳……妨碍司法公正！咳咳咳咳……”<br>
-听见阵阵咳嗽声，官秋山不由地眉头紧皱，心里担忧地想，这位法律顾问看起来像是身患喘症，要是骂到急火攻心时突然喷出了一口鲜血……弄脏现场的话可就更难办了。<br>
-这时候，Han察觉自己的手机一震，他掏出一看，是有人给他传来了一封简讯。</p>
-<p>【如果中森施予自杀亡故，那我现在看到的人是谁？】</p>
-<p>Han全身紧紧绷着，拇指僵硬地一下下摁着手机键盘，直到能看见这句话后面完整的照片。<br>
-在照片里，中森施予独自坐在餐桌旁边。一身的暹罗香火纱，被桌上的烛光照亮后，整个人像是一枚触手生温的菩萨玉坠，美不胜收。</p>
-<h1 id="-3"></h1>
-<p>中森施予切开鲜嫩生腐皮，用叉子挑出藏匿其中的野藕和山药，端详着，问道：“Q，你说我现在明明一无所有，还欠下了好大一笔医药费要还，应该比两年前更想死才对吧，可我为什么……居然还是想要活下去呢？”<br>
-中森施予左手突然一抖，餐叉“当啷”一声磕在餐盘上，又弹到了地上，中森施予伸出右手，放在餐桌上假装弹了几个音节的样子，抬头又是一笑：“医生你看看我，我现在不但浑身上下哪里都在疼。好像手也在疼，听说我以前是弹钢琴的，但只剩下一只手的话，好像没法弹吧。”<br>
-“该缝合的已经缝合，该上药的已经上药。你可能是心理影响了生理，不去想就不疼。”<br>
-“看来我得再去一次精神科，再开一点治心病的药吃？”<br>
-“你需要的不是吃药，而是休息。”<br>
-“人死后自会长眠，那么生时再忙碌一点也无妨吧。”中森施予说完，冲着医生眨了眨眼，用日语恭恭敬敬道了一声谢后，又换成中文，说：“其实我这个人没读过什么书，更没有什么英雄梦想，现在更是……”中森施予敲了敲头，继续说：“脑袋空空，连记忆都没有了啊。但我不知道为什么，我今天耳边突然响起了一句话，我听见一个很年迈的声音对我说，你若愿意的话，何不以悠悠之生立一技之长，而贞静自守。虽然我不根本记得我父亲是谁了，但是会对我说这种话的人，应该是我父亲吧，不然我为什么会学钢琴呢？”<br>
-医生一言不发，低着头慢条斯理地将野藕切成絮状，山药切成泥状，盘中的素餐，尽情地被刀俎享用了。<br>
-中森施予看了一眼面前做工精致但食之无味的素餐，叹气道：“Q，我本来就没几年时间了，真不想像出家人一样活着啊。”<br>
-“GVHD是骨髓移植手术中最严重的并发症，你贪一时口腹之欲不要紧，但要是从饮食上感染细菌，未免得不偿失。”<br>
-中森施予俯下身子捡起刚刚掉落在地的餐叉，在准备拿去消毒时，突然又回头问道：“医生，你见过张禹吗？”<br>
-“有幸见过一面。”<br>
-“他到底是个什么人啊？”<br>
-“是一个除了正义，什么都能出卖的孩子。”<br>
-“他还真是个好孩子啊。”<br>
-“是吗？”性格如陈年积雪一般冷清的医生，此时难得露出了一个微笑，笑容里却满满都是嘲讽“我不觉得。”</p>
+      <div class="post-body">
+        
+        
+          <p>这一天是1月1日，我有一个不敢说与旁人听的秘密：我将要结婚。尽管我只见过他一面，但我想这个人应该——也是真心爱我。</p>
 
-            </div>
-            
-            
-              <div class="post-footer">
-  <ul class="post-copyright">
-    <li class="post-copyright-author">
-      <strong class="language" data-lan="author">本文作者：</strong>
-      Fooogy Homicide
-    </li>
-    <li class="post-copyright-link">
-      <strong class="language" data-lan="link">本文链接：</strong>
-      <a href="https://fooogy.github.io/post/ge-an-guan-di-er-shi-yi-zhang/" title="隔岸观·第二十一章">https://fooogy.github.io/post/ge-an-guan-di-er-shi-yi-zhang/</a>
-    </li>
-    <li class="post-copyright-license">
-      <strong class="language" data-lan="copyright">版权声明： </strong>
-      本博客所有文章除特别声明外，均采用<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i> BY-NC-SA</a> 许可协议。转载请注明出处！
-    </li>
-  </ul>
-  <div class="tags">
-    
-  </div>
-  <div class="nav">
-    <div class="nav-prev">
-      
-        <i class="fa fa-chevron-left"></i>
-        <a class="nav-pc-next" title="隔岸观·第二十二章" href="https://fooogy.github.io/post/ge-an-guan-di-er-shi-er-zhang/">隔岸观·第二十二章</a class="nav-pc-next">
-        <a class="nav-mobile-prev" title="隔岸观·第二十二章" href="https://fooogy.github.io/post/ge-an-guan-di-er-shi-er-zhang/">上一篇</a>
+        
+        
+        <div class="post-button text-center">
+          <a class="btn language" data-lan="read-more" href="https://fooogy.github.io/post/ge-an-guan-qian-yan/" rel="contents">
+            阅读全文 »
+          </a>
+        </div>
+        
+      </div>
       
     </div>
-    <div class="nav-next">
-      
-        <a class="nav-pc-next" title="隔岸观·第二十章" href="https://fooogy.github.io/post/ge-an-guan-di-er-shi-zhang/">隔岸观·第二十章</a>
-        <a class="nav-mobile-next" title="隔岸观·第二十章" href="https://fooogy.github.io/post/ge-an-guan-di-er-shi-zhang/">下一篇</a>
-        <i class="fa fa-chevron-right"></i>
-      
-    </div>
-  </div>
-</div>
-            
-            
+  </article>
   
-
-          </div>
+            
+            
+<div class="page bg-color">
+  <ul class="pagination-ul">
+    
+      <li class="pagination-dir">
+        <a href="https://fooogy.github.io/page/4/">
+          <i class="fa fa-angle-left"></i>
+        </a>
+      </li>
+    
+    
+      
+        <li class="pagination-li ">
+            <a href="/page/../">
+              1
+            </a>
+        </li>
+      
+        <li class="pagination-li ">
+            <a href="/page/2">
+              2
+            </a>
+        </li>
+      
+        <li class="pagination-li ">
+            <a href="/page/3">
+              3
+            </a>
+        </li>
+      
+        <li class="pagination-li ">
+            <a href="/page/4">
+              4
+            </a>
+        </li>
+      
+        <li class="pagination-li pagination-active">
+            <a href="/page/5">
+              5
+            </a>
+        </li>
+      
+    
+    
+  </ul>
+</div>
+          </section>
         </div>
       </div>
     </div>
@@ -835,223 +546,6 @@ Han两手向下一摊，双眼向上一翻，“能把犯罪故事讲得这么�
     }
   })
 </script>
-    <div class="reward-mask" style="display: none;">
-  <div class="reward-relative">
-    <span class="close" aria-hidden="true">x</span>
-    <div class="reward-body">
-      <h2>感谢您的支持，我会继续努力的!</h2>
-      <div class="reward-img-box">
-        <div style="position: relative; width: 140px; height: 140px;">
-          
-          
-          
-        </div>
-      </div>
-      <p class="reward-word">扫码打赏，你说多少就多少</p>
-      <p class="reward-tip">打开微信扫一扫，即可进行扫码打赏哦</p>
-    </div>
-    <div class="bottom">
-      
-      
-    </div>
-  </div>
-</div>
-<style>
-  .reward-mask {
-    position: fixed;
-    z-index: 99999;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: #00000054;
-  }
-
-  .reward-relative {
-    position: relative;
-    width: 480px;
-    text-align: center;
-    margin: 0 auto;
-    border-radius: 5px;
-    background-color: #fff;
-    top: 50%;
-    margin-top: -205px;
-  }
-
-  .reward-relative .close {
-    position: absolute;
-    right: 10px;
-    font-weight: normal;
-    font-size: 16px;
-    color: #929292;
-  }
-
-  .reward-body {
-    padding: 40px 20px 20px;
-  }
-
-  .bottom {
-    display: flex;
-  }
-
-  .reward-btn {
-    text-align: center;
-  }
-
-  .reward-btn-text {
-    display: inline-block;
-    cursor: pointer;
-    width: 60px;
-    height: 60px;
-    line-height: 60px;
-    border-radius: 50%;
-    background-color: #ff9734;
-    color: #FFF;
-    margin-top: 20px;
-  }
-
-  .pay-text {
-    margin-top: 10px;
-    padding: 10px;
-    flex: 1;
-    transition: all .2s linear;
-  }
-
-  .pay-text:hover {
-    background-color: #a5a5a536;
-  }
-
-  .reward-body h2 {
-    padding-top: 10px;
-    text-align: center;
-    color: #a3a3a3;
-    font-size: 16px;
-    font-weight: normal;
-    margin: 0 0 20px;
-  }
-
-  .reward-body h2:after,
-  .reward-body h2:before {
-    font-family: Arial, Helvetica, sans-serif;
-    background: 0 0;
-    width: 0;
-    height: 0;
-    font-style: normal;
-    color: #eee;
-    font-size: 80px;
-    position: absolute;
-    top: 20px;
-  }
-
-  .reward-body h2:before {
-    content: '\201c';
-    left: 50px;
-  }
-
-  .reward-body h2:after {
-    content: '\201d';
-    right: 80px;
-  }
-
-  .reward-img-box {
-    display: inline-block;
-    padding: 10px;
-    border: 6px solid #ea5f00;
-    margin: 0 auto;
-    border-radius: 3px;
-    position: relative;
-  }
-
-  .reward-img {
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    width: 100%;
-    height: 100%;
-  }
-
-  @media (max-width: 767px) {
-    .reward-relative {
-      height: 100%;
-      top: 0px;
-      margin-top: 0;
-      width: auto;
-    }
-
-    .reward-relative .bottom {
-      flex-direction: column;
-    }
-
-    .reward-relative .pay-text {
-      width: 80%;
-      margin: 5px auto;
-      border: 1px solid silver;
-      padding: 6px;
-      border-radius: 4px;
-    }
-
-    .reward-body h2:after {
-      right: 40px;
-    }
-
-    .reward-body h2:after,
-    .reward-body h2:before {
-      font-size: 60px;
-    }
-
-    .reward-body h2:before {
-      left: 20px;
-    }
-  }
-</style>
-<script>
-  !function () {
-    var mask = document.querySelector('.reward-mask');
-    let close = document.querySelector('.reward-relative .close');
-    let rewardBtn = document.querySelector('.reward-btn');
-
-    let zfb = document.querySelector('#zfb'),
-      wx = document.querySelector('#wx'),
-      zfbBtn = document.querySelector('#zfbBtn'),
-      wxBtn = document.querySelector('#wxBtn');
-
-    if (zfbBtn && wxBtn) {
-      zfbBtn.addEventListener('click', () => {
-        window.Velocity(zfb, 'transition.slideLeftIn', {
-          duration: 400
-        });
-        window.Velocity(wx, 'transition.slideRightOut', {
-          display: 'none',
-          duration: 400
-        });
-      });
-
-      wxBtn.addEventListener('click', () => {
-        window.Velocity(wx, 'transition.slideRightIn', {
-          duration: 400
-        });
-        window.Velocity(zfb, 'transition.slideLeftOut', {
-          display: 'none',
-          duration: 400
-        });
-      });
-    }
-
-    rewardBtn.addEventListener('click', (e) => {
-      window.Velocity(mask, 'transition.slideDownIn', {
-        duration: 400
-      })
-    });
-
-    close.addEventListener('click', (e) => {
-      e.preventDefault();
-      window.Velocity(mask, 'transition.slideUpOut', {
-        duration: 400
-      })
-    })
-  }()
-</script>
-
   </div>
 </body>
 
@@ -3541,6 +3035,7 @@ Mon特助对住在95公寓的那一位，颇有了解。是一个名字听起来
     speed: 200
   });
 </script>
+
 
 
 
