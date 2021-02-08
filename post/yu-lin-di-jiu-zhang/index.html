@@ -8,7 +8,7 @@
 <meta name="keywords" content="Gridea静态个人博客">
 <meta name="description" content="Curiosity &amp; Creativity">
 <meta name="theme-color" content="#343a40">
-<title>A Dream of Fooogy</title>
+<title>雨霖瀮 · 第九章 | A Dream of Fooogy</title>
 <link rel="shortcut icon" href="/favicon.ico?v=1612779341050">
 <link rel="stylesheet" href="/media/css/gemini.css">
 <link rel="stylesheet" href="/media/fonts/font-awesome.css">
@@ -38,6 +38,8 @@
 
 
 
+  <meta name="description" content="雨霖瀮 · 第九章" />
+  <meta name="keywords" content="" />
 </head>
 
 <body>
@@ -73,7 +75,7 @@
             
               
             
-            <li class="nav-item nav-item-active">
+            <li class="nav-item ">
               
               
                 <a href="/" target="_self">
@@ -172,486 +174,462 @@
     <div
       class="section-layout gemini ">
       <div class="section-layout-wrapper">
-        <div id="sidebarMeta" class="sidebar">
-    
-<div class="sidebar-wrapper box-shadow-wrapper bg-color">
-  <div class="sidebar-item">
-    <img class="site-author-image right-motion" src="/images/avatar.png"/>
-    <p class="site-author-name">Fooogy Homicide</p>
-    
-    <div class="site-description right-motion">
-      
-      
-      
-        <p>不疯魔不成活</p>
-      
-      
-    </div>
-    
-  </div>
-  <div class="sidebar-item side-item-stat right-motion">
-    <div class="sidebar-item-box">
-      <a href="/archives/">
         
-        <span class="site-item-stat-count">35</span>
-        <span class="site-item-stat-name language" data-lan="article">文章</span>
-      </a>
-    </div>
-    <div class="sidebar-item-box">
-      <a href="">
-        <span class="site-item-stat-count">0</span>
-        <span class="site-item-stat-name language" data-lan="category">分类</span>
-      </a>
-    </div>
-    <div class="sidebar-item-box">
-      <a href="/tags/">
-        <span class="site-item-stat-count">0</span>
-        <span class="site-item-stat-name language" data-lan="tag">标签</span>
-      </a>
-    </div>
+
+<div class="sidebar">
+  
+    <div class="sidebar-box box-shadow-wrapper bg-color right-motion" id="sidebar">
+      
+      <div class="sidebar-body gemini" id="sidebar_body">
+        
+          
+            <div style="opacity: 1;">
+              <div class="toc-box right-motion">
+  <div class="toc-wrapper auto-number no_compress"
+    id="toc_wrapper">
+    <ul class="markdownIt-TOC">
+<li></li>
+<li></li>
+<li></li>
+</ul>
+
   </div>
-  
-    
-  
-  
-
-
 </div>
-</div>
+
 <script>
-  let sidebarMeta = document.querySelector('#sidebarMeta');
-  let scheme = 'gemini';
-  let sidebarWrapper = document.querySelector('.sidebar-wrapper');
-  if (sidebarMeta && (scheme === 'pisces' || scheme === 'gemini')) {
-    document.addEventListener('scroll', function(e) {
-      if (document.scrollingElement.scrollTop > parseInt(sidebarMeta.style.marginTop) + 10) {
-        sidebarWrapper.classList.add('home-sidebar-fixed')
-      } else {
-        sidebarWrapper.classList.remove('home-sidebar-fixed')
+
+  let lastTop = 0, lList = [], hList = [], postBody, lastIndex = -1;
+  let active = 'active-show', activeClass = 'active-current';
+  let tocWrapper = document.querySelector('#toc_wrapper');
+  let tocContent = tocWrapper.children[0];
+  let autoNumber = tocWrapper && tocWrapper.classList.contains('auto-number');
+
+  function addTocNumber(elem, deep) {
+    if (!elem) {
+      return;
+    }
+    let prop = elem.__proto__;
+
+    if (prop === HTMLUListElement.prototype) {
+      for (let i = 0; i < elem.children.length; i++) {
+        addTocNumber(elem.children[i], deep + (i + 1) + '.');
       }
+    } else if (prop === HTMLLIElement.prototype) {
+      // 保存li元素
+      if (elem.children[0] && elem.children[0].__proto__ === HTMLAnchorElement.prototype) {
+        lList.push(elem);
+      }
+      for (let i = 0; i < elem.children.length; i++) {
+        let cur = elem.children[i];
+        if (cur.__proto__ === HTMLAnchorElement.prototype) {
+          if (autoNumber) {
+            cur.text = deep + ' ' + cur.text;
+          }
+        } else if (cur.__proto__ === HTMLUListElement.prototype) {
+          addTocNumber(cur, deep);
+        }
+      }
+    }
+  }
+
+  function removeParentActiveClass() {
+    let parents = tocContent.querySelectorAll('.' + active)
+    parents.forEach(function (elem) {
+      elem.classList.remove(active);
     });
   }
-  </script>
-        <div class="section-box gemini">
-          <section class="section  posts-expand slide-down-in">
-            
-  <article class="post-list-box  post box-shadow-wrapper">
-    <div class="article-wrapper bg-color">
-      <header class="post-header">
-  <h1 class="post-title">
-    <a class="post-title-link" href="https://fooogy.github.io/post/yu-lin-di-san-zhang/">
-      雨霖瀮 · 第二章
-    </a>
-  </h1>
-  <div class="post-meta">
-    
-    <span class="meta-item pc-show">
-      <i class="fa fa-calendar-o"></i>
-      <span class="language" data-lan="publish">发布于</span>
-      <span>2021-01-22</span>
-      <span class="post-meta-divider pc-show">|</span>
-    </span>
-    
-    <span class="meta-item">
-      <i class="fa fa-clock-o"></i>
-      <span>18<span class="language" data-lan="minute">分钟</span></span>
-    </span>
-    <span class="meta-item">
-      <span class="post-meta-divider">|</span>
-      <i class="fa fa-file-word-o"></i>
-      <span>5257<span class="pc-show language" data-lan="words">字数</span></span>
-    </span>
-    
-  </div>
-</header>
-      <div class="post-body">
-        
-        
-          <h1 id=""></h1>
-<p>在小男孩长成男人的过程里，总是先看懂性的电影，再遇到能发生性的人。张禹13岁那一年，恰好反其道而行之。但也不过是被揠苗助长的一生里，最普通不过的某一天。</p>
-<p>一只布满粗茧的手掌举起再落下，台灯映得作业本上的字迹亮了又暗淡，天花板的霉斑粉饰过一遍后又重新长了出来，像是翡翠色的壁纸。官秋山心烦气躁地把笔一甩，作为中六的学生，张禹这些中三的题，他是一道也做不下去了。不知道张禹出去了这么久，和楼上的高才生到底谈的怎么样。莫非是天天在家中泡澡？而浴缸又裂开，让热水都渗了出来？不然为何把自家的天花板浸成一片湿地？郁郁葱葱的样子。<br>
-棠高财自然不是每日沐浴一遍的讲究人。但张禹是。浴缸中也没有热水，光着脚踩进去，嘴唇立即就会冻得颤动。棠高财看见了，只觉得好笑，这个小孩今天大概是被自己吓住了，居然连哭都不会了。张禹只是知道，孩子的哭声就是一盆脏水，泼出去，无论落进楼下哪家男主人的耳朵里，都只惹人一身嫌。<br>
-没有人告诉过他这件事，可他就是知道。<br>
-棠高财掬起一捧水，浇在张禹的腿上，小腿抖得停不下来。水在身上慢慢变温，变烫，再流下来时，被染成了微茫的红色，重新融没在水里。</p>
 
-        
-        
-        <div class="post-button text-center">
-          <a class="btn language" data-lan="read-more" href="https://fooogy.github.io/post/yu-lin-di-san-zhang/" rel="contents">
-            阅读全文 »
-          </a>
-        </div>
+  function addActiveClass(index) {
+    if (index >= 0 && index < hList.length) {
+      lList[index].classList.add(activeClass);
+    }
+  }
+
+  function removeActiveClass(index) {
+    if (index >= 0 && index < hList.length) {
+      lList[index].classList.remove(activeClass);
+    }
+  }
+
+  function addActiveLiElemment(elem, parent) {
+    if (!elem || elem === parent) {
+      return;
+    } else {
+      if (elem.__proto__ === HTMLLIElement.prototype) {
+        elem.classList.add(active);
+      }
+      addActiveLiElemment(elem.parentElement, parent);
+    }
+  }
+
+  function showToc() {
+    if (tocWrapper) {
+      postBody = document.querySelector('#post_body');
+      for (let i = 0; i < postBody.children.length; i++) {
+        if (postBody.children[i].__proto__ === HTMLHeadingElement.prototype) {
+          hList.push(postBody.children[i]);
+        }
+      }
+      if (tocWrapper.classList.contains('compress')) {
+        tocContent.classList.add('closed');
+      } else if (tocWrapper.classList.contains('no_compress')) {
+        tocContent.classList.add('expanded');
+      } else {
+        if (hList.length > 10) {
+          active = 'active-hidden'
+          tocContent.classList.add('closed');
+        } else {
+          tocContent.classList.add('expanded');
+        }
+      }
+    }
+  }
+
+  (function () {
+    // 处理不是从#一级标题开始目录
+    if (tocContent.children.length === 1 && tocContent.children[0].__proto__ === HTMLLIElement.prototype) {
+      let con = tocContent.children[0].children[0];
+      tocContent.innerHTML = con.innerHTML;
+    }
+    let markdownItTOC = document.querySelector('.markdownIt-TOC');
+    let innerHeight = window.innerHeight;
+    markdownItTOC.style = `max-height: ${innerHeight - 80 > 0 ? innerHeight - 80 : innerHeight}px`
+    addTocNumber(tocContent, '');
+  })();
+
+  document.addEventListener('scroll', function (e) {
+    if (lList.length <= 0) {
+      return;
+    }
+    let scrollTop = document.scrollingElement.scrollTop + 10;
+    let dir;
+
+    if (lastTop - scrollTop > 0) {
+      dir = 'up';
+    } else {
+      dir = 'down';
+    }
+
+    lastTop = scrollTop;
+    if (scrollTop <= 0) {
+      if (lastIndex >= 0 && lastIndex < hList.length) {
+        lList[lastIndex].classList.remove(activeClass);
+      }
+      return;
+    }
+
+    let current = 0, hasFind = false;
+    for (let i = 0; i < hList.length; i++) {
+      if (hList[i].offsetTop > scrollTop) {
+        current = i;
+        hasFind = true;
+        break;
+      }
+    }
+    if (!hasFind && scrollTop > lList[lList.length - 1].offsetTop) {
+      current = hList.length - 1;
+    } else {
+      current--;
+    }
+    if (dir === 'down') {
+      if (current > lastIndex) {
+        addActiveClass(current);
+        removeActiveClass(lastIndex)
+        lastIndex = current;
+        removeParentActiveClass();
+        lList[current] && addActiveLiElemment(lList[current].parentElement, tocContent);
+      }
+    } else {
+      if (current < lastIndex) {
+        addActiveClass(current);
+        removeActiveClass(lastIndex);
+        lastIndex = current;
+        removeParentActiveClass();
+        lList[current] && addActiveLiElemment(lList[current].parentElement, tocContent);
+      }
+    }
+  });
+
+
+  window.addEventListener('load', function () {
+    showToc();
+    document.querySelector('#sidebar').style = 'display: block;';
+    tocWrapper.classList.add('toc-active');
+    setTimeout(function () {
+      if ("createEvent" in document) {
+        let evt = document.createEvent("HTMLEvents");
+        evt.initEvent("scroll", false, true);
+        document.dispatchEvent(evt);
+      }
+      else {
+        document.fireEvent("scroll");
+      }
+    }, 500)
+  })
+
+</script>
+            </div>
+          
         
       </div>
-      
     </div>
-  </article>
-
-  <article class="post-list-box  post box-shadow-wrapper">
-    <div class="article-wrapper bg-color">
-      <header class="post-header">
-  <h1 class="post-title">
-    <a class="post-title-link" href="https://fooogy.github.io/post/yu-lin-di-yi-zhang/">
-      雨霖瀮 · 第一章
-    </a>
-  </h1>
-  <div class="post-meta">
-    
-    <span class="meta-item pc-show">
-      <i class="fa fa-calendar-o"></i>
-      <span class="language" data-lan="publish">发布于</span>
-      <span>2021-01-20</span>
-      <span class="post-meta-divider pc-show">|</span>
-    </span>
-    
-    <span class="meta-item">
-      <i class="fa fa-clock-o"></i>
-      <span>16<span class="language" data-lan="minute">分钟</span></span>
-    </span>
-    <span class="meta-item">
-      <span class="post-meta-divider">|</span>
-      <i class="fa fa-file-word-o"></i>
-      <span>4597<span class="pc-show language" data-lan="words">字数</span></span>
-    </span>
-    
-  </div>
-</header>
-      <div class="post-body">
-        
-        
-          <h1 id=""></h1>
-<p>俞溪桥第一次见倪宿时，是在1995年的9月9日，美国。当时他陪中森施予去洛杉矶开演奏会。到了夜里，中森施予跟洛杉矶当地的乐团提议，所有人都去一家通宵营业的爵士乐酒吧庆功，一醉方休。那也是中森施予第一次见到倪宿。<br>
-中森施予那时候还很年轻，自带一种蛊惑人心的气质。尽管五年后的他也没有多老。但他那时候自以为永远年轻，永远都不会和历尽沧桑、饱经风霜这种词扯上关系。就连中森施予自己，都觉得自己命太好，这些年做什么都顺风顺水，早晚遭天妒，要将眼下的种种好处，连本带利，全都收回去。举起酒杯，头一仰、喉咙一滚、酒杯一落。因为点的都是烈酒，中森施予实在难以下咽，就重新吐到了杯子中，他向来不难为自己，向来率性而活。<br>
-酒和人，中森施予都喜欢分成清烈和浑臭两类。这一杯，就属于后者。<br>
-“听口音，先生是南方人？”</p>
-
-        
-        
-        <div class="post-button text-center">
-          <a class="btn language" data-lan="read-more" href="https://fooogy.github.io/post/yu-lin-di-yi-zhang/" rel="contents">
-            阅读全文 »
-          </a>
-        </div>
-        
-      </div>
-      
-    </div>
-  </article>
-
-  <article class="post-list-box  post box-shadow-wrapper">
-    <div class="article-wrapper bg-color">
-      <header class="post-header">
-  <h1 class="post-title">
-    <a class="post-title-link" href="https://fooogy.github.io/post/ge-an-guan-di-er-shi-wu-zhang/">
-      隔岸观·第二十五章
-    </a>
-  </h1>
-  <div class="post-meta">
-    
-    <span class="meta-item pc-show">
-      <i class="fa fa-calendar-o"></i>
-      <span class="language" data-lan="publish">发布于</span>
-      <span>2021-01-19</span>
-      <span class="post-meta-divider pc-show">|</span>
-    </span>
-    
-    <span class="meta-item">
-      <i class="fa fa-clock-o"></i>
-      <span>15<span class="language" data-lan="minute">分钟</span></span>
-    </span>
-    <span class="meta-item">
-      <span class="post-meta-divider">|</span>
-      <i class="fa fa-file-word-o"></i>
-      <span>4217<span class="pc-show language" data-lan="words">字数</span></span>
-    </span>
-    
-  </div>
-</header>
-      <div class="post-body">
-        
-        
-          <h1 id=""></h1>
-<p>纽沃德自从那日被Macbeth注射麻醉剂，意识就没清楚过。先是浑浑噩噩地在108号房睡了三天三夜，到了第四天，意识是清醒了些，但却还是继续住着。只因他平日里的食量本就凶猛，如今却一连三天不吃不喝，身形眼见着消减了一圈，虚弱不堪，一站起来便头晕眼花，半步都移动不得。在牛排龙虾轮着番招待了一天之后，又睡了一夜的安稳觉，终于在1999年的年末，12月31日这天白天，在Han和Macbeth两个人的搀扶下，一步一蹒跚地回到了二楼自己房间中。然而邮轮之上有关Orville的谣言，因纽沃德此事越传越汹涌。名声二字，维护好需要十年如一日地洁身自好，可想要毁坏时，却不费吹灰之力。<br>
-“怎么办？怎么办？这房门我算是出不去了。”Han焦虑地用枕头捂住脸，然后一下下往墙上用力撞着，似乎能缓解痛苦似的。<br>
-“还能怎么办？以死明志？”Orville似乎没收到谣言任何影响，依然是在各种异样的眼神凝视下，日日给辛蔓夫妇拍摄，夜夜将照片在房中洗好。虽说两人的婚姻就像朵花似的，说萎便萎了，但这恰恰也成了Orville继续拍照的理由。<br>
-一段无以为继的婚姻，用相片立碑，最合适不过。</p>
-
-        
-        
-        <div class="post-button text-center">
-          <a class="btn language" data-lan="read-more" href="https://fooogy.github.io/post/ge-an-guan-di-er-shi-wu-zhang/" rel="contents">
-            阅读全文 »
-          </a>
-        </div>
-        
-      </div>
-      
-    </div>
-  </article>
-
-  <article class="post-list-box  post box-shadow-wrapper">
-    <div class="article-wrapper bg-color">
-      <header class="post-header">
-  <h1 class="post-title">
-    <a class="post-title-link" href="https://fooogy.github.io/post/yu-lin-di-er-zhang/">
-      隔岸观·第二十四章
-    </a>
-  </h1>
-  <div class="post-meta">
-    
-    <span class="meta-item pc-show">
-      <i class="fa fa-calendar-o"></i>
-      <span class="language" data-lan="publish">发布于</span>
-      <span>2021-01-16</span>
-      <span class="post-meta-divider pc-show">|</span>
-    </span>
-    
-    <span class="meta-item">
-      <i class="fa fa-clock-o"></i>
-      <span>17<span class="language" data-lan="minute">分钟</span></span>
-    </span>
-    <span class="meta-item">
-      <span class="post-meta-divider">|</span>
-      <i class="fa fa-file-word-o"></i>
-      <span>4817<span class="pc-show language" data-lan="words">字数</span></span>
-    </span>
-    
-  </div>
-</header>
-      <div class="post-body">
-        
-        
-          <h1 id=""></h1>
-<p>雪莱号二楼酒廊。<br>
-“法国让我知道了，即便我拿着笔，我也不是画家。日本让我知道，即便手死死守住方向盘，我不是开不好赛车。现在我上了这艘船，发现我的伤心地，又多了一处。帅哥，你尝一口，看看是不是我舌头出了问题。这个酒，怎么让我越喝越不痛快呢？”<br>
-伯也斯满脸通红，不见外地举起自己的酒杯，直接递到了修伟唇边。修伟头迅速撇开，然后手指不动声色推开酒杯，婉言道：“谁让你不痛快？”<br>
-伯也斯将杯中剩下的最后一点酒，一饮而尽，然后垂头丧气地趴下。他总是这样，偷偷恋慕着某人，又嫉妒着某人，只好把心事酗在酒里。脸埋在手臂里，声音像破铜砸向烂铁，两个一起被人沉海般，闷闷地传出来：“你已经长这样，还当什么演员？你就应该去傍富婆！你跟任何一个女人求婚，他都会答应的。辛蔓怎么样，你中意吗？”修伟好不尴尬，他生平从未见过如此无厘头的人。</p>
-
-        
-        
-        <div class="post-button text-center">
-          <a class="btn language" data-lan="read-more" href="https://fooogy.github.io/post/yu-lin-di-er-zhang/" rel="contents">
-            阅读全文 »
-          </a>
-        </div>
-        
-      </div>
-      
-    </div>
-  </article>
-
-  <article class="post-list-box  post box-shadow-wrapper">
-    <div class="article-wrapper bg-color">
-      <header class="post-header">
-  <h1 class="post-title">
-    <a class="post-title-link" href="https://fooogy.github.io/post/ge-an-guan-di-er-shi-san-zhang/">
-      隔岸观·第二十三章
-    </a>
-  </h1>
-  <div class="post-meta">
-    
-    <span class="meta-item pc-show">
-      <i class="fa fa-calendar-o"></i>
-      <span class="language" data-lan="publish">发布于</span>
-      <span>2020-12-24</span>
-      <span class="post-meta-divider pc-show">|</span>
-    </span>
-    
-    <span class="meta-item">
-      <i class="fa fa-clock-o"></i>
-      <span>17<span class="language" data-lan="minute">分钟</span></span>
-    </span>
-    <span class="meta-item">
-      <span class="post-meta-divider">|</span>
-      <i class="fa fa-file-word-o"></i>
-      <span>4764<span class="pc-show language" data-lan="words">字数</span></span>
-    </span>
-    
-  </div>
-</header>
-      <div class="post-body">
-        
-        
-          <h1 id=""></h1>
-<p>鸿蒙兄弟电影正式成立后，《雨霖澪》终于确定开机日期为2000年3月19日。制片方天南海北地换了好几番，可男主角倪宿，却始终不曾公开露面。从头到尾众人也只知，原洪京墨特助Mon现已扶摇直上，成为鸿蒙兄弟电影的总经理，就任当日即宣布《雨霖澪》全剧组近日将前往海外拍摄宣传片。鸿蒙兄弟电影为倪宿千金不吝，不但邀请新加坡电视台、香港《新世界周刊》等媒体参与，更争取到泰国京畿警察署的支持，一行人浩浩荡荡，于1999年12月23日，乘坐“雪莱号”前往电影拍摄地。<br>
-“这是您的房间，109号。Macbeth先生，祝您旅途愉快。”<br>
-“谢谢。但这可不是旅游签证，而是工作签证。”<br>
-不是游客，那就应该是受邀参加拍摄的外国记者吧。身穿黑白色制服的客房部女经理嫣然一笑，点头道“那便祝您工作顺利。六点是经济舱用早餐的时间，请您前往餐厅，为我们主厨的英式司康饼提些建议。”<br>
-Macbeth推辞道：“虽然是美国人，但……谢谢。”</p>
-
-        
-        
-        <div class="post-button text-center">
-          <a class="btn language" data-lan="read-more" href="https://fooogy.github.io/post/ge-an-guan-di-er-shi-san-zhang/" rel="contents">
-            阅读全文 »
-          </a>
-        </div>
-        
-      </div>
-      
-    </div>
-  </article>
-
-  <article class="post-list-box  post box-shadow-wrapper">
-    <div class="article-wrapper bg-color">
-      <header class="post-header">
-  <h1 class="post-title">
-    <a class="post-title-link" href="https://fooogy.github.io/post/ge-an-guan-di-er-shi-er-zhang/">
-      隔岸观·第二十二章
-    </a>
-  </h1>
-  <div class="post-meta">
-    
-    <span class="meta-item pc-show">
-      <i class="fa fa-calendar-o"></i>
-      <span class="language" data-lan="publish">发布于</span>
-      <span>2020-11-21</span>
-      <span class="post-meta-divider pc-show">|</span>
-    </span>
-    
-    <span class="meta-item">
-      <i class="fa fa-clock-o"></i>
-      <span>16<span class="language" data-lan="minute">分钟</span></span>
-    </span>
-    <span class="meta-item">
-      <span class="post-meta-divider">|</span>
-      <i class="fa fa-file-word-o"></i>
-      <span>4604<span class="pc-show language" data-lan="words">字数</span></span>
-    </span>
-    
-  </div>
-</header>
-      <div class="post-body">
-        
-        
-          <p>世上到底是是先有的警察，还是先有的罪犯。<br>
-先有的妓，还是先有的嫖。<br>
-娼妓和嫖客自然是同时有的，在插入之前，在点钱之前，妓还不是妓，嫖也不算嫖。</p>
-<p>那前面那个问题呢？洪先生。<br>
-先有的父亲。</p>
-<p>洪先生回答给张禹说，“警察生出的儿子当警察，死刑犯生出的儿子当死刑犯。”<br>
-如果我爸没死的话，多半也是要这样，满口大道理吧。成年人爱用怪力乱神之说吓唬小孩，却不知道小孩的内心世界，早已住下数不清的妖魔鬼怪，嘲讽声，咒骂声，说教声……声声入耳，每一句话都像一条鞭子，抽打着这些妖魔鬼怪，你要学好，不要学坏。张禹心里不由地嘲笑起洪先生，道：“幸好你没有孩子。”</p>
-
-        
-        
-        <div class="post-button text-center">
-          <a class="btn language" data-lan="read-more" href="https://fooogy.github.io/post/ge-an-guan-di-er-shi-er-zhang/" rel="contents">
-            阅读全文 »
-          </a>
-        </div>
-        
-      </div>
-      
-    </div>
-  </article>
-
-  <article class="post-list-box  post box-shadow-wrapper">
-    <div class="article-wrapper bg-color">
-      <header class="post-header">
-  <h1 class="post-title">
-    <a class="post-title-link" href="https://fooogy.github.io/post/ge-an-guan-di-er-shi-yi-zhang/">
-      隔岸观·第二十一章
-    </a>
-  </h1>
-  <div class="post-meta">
-    
-    <span class="meta-item pc-show">
-      <i class="fa fa-calendar-o"></i>
-      <span class="language" data-lan="publish">发布于</span>
-      <span>2020-11-19</span>
-      <span class="post-meta-divider pc-show">|</span>
-    </span>
-    
-    <span class="meta-item">
-      <i class="fa fa-clock-o"></i>
-      <span>15<span class="language" data-lan="minute">分钟</span></span>
-    </span>
-    <span class="meta-item">
-      <span class="post-meta-divider">|</span>
-      <i class="fa fa-file-word-o"></i>
-      <span>4259<span class="pc-show language" data-lan="words">字数</span></span>
-    </span>
-    
-  </div>
-</header>
-      <div class="post-body">
-        
-        
-          <p>官秋山没想到，Macbeth也会全然不顾法国泰国两国时差的存在，在自己刚洗漱完毕准备换睡衣歇下时，就被对方的一同来电吵到睡意全无。<br>
-“秋！多亏了那个虚伪的美国政客有定期浏览色情视频的癖好！我在追查他的邮件往来时，居然找到了张禹的线索！”<br>
-“什么线索？”<br>
-“我起初只是怀疑这名政客和洪京墨有某种秘密交易，但是因为账户上根本看不出来什么，我就只能默默窃听着手机通话做记录。这是他今天下午5点32分，在洛杉矶的一家餐厅用餐时拨出的两通电话，你打开邮箱听一遍。”<br>
-官秋山连忙从床铺上翻身滚下来，坐在办公桌前打开电脑。然而认真听过一遍后，不由得失望，似乎只是两人普通的问候。Macbeth将音频调到最高音量后，又嘱咐官秋山再仔细听一遍。音频第二遍播放时，官秋山闭上眼睛沉下心来，突然瞳孔一震，在二人的交谈中，他好像听到了一声惨叫。<br>
-“秋！我和你一样！我当时也以为声音一定是来自洪京墨方。但在我调出了那家餐厅的监控录像后，我发现他只是按照往日习惯，一边吃饭，一边使用手提电脑观看色情影片而已，这一声尖叫之后，他也迅速把音量调的更低，完全超出了窃听器能够捕捉的限度。时间紧张，监控录像的画面清晰度我只能处理成这样，你再好好看看吧。”<br>
-“那不是张禹。”</p>
-
-        
-        
-        <div class="post-button text-center">
-          <a class="btn language" data-lan="read-more" href="https://fooogy.github.io/post/ge-an-guan-di-er-shi-yi-zhang/" rel="contents">
-            阅读全文 »
-          </a>
-        </div>
-        
-      </div>
-      
-    </div>
-  </article>
   
-            
-            
-<div class="page bg-color">
-  <ul class="pagination-ul">
-    
-      <li class="pagination-dir">
-        <a href="https://fooogy.github.io/">
-          <i class="fa fa-angle-left"></i>
-        </a>
-      </li>
-    
-    
-      
-        <li class="pagination-li ">
-            <a href="/page/../">
-              1
-            </a>
-        </li>
-      
-        <li class="pagination-li pagination-active">
-            <a href="/page/2">
-              2
-            </a>
-        </li>
-      
-        <li class="pagination-li ">
-            <a href="/page/3">
-              3
-            </a>
-        </li>
-      
-        <li class="pagination-li ">
-            <a href="/page/4">
-              4
-            </a>
-        </li>
-      
-        <li class="pagination-li ">
-            <a href="/page/5">
-              5
-            </a>
-        </li>
-      
-    
-    
-      <li class="pagination-dir">
-        <a href="/page/3">
-          <i class="fa fa-angle-right"></i>
-        </a>
-      </li>
-    
-  </ul>
 </div>
-          </section>
+<script>
+  const SIDEBAR_TITLE_ACTIVE = 'sidebar-title-active';
+  const SIDEBAR_BODY_ACTIVE = 'sidebar-body-active';
+  const SLIDE_UP_IN = 'slide-up-in';
+
+  let sidebar = document.querySelector('#sidebar'),
+  tocSideBar = document.querySelector('#tocSideBar'),
+  metaSideBar = document.querySelector('#metaSideBar'),
+  postToc = document.querySelector('#post_toc'),
+  postSiteMeta = document.querySelector('#post_side_meta'),
+  sidebarTitle = document.querySelector('.sidebar-title'),
+  sidebarBody = document.querySelector('#sidebar_body');
+
+  tocSideBar && tocSideBar.addEventListener('click', (e) => {
+    toggleSidebar(e);
+  });
+
+  metaSideBar && metaSideBar.addEventListener('click', (e) => {
+    toggleSidebar(e);
+  });
+
+  function toggleSidebar(e) {
+    let currentTitle = document.querySelector("."+SIDEBAR_TITLE_ACTIVE);
+    if (currentTitle == e.srcElement) {
+      return ;
+    }
+    let current, showElement, hideElement;
+    if (e.srcElement == metaSideBar) {
+      showElement = postSiteMeta;
+      hideElement = postToc;
+    } else if (e.srcElement == tocSideBar){
+      showElement = postToc;
+      hideElement = postSiteMeta;
+    }
+    currentTitle.classList.remove(SIDEBAR_TITLE_ACTIVE);
+    e.srcElement.classList.add(SIDEBAR_TITLE_ACTIVE);
+
+    window.Velocity(hideElement, 'stop');
+    window.Velocity(hideElement, 'transition.slideUpOut', {
+      display: 'none',
+      duration: 200,
+      complete: function () {
+        window.Velocity(showElement, 'transition.slideDownIn', {
+          duration: 200
+        });
+      }
+    })
+    hideElement.classList.remove(SIDEBAR_BODY_ACTIVE);
+    showElement.classList.add(SIDEBAR_BODY_ACTIVE);
+  }
+
+  postToc && postToc.addEventListener('transitionend', function() {
+    this.classList.remove(SLIDE_UP_IN);
+  });
+
+  if (sidebarBody) {
+    if (sidebarBody.classList.contains('pisces') || sidebarBody.classList.contains('gemini')) {
+      let hasFix = false;
+      let scrollEl = document.querySelector('.main-continer');
+      let limitTop = document.querySelector('#nav_ul').children.length * 42 + 162;
+      window.addEventListener('scroll', function(e) {
+        if (document.scrollingElement.scrollTop >= limitTop) {
+          if (!hasFix) {
+            sidebar.classList.add('sidebar-fixed');
+            hasFix = true;
+          }
+        } else {
+          if (hasFix) {
+            sidebar.classList.remove('sidebar-fixed');
+            hasFix = false;
+          }
+        }
+      });
+    }
+  }
+  
+</script>
+        <div class="section-box box-shadow-wrapper">
+          <div class="section bg-color post post-page">
+            <header class="post-header">
+  <h1 class="post-title">
+    <a class="post-title-link" href="https://fooogy.github.io/post/yu-lin-di-jiu-zhang/">
+      雨霖瀮 · 第九章
+    </a>
+  </h1>
+  <div class="post-meta">
+    
+    <span class="meta-item pc-show">
+      <i class="fa fa-calendar-o"></i>
+      <span class="language" data-lan="publish">发布于</span>
+      <span>2021-02-08</span>
+      <span class="post-meta-divider pc-show">|</span>
+    </span>
+    
+    <span class="meta-item">
+      <i class="fa fa-clock-o"></i>
+      <span>15<span class="language" data-lan="minute">分钟</span></span>
+    </span>
+    <span class="meta-item">
+      <span class="post-meta-divider">|</span>
+      <i class="fa fa-file-word-o"></i>
+      <span>4181<span class="pc-show language" data-lan="words">字数</span></span>
+    </span>
+    
+    
+    
+    <span id="/post/yu-lin-di-jiu-zhang/" data-flag-title="雨霖瀮 · 第九章" class="meta-item pc-show leancloud_visitors">
+      <span class="post-meta-divider">|</span>
+      <i class="fa fa-eye"></i>
+      <span><span class="language" data-lan="view">浏览量</span>：<span class="leancloud-visitors-count"></span></span>
+    </span>
+    
+  </div>
+</header>
+            <div class="post-body next-md-body" id="post_body">
+              <h1 id=""></h1>
+<p>站在山海大酒店的大堂里，Han深吸一口气，五脏六腑内便像是有暗香浮动，自在得，手脚都不知该如何摆放才是好。于是对欧阳骞这样说道：“没想到圣涅岛上，居然也有一个山海大酒店。洪京墨新建的那一家和它比起来，不够阔气，又阴森森的，反倒像是个赝品了。”<br>
+新的，本来就该是赝的。欧阳骞默默在心里回道。<br>
+酒店的工作人员食指竖在嘴唇中间，发出了“嘘——”的声音，又紧张地提醒Han道：“虽然监控室现在没人，但你说话还是给我小声点啊。我可是背着经理，偷偷带你们两个进来的。”<br>
+Han双手捧着一个大礼盒，但在大礼盒之上，还放着一个更为小巧玲珑的礼盒。等走到总统套房门前，工作人员开门后，欧阳骞将小礼盒双手交给工作人员，Han笑着解释道：<br>
+“这是我和我们家演员的一点心意。谢谢您给我们行的方便，我们把礼物放在洪先生房间就走。”<br>
+工作人员打开礼盒，发现是一对金光闪闪的耳环，设计别致，又像是价值不菲的样子，顿时心花怒放，对Han和欧阳骞的前程也信口开河地祝福道：“你家演员长得这么好，只要没有走错路，一定能成为下一个中森施予的。”<br>
+“借您吉言。”Han笑嘻嘻地合上门后，将礼盒放下，拆开，拿出了一台相机，恨不得把总统套房的每一个角落都给拍下。欧阳骞跟着Han一边走，一边扫视四周的狼藉，确然是一副入室抢劫的样子。洪京墨的衣物全都散落在地上，却有好几件，是折叠整齐的，看来绑匪是清空洪京墨的行李箱后，再用行李箱来藏匿钞票和中森施予，然后在众目睽睽之下，扬长而去的。</p>
+<p>Han看着相机里留下的图，若有所思地回忆道：“洪京墨之前搬运鬣狗尸体，用的也是行李箱。但这次却用了两个……中森施予不会是被分尸了吧！”Han慌张地确认了好几遍，屋中确实没有血迹和刀痕，才放了心。<br>
+行李箱？欧阳骞突然笑出声，对着Han说：“我们走吧。”<br>
+Han想不明白，两人是花了大价钱行贿工作人员才进来的，居然待不到一分钟就要离开？事发之后，俞溪桥甚至都不敢报警，生怕影响了电影的进度。洪京墨昏迷的事，Mon也一直藏着掖着，不曾外传。所以酒店的工作人员，才会堂而皇之地放两人进来。因为在他们心中，山海大酒店本就无事发生。这新闻如此惊天动地，却又如此无声无息，怎能不继续查下去？问道：“不查中森施予被绑架的事吗？”<br>
+欧阳骞：“他没被绑架。”<br>
+Han：“怎么会？我们不是打听过了吗？酒店的人看见‘中森施予’大摇大摆从正门离开时，穿着一身奔丧似的白西装，又带着一副招摇的大墨镜。那人不近视，绝对不是中森施予。”<br>
+“可在房间里，依然没有眼镜。”欧阳骞此时已经走到门口，手握着门把手，问道：“你见过先给人质好好戴上眼镜，再打晕装箱的绑匪吗？”<br>
+Han懊悔地敲着自己的头，将相机重新藏进礼盒后，直接摆出一副上当受骗的脸色：“原来又是他自导自演的一场戏。算了……他没出事就好。我们去查倪宿案吧。”<br>
+欧阳骞摇摇头，刚想出言解释，就听见手机响了，低头一看，是城市警察局刑事侦查科的耑清。大概是去医院没找见欧阳骞本人，只好电话联系，约定一个确定的问话地点和时间。欧阳骞直接将手机递给Han，Han接过电话，开口道：“警察叔叔好。我这边还有点事没办完，要不要你再多点几杯咖啡，喝完欧阳骞就过去见你了。”<br>
+欧阳骞被这一番话逗得笑出了声，笑过之后转念一想，可能让Han和警察待在一起，比和自己一起查案要更安全。便让Han先自己去和耑清见面，说清楚雪莱号的情况，自己有两个不得不先见上一面的人。</p>
+<p>鹿游原正坐在一家书店的台阶之上，膝盖上放着一本书，内容是《论圣涅岛的民主》，著者姓名是：辛东道。他读得津津有味，殊不知自己就是欧阳骞想要见的人。欧阳骞慢步走来，在书页上印下一层漂亮的阴影，鹿游原抬起头，笑眯眯地对欧阳骞说道：“先生，你挡到我的光了。”<br>
+欧阳骞回头，看了一眼自己身后的山海大酒店，沐浴在日光之下，更显堂皇。欧阳骞伸手压低了帽檐后，说：“是，挡到了你监视他的目光。”<br>
+鹿游原一歪头，用手指着自己的脸，反问：“我？监视谁？”<br>
+“可能是我太缺少想象力，根本想不明白犯罪分子为何总爱玩故地重游的把戏。”欧阳骞坐在鹿游原的身旁，将整个身体都好好的藏匿在树荫下，似乎是在乘凉。鹿游原看了一眼，同样想不明白，这个人明明这么怕热，衣服却又穿得这样多，像是藏着什么秘密在身上。虽然对方立场未明，但犯罪分子的身份都被挑破了，鹿游原便也不好意思再掩饰。用书挡住脸，两只眼睛弯成两道曲线，解释道：“我只是想第一时间知道俞溪桥的筹款进度。但看他忙进忙出一整夜的样子，应该是没戏。”<br>
+欧阳骞朝鹿游原伸出一只手，拇指和食指比量出1厘米的厚度，说：“一万美元叠在一起，大概有这么厚。”然后又伸出另一只手，比量出一百万美元的体积，问：“这么多，又这么重，你要中森施予怎么带走？还是用行李箱？”<br>
+鹿游原将书翻过去一页，抬头看天，仿佛是在看海看地图，手指画了一道曲线，说：“用船。圣涅岛有专帮人偷渡到香港的蛇头。现金我会装进一个背包中，表面铺几层药品，装成走私药品的商人。等他到了香港，要是跑不动了，直接买房买地，做一个再也不用抛头露面的包租公也很好啊。”<br>
+欧阳骞冷笑，道：“如果是鹿游原本人的话，他可不会觉得，买房是条好生路吧。”<br>
+连这个都看出来了吗？真是一点秘密都不留给别人啊。鹿游原朗声大笑，笑得直咳嗽，咳得喘不过气来，捶胸口缓了好一会儿才问：“你都查到什么了啊？”<br>
+欧阳骞说道：“出生地、出生日期、婚育状况、就业经历……你貌似能记得住他所有事情。可有一件事，你不知道。他就算炒楼炒得倾家荡产，他也不可能去伯乐地产做法务。如果你真是鹿游原本人，那就明明白白的告诉我，他的高等会考分数是多少。”</p>
+<h1 id="-2"></h1>
+<p>刑事情报科的高级督察耑清，和国际刑警Macbeth同时坐在欧阳骞的病房中。病床上，满是耑清特意打印下来给欧阳骞看的照片，是雪莱号上监控录像的截图。<br>
+Macbeth将遇害调酒师的照片放在第一顺位，分析道：“他是第一位遇害人。正因为他的尸体被凶手藏进了冰柜，才吓得原厨师长精神失常。可凶手杀他的动机会是什么？”<br>
+耑清又从文件包中取出一摞文件，递给Macbeth，是船上所有乘客的酒水消费记录。Macbeth粗略地算计了一番，邮轮上，在饮酒方面消费金额最高的人是伯也斯，其次就是自己。莫非调酒师遇害，和自己的职业身份有关？<br>
+耑清在脑中回想起雪莱号的行程图，一边在草纸上画着，一边说道：“雪莱号在泰国湾停靠整整两天两夜，才开往新加坡。第一夜上船的人有洪京墨和私人医生，Mon。第二夜上船的人是倪宿、俞溪桥，还有中森施予。你是在第三天凌晨时才登上的船。”<br>
+厨师长在第三天准备早餐时突发疯病，那就说明调酒师是在前一晚遇害的。Macbeth将倪宿、俞溪桥、中森施予的名字写在调酒师的照片下面，又照着酒水消费记录的日期进行比对，看看这三人究竟有谁曾在二楼酒廊饮酒。<br>
+耑清说：“有一件事很奇怪。在监控录像中，我们能看到，倪宿每日的餐食都有佐餐的红酒。但……”<br>
+Macbeth将酒水消费记录放下，严肃地说道：“洪京墨本人在船上，没有产生任何酒水消费。也就是说，倪宿所喝的酒，是他自带上船的。一直放在冰柜里冷藏，和调酒师的尸体一起。”<br>
+耑清眼睛一眯，总结道：“每日配餐、送餐的侍应生，可能是雪莱号连环杀人案的杀人真凶。但更有可能的是，这人只是杀人真凶，之一。”<br>
+Han这时推门而入，朝耑清点了点头，问候道：“警察叔叔好。”然后完全无视了Macbeth，坐在一张木椅上，离病床上铺陈开来的真相相距甚远。</p>
+<h1 id="-3"></h1>
+<p>“5科A1，1科A2。”<br>
+“除四门必考科目以外，他选择的另外两门选修科目是……”<br>
+“中国历史和英文文学。”<br>
+“这两科任课教师的姓名。”<br>
+“李佳乐和许慧仪。”<br>
+“这两位教师的结婚日期。”<br>
+“1996年的白色情人节。鹿游原还包了很厚的红包做礼金。”<br>
+“孩子的一周岁生日宴在香港哪家酒店举办。”<br>
+“我不知道。”<br>
+“是不知道，还是没背下来？”<br>
+鹿游原双眼暗淡下去，回忆道：“1997年，亚洲金融风暴。鹿游原炒楼炒成负资产，在家中烧炭自杀未遂后，远走泰国散心，和别人再也没有往来。”<br>
+欧阳骞接着他的话继续说道：“然后鹿游原的妻儿全部葬身火场。他凭借保险公司的巨额赔偿金，还清了债务。”<br>
+鹿游原苦笑：“是啊。这个人有杀妻骗保的嫌疑。”<br>
+“但保险公司还是按照常规流程进行理赔，对鹿游原毫无怀疑。因为他……”欧阳骞的衣衫此时已是汗津津的了，却仍然固执的，把浅绿穿成了深绿，把四季如春的热带岛屿，当成了冰岛。<br>
+假鹿游原解释道：“因为他本人也严重烧伤。四肢创面严重感染，为了保命，接受了截肢手术。”<br>
+“所以阁下的真实身份是？”</p>
+<p>假鹿游原摇头：“我不知道。我现有的记忆，是从1997年4月1日开始的。我当时在泰国一家地下医院的整形科醒来，医生给我的说法时，我因为一次医疗事故，麻醉过量，造成长时间昏迷，脑中形成血栓，记忆功能受损。为表示歉意，他们决定免除我重新再做整容手术的费用。因为是地下医院，不用真实证件就能登记。所以我没办法查出我的身份。鹿游原的赔偿金都抵给债主了，囊中羞涩，也在泰国做手术，和我是同病房的病友。他可怜我失忆，我可怜他伤残，就这样，交情越来越深。直到有一天，他问我，如果已经不记得自己为什么要整容，那是不是整容成什么样子，都不重要呢？”<br>
+欧阳骞继续冷笑，道：“他这种投机者，居然会有这样的好心，将姓名和人生白白送给你？”<br>
+假鹿游原摆摆手：“当然不是白送的。他想让我替他报仇雪恨。”<br>
+欧阳骞回答道：“所以你去了一家房地产企业，伯乐地产。”<br>
+假鹿游原双手一摊:“没办法。他心中对伯乐当年见死不救的事，有恨。”<br>
+三年前的亚洲金融风暴直接导致了房地产市场崩溃，伯乐地产也是危在旦夕，实在是无暇顾及鹿游原，虽然无情，更多的却是无奈。于是欧阳骞评价道：“还是个报复心很强的投机者。”</p>
+<p>假鹿游原问：“所以你为什么会怀疑我。绑架案的事。”<br>
+欧阳骞解释道：“因为你是用行李箱将中森施予带走的，还是两个完好无损的行李箱。Han跟我说过，洪京墨之前搬运鬣狗尸体，用的也是行李箱。行李箱的品牌、规格都有可能变，但惯用的密码却不会变。除了洪京墨身边人，同样接触过装着鬣狗尸体的行李箱并留下指纹的人，一共有中森施予、Han、伯也斯，和你。”<br>
+假鹿游原朝欧阳骞伸出伤痕累累的双手，十指俱损，笑着说道：“我可留不下指纹。”<br>
+伤敌一千，自损八百，也不知道是一种匹夫之勇，还是愚蠢。欧阳骞问道：“洪京墨惯用的密码是什么？”<br>
+假鹿游原收回双手，说道：“0730。随便看了一眼而已，没想到我能记到现在。你知道这串数字的意义是什么吗？”<br>
+“他的密码，我怎么会知道意义？”<br>
+“百密一疏啊……”假鹿游原不甘心地合上书，叹气道：“我没想到一串数字，居然能打开洪京墨所有的行李箱。更没想到你会因此，开始怀疑我的身份。”<br>
+这一番话，在欧阳骞听来，说得仿佛是羞辱一样，强调道：“我从第一次见你维护官秋山的时候，就已经在怀疑你了。”<br>
+假鹿游原自觉地摸了摸脸，说：“看来是我整容手术的效果不好，和他本人不太像。没办法，医生做手术时，肯定都是在往美的方向下功夫。”<br>
+我要是能从面貌上分清你和鹿游原，我也不至于分辨不出船上的人到底是倪宿，还是张禹。欧阳骞好一阵腹诽之后，终于开口点明，那件鹿游原本人不曾告诉过他的事是什么。<br>
+“鹿游原没有你这样的好记性。复读三年，又落榜三年，根本没能考上任何一所大学的法学院。”<br>
+听完，假鹿游原已是瞠目结舌，怎么还能在个人简历上造假呢。然后哑然失笑，摸着自己的脸暗自唏嘘道：真是个虚荣心很重的投机者。</p>
+<p>两人这一番寒暄过后，也算是知根知底。于是欧阳骞也不再掩饰来意，直截了当地开口道：<br>
+“现在让我们谈一谈，分赃的事情。拿到赎金后，分三分之一的钱给我。”<br>
+假鹿游原也是直截了当地拒绝：“没得商量。这一百万，是我答应好给中森施予的活命钱。”<br>
+欧阳骞墨镜底下的眼睛震颤，似乎是被阳光烤得有点发酸，合眸说道：“没有我替他买药，他能活着离开圣涅岛吗？”<br>
+鹿游原惊诧，追问：“他居然还有病？什么病？”<br>
+“慢性移植物宿主病。从昨天午时到今天，已经断药超过24小时了。”<br>
+话音未落，假鹿游原便一把拉起欧阳骞，边跑边气喘吁吁地说道：“他要是有这种病在身上，为什么还要答应我的计划？我有可能害死他！”<br>
+欧阳骞用另一只手死死摁住帽子，心里想到：或许是没有办法了吧。看见一根稻草，也不管能不能救命，只想紧紧抓住他，死也不松手。</p>
+
+            </div>
+            
+            
+              <div class="post-footer">
+  <ul class="post-copyright">
+    <li class="post-copyright-author">
+      <strong class="language" data-lan="author">本文作者：</strong>
+      Fooogy Homicide
+    </li>
+    <li class="post-copyright-link">
+      <strong class="language" data-lan="link">本文链接：</strong>
+      <a href="https://fooogy.github.io/post/yu-lin-di-jiu-zhang/" title="雨霖瀮 · 第九章">https://fooogy.github.io/post/yu-lin-di-jiu-zhang/</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong class="language" data-lan="copyright">版权声明： </strong>
+      本博客所有文章除特别声明外，均采用<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i> BY-NC-SA</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+  <div class="tags">
+    
+  </div>
+  <div class="nav">
+    <div class="nav-prev">
+      
+    </div>
+    <div class="nav-next">
+      
+        <a class="nav-pc-next" title="雨霖瀮 · 第八章" href="https://fooogy.github.io/post/yu-lin-di-ba-zhang/">雨霖瀮 · 第八章</a>
+        <a class="nav-mobile-next" title="雨霖瀮 · 第八章" href="https://fooogy.github.io/post/yu-lin-di-ba-zhang/">下一篇</a>
+        <i class="fa fa-chevron-right"></i>
+      
+    </div>
+  </div>
+</div>
+            
+            
+  
+    
+      <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<div id="gitalk-container"></div>
+
+<script>
+  var gitalk = new Gitalk({
+    clientID: '',
+    clientSecret: '',
+    repo: '',
+    owner: '',
+    admin: [''],
+    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
+  gitalk.render('gitalk-container')
+</script>
+    
+    
+  
+
+          </div>
         </div>
       </div>
     </div>
@@ -868,6 +846,223 @@ Macbeth推辞道：“虽然是美国人，但……谢谢。”</p>
     }
   })
 </script>
+    <div class="reward-mask" style="display: none;">
+  <div class="reward-relative">
+    <span class="close" aria-hidden="true">x</span>
+    <div class="reward-body">
+      <h2>感谢您的支持，我会继续努力的!</h2>
+      <div class="reward-img-box">
+        <div style="position: relative; width: 140px; height: 140px;">
+          
+          
+          
+        </div>
+      </div>
+      <p class="reward-word">扫码打赏，你说多少就多少</p>
+      <p class="reward-tip">打开微信扫一扫，即可进行扫码打赏哦</p>
+    </div>
+    <div class="bottom">
+      
+      
+    </div>
+  </div>
+</div>
+<style>
+  .reward-mask {
+    position: fixed;
+    z-index: 99999;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #00000054;
+  }
+
+  .reward-relative {
+    position: relative;
+    width: 480px;
+    text-align: center;
+    margin: 0 auto;
+    border-radius: 5px;
+    background-color: #fff;
+    top: 50%;
+    margin-top: -205px;
+  }
+
+  .reward-relative .close {
+    position: absolute;
+    right: 10px;
+    font-weight: normal;
+    font-size: 16px;
+    color: #929292;
+  }
+
+  .reward-body {
+    padding: 40px 20px 20px;
+  }
+
+  .bottom {
+    display: flex;
+  }
+
+  .reward-btn {
+    text-align: center;
+  }
+
+  .reward-btn-text {
+    display: inline-block;
+    cursor: pointer;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    border-radius: 50%;
+    background-color: #ff9734;
+    color: #FFF;
+    margin-top: 20px;
+  }
+
+  .pay-text {
+    margin-top: 10px;
+    padding: 10px;
+    flex: 1;
+    transition: all .2s linear;
+  }
+
+  .pay-text:hover {
+    background-color: #a5a5a536;
+  }
+
+  .reward-body h2 {
+    padding-top: 10px;
+    text-align: center;
+    color: #a3a3a3;
+    font-size: 16px;
+    font-weight: normal;
+    margin: 0 0 20px;
+  }
+
+  .reward-body h2:after,
+  .reward-body h2:before {
+    font-family: Arial, Helvetica, sans-serif;
+    background: 0 0;
+    width: 0;
+    height: 0;
+    font-style: normal;
+    color: #eee;
+    font-size: 80px;
+    position: absolute;
+    top: 20px;
+  }
+
+  .reward-body h2:before {
+    content: '\201c';
+    left: 50px;
+  }
+
+  .reward-body h2:after {
+    content: '\201d';
+    right: 80px;
+  }
+
+  .reward-img-box {
+    display: inline-block;
+    padding: 10px;
+    border: 6px solid #ea5f00;
+    margin: 0 auto;
+    border-radius: 3px;
+    position: relative;
+  }
+
+  .reward-img {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+  }
+
+  @media (max-width: 767px) {
+    .reward-relative {
+      height: 100%;
+      top: 0px;
+      margin-top: 0;
+      width: auto;
+    }
+
+    .reward-relative .bottom {
+      flex-direction: column;
+    }
+
+    .reward-relative .pay-text {
+      width: 80%;
+      margin: 5px auto;
+      border: 1px solid silver;
+      padding: 6px;
+      border-radius: 4px;
+    }
+
+    .reward-body h2:after {
+      right: 40px;
+    }
+
+    .reward-body h2:after,
+    .reward-body h2:before {
+      font-size: 60px;
+    }
+
+    .reward-body h2:before {
+      left: 20px;
+    }
+  }
+</style>
+<script>
+  !function () {
+    var mask = document.querySelector('.reward-mask');
+    let close = document.querySelector('.reward-relative .close');
+    let rewardBtn = document.querySelector('.reward-btn');
+
+    let zfb = document.querySelector('#zfb'),
+      wx = document.querySelector('#wx'),
+      zfbBtn = document.querySelector('#zfbBtn'),
+      wxBtn = document.querySelector('#wxBtn');
+
+    if (zfbBtn && wxBtn) {
+      zfbBtn.addEventListener('click', () => {
+        window.Velocity(zfb, 'transition.slideLeftIn', {
+          duration: 400
+        });
+        window.Velocity(wx, 'transition.slideRightOut', {
+          display: 'none',
+          duration: 400
+        });
+      });
+
+      wxBtn.addEventListener('click', () => {
+        window.Velocity(wx, 'transition.slideRightIn', {
+          duration: 400
+        });
+        window.Velocity(zfb, 'transition.slideLeftOut', {
+          display: 'none',
+          duration: 400
+        });
+      });
+    }
+
+    rewardBtn.addEventListener('click', (e) => {
+      window.Velocity(mask, 'transition.slideDownIn', {
+        duration: 400
+      })
+    });
+
+    close.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.Velocity(mask, 'transition.slideUpOut', {
+        duration: 400
+      })
+    })
+  }()
+</script>
+
   </div>
 </body>
 
@@ -3891,7 +4086,6 @@ Mon特助对住在95公寓的那一位，颇有了解。是一个名字听起来
     speed: 200
   });
 </script>
-
 
 
 
