@@ -8,7 +8,7 @@
 <meta name="keywords" content="Gridea静态个人博客">
 <meta name="description" content="Curiosity &amp; Creativity">
 <meta name="theme-color" content="#343a40">
-<title>隔岸观·第十三章 | A Dream of Fooogy</title>
+<title>A Dream of Fooogy</title>
 <link rel="shortcut icon" href="/favicon.ico?v=1613586012345">
 <link rel="stylesheet" href="/media/css/gemini.css">
 <link rel="stylesheet" href="/media/fonts/font-awesome.css">
@@ -38,8 +38,6 @@
 
 
 
-  <meta name="description" content="隔岸观·第十三章" />
-  <meta name="keywords" content="" />
 </head>
 
 <body>
@@ -75,7 +73,7 @@
             
               
             
-            <li class="nav-item ">
+            <li class="nav-item nav-item-active">
               
               
                 <a href="/" target="_self">
@@ -174,289 +172,75 @@
     <div
       class="section-layout gemini ">
       <div class="section-layout-wrapper">
-        
-
-<div class="sidebar">
-  
-    <div class="sidebar-box box-shadow-wrapper bg-color right-motion" id="sidebar">
+        <div id="sidebarMeta" class="sidebar">
+    
+<div class="sidebar-wrapper box-shadow-wrapper bg-color">
+  <div class="sidebar-item">
+    <img class="site-author-image right-motion" src="/images/avatar.png"/>
+    <p class="site-author-name">Fooogy Homicide</p>
+    
+    <div class="site-description right-motion">
       
-      <div class="sidebar-body gemini" id="sidebar_body">
-        
-          
-            <div style="opacity: 1;">
-              <div class="toc-box right-motion">
-  <div class="toc-wrapper auto-number no_compress"
-    id="toc_wrapper">
-    <ul class="markdownIt-TOC">
-<li></li>
-<li></li>
-</ul>
-
+      
+      
+        <p>不疯魔不成活</p>
+      
+      
+    </div>
+    
   </div>
+  <div class="sidebar-item side-item-stat right-motion">
+    <div class="sidebar-item-box">
+      <a href="/archives/">
+        
+        <span class="site-item-stat-count">36</span>
+        <span class="site-item-stat-name language" data-lan="article">文章</span>
+      </a>
+    </div>
+    <div class="sidebar-item-box">
+      <a href="">
+        <span class="site-item-stat-count">0</span>
+        <span class="site-item-stat-name language" data-lan="category">分类</span>
+      </a>
+    </div>
+    <div class="sidebar-item-box">
+      <a href="/tags/">
+        <span class="site-item-stat-count">0</span>
+        <span class="site-item-stat-name language" data-lan="tag">标签</span>
+      </a>
+    </div>
+  </div>
+  
+    
+  
+  
+
+
 </div>
-
+</div>
 <script>
-
-  let lastTop = 0, lList = [], hList = [], postBody, lastIndex = -1;
-  let active = 'active-show', activeClass = 'active-current';
-  let tocWrapper = document.querySelector('#toc_wrapper');
-  let tocContent = tocWrapper.children[0];
-  let autoNumber = tocWrapper && tocWrapper.classList.contains('auto-number');
-
-  function addTocNumber(elem, deep) {
-    if (!elem) {
-      return;
-    }
-    let prop = elem.__proto__;
-
-    if (prop === HTMLUListElement.prototype) {
-      for (let i = 0; i < elem.children.length; i++) {
-        addTocNumber(elem.children[i], deep + (i + 1) + '.');
+  let sidebarMeta = document.querySelector('#sidebarMeta');
+  let scheme = 'gemini';
+  let sidebarWrapper = document.querySelector('.sidebar-wrapper');
+  if (sidebarMeta && (scheme === 'pisces' || scheme === 'gemini')) {
+    document.addEventListener('scroll', function(e) {
+      if (document.scrollingElement.scrollTop > parseInt(sidebarMeta.style.marginTop) + 10) {
+        sidebarWrapper.classList.add('home-sidebar-fixed')
+      } else {
+        sidebarWrapper.classList.remove('home-sidebar-fixed')
       }
-    } else if (prop === HTMLLIElement.prototype) {
-      // 保存li元素
-      if (elem.children[0] && elem.children[0].__proto__ === HTMLAnchorElement.prototype) {
-        lList.push(elem);
-      }
-      for (let i = 0; i < elem.children.length; i++) {
-        let cur = elem.children[i];
-        if (cur.__proto__ === HTMLAnchorElement.prototype) {
-          if (autoNumber) {
-            cur.text = deep + ' ' + cur.text;
-          }
-        } else if (cur.__proto__ === HTMLUListElement.prototype) {
-          addTocNumber(cur, deep);
-        }
-      }
-    }
-  }
-
-  function removeParentActiveClass() {
-    let parents = tocContent.querySelectorAll('.' + active)
-    parents.forEach(function (elem) {
-      elem.classList.remove(active);
     });
   }
-
-  function addActiveClass(index) {
-    if (index >= 0 && index < hList.length) {
-      lList[index].classList.add(activeClass);
-    }
-  }
-
-  function removeActiveClass(index) {
-    if (index >= 0 && index < hList.length) {
-      lList[index].classList.remove(activeClass);
-    }
-  }
-
-  function addActiveLiElemment(elem, parent) {
-    if (!elem || elem === parent) {
-      return;
-    } else {
-      if (elem.__proto__ === HTMLLIElement.prototype) {
-        elem.classList.add(active);
-      }
-      addActiveLiElemment(elem.parentElement, parent);
-    }
-  }
-
-  function showToc() {
-    if (tocWrapper) {
-      postBody = document.querySelector('#post_body');
-      for (let i = 0; i < postBody.children.length; i++) {
-        if (postBody.children[i].__proto__ === HTMLHeadingElement.prototype) {
-          hList.push(postBody.children[i]);
-        }
-      }
-      if (tocWrapper.classList.contains('compress')) {
-        tocContent.classList.add('closed');
-      } else if (tocWrapper.classList.contains('no_compress')) {
-        tocContent.classList.add('expanded');
-      } else {
-        if (hList.length > 10) {
-          active = 'active-hidden'
-          tocContent.classList.add('closed');
-        } else {
-          tocContent.classList.add('expanded');
-        }
-      }
-    }
-  }
-
-  (function () {
-    // 处理不是从#一级标题开始目录
-    if (tocContent.children.length === 1 && tocContent.children[0].__proto__ === HTMLLIElement.prototype) {
-      let con = tocContent.children[0].children[0];
-      tocContent.innerHTML = con.innerHTML;
-    }
-    let markdownItTOC = document.querySelector('.markdownIt-TOC');
-    let innerHeight = window.innerHeight;
-    markdownItTOC.style = `max-height: ${innerHeight - 80 > 0 ? innerHeight - 80 : innerHeight}px`
-    addTocNumber(tocContent, '');
-  })();
-
-  document.addEventListener('scroll', function (e) {
-    if (lList.length <= 0) {
-      return;
-    }
-    let scrollTop = document.scrollingElement.scrollTop + 10;
-    let dir;
-
-    if (lastTop - scrollTop > 0) {
-      dir = 'up';
-    } else {
-      dir = 'down';
-    }
-
-    lastTop = scrollTop;
-    if (scrollTop <= 0) {
-      if (lastIndex >= 0 && lastIndex < hList.length) {
-        lList[lastIndex].classList.remove(activeClass);
-      }
-      return;
-    }
-
-    let current = 0, hasFind = false;
-    for (let i = 0; i < hList.length; i++) {
-      if (hList[i].offsetTop > scrollTop) {
-        current = i;
-        hasFind = true;
-        break;
-      }
-    }
-    if (!hasFind && scrollTop > lList[lList.length - 1].offsetTop) {
-      current = hList.length - 1;
-    } else {
-      current--;
-    }
-    if (dir === 'down') {
-      if (current > lastIndex) {
-        addActiveClass(current);
-        removeActiveClass(lastIndex)
-        lastIndex = current;
-        removeParentActiveClass();
-        lList[current] && addActiveLiElemment(lList[current].parentElement, tocContent);
-      }
-    } else {
-      if (current < lastIndex) {
-        addActiveClass(current);
-        removeActiveClass(lastIndex);
-        lastIndex = current;
-        removeParentActiveClass();
-        lList[current] && addActiveLiElemment(lList[current].parentElement, tocContent);
-      }
-    }
-  });
-
-
-  window.addEventListener('load', function () {
-    showToc();
-    document.querySelector('#sidebar').style = 'display: block;';
-    tocWrapper.classList.add('toc-active');
-    setTimeout(function () {
-      if ("createEvent" in document) {
-        let evt = document.createEvent("HTMLEvents");
-        evt.initEvent("scroll", false, true);
-        document.dispatchEvent(evt);
-      }
-      else {
-        document.fireEvent("scroll");
-      }
-    }, 500)
-  })
-
-</script>
-            </div>
-          
-        
-      </div>
-    </div>
-  
-</div>
-<script>
-  const SIDEBAR_TITLE_ACTIVE = 'sidebar-title-active';
-  const SIDEBAR_BODY_ACTIVE = 'sidebar-body-active';
-  const SLIDE_UP_IN = 'slide-up-in';
-
-  let sidebar = document.querySelector('#sidebar'),
-  tocSideBar = document.querySelector('#tocSideBar'),
-  metaSideBar = document.querySelector('#metaSideBar'),
-  postToc = document.querySelector('#post_toc'),
-  postSiteMeta = document.querySelector('#post_side_meta'),
-  sidebarTitle = document.querySelector('.sidebar-title'),
-  sidebarBody = document.querySelector('#sidebar_body');
-
-  tocSideBar && tocSideBar.addEventListener('click', (e) => {
-    toggleSidebar(e);
-  });
-
-  metaSideBar && metaSideBar.addEventListener('click', (e) => {
-    toggleSidebar(e);
-  });
-
-  function toggleSidebar(e) {
-    let currentTitle = document.querySelector("."+SIDEBAR_TITLE_ACTIVE);
-    if (currentTitle == e.srcElement) {
-      return ;
-    }
-    let current, showElement, hideElement;
-    if (e.srcElement == metaSideBar) {
-      showElement = postSiteMeta;
-      hideElement = postToc;
-    } else if (e.srcElement == tocSideBar){
-      showElement = postToc;
-      hideElement = postSiteMeta;
-    }
-    currentTitle.classList.remove(SIDEBAR_TITLE_ACTIVE);
-    e.srcElement.classList.add(SIDEBAR_TITLE_ACTIVE);
-
-    window.Velocity(hideElement, 'stop');
-    window.Velocity(hideElement, 'transition.slideUpOut', {
-      display: 'none',
-      duration: 200,
-      complete: function () {
-        window.Velocity(showElement, 'transition.slideDownIn', {
-          duration: 200
-        });
-      }
-    })
-    hideElement.classList.remove(SIDEBAR_BODY_ACTIVE);
-    showElement.classList.add(SIDEBAR_BODY_ACTIVE);
-  }
-
-  postToc && postToc.addEventListener('transitionend', function() {
-    this.classList.remove(SLIDE_UP_IN);
-  });
-
-  if (sidebarBody) {
-    if (sidebarBody.classList.contains('pisces') || sidebarBody.classList.contains('gemini')) {
-      let hasFix = false;
-      let scrollEl = document.querySelector('.main-continer');
-      let limitTop = document.querySelector('#nav_ul').children.length * 42 + 162;
-      window.addEventListener('scroll', function(e) {
-        if (document.scrollingElement.scrollTop >= limitTop) {
-          if (!hasFix) {
-            sidebar.classList.add('sidebar-fixed');
-            hasFix = true;
-          }
-        } else {
-          if (hasFix) {
-            sidebar.classList.remove('sidebar-fixed');
-            hasFix = false;
-          }
-        }
-      });
-    }
-  }
-  
-</script>
-        <div class="section-box box-shadow-wrapper">
-          <div class="section bg-color post post-page">
-            <header class="post-header">
+  </script>
+        <div class="section-box gemini">
+          <section class="section  posts-expand slide-down-in">
+            
+  <article class="post-list-box  post box-shadow-wrapper">
+    <div class="article-wrapper bg-color">
+      <header class="post-header">
   <h1 class="post-title">
-    <a class="post-title-link" href="https://fooogy.github.io/post/ge-an-guan-di-shi-san-zhang/">
-      隔岸观·第十三章
+    <a class="post-title-link" href="https://fooogy.github.io/post/ge-an-guan-qian-yan/">
+      隔岸观·前言
     </a>
   </h1>
   <div class="post-meta">
@@ -470,157 +254,80 @@
     
     <span class="meta-item">
       <i class="fa fa-clock-o"></i>
-      <span>13<span class="language" data-lan="minute">分钟</span></span>
+      <span>2<span class="language" data-lan="minute">分钟</span></span>
     </span>
     <span class="meta-item">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-file-word-o"></i>
-      <span>3686<span class="pc-show language" data-lan="words">字数</span></span>
-    </span>
-    
-    
-    
-    <span id="/post/ge-an-guan-di-shi-san-zhang/" data-flag-title="隔岸观·第十三章" class="meta-item pc-show leancloud_visitors">
-      <span class="post-meta-divider">|</span>
-      <i class="fa fa-eye"></i>
-      <span><span class="language" data-lan="view">浏览量</span>：<span class="leancloud-visitors-count"></span></span>
+      <span>397<span class="pc-show language" data-lan="words">字数</span></span>
     </span>
     
   </div>
 </header>
-            <div class="post-body next-md-body" id="post_body">
-              <h1 id=""></h1>
-<p>活人不能被死物奴役，药品、酒精、道德、法律、血缘关系，对人而言都是死物。然而哪怕是脱俗如洪先生，也不得不把各种药物视为一生一世的爱人，和它生死与共，不离不弃。这是洪先生和这个世界，最接近爱情的时候。可惜他今天，又要为张禹，破例一回。<br>
-张禹看见洪京墨从怀中掏出钢制酒壶来时，还以为是洪京墨心灰意冷，也开始尝试酗酒。然而当酒壶里的液体灌进自己的喉咙里时，他才意识到那里面装着的，原来不是任何一种烈酒，而是微微发苦的药水。洪京墨一只手圈住张禹的腰，让他和自己紧紧贴在一起，没有一点空隙。另一只手则用力掰开张禹的牙齿，用手指按压住他的舌头，好让药水在喉咙里一路飞流而下，直击灵魂深处。<br>
-“美国警察审讯时常用的药水，香港还没听说过这种东西，对吧？”<br>
-张禹顺着玻璃不自觉地下滑，再抬起头时整张脸都湿漉漉的，沐浴过的样子“你怎么能……”<br>
-“我只是觉得，这个药或许能让我们，重新认识一下彼此。我是洪京墨，你是谁？”<br>
-“张禹。”他听见自己的声音，像山谷里的回声一样，越飘越远。手拽着窗帘想要站起来，抓住自己的声音，却扑了个空，原来他离家出走的是灵魂。</p>
-<!-- more -->
-<p>“你为什么跟着鹿天鸣一起来泰国？”洪先生手指捏红了张禹的脸。<br>
-“我放暑假……过来玩。”张禹双眼失神，呆呆地看着波涛汹涌的天花板，吊灯也幻化成海上的灯塔，暗自发着光，数都数不清。<br>
-“玩的开心吗？”洪先生掀开了张禹的白T，却发现张禹居然哭出了声，眼泪大颗大颗落在衣襟上，润湿成一朵又一朵的雪绒花。<br>
-“不开心，所有人都死了。”<br>
-“你一开始明明可以回香港去的，你为什么不回去？”洪京墨将头抵在张禹的额头上，其实他自己都想不清楚，现在到底是想听到一个什么内容的回答。但无论是残酷的，还是鲜血淋漓的，只要是真实的就好。洪京墨在这一刻，对张禹已经别无所求。<br>
-“我在找一个人。”泪眼朦胧间，张禹也知道自己好像说出了不该说的话，但他的灵魂已经脱离身体太远太久，他对即将要发生的所有一切，都无能为力。<br>
-“最后找到了吗？”<br>
-张禹被硬生生翻了个面，无意将窗帘也整个扯落，一抬眼，他又看见了楼下的官秋山，身影模糊的像是一段回忆，轻声笑了“找到了。他还活着……我很高兴……”<br>
-窗帘现在成了赤裸裸的两个人最后一块遮羞布，但这回赤诚相见的是他们的灵魂。洪先生重新抱紧张禹的身体，像每一个做爱之前占有欲都空前膨胀的男人那样，俗滥地一问：“鹿天鸣是你的初恋吗？”<br>
-“当然不是！”张禹怏怏不乐地否认道，“我第一次拍拖，是和一个好单纯的女孩。手都没牵过可是我好爱她，分手之后还去求复合……”张禹有些苦闷，凭空回想起来那时候还真是丢人。<br>
-可洪京墨此时居然因为张禹的情路坎坷，而喜形于色。他承认这太不道德，但张禹这个人确实有些悲惨的幽默在。洪京墨一根根亲吻着对方细长的手指，漫不经心地随口一问：<br>
-“看来鹿天鸣只是你第一次和男人做，甚至可能是……第一次做？”<br>
-“不，不是第一次。”灵魂彻底灰飞烟灭的张禹，最终这样说道。</p>
-<p>只剩下一件白色上衣的张禹挂在玻璃窗上，官秋山抬头凝视着，在玻璃反射的强光下，那几乎就仅仅只是件白衣服，没有人在那里。官秋山记得自己第一次见张禹，就是在晾满衣服和床单的屋邨天台上。肥皂水味道如梦似幻，干净得像是一场梦。<br>
-“喂！洗过的衣服要用力拧干净，才晾得快。”<br>
-“你相信我，我真的已经尽力了。”<br>
-张禹那时候9岁，官秋山一直很意外，怎么会有人才9岁，说的每一句话就已经像是一声叹息，宛如活过二十年以上的老人。官秋山不知道自己也很快长成了一个二十多岁的老人，不，是一个二十多岁的老古惑仔。<br>
-泰国扫毒行动前天，香港下了一场大暴雨，连Make都说，这活见鬼的天气真不像是个好兆头，便挂了电话。张禹出门时，还被阿妈叮嘱不要太晚回家。鞋子踩着马路上的水洼，越走脚步越重，走到官秋山的出租屋时，整个人像是从水里刚捞出来的活鱼。<br>
-官秋山看着张禹狼狈的模样，阴郁的心情也消退大半，开玩笑说道“游泳来的？”<br>
-“对啊，水很深，差点淹死我。阿嚏！”<br>
-放下啤酒和烧鸡后，一块毛巾适时地甩了过来。张禹用脸接住后，认真地擦着头发，还有溅落在小腿的泥水，然后他听见阿秋拉开一罐啤酒说：<br>
-“阿禹，你说我怎么突然就这么老了……但你好像一直没长大。”<br>
-“喂喂喂！你别以为我听不出你在说我矮！”<br>
-啤酒罐落地，官秋山猛地抬起头，定定看着张禹，拉着他的手问道：“阿禹我认真的，我现在就想知道你长大后会是什么模样。你会做一个什么样的警察，你会在什么年纪结婚，你会和谁结婚，你会生几个孩子，你也会被Make骂着去卖命吗？你会每天清明节都记得扫墓吗？你会像祭奠你爸一样，年年月月记得我吗……”<br>
-无人理会的毛巾掉在地上，张禹看着越来越激动的官秋山，心里想，如果自己再早出生几年就好了。<br>
-“官秋山，我已经长大了。”</p>
-<p>那天晚上的张禹今天回忆起来，已是面目模糊了。但官秋山没有特意去回忆，天真莽撞的张禹本就是一直长在他眼前，长在他脑子里的人。天色已晚，洪先生却仍然没有从95公寓里出来，官秋山只能和所有人一起站在楼下等待，和很多人一起，却仍感觉自己形单影只。所以他一直抬头望着楼上的窗子，一如他在每一个不眠之夜望着的高天孤月。<br>
-一只虚白的手怏怏伸出来，洪京墨抓住它用力摁在玻璃上，胡乱留下的指印都来自于这只被废掉的左手。轮番打磨着每一寸指节，然后卷起手掌勾住。当他全神贯注涌进去时，手指会把窗帘揪成一团，当他退出来，一根根绷紧的手指才会重新松开，只剩下窗帘皱皱巴巴的花团锦簇盛开着，像一张古城的地图，任由洪京墨南征北讨，占为己有。<br>
-洪京墨目光灼灼，盯着自己的作品看来看去，却没有任何春风得意在脸上停留，凄然一笑。用窗帘将整个人卷起来，打横抱着进了浴室。窗帘长长拖在地上，跟着两个人左拐右拐，幽幽散发着风情。可洪先生抱着张禹时，却全然不像是抱着一个和自己有肌肤之亲的男人。<br>
-人和窗帘一起抛进浴缸里，张禹探出来头，虚脱地眨了眨眼。温水浇在身上，他的灵魂也终于回来了一半，于是他问，“这药太绝了，我该不会连小时候尿床的事都说了吧。”<br>
-洪先生笑得五官都移了位置，掐着对方的脸说道：“你还说自己苦恋我多年。”<br>
-张禹配合地作出大惊失色的脸，忙伸出左手捂住洪京墨的嘴，“喂！不可以把我的秘密说出来！”<br>
-“我从来都是最不受威胁的人。”洪京墨偏头忘乎所以地吻着张禹手上的伤疤，又顺着手臂一路向下，那件白T沾了水贴在他胸膛前，还有着斑斑驳驳的污渍，不知道是谁留下来的，光打下来有些湿润的性感。突然间，就算他看不清张禹的真面目他也不在意，这段感情如云如雾，反而极美。而张禹也顺势将他搂在身前，唇齿相依时，洪京墨甚至重新把手伸进了张禹的白T里，想要替他脱下来好好清洗。然后，下腹忽然被硬物狠狠一顶，洪京墨低头去看，笑意全无。张禹右手正拿枪指着自己。<br>
-云雾散开，张禹天真得让人生厌的脸，又清晰可见。<br>
-“我的洪先生，这才叫威胁。”</p>
-<h1 id="-2"></h1>
-<p>凯迪拉克的轮胎碾过路面，洪先生只觉得自己的脸面，也被张禹随意丢在地上，再碾平。三十八年以来，这是洪先生第一次明白生死由命的道理。在人生的中段认识了张禹，不是给他的恩赏，而是他的报应。<br>
-空气暖湿，卷着树叶的风吹过去，他从后视镜里能看到官秋山等人开车默默跟着，车里还坐着张禹的父亲。而自己则小心翼翼握着方向盘，在张禹的胁迫下朝码头开过去，身上只狼狈地披着一件浴袍，这还是张禹当时好心给自己搭上的。不然洪先生可能要成为东南亚各国，第一个被情人逼着赤裸裸出门的黑帮教父。倒也算名垂青史。<br>
-然而每当洪先生心不在焉时，张禹的枪口就会猛然磕在他太阳穴位置上，作为命若悬丝的提示。洪京墨心底的怒火慢慢烧上来，整个胸膛都红灿灿的，肋骨位置似乎更疼了，洪京墨忽然松开一只手，压在心脏上。<br>
-“你怎么了？”张禹仍然维持着双手举枪的动作，只是偏过头看了一眼，洪京墨面色惨白，好像不太对劲。<br>
-洪京墨没有说话，捂着心脏弓下去了，上半身趴在方向盘上，一抖一抖的地说：药。<br>
-张禹左手从枪上移下，伸出手拨开洪京墨额前的乱发，看见了对方痛极难耐的面容，心中也有些不忍，问“车上有吗？我给你拿……”<br>
-张禹徒劳地翻找着药瓶，可他既不可能分出目光去看，也不可能放下枪去找，只能眼睁睁看着洪京墨在眼前呻吟着。方向盘失去了他的控制后车撞上了护栏，张禹几乎能感觉到背后的灼热感。<br>
-“洪京墨！刹车！”<br>
-洪京墨对此充耳不闻，一只手猛打方向盘调整好方向后，又慌乱地踩下油门，把车子的速度又提起来。索性张禹终于找到了一瓶药，放在嘴边咬开瓶盖后就要给洪京墨嘴里倒下去。然而洪京墨刚一张开嘴，车子又是猛烈颠簸，药片撒了他一胸膛不说，药瓶甚至也飞到了车后座去。洪京墨自暴自弃地两只手都松开了方向盘，张禹左手试图抓起药片却根本握不住，心下一横，整个人趴了上去，用舌头卷起散落的药片喂到了洪京墨嘴里。<br>
-在凯迪拉克即将要撞上码头仓库的墙壁之前，洪京墨终于回过神来踩住急刹车。两个人的身体同时一晃一震，也不知道是谁磕破了舌头，两个人嘴唇上都粘上了血丝。分开时，张禹看见洪京墨的眼里一片清明，好像什么情绪都没有。<br>
-洪京墨摸着张禹的头发，脸上一半像是哭，一半像是在笑：“生死关头，倒是吻得很用功。”<br>
-张禹喘匀了胸里这口气后，释然一笑“你骗我啊。”<br>
-“只能你骗我，我不能骗你吗？”<br>
-“可以，那我们又扯平了。”<br>
-“可惜我是真的没想到，原来我哪怕是要死在你眼前，你都不能放下枪。”<br>
-“洪先生说笑了，您和我爸一起千年万年地活下去。”枪口像一个冰凉的吻，碰在额头上。在昏暗的车厢里，张禹在自己的腿上坐了起来，洪先生看见的仍然是他一贯若无其事的微笑，微笑里藏匿万千沟壑和阴影，“现在立刻让官秋山带着我爸上船，不然洪先生的头马上就开花了。”<br>
-洪先生望着他许久，叹息似的发出声音：“官秋山，送张老先生上船。”<br>
-余光瞥见官秋山搀扶着厉sir上船后，张禹终于松下了一口气。洪先生也感觉得到，身前的张禹几乎是在刹那间就化成了一滩水，随后船慢慢启动，离岸飘远，两个人仍在车里僵持着，一呼一吸相互交融着体温，深深看着对方眼底自己的倒影。<br>
-张禹没有放下枪，尽管他心里明白这枪只不过是虚张声势的摆设，然后惨淡一笑，“谢谢了，洪先生。”<br>
-“还是要……杀我吗？”洪先生没有意识到自己的疑问句，其实带着微茫的希望。<br>
-哪怕夜深，哪怕他的视力不够出色，厉sir仍然是固执地眺望着码头上的那辆车，官秋山心中闪过一丝不忍和愧疚，掰过他的肩膀说道“厉sir，你不要看了！阿禹杀不了他的。”<br>
-“为什么？”<br>
-“因为……”官秋山的声音沉下去，无影无踪浸没在江水里，“我的那把枪在Make死后，再也没装过子弹。”</p>
+      <div class="post-body">
+        
+        
+          <p>这一天是1月1日，我有一个不敢说与旁人听的秘密：我将要结婚。尽管我只见过他一面，但我想这个人应该——也是真心爱我。</p>
 
-            </div>
+        
+        
+        <div class="post-button text-center">
+          <a class="btn language" data-lan="read-more" href="https://fooogy.github.io/post/ge-an-guan-qian-yan/" rel="contents">
+            阅读全文 »
+          </a>
+        </div>
+        
+      </div>
+      
+    </div>
+  </article>
+  
             
             
-              <div class="post-footer">
-  <ul class="post-copyright">
-    <li class="post-copyright-author">
-      <strong class="language" data-lan="author">本文作者：</strong>
-      Fooogy Homicide
-    </li>
-    <li class="post-copyright-link">
-      <strong class="language" data-lan="link">本文链接：</strong>
-      <a href="https://fooogy.github.io/post/ge-an-guan-di-shi-san-zhang/" title="隔岸观·第十三章">https://fooogy.github.io/post/ge-an-guan-di-shi-san-zhang/</a>
-    </li>
-    <li class="post-copyright-license">
-      <strong class="language" data-lan="copyright">版权声明： </strong>
-      本博客所有文章除特别声明外，均采用<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i> BY-NC-SA</a> 许可协议。转载请注明出处！
-    </li>
+<div class="page bg-color">
+  <ul class="pagination-ul">
+    
+      <li class="pagination-dir">
+        <a href="https://fooogy.github.io/page/5/">
+          <i class="fa fa-angle-left"></i>
+        </a>
+      </li>
+    
+    
+      <!-- 1 2 3 4 ... N -->
+      
+        <!-- 1 ... N-2 N-1 N-->
+        <li class="pagination-li">
+          <a href="/">1</a>
+        </li>
+        <li class="pagination-li">
+          …
+        </li>
+        
+          <li class="pagination-li ">
+            <a href="/page/4">
+              4
+            </a>
+          </li>
+        
+          <li class="pagination-li ">
+            <a href="/page/5">
+              5
+            </a>
+          </li>
+        
+          <li class="pagination-li pagination-active">
+            <a href="#">
+              6
+            </a>
+          </li>
+        
+      
+    
+    
   </ul>
-  <div class="tags">
-    
-  </div>
-  <div class="nav">
-    <div class="nav-prev">
-      
-        <i class="fa fa-chevron-left"></i>
-        <a class="nav-pc-next" title="隔岸观·第十四章" href="https://fooogy.github.io/post/ge-an-guan-di-shi-si-zhang/">隔岸观·第十四章</a class="nav-pc-next">
-        <a class="nav-mobile-prev" title="隔岸观·第十四章" href="https://fooogy.github.io/post/ge-an-guan-di-shi-si-zhang/">上一篇</a>
-      
-    </div>
-    <div class="nav-next">
-      
-        <a class="nav-pc-next" title="隔岸观·第十二章" href="https://fooogy.github.io/post/ge-an-guan-di-shi-er-zhang/">隔岸观·第十二章</a>
-        <a class="nav-mobile-next" title="隔岸观·第十二章" href="https://fooogy.github.io/post/ge-an-guan-di-shi-er-zhang/">下一篇</a>
-        <i class="fa fa-chevron-right"></i>
-      
-    </div>
-  </div>
 </div>
-            
-            
-  
-    
-      <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
-<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
-
-<div id="gitalk-container"></div>
-
-<script>
-  var gitalk = new Gitalk({
-    clientID: '',
-    clientSecret: '',
-    repo: '',
-    owner: '',
-    admin: [''],
-    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
-    distractionFreeMode: false  // Facebook-like distraction free mode
-  })
-  gitalk.render('gitalk-container')
-</script>
-    
-    
-  
-
-          </div>
+          </section>
         </div>
       </div>
     </div>
@@ -837,223 +544,6 @@
     }
   })
 </script>
-    <div class="reward-mask" style="display: none;">
-  <div class="reward-relative">
-    <span class="close" aria-hidden="true">x</span>
-    <div class="reward-body">
-      <h2>感谢您的支持，我会继续努力的!</h2>
-      <div class="reward-img-box">
-        <div style="position: relative; width: 140px; height: 140px;">
-          
-          
-          
-        </div>
-      </div>
-      <p class="reward-word">扫码打赏，你说多少就多少</p>
-      <p class="reward-tip">打开微信扫一扫，即可进行扫码打赏哦</p>
-    </div>
-    <div class="bottom">
-      
-      
-    </div>
-  </div>
-</div>
-<style>
-  .reward-mask {
-    position: fixed;
-    z-index: 99999;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: #00000054;
-  }
-
-  .reward-relative {
-    position: relative;
-    width: 480px;
-    text-align: center;
-    margin: 0 auto;
-    border-radius: 5px;
-    background-color: #fff;
-    top: 50%;
-    margin-top: -205px;
-  }
-
-  .reward-relative .close {
-    position: absolute;
-    right: 10px;
-    font-weight: normal;
-    font-size: 16px;
-    color: #929292;
-  }
-
-  .reward-body {
-    padding: 40px 20px 20px;
-  }
-
-  .bottom {
-    display: flex;
-  }
-
-  .reward-btn {
-    text-align: center;
-  }
-
-  .reward-btn-text {
-    display: inline-block;
-    cursor: pointer;
-    width: 60px;
-    height: 60px;
-    line-height: 60px;
-    border-radius: 50%;
-    background-color: #ff9734;
-    color: #FFF;
-    margin-top: 20px;
-  }
-
-  .pay-text {
-    margin-top: 10px;
-    padding: 10px;
-    flex: 1;
-    transition: all .2s linear;
-  }
-
-  .pay-text:hover {
-    background-color: #a5a5a536;
-  }
-
-  .reward-body h2 {
-    padding-top: 10px;
-    text-align: center;
-    color: #a3a3a3;
-    font-size: 16px;
-    font-weight: normal;
-    margin: 0 0 20px;
-  }
-
-  .reward-body h2:after,
-  .reward-body h2:before {
-    font-family: Arial, Helvetica, sans-serif;
-    background: 0 0;
-    width: 0;
-    height: 0;
-    font-style: normal;
-    color: #eee;
-    font-size: 80px;
-    position: absolute;
-    top: 20px;
-  }
-
-  .reward-body h2:before {
-    content: '\201c';
-    left: 50px;
-  }
-
-  .reward-body h2:after {
-    content: '\201d';
-    right: 80px;
-  }
-
-  .reward-img-box {
-    display: inline-block;
-    padding: 10px;
-    border: 6px solid #ea5f00;
-    margin: 0 auto;
-    border-radius: 3px;
-    position: relative;
-  }
-
-  .reward-img {
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    width: 100%;
-    height: 100%;
-  }
-
-  @media (max-width: 767px) {
-    .reward-relative {
-      height: 100%;
-      top: 0px;
-      margin-top: 0;
-      width: auto;
-    }
-
-    .reward-relative .bottom {
-      flex-direction: column;
-    }
-
-    .reward-relative .pay-text {
-      width: 80%;
-      margin: 5px auto;
-      border: 1px solid silver;
-      padding: 6px;
-      border-radius: 4px;
-    }
-
-    .reward-body h2:after {
-      right: 40px;
-    }
-
-    .reward-body h2:after,
-    .reward-body h2:before {
-      font-size: 60px;
-    }
-
-    .reward-body h2:before {
-      left: 20px;
-    }
-  }
-</style>
-<script>
-  !function () {
-    var mask = document.querySelector('.reward-mask');
-    let close = document.querySelector('.reward-relative .close');
-    let rewardBtn = document.querySelector('.reward-btn');
-
-    let zfb = document.querySelector('#zfb'),
-      wx = document.querySelector('#wx'),
-      zfbBtn = document.querySelector('#zfbBtn'),
-      wxBtn = document.querySelector('#wxBtn');
-
-    if (zfbBtn && wxBtn) {
-      zfbBtn.addEventListener('click', () => {
-        window.Velocity(zfb, 'transition.slideLeftIn', {
-          duration: 400
-        });
-        window.Velocity(wx, 'transition.slideRightOut', {
-          display: 'none',
-          duration: 400
-        });
-      });
-
-      wxBtn.addEventListener('click', () => {
-        window.Velocity(wx, 'transition.slideRightIn', {
-          duration: 400
-        });
-        window.Velocity(zfb, 'transition.slideLeftOut', {
-          display: 'none',
-          duration: 400
-        });
-      });
-    }
-
-    rewardBtn.addEventListener('click', (e) => {
-      window.Velocity(mask, 'transition.slideDownIn', {
-        duration: 400
-      })
-    });
-
-    close.addEventListener('click', (e) => {
-      e.preventDefault();
-      window.Velocity(mask, 'transition.slideUpOut', {
-        duration: 400
-      })
-    })
-  }()
-</script>
-
   </div>
 </body>
 
@@ -4168,6 +3658,7 @@ Mon特助对住在95公寓的那一位，颇有了解。是一个名字听起来
     speed: 200
   });
 </script>
+
 
 
 
