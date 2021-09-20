@@ -8,7 +8,7 @@
 <meta name="keywords" content="Gridea静态个人博客">
 <meta name="description" content="Curiosity &amp; Creativity">
 <meta name="theme-color" content="#343a40">
-<title>隔岸观·第七章 | A Dream of Fooogy</title>
+<title>雨霖瀮·第二十一章 | A Dream of Fooogy</title>
 <link rel="shortcut icon" href="/favicon.ico?v=1632143725511">
 <link rel="stylesheet" href="/media/css/gemini.css">
 <link rel="stylesheet" href="/media/fonts/font-awesome.css">
@@ -38,7 +38,7 @@
 
 
 
-  <meta name="description" content="隔岸观·第七章" />
+  <meta name="description" content="雨霖瀮·第二十一章" />
   <meta name="keywords" content="" />
 </head>
 
@@ -178,200 +178,6 @@
 
 <div class="sidebar">
   
-    <div class="sidebar-box box-shadow-wrapper bg-color right-motion" id="sidebar">
-      
-      <div class="sidebar-body gemini" id="sidebar_body">
-        
-          
-            <div style="opacity: 1;">
-              <div class="toc-box right-motion">
-  <div class="toc-wrapper auto-number no_compress"
-    id="toc_wrapper">
-    <ul class="markdownIt-TOC">
-<li></li>
-</ul>
-
-  </div>
-</div>
-
-<script>
-
-  let lastTop = 0, lList = [], hList = [], postBody, lastIndex = -1;
-  let active = 'active-show', activeClass = 'active-current';
-  let tocWrapper = document.querySelector('#toc_wrapper');
-  let tocContent = tocWrapper.children[0];
-  let autoNumber = tocWrapper && tocWrapper.classList.contains('auto-number');
-
-  function addTocNumber(elem, deep) {
-    if (!elem) {
-      return;
-    }
-    let prop = elem.__proto__;
-
-    if (prop === HTMLUListElement.prototype) {
-      for (let i = 0; i < elem.children.length; i++) {
-        addTocNumber(elem.children[i], deep + (i + 1) + '.');
-      }
-    } else if (prop === HTMLLIElement.prototype) {
-      // 保存li元素
-      if (elem.children[0] && elem.children[0].__proto__ === HTMLAnchorElement.prototype) {
-        lList.push(elem);
-      }
-      for (let i = 0; i < elem.children.length; i++) {
-        let cur = elem.children[i];
-        if (cur.__proto__ === HTMLAnchorElement.prototype) {
-          if (autoNumber) {
-            cur.text = deep + ' ' + cur.text;
-          }
-        } else if (cur.__proto__ === HTMLUListElement.prototype) {
-          addTocNumber(cur, deep);
-        }
-      }
-    }
-  }
-
-  function removeParentActiveClass() {
-    let parents = tocContent.querySelectorAll('.' + active)
-    parents.forEach(function (elem) {
-      elem.classList.remove(active);
-    });
-  }
-
-  function addActiveClass(index) {
-    if (index >= 0 && index < hList.length) {
-      lList[index].classList.add(activeClass);
-    }
-  }
-
-  function removeActiveClass(index) {
-    if (index >= 0 && index < hList.length) {
-      lList[index].classList.remove(activeClass);
-    }
-  }
-
-  function addActiveLiElemment(elem, parent) {
-    if (!elem || elem === parent) {
-      return;
-    } else {
-      if (elem.__proto__ === HTMLLIElement.prototype) {
-        elem.classList.add(active);
-      }
-      addActiveLiElemment(elem.parentElement, parent);
-    }
-  }
-
-  function showToc() {
-    if (tocWrapper) {
-      postBody = document.querySelector('#post_body');
-      for (let i = 0; i < postBody.children.length; i++) {
-        if (postBody.children[i].__proto__ === HTMLHeadingElement.prototype) {
-          hList.push(postBody.children[i]);
-        }
-      }
-      if (tocWrapper.classList.contains('compress')) {
-        tocContent.classList.add('closed');
-      } else if (tocWrapper.classList.contains('no_compress')) {
-        tocContent.classList.add('expanded');
-      } else {
-        if (hList.length > 10) {
-          active = 'active-hidden'
-          tocContent.classList.add('closed');
-        } else {
-          tocContent.classList.add('expanded');
-        }
-      }
-    }
-  }
-
-  (function () {
-    // 处理不是从#一级标题开始目录
-    if (tocContent.children.length === 1 && tocContent.children[0].__proto__ === HTMLLIElement.prototype) {
-      let con = tocContent.children[0].children[0];
-      tocContent.innerHTML = con.innerHTML;
-    }
-    let markdownItTOC = document.querySelector('.markdownIt-TOC');
-    let innerHeight = window.innerHeight;
-    markdownItTOC.style = `max-height: ${innerHeight - 80 > 0 ? innerHeight - 80 : innerHeight}px`
-    addTocNumber(tocContent, '');
-  })();
-
-  document.addEventListener('scroll', function (e) {
-    if (lList.length <= 0) {
-      return;
-    }
-    let scrollTop = document.scrollingElement.scrollTop + 10;
-    let dir;
-
-    if (lastTop - scrollTop > 0) {
-      dir = 'up';
-    } else {
-      dir = 'down';
-    }
-
-    lastTop = scrollTop;
-    if (scrollTop <= 0) {
-      if (lastIndex >= 0 && lastIndex < hList.length) {
-        lList[lastIndex].classList.remove(activeClass);
-      }
-      return;
-    }
-
-    let current = 0, hasFind = false;
-    for (let i = 0; i < hList.length; i++) {
-      if (hList[i].offsetTop > scrollTop) {
-        current = i;
-        hasFind = true;
-        break;
-      }
-    }
-    if (!hasFind && scrollTop > lList[lList.length - 1].offsetTop) {
-      current = hList.length - 1;
-    } else {
-      current--;
-    }
-    if (dir === 'down') {
-      if (current > lastIndex) {
-        addActiveClass(current);
-        removeActiveClass(lastIndex)
-        lastIndex = current;
-        removeParentActiveClass();
-        lList[current] && addActiveLiElemment(lList[current].parentElement, tocContent);
-      }
-    } else {
-      if (current < lastIndex) {
-        addActiveClass(current);
-        removeActiveClass(lastIndex);
-        lastIndex = current;
-        removeParentActiveClass();
-        lList[current] && addActiveLiElemment(lList[current].parentElement, tocContent);
-      }
-    }
-  });
-
-
-  window.addEventListener('load', function () {
-    showToc();
-    document.querySelector('#sidebar').style = 'display: block;';
-    tocWrapper.classList.add('toc-active');
-    setTimeout(function () {
-      if ("createEvent" in document) {
-        let evt = document.createEvent("HTMLEvents");
-        evt.initEvent("scroll", false, true);
-        document.dispatchEvent(evt);
-      }
-      else {
-        document.fireEvent("scroll");
-      }
-    }, 500)
-  })
-
-</script>
-            </div>
-          
-        
-      </div>
-    </div>
-  
 </div>
 <script>
   const SIDEBAR_TITLE_ACTIVE = 'sidebar-title-active';
@@ -454,8 +260,8 @@
           <div class="section bg-color post post-page">
             <header class="post-header">
   <h1 class="post-title">
-    <a class="post-title-link" href="https://fooogy.github.io/post/ge-an-guan-di-qi-zhang/">
-      隔岸观·第七章
+    <a class="post-title-link" href="https://fooogy.github.io/post/yu-lin-di-er-shi-yi-zhang/">
+      雨霖瀮·第二十一章
     </a>
   </h1>
   <div class="post-meta">
@@ -463,23 +269,23 @@
     <span class="meta-item pc-show">
       <i class="fa fa-calendar-o"></i>
       <span class="language" data-lan="publish">发布于</span>
-      <span>2020-06-09</span>
+      <span>2021-09-20</span>
       <span class="post-meta-divider pc-show">|</span>
     </span>
     
     <span class="meta-item">
       <i class="fa fa-clock-o"></i>
-      <span>14<span class="language" data-lan="minute">分钟</span></span>
+      <span>16<span class="language" data-lan="minute">分钟</span></span>
     </span>
     <span class="meta-item">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-file-word-o"></i>
-      <span>4170<span class="pc-show language" data-lan="words">字数</span></span>
+      <span>4583<span class="pc-show language" data-lan="words">字数</span></span>
     </span>
     
     
     
-    <span id="/post/ge-an-guan-di-qi-zhang/" data-flag-title="隔岸观·第七章" class="meta-item pc-show leancloud_visitors">
+    <span id="/post/yu-lin-di-er-shi-yi-zhang/" data-flag-title="雨霖瀮·第二十一章" class="meta-item pc-show leancloud_visitors">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-eye"></i>
       <span><span class="language" data-lan="view">浏览量</span>：<span class="leancloud-visitors-count"></span></span>
@@ -488,83 +294,96 @@
   </div>
 </header>
             <div class="post-body next-md-body" id="post_body">
-              <h1 id=""></h1>
-<p>像是地壳运动颠覆山脉为湖泊，洪先生伸出双指抚平他紧皱的眉头，拇指的指尖又刮过他的眼眶，泪渗出眼角流进鬓角深处。洪先生看着他，好端端生出些温柔怜惜的感情，这个年轻人注定要成为自己宁可错杀三千的之一了，不再继续挣扎了吗？或许我下一秒就会回心转意，为你生出点良心呢？</p>
-<p>看起来心不在焉的张禹，其实脑中正进行着堪比纳粹集中营程度的自救。我要窘迫，还是放荡，我要欲拒还迎还是宁死不屈？整个人被折叠又折叠之后，他终于再看不见洪先生的脸。这样也好，避开四目相对就是在避开被看穿的风险。这让他有几分心安的同时又下意识绷紧了意识。可惜意志力再强也是徒劳无益，看不见的肢体和动作里如数落在脑海里，皮肤上所感知到的一切触碰、研磨、碾压都会异常清晰地传遍每一处角落。处于趋利避害的人性他总是不自觉地往前爬，直到自己退无可退。而洪先生则对他的一切反应了然于胸。既然决定好要摘下还没熟透的果实，他就要做好一口吃下去只能尝到满嘴酸苦的心理准备。</p>
-<p>毕竟，洪先生苦中作乐多年，早已失去味觉，闻着香就足够，尝不出半点甘甜又何妨。</p>
+              <p>俞溪桥没想到中森施予会记得自己的号码，他受宠若惊地问候道：“你身上的钱够用吗？衣服够穿吗？”<br>
+俞溪桥若无其事的语气，令中森施予恍惚觉得自己好像就只是离家出走，没假装被绑架似的。<br>
+中森施予：“你在什么地方？”<br>
+听到此处，Macbeth就已经对中森施予这通电话的作用，不抱任何希望了。<br>
+俞溪桥听出了中森施予言外的拷问之意，心里顿觉有趣，便刻意把手机换到免提，又调到最大声音，然后猛然一脚踢向温胜寒的后背，温胜寒痛呼出声，听得中森施予心惊胆战，浑身颤抖不止，质问道：“你为什么要绑架他？”<br>
+欧阳骞手被手铐铐住，又被蒙着眼，除了能感觉到自己好像被困在了楼梯上，什么也不知道。他没注意到中森施予的来电，只听得到温胜寒挣扎作痛的声音。欧阳骞高声喊着温胜寒的名字，想要确认他的位置，然而温胜寒却顾不上回应他。俞溪桥又骑到了他身上来，温胜寒动了动手指，牵一发而动全身的疼，连继续挣扎的力气都没有了，心灰意冷时，却又看到俞溪桥从背后抽出一把尖刀，温胜寒刚想要发出求救声，就被俞溪桥捂住了嘴，任凭刀尖贴上了自己的手指。<br>
+中森施予在那边听得泪流不止，只哽咽着问俞溪桥：“你这样逼我，不怕我自首吗？”</p>
 <!-- more -->
-<p>身底下闷闷的声音传过来，洪先生稍稍放缓动作，扭过张禹的头问，什么声音？</p>
-<p>张禹连忙手挡住嘴，摇着头否认。然后洪先生就像古战场上才会见到的攻城木那样，一下接一下地撞上来，而他死死咬住枕头，倔强地再也没发出任何声音。</p>
-<p>两个人的高潮来得比想象中要快，可能是因为洪先生心善有耐性，再干涩的枯井也能由浅入深地抽出清泉来。洪先生第一次射精结束后，张禹的双腿却还在微微颤抖，他能感觉到自己的生命好像也在缓缓流淌出去。</p>
-<p>Make，我好像太没用，这么快就要跟上你了。</p>
-<p>官秋山啊，如果我死了，你千万要讲义气地替我报仇，如果你还活着……</p>
-<p>胡思乱想一番后的张禹有些头昏，身前身后都有点火辣辣地疼，他趴在床铺上，心中却是一片死寂。目光下扫，惊愕一抖。自己和鹿天鸣做过这么多次，好像还是第一次流这么多血。张禹的手覆盖在床上挡住了暗沉的血迹，像是把一朵红得鲜艳的花从枝头上折了下来，把自己也折下来。</p>
-<p>“像花虽未红……如冰虽不冻……这是好几年前的粤语老歌了，洪先生听过吗？”</p>
-<p>听到张禹哼出了两句不成调的歌，洪先生眼皮微微一颤，仿佛也看见了红红的罂粟花开在金三角的土地上，而自己就是其中最凄艳的一朵。可物离乡贵，人离乡贱。和予人欢愉的罂粟相提并论，自己又是不配。捂住嘴轻轻咳嗽几声，却又欲言又止。</p>
-<p>最后只是一垂眼，淡淡道：</p>
-<p>“花会萎谢，人也不能免俗。这支粤语歌太悲，有曲终人散之兆。”</p>
-<p>张禹眼角摇晃出眼泪，解释说“这本就是首怀念的歌，就当作我在怀念Timmy仔。”</p>
-<p>“他的死，真值得你伤怀至此吗？”</p>
-<p>大概就是因为世界上还有张禹这样的人，把所有关于愧疚的份额都占满了，以致于洪先生无论怎样作恶多端，从来也不曾惭愧过。洪先生又温和地插入进来，然后不由地也弓着腰把手扣上去，摸着张禹的手一起陷入在血痕里，心中突然生出了新的打算，扭过他的头吻了过去。洪京墨手掌上有一道狭长的伤疤，横冲直撞地切断了生命线和爱情线，从虎口一路蜿蜒到尾指。张禹不明所以地皱着眉，分开后，又不小心低头看见散落在地上的照片，其中一张被压在最底下，只能看到照片上的人一只手。但是张禹一眼就认出来了，那不是别的人，那是Make。</p>
-<p>嗡地一声，张禹将手抽出来抓住胸口。</p>
-<p>“你怎么了？”</p>
-<p>心中沉淀下去的怨恨乍惊乍起，顿时间泪如雨下，眼底心底凄凉无底，只想对自己的脸扇几巴掌清醒一点。</p>
-<p>身底下自暴自弃的大哭吓到了洪先生，他不禁疑惑，有这么疼吗？已经很轻了。</p>
-<p>“对不起，我只是……我突然有点想家了”</p>
-<p>洪先生不能明白，张禹崩溃的感情强烈到无法形容是为何而崩溃。不仅恨Make尸骨未寒，恨官秋山生死未卜，也恨他自己居然要借着他们三个的感情来逢场作戏。但若为了顾全大局，能做好这最后一出戏也无可厚非。可他更恨自己耽于往昔，深陷在伤痛中不能抽离，实在太没用。手紧紧攥着床脚，又想起洪先生给的枪，自己居然没用来杀人。今生今世，再也不会有这么好的机会。</p>
-<p>你是想要回香港吗？一句话说出口，洪先生才突然发觉，自从自己1973年离开香港，这几十年除却梦里，竟是再未回去过。洪先生心中顿觉酸楚，“其实我和你不同，我是20年前的香港人。70年代的香港，遍地都是带着殖民色彩的掮客。贪污腐败的政治掮客、哄抬物价的经济掮客、还有太多绅士名媛也做掮客，但身上永远带着一种……烈得呛人的上等人味。这种味道把香港搞得太脏了，所以我才千辛万苦地逃出来。你之前说今年……多大年纪？”</p>
-<p>张禹脸蹭过床铺，擦干净眼泪，嗫嚅着“我，20岁。”</p>
-<p>像是没有听见，洪先生只身陷入了深深的回忆中，“我逃出香港的时候不过15岁。我那时候躲在货船上，不知道在海上漂了多少天才到越南边境。又兜兜转转，最后来到泰国扎根落地。”</p>
-<p>“逃？”</p>
-<p>洪先生盯着张禹颤抖着的背影，像是看到了当年那个仓皇失措的自己，“对，是逃。我当时在香港杀了人。那是我第一次杀人，害怕得不得了。幸好遇到了来香港带货的Timmy仔，他跟我说，我可以搭他们家亲戚走私毒品的邮轮偷渡出国。那时候都很单纯，真怀念那时候。”</p>
-<p>我那时候那么年轻，那么容易相信，那么完整。</p>
-<p>因为是第一次杀人，所以才会拿不稳刀割伤了手吗？张禹偏过头盯着洪京墨掌心的疤，“但你今天把他也杀了。”</p>
-<p>“阿禹，洪先生今天杀他是因为他做错了事。而不是因为我不喜欢他。”</p>
-<p>张禹苦笑，这个男人是真的沧桑历尽，所以讲话永远都是一副老年人奚落小孩的口吻。苏健秋曾经抱怨过Make少年老成，十几岁就活得像个凶神恶煞的中年大叔，但和洪先生相比又是鲁莽有余，城府不足。Make也说，这种老派古董男就像是过期的方糖，表面上闻着自然还是香的，其实内里藏污纳垢。但碍于情面不能吐出来，又咽不下去，只好恭恭敬敬含着。</p>
-<p>不过这情面是碍于他位高权重的情面，而不是碍于他已经不惑的年岁。洪先生一生最满意的成就，就是多亏了自己，才让很多庸人名利双收，但他其实一直对外界判断错误。</p>
-<p>是多亏了社会上永远有人要追名逐利，他才被恭维。</p>
-<p>“是，洪先生最怕背叛。是他死有余辜。”</p>
-<p>“我不怕背叛，我只是可惜。人一旦背叛我，无论我有多么舍不得，这个人都不能再留。”</p>
-<p>洪先生声音低沉，停顿片刻又闭上了眼，“我可能是害怕分别。有时候恨不能变盲，这样许多人许多事，就都眼不见为净。”</p>
-<p>张禹猛地回起头，脸上闪过一丝惊讶，“你到底遭到过什么人的背叛？”</p>
-<p>洪先生突然捂住张禹的嘴，将他的头压下去，就像是怕他再说出什么越界的话，自己就真的不得不杀他了。然后放肆地欺身向前继续顶撞着，然后抽出手默默拿回了放在桌上的匕首，张禹在床上看见了刀的光影，突然开口问道：</p>
-<p>“洪先生你记不记得，鹿天鸣最后好像跟我说，他死都不会放过我。”</p>
-<p>洪先生快乐地笑了，“不要怕，那是在说我。”</p>
-<p>张禹翻过身来将额头抵近亲吻他的匕首，呼出的热气碰在洪先生的手腕上，令他手心连着心头一起作痒。</p>
-<p>“那洪先生，你现在也要杀我吗？像杀他一样。”</p>
-<p>做错事的人当然要受罚，那张禹做错了什么呢？洪先生的身下仍然剧烈摇晃着撕裂对方，但握刀的手却很温柔。刀锋下移，刀背一一经过张禹的眉心、眼睛，嘴唇，最后在张禹的下巴位置来回点着，好像是在思考在哪里下刀会比较凄美。仿佛闭上眼睛就能看到鲜血和精液同时喷射出来的奇观。但不知为何，闭上眼睛后洪先生突然想起鹿天鸣最后说的话，张禹你生是我的人，死是我的鬼。</p>
-<p>如果现在就这么简单朝着他的喉咙刺下去，岂不是成全了鹿天鸣要和张禹九泉之下，继续做一对亡命鸳鸯的心思。但鹿天鸣好像没有任何犹豫地就背叛了我，我为什么还要这么好心啊？我是洪先生。随后一笑，好像是这么一回事。他是洪先生，他怎么能和鹿天鸣那样丧尽天良的人沆瀣一气。</p>
-<p>从1973年到1996年，他从一个少年逃犯长成了一位华人大亨。他是东南亚所有克勤克俭，劳心劳力的犯罪者们，最后伟大的福音。是正人君子。</p>
-<p>最后将刀收回，只是轻描淡写两句：“既然同是天涯沦落人，我便不会害你。”</p>
-<p>张禹心中冷冷想到，哦，是这样吗？</p>
-<p>而后洪先生专注在沉寂的空气之中，又问，“我看你朝Timmy仔开枪时用的好像是左手，是左撇子吗？”</p>
-<p>张禹斜眼看见洪先生手下凌厉的刀刃，眼前一瞬间闪过鹿天鸣后，突然想要拼命抽出自己的手，但还是被洪先生死死摁在床上动弹不能。他浑身颤抖不止只好闭上了眼睛，好像是洪先生朝自己吻过来。仓皇失措之中顾不得抵御对方唇舌的侵略，随后耳边就听到了匕首隔开皮肉的声响，脑子里先是撕心裂肺地一痛，又恍惚露出来了微茫的笑意。</p>
-<p>洪先生最后只是挑断了他左手的手筋，那么他今天就是暂时不用死了。于是彻底松了一口气，瘫死在床上。</p>
-<p>洪先生从张禹的身体里退出来，为他有风度地披上外套，很快地便从地上摸到了拐杖走出房间。张禹依然还像条用过的毛巾一样，一半还挂在床上，另一半却趴在地板上。左手手腕上筋骨具裂，皮肤外翻，像在呕血的鱼唇。手腕上汩汩流出的鲜血又顺着手臂倒流回肩膀，又更像是沾上血液濡湿身体能再多苟活几时的鱼了。他感觉腿下的地板有些凉，光裸的后背上只盖着洪先生留给他的一件外套。只觉得浑身上下都像是生锈的破铜烂铁，想要坐起来把衣服穿上，又更想一直躺下去躺倒死。但终于在浓稠的黑夜里，他站了起来像是一根搅拌棍，搅弄一杯咖啡一样地在地上走了一圈，淌了一圈的血又像是在咖啡上拉花。单手捡起了衣服勉强套进去，衣料摩擦左手时宛如经受凌迟，他却只惋惜着自己最后一件干净的外衫，到底也是脏了。</p>
-<p>衣袖被鲜血打湿一角后，血迹就像水草一样攀爬至整个衣袖，滴落在地板上又被他踩在脚底，摇摇晃晃地走着，最后终于借着月光看清了这具死不瞑目的尸身。</p>
-<p>有人吸食毒品，便有了毒贩毒贩。有人贩卖毒品，便有了毒品调查科。乐极生悲，盛极必衰，人生种种境遇，不过是实现欲望和偿还代价之间的有借有还。张禹用右手捡起那只断手，妥当地放回在了鹿天鸣身旁，看着他干裂的嘴唇，想起了两个人所讲的第一句话：阿sir你的水能给我喝一口吗。这个可恨的毒贩终于是死在了他最喜欢的毒品手里，不知道算不算是死得其所。那自己最终是不是也应该为毒贩而死？</p>
-<p>忘了，我又不是警察。我有什么资格……可是Make又凭什么死在你种人手里，鹿天鸣你只有一条命你要怎么还他们。灵魂被仇恨撕裂时胜过身体上的疼痛千万倍。最后，张禹面如死灰，喉咙嘶哑，只能发出胡琴一样的声音同他告别：</p>
-<p>“鹿天鸣，我是真想过带你回去，可是香港已经没有死刑……”</p>
-<p>手捂住干涩的眼睛，却是半行眼泪都流不出来。</p>
-<p>保镖在朝洪先生走近的这几步路里，突然发觉今晚的洪先生比平时面善了些许，脸上甚至有一派如鱼得水的快活气象。</p>
-<p>“老板，张禹怎么处理。”</p>
-<p>“一整晚听下来，有什么评价给他？”</p>
-<p>保镖看了一眼屋内半死不活的张禹，简明扼要地说：“天真懵懂、深不可测。”</p>
-<p>“觉不觉得他很像当年的我……”</p>
-<p>“您指的是，他和您当年一样背井离乡吗？”</p>
-<p>自己走在人生的中段还能遇上这么一个人，大抵也算是有缘。莫非是上了年纪，怎么总是情不自禁地开始回忆往事。洪先生拄着拐杖低头笑了，而后笑容化成沦落人的悲愁。往事如风干的旧年历一样模糊，而鹿天鸣死不瞑目的那张脸依旧清晰可见。</p>
-<p>阿洪，你将来去泰国发财了一定要记着我的好啊。</p>
-<p>我都不知道你是谁，我怎么记着你？</p>
-<p>鹿天鸣。我们村里都叫我Timmy仔。</p>
-<p>鹿天鸣当时憨厚地嘿嘿一笑，欢天喜地地站在岸边朝自己摆手，就像是自己也逃脱了香港这个吃人的洞窟一样欢喜。天鸣……Timmy仔，原来已经过去23年了。</p>
-<p>“先送医，给他把手筋接上。再给他找一个别太偏也别太吵闹，好一点的住所。不想他像我当年那样，流浪街头。”</p>
-<p>“是。”</p>
-<p>“鹿天鸣勾结警察这件事便到今天为止……对，之前在枪战时重伤的那个青年人醒了吗？”</p>
-<p>“还在医院昏迷着。”</p>
-<p>“他杀了Make这个警察，算是我的恩人。要是真醒不过来……便找个时间做掉，给他个痛快。”</p>
-<p>“……我知道了，洪先生。”</p>
-<p>“他叫什么名字来着。”</p>
-<p>“官秋山，我们都叫他阿秋。”</p>
+<p>听见中森施予的话，俞溪桥的兴致却变得更好。他放过了温胜寒，提着刀朝欧阳骞走了过去，边走边说：“他还没死，你哭什么丧？”<br>
+欧阳骞听见俞溪桥越来越靠近的脚步声，立刻警觉地坐起身，可他没想到，俞溪桥会突然朝自己发问：“名单在你身上？”<br>
+什么名单？中森施予和欧阳骞两个人心中，此时皆是同一片茫然。<br>
+俞溪桥忽然拿刀抵住欧阳骞的喉咙，将人摁在了楼梯的台阶上，双眼充血地威胁道：“欧阳骞，你现在拿它跟我换生路还来得及！”<br>
+“名单不在他身上……”温胜寒趴在地板上，奄奄一息地回应道。<br>
+欧阳骞恍然大悟，这或许就是纽沃德从倪宿那边接手过来的，令自己命丧邮轮的东西。那东西绝不可能在温胜寒身上，纽沃德不会置他于这等险境。</p>
+<p>托重伤患者官秋山的福，伯乐在军区医院顺利取到药。见到鹿游原后，察觉到对方脸色惨白，声音虚浮，以为是旧疾复发，忍不住关心道：“有一盒是开给你自己的，按时吃。就算治不好，多多少少也能控制控制病情，不让它更坏。”<br>
+伯也斯站在两人中间，插嘴道：“刚刚接到俞溪桥的通知，《雨霖瀮》今天就要开拍，修伟他们都已经赶过去了。我是不是……”<br>
+伯乐不解，问：“男主角都不在，怎么开机？”<br>
+伯也斯一愣：“中森施予居然不在吗？有人明明都在现场看到俞溪桥了。这个经纪人，不是向来对他寸步不离的吗？”<br>
+鹿游原跑出警局，见到剧组来接伯也斯的两辆车，忙跑过去问司机，有没有在现场看到中森施予。司机不耐烦地回复说：不认识。鹿游原抚着胸口，气都没喘均匀，又进一步解释说：他是明星。司机大笑，随手指了指从警局走出来的伯也斯，说：拍电影的，谁不是明星。<br>
+鹿游原刚要拉开车门，俞溪桥就摇下车窗，然后故作惊喜地招呼道：“鹿律师？真不巧。我们今天是要开机，不是要开庭。”<br>
+鹿游原清一清嗓，镇定道：“桥总不邀请我上车坐坐？伯也斯的合同我们好像还没谈清楚吧。”<br>
+俞溪桥探出一点身子，向鹿游原低声耳语道：“伯也斯没通知你吗？合同已经签好了。毕竟伯也斯肇事逃逸的照片，是我花重金从《新世界》手里买回来的。外人就是外人，你就算替他顶罪，他也不会念你的好。”<br>
+鹿游原从俞溪桥手中接过照片，看了看下面的日期，确实是鬣狗案案发当夜。那天，鹿游原从公司赶到事故现场，仔细勘察一番后，便开始安慰伯也斯：“人不是你撞死的，别害怕。更何况你有国际驾照，别担心，我和你一起去警局，没什么说不清楚的。”<br>
+“我不管！”伯也斯忽然从座椅上掏出枪，指着鹿游原的头威胁道：“你要是敢报警，我就开枪了！”<br>
+鹿游原神色肃然，手指直接拨开枪口，呵斥伯也斯道：“你玩车就算了，还玩枪！”<br>
+伯也斯叫嚷起来，委屈得要落泪：“我不管！PAPA要是知道了不会放过我！我也不会放过你！”<br>
+鹿游原上前一步，继续问：“枪是怎么来的？”<br>
+伯也斯：“你凭什么管我！”<br>
+鹿游原：“谁卖给你的！”<br>
+伯也斯：“你闭嘴！你是不是要报警！”<br>
+鹿游原：“酒后驾驶、肇事逃逸，现在还非法持枪……伯也斯，你想进监狱啊！”<br>
+伯也斯对准鹿游原的胸口扣动了扳机，这样近的距离，居然还是射偏了，子弹擦着鹿游原的耳朵划了过去。然而鹿游原却只觉得忽然间天塌地陷，拽着伯也斯的衣领摔倒在地。<br>
+伯也斯用手托着他，还以为是真伤到了他，哭得一塌糊涂：“鹿叔叔，这麻醉枪是我在泰国山海酒店买的，你别告诉我PAPA。你全家都死光了，你不懂。我不想PaPa生气，我就他这么一个亲人。你不说，我也不说，大家相安无事开心快乐不好吗？”</p>
+<p>已经记不得的事，鹿游原此时此刻又重新想起，五味杂陈的同时，又有些庆幸，也许有一天，他能想起自己的亲人和挚友。鹿游原目送伯也斯坐上后面的车，想要嘱咐几句，却又已经无话可说。他心里猜伯也斯的信用卡应该是已被伯乐冻结，才冲动签约。但还若无其事地坐出租车，进现场，顶着大雨跟自己满世界乱跑，太不懂事。</p>
+<p>鹿游原瞥了一眼俞溪桥，开玩笑似的说：“中森施予根本不在现场吧。桥总的事，好像成不了。”<br>
+俞溪桥摆了摆手，解释说：“真多虑了，现在只是温老的剧本出了一些问题。他那边剧本一改好，我这边立即开机。”<br>
+鹿游原一拱手，贺道：“那就祝桥总，心想事成。而不是赔了夫人又折兵。”<br>
+俞溪桥哈哈大笑，笑得额头、脸颊全是汗，说：“夫人赔了，再娶就是。兵折了，再招揽就是。只是两条人命没了，还能去哪里要呢？”<br>
+鹿游原说：“都说桥总是个厚道的生意人，可我却觉得桥总谈生意的心始终不诚。一命换两命，有失公平吧。”<br>
+俞溪桥猛地一拍额头，说：“你提醒我了。欧阳骞和温胜寒是两条命，倪宿和中森也是。可倪宿死了，那……Mon！我们不是要送鹿律师份厚礼吗？备好了没有！”<br>
+Mon不可置信地看向俞溪桥，就好像俞溪桥不是在向他讨礼，而是在向他索命。鹿游原也看着Mon，他坐在俞溪桥身后，手上确实拿着一个包裹，不知道装着什么。<br>
+“给他啊！”俞溪桥催促道。<br>
+Mon的手缓慢伸出车窗，将包裹递到了鹿游原手中。鹿游原接过的瞬间，顿时就产生了一股不良的预感，且不先猜包裹里面的，单单这外面的一层，鹿游原就认得出来，这颜色像是温胜寒的外衣——那件出租车司机的制服，他亲自给欧阳骞披在身上的。<br>
+俞溪桥说：“昨天有人入室盗窃，还纵火，这是落在中森家中的物证。本应该他来，可是他语言不通，所以只有我来，报案。”<br>
+俞溪桥命令Mon开车，Mon没听，抽出火机想点烟，但看了一眼俞溪桥身底下，已经淌了一地的血，一条命仿佛死了一半。手刚凑近嘴巴就立即甩了甩手，把叼着的烟呸了出去，立即启动车子开走了。鹿游原在原地解剖似的将包裹一层一层拆开后，鹿游原突然两腿一软，趴在地上呕出一大口血。伯乐刚想走上前扶他一把，鹿游原就摇摇晃晃地，自己又撑着地站起来，说：“当务之急，是救人。”<br>
+伯乐看了一眼鹿游原手上的物证，那是一摊血红的烂肉，但在成为烂肉之前，是人的肉身：“绑匪刚刚打电话给欧阳望，说，这两人已被在下绑架，请在一天之内筹措两百万，编号不连号的美元，作赎金。两百万，即便是美金也不算多。但欧阳望说，他和温胜寒非亲非故，这一部分钱，他不会出。”<br>
+鹿游原问：“温胜寒的事都到了这一地步，为什么还不联系温辞？”<br>
+伯乐：“电话不通。”<br>
+鹿游原喉咙里一股血气翻天往上涌，但他生生咽下去，捂着嘴说：“找修伟。”</p>
+<p>烽火街上的阁楼里，修伟的手提电话突然响起。温辞听得心里烦躁的很，直接将钢笔一甩，重重拍在了桌子上。笔尖的墨水溅到了修伟脸上，但修伟没什么反应，他反而面带愧色向温辞道歉说：“老师，我出去接个电话。”<br>
+淋过雨的修伟就像一件刚洗过的衬衣，颜色变得更深了，有焕然的新鲜味儿。温辞大约是不太甘心，像抽了一个巴掌似的，又在修伟脸上泼过去一道墨迹，然后仰头大笑着说：“这画法就叫做曹衣出水。”<br>
+修伟无意接电话，他原本只是想走出去洗把脸。然而听过温辞这样讲后，反倒被激得一阵冷笑，直接把电话扔出了窗外。窗户被砸出蛛网一样的裂纹，碎玻璃都落在了楼下人家的门口。<br>
+要去执行防汛任务的巡警骑着摩托车经过此处时，立即高声喊着楼下男人的名字。<br>
+“卓稻！快把碎玻璃扫干净！别扎到路人的鞋，不安全！”<br>
+卓稻回过头，他正是那个一直坐在家门口，拼命向外舀水的男妓。他只听得扑通一声，伸手一捞，是修伟的手机。<br>
+那是一条简讯，发信人是俞溪桥。内容很简单，只一句：“郁贞远道而来，你确定还要和温辞在一处？”<br>
+卓稻的想法却很质朴，抬头看看混沌连片的天，风雨未停，远道人要如何来？</p>
+<p>“老师是因为爱师母才结婚的吗？”<br>
+“是。青梅竹马的爱，门当户对的爱，传宗接代的爱。”<br>
+“那老师和我之间，也是爱吗？”<br>
+“更是爱的。横眉冷对的千夫所指的还不算是爱的话，什么算是爱呢？”<br>
+温辞是台湾人，所以修伟总觉得老师的情话自带一种自嘲的腔调，每一个音都发得像叹息，又像是顾影自怜。但来拜佛的人都是可怜的，他们心中各有各的求不得。<br>
+老师指着一尊佛像，告诫修伟说：“你看，在我们两个人面前，连佛都是睁一只眼闭一只眼的。”<br>
+这是慈悲吗？修伟的目光从佛的脸上滑下来，左顾，右盼，他看见了穿着高跟鞋的女人，穿着皮鞋的男人，他那时候太年轻，只觉得裤脚沾上灰尘的男人可怜，被高跟鞋带磨破脚踝的女人也很可怜，连话都不会说，就被夫妻带来的小孩子哭闹的时候也很可怜。<br>
+老师说这是众生皆苦，除了你我。你看，那对夫妻离开寺庙之后，会回家。而老师会带着证件和学生去酒店，但外人看着他们却没什么可奇怪的，可以是观光客，可以是父子。<br>
+老师特意说，有外人在时，可以叫他爸爸。老师的“可以”，就是“必须”的意思。两个人第一次发生关系时，修伟问他：“可以这样吗？”老师说：“必须这样，这是你欠我的学费。”<br>
+苏格拉底在与柏拉图的对话录有写：对于一个年轻人的最大祝福，莫过于希望他能在长大的时候，有一位品德高尚的年长者相伴，而对于年长者的最大祝福，则是希望他能遇到一个爱他的年轻人。老师在修伟身上，发现了文学的灵感，修伟在老师身上，发现了……对于爱，只能不求甚解。<br>
+有一次，修伟在自助餐厅里想要拿一份鱼肉时，踮着脚却还是够不到。还是下意识的叫了“老师帮我”。老师看起来没有生气，只问他：“你喜欢鱼吗？”<br>
+他点点头。于是老师帮他把鱼刺都剔干净了，再端给他。可是咀嚼过以后，只想吐掉，他发现自己并不喜欢，原来只是没吃过而已。但他还是快活的咽下去了，就像老师没有把他吐掉一样。老师把他的亲生骨肉都吐掉，却还是没有扔下自己，众生皆苦，老师是这样爱我。哪怕笑的时候满脸会堆砌起皱纹，都好看得像一种画法。<br>
+温辞问修伟在笑什么，他说自己好像发现了老师的一个秘密，但他不会告诉老师。</p>
+<p>温辞失联，修伟亦然。但在这生死关头，伯乐更没想到的是，自己会和鹿游原去医院见洪京墨。也许是因为二人都刚刚见过Mon和俞溪桥，一知道这两人不在洪京墨身边，便来趁虚而入了。伯乐一穿上白大褂，戴上白口罩，和欧阳望居然也是有几分相像的。鹿游原在邮轮上听说过洪京墨给欧阳骞输血一事，他不清楚内里的缘故，但他知道这样做没错，所以便来了。然而不等鹿游原把针头插入，洪京墨便悠然转醒，两个人四目相对。<br>
+鹿游原：“我给他打了药，他暂时还清醒不过来。”<br>
+伯乐悬着的心随之落地，又看着洪京墨手背青青紫紫的针眼，嘱咐鹿游原说：“毕竟还昏迷着，又是病人，下手轻点。”<br>
+鹿游原满口答应着，然后狠狠把针扎进静脉中去。洪京墨眼角突然掉泪，鹿游原接住，像所有医生问候病患一样，他问候洪京墨：“现在感觉怎么样？”<br>
+洪京墨回答说：“我死了吗？如果要这么早死，一开始就不用那么拼命活了。现在无病一身轻，好像比活着的时候痛快。”<br>
+鹿游原收好血袋，又好心地用毛巾替洪京墨擦干净眼屎和眼泪，洪京墨意识不清醒，问鹿游原手里拿着的东西是什么？<br>
+鹿游原做贼也不心虚，只说：“倪宿死后不肯投胎，说要等你一起上路。所以我就想从你身上抽出点血，去还他。别等他化成厉鬼再来缠你。”<br>
+洪京墨问：“他卖命，我出钱，所有的买卖都是清清楚楚，你情我愿，他为什么要恨我？”<br>
+鹿游原也问：“你不是答应过他，事成之后要送他去日本的吗？”<br>
+洪京墨解释说：“可交给他的事情，被他办砸了。做事手脚不干不净，被欧阳骞抓住了把柄。死了也活该。”<br>
+鹿游原追问：“什么把柄？”<br>
+鹿游原声音太轻，这一句洪京墨没有听清，他反而问道：“那你恨我吗？”<br>
+鹿游原坦然回答：“我和你无冤无仇。”<br>
+洪京墨：“怒汉神探替我翻案这件事，是大恩，让我能‘正大光明’地回香港去。你知道伯乐为什么要离开香港吗？是因为棠家人要吞掉香港伯乐地产。你知道我为什么会被诬陷成少年犯吗？是因为棠家人要吞掉我父母的遗产。可是怒汉神探既然已经救了我，为什么不能就此放过我？是他的好徒弟厉国泰朝我开枪在先，我只打断了他一条腿，还放走了官秋山。我这不算恩将仇报，对吧。”<br>
+鹿游原没有顺着洪京墨的意往下说，反驳道：“官秋山不是你有意要放的。鬣狗死得这么惨，还不是因为你想要报复官秋山而不能？”<br>
+洪京墨看着鹿游原的眼睛，除了这个，他什么都看不清，但鹿游原依然有一种被对方看穿了的感觉，洪京墨问他：<br>
+“那人…一起去…你还记得他吗？”<br>
+“谁？什么？”<br>
+不过三言两句间，洪京墨就又沉沉睡去。他体质不比纽沃德健壮，美国佬的药一针打下去，除了昏迷便是不醒，起不到半点审讯的作用。</p>
+<p>伯乐看着一横一竖两个人，不耐烦地背手离去，厌弃道：“棠家人，呵！”</p>
 
             </div>
             
@@ -577,7 +396,7 @@
     </li>
     <li class="post-copyright-link">
       <strong class="language" data-lan="link">本文链接：</strong>
-      <a href="https://fooogy.github.io/post/ge-an-guan-di-qi-zhang/" title="隔岸观·第七章">https://fooogy.github.io/post/ge-an-guan-di-qi-zhang/</a>
+      <a href="https://fooogy.github.io/post/yu-lin-di-er-shi-yi-zhang/" title="雨霖瀮·第二十一章">https://fooogy.github.io/post/yu-lin-di-er-shi-yi-zhang/</a>
     </li>
     <li class="post-copyright-license">
       <strong class="language" data-lan="copyright">版权声明： </strong>
@@ -591,14 +410,14 @@
     <div class="nav-prev">
       
         <i class="fa fa-chevron-left"></i>
-        <a class="nav-pc-next" title="隔岸观·第八章" href="https://fooogy.github.io/post/ge-an-guan-di-ba-zhang/">隔岸观·第八章</a class="nav-pc-next">
-        <a class="nav-mobile-prev" title="隔岸观·第八章" href="https://fooogy.github.io/post/ge-an-guan-di-ba-zhang/">上一篇</a>
+        <a class="nav-pc-next" title="雨霖瀮·第二十二章" href="https://fooogy.github.io/post/yu-lin-di-er-shi-er-zhang/">雨霖瀮·第二十二章</a class="nav-pc-next">
+        <a class="nav-mobile-prev" title="雨霖瀮·第二十二章" href="https://fooogy.github.io/post/yu-lin-di-er-shi-er-zhang/">上一篇</a>
       
     </div>
     <div class="nav-next">
       
-        <a class="nav-pc-next" title="隔岸观·第六章" href="https://fooogy.github.io/post/ge-an-guan-di-liu-zhang/">隔岸观·第六章</a>
-        <a class="nav-mobile-next" title="隔岸观·第六章" href="https://fooogy.github.io/post/ge-an-guan-di-liu-zhang/">下一篇</a>
+        <a class="nav-pc-next" title="雨霖瀮·第二十章" href="https://fooogy.github.io/post/yu-lin-di-er-shi-zhang/">雨霖瀮·第二十章</a>
+        <a class="nav-mobile-next" title="雨霖瀮·第二十章" href="https://fooogy.github.io/post/yu-lin-di-er-shi-zhang/">下一篇</a>
         <i class="fa fa-chevron-right"></i>
       
     </div>
